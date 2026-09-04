@@ -1,0 +1,5 @@
+[
+  {"id":"kyiv","name":{"uk":"Київ","ru":"Киев"},"flag":"🇺🇦","tz":"Europe/Kyiv","currency":"UAH","bbox":[50.36,30.35,50.59,30.72]},
+  {"id":"chisinau","name":{"uk":"Кишинів","ru":"Кишинёв"},"flag":"🇲🇩","tz":"Europe/Chisinau","currency":"MDL","bbox":[46.92,28.78,47.10,28.97]},
+  {"id":"marrakech","name":{"uk":"Марракеш","ru":"Марракеш"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","bbox":[31.57,-8.08,31.70,-7.93]}
+]

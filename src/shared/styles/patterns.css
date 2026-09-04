@@ -1,0 +1,17 @@
+/* восьмиконечная звезда паттерн — зеллидж */
+.zellige {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23E3B341' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M20 6 L23 17 L34 20 L23 23 L20 34 L17 23 L6 20 L17 17 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* пунктир шляха — золотая линия dash 2 6 */
+.dashed-gold {
+  border-left: 2px dashed var(--gold);
+}
+/* pulse for SOS */
+@keyframes sos-pulse{
+  0%{transform:scale(1);opacity:.55}
+  70%{transform:scale(1.45);opacity:0}
+  100%{transform:scale(1.45);opacity:0}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+}

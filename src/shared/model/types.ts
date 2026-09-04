@@ -1,0 +1,16 @@
+export type CityId="kyiv"|"chisinau"|"marrakech";
+export type Lang="uk"|"ru";
+export type L10n=Record<Lang,string>;
+export interface City{id:CityId;name:L10n;flag:string;tz:string;currency:string;bbox:[number,number,number,number];}
+export interface Emergency{id:string;city:CityId|"*";kind:"police"|"medical"|"fire"|"rescue"|"tourist"|"embassy";title:L10n;number?:string;tel?:string;note?:L10n;hours?:string;address?:string;}
+export interface Taxi{id:string;city:CityId;name:string;kind:"app"|"phone";value:string;note?:L10n;}
+export type POICat="sight"|"food"|"shop"|"market"|"pharmacy"|"exchange"|"transport"|"stay";
+export interface POI{id:string;city:CityId;cat:POICat;name:string;desc?:L10n;lat:number;lon:number;hours?:string;tags?:string[];address?:string;}
+export interface UnsafeZone{id:string;city:CityId;level:"caution"|"avoid";title:L10n;why:L10n;tips:L10n[];lat?:number;lon?:number;radiusM?:number;}
+export interface RouteStop{poi:string;dwell:number;note?:L10n;}
+export interface WalkRoute{id:string;city:CityId;kind:"short"|"scenic";title:L10n;emoji:string;desc:L10n;stops:RouteStop[];}
+export interface ItinBlock{t:string;type:"move"|"sight"|"food"|"stay"|"shop"|"rest";title:string;detail?:string;cost?:string;city?:CityId;}
+export interface ItinDay{id:string;city:CityId;title:L10n;blocks:ItinBlock[];stay?:string;}
+export interface CheckItem{id:string;text:L10n;qty?:string;critical?:boolean;note?:L10n;}
+export interface CheckSection{id:string;icon:string;title:L10n;items:CheckItem[];}
+export interface Phrase{uk:string;ru:string;fr:string;ar:string;ro:string;}

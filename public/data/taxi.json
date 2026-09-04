@@ -1,0 +1,15 @@
+[
+  {"id":"kyiv-uklon","city":"kyiv","name":"Uklon","kind":"app","value":"https://uklon.com.ua","note":{"uk":"Додаток","ru":"Приложение"}},
+  {"id":"kyiv-bolt","city":"kyiv","name":"Bolt","kind":"app","value":"https://bolt.eu","note":{"uk":"Додаток","ru":"Приложение"}},
+  {"id":"kyiv-uber","city":"kyiv","name":"Uber","kind":"app","value":"https://uber.com","note":{"uk":"Додаток","ru":"Приложение"}},
+  {"id":"kyiv-ontaxi","city":"kyiv","name":"OnTaxi","kind":"phone","value":"2000","note":{"uk":"Короткий номер","ru":"Короткий номер"}},
+  {"id":"kyiv-opti","city":"kyiv","name":"Opti Taxi","kind":"phone","value":"579","note":{"uk":"Короткий номер","ru":"Короткий номер"}},
+  {"id":"chisinau-14444","city":"chisinau","name":"Taxi 14444","kind":"phone","value":"14444"},
+  {"id":"chisinau-14222","city":"chisinau","name":"Taxi 14222","kind":"phone","value":"14222"},
+  {"id":"chisinau-14999","city":"chisinau","name":"Taxi 14999","kind":"phone","value":"14999"},
+  {"id":"chisinau-14002","city":"chisinau","name":"Taxi 14002","kind":"phone","value":"14002"},
+  {"id":"chisinau-yandex","city":"chisinau","name":"Yandex Go","kind":"phone","value":"14700","note":{"uk":"Додаток/короткий","ru":"Приложение/короткий"}},
+  {"id":"marrakech-indrive","city":"marrakech","name":"inDrive","kind":"app","value":"https://indrive.com","note":{"uk":"Популярно в Марракеші","ru":"Популярно в Марракеше"}},
+  {"id":"marrakech-heetch","city":"marrakech","name":"Heetch / Careem","kind":"app","value":"https://heetch.com","note":{"uk":"Альтернатива","ru":"Альтернатива"}},
+  {"id":"marrakech-dispatcher","city":"marrakech","name":"Диспетчер petit taxi","kind":"phone","value":"+212524409499","note":{"uk":"Подача 15 MAD. petit taxi: база 7 MAD, поїздка 20–30 MAD","ru":"Подача 15 MAD. petit taxi: база 7 MAD, поездка 20–30 MAD"}}
+]

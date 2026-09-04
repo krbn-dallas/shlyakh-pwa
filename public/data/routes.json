@@ -1,0 +1,18 @@
+[
+  {
+    "id":"medina-classic","city":"marrakech","kind":"scenic","emoji":"🕌","title":{"uk":"Класика медини","ru":"Классика медины"},"desc":{"uk":"~6 км — Кутубія → суки → Бен Юсеф → Café des Épices → Бахіа → захід на Джемаа","ru":"~6 км — Кутубия → суки → Бен Юсеф → Café des Épices → Бахия → закат на Джемаа"},
+    "stops":[{"poi":"koutoubia","dwell":15},{"poi":"souk-semarine","dwell":40,"note":{"uk":"Торгуйся ввічливо","ru":"Торгуйся вежливо"}},{"poi":"ben-youssef","dwell":30},{"poi":"cafe-epices","dwell":40},{"poi":"bahia","dwell":30},{"poi":"jemaa","dwell":60}]
+  },
+  {
+    "id":"short-main","city":"marrakech","kind":"short","emoji":"⚡","title":{"uk":"Коротко і головне","ru":"Коротко и главное"},"desc":{"uk":"~2.5 км — Джемаа → Кутубія → Бахіа","ru":"~2.5 км — Джемаа → Кутубия → Бахия"},
+    "stops":[{"poi":"jemaa","dwell":20},{"poi":"koutoubia","dwell":15},{"poi":"bahia","dwell":30}]
+  },
+  {
+    "id":"gardens-gueliz","city":"marrakech","kind":"scenic","emoji":"🌵","title":{"uk":"Сади і Геліз","ru":"Сады и Гелиз"},"desc":{"uk":"Мажорель → шопінг Геліз → кава","ru":"Мажорель → шопинг Гелиз → кофе"},
+    "stops":[{"poi":"majorelle","dwell":60},{"poi":"gueliz","dwell":90},{"poi":"cafe-epices","dwell":30}]
+  },
+  {
+    "id":"chisinau-evening","city":"chisinau","kind":"scenic","emoji":"🇲🇩","title":{"uk":"Вечірня прогулянка","ru":"Вечерняя прогулка"},"desc":{"uk":"Арка → собор → парк Штефана","ru":"Арка → собор → парк Штефана"},
+    "stops":[{"poi":"arch-chisinau","dwell":10},{"poi":"park-stefan","dwell":30},{"poi":"chisinau-market","dwell":20}]
+  }
+]

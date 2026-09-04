@@ -1,0 +1,23 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+::selection{background:var(--gold);color:var(--on-gold)}
+body{transition:background .3s, color .3s}
+.container{max-width:560px;margin:0 auto;padding:0 16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--shadow);padding:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:13px;font-weight:600;cursor:pointer}
+.chip.active{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:var(--r-ctl);border:1px solid transparent;font-weight:700;cursor:pointer;min-height:44px}
+.btn-primary{background:var(--red);color:var(--on-red);border-color:var(--red)}
+.btn-primary:hover{background:var(--red-strong)}
+.btn-ghost{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.btn-gold{background:var(--gold);color:var(--on-gold);border-color:var(--gold)}
+.muted{color:var(--muted)}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-0.02em;line-height:1.15;margin:0}
+h1{font-size:32px} h2{font-size:24px} h3{font-size:18px}
+@media(min-width:480px){h1{font-size:40px}}
+.small{font-size:12px} .tiny{font-size:11px}
+.divider{height:1px;background:var(--line);margin:12px 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

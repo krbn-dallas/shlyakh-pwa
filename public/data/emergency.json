@@ -1,0 +1,15 @@
+[
+  {"id":"kyiv-police","city":"kyiv","kind":"police","title":{"uk":"Поліція","ru":"Полиция"},"number":"102","tel":"+380441022"},
+  {"id":"kyiv-medical","city":"kyiv","kind":"medical","title":{"uk":"Швидка допомога","ru":"Скорая помощь"},"number":"103","tel":"+380441033"},
+  {"id":"kyiv-fire","city":"kyiv","kind":"fire","title":{"uk":"Рятувальники / Пожежна","ru":"Спасатели / Пожарная"},"number":"101","tel":"+380441011"},
+  {"id":"kyiv-general","city":"kyiv","kind":"rescue","title":{"uk":"Єдиний номер порятунку","ru":"Единый номер спасения"},"number":"112","tel":"112"},
+  {"id":"chisinau-general","city":"chisinau","kind":"rescue","title":{"uk":"Єдиний номер 112","ru":"Единый номер 112"},"number":"112","tel":"112","note":{"uk":"Також поліція 902, швидка 903","ru":"Также полиция 902, скорая 903"}},
+  {"id":"chisinau-embassy","city":"chisinau","kind":"embassy","title":{"uk":"Посольство України в Молдові","ru":"Посольство Украины в Молдове"},"tel":"+37322582284","address":"Кишинів, вул. Василе Лупу 17","hours":"пн-пт 09:00-18:00","note":{"uk":"Другий номер +373 22 58 21 51","ru":"Второй номер +373 22 58 21 51"}},
+  {"id":"marrakech-police-city","city":"marrakech","kind":"police","title":{"uk":"Поліція (місто)","ru":"Полиция (город)"},"number":"19","tel":"19","note":{"uk":"З мобільного 190","ru":"С мобильного 190"}},
+  {"id":"marrakech-police-mobile","city":"marrakech","kind":"police","title":{"uk":"Поліція з мобільного","ru":"Полиция с мобильного"},"number":"190","tel":"190"},
+  {"id":"marrakech-medical-fire","city":"marrakech","kind":"medical","title":{"uk":"Швидка / Пожежна","ru":"Скорая / Пожарная"},"number":"15","tel":"15"},
+  {"id":"marrakech-gendarmerie","city":"marrakech","kind":"police","title":{"uk":"Жандармерія","ru":"Жандармерия"},"number":"177","tel":"177"},
+  {"id":"marrakech-tourist-1","city":"marrakech","kind":"tourist","title":{"uk":"Туристична поліція","ru":"Туристическая полиция"},"number":"05 24 38 46 01","tel":"+212524384601"},
+  {"id":"marrakech-tourist-free","city":"marrakech","kind":"tourist","title":{"uk":"Туристична лінія 24/7 (безкоштовно)","ru":"Туристическая линия 24/7 (бесплатно)"},"number":"05 24 88 86 80","tel":"+212524888680"},
+  {"id":"marrakech-embassy","city":"marrakech","kind":"embassy","title":{"uk":"Посольство України в Марокко (Рабат)","ru":"Посольство Украины в Марокко (Рабат)"},"tel":"+212537657840","address":"Villa 212, rue Mouaouya Ben Houdaig, Souissi, Rabat","hours":"пн-пт","note":{"uk":"Гаряча лінія +212 661 186 390","ru":"Горячая линия +212 661 186 390"}}
+]
