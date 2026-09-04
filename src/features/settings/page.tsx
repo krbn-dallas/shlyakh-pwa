@@ -5,6 +5,9 @@ import { useT } from '@/shared/i18n';
 import { Icon } from '@/shared/ui/Icon';
 import { BrokenHeart } from '@/shared/ui/Logo';
 import { fetchRates } from '@/shared/lib/rates';
+import { getSpace, setSpace } from '@/shared/lib/diary';
+import { syncDiary } from '@/shared/lib/sync';
+import { setSoundEnabled, soundEnabled, sfx } from '@/shared/lib/sound';
 import { PageHeader } from '@/shared/ui/PageHeader';
 import { Section } from '@/shared/ui/Section';
 import { useData } from '@/shared/lib/data';
@@ -43,6 +46,18 @@ export default function SettingsPage() {
   const { data: cities } = useData('cities');
   const [tiles, setTiles] = useState<{ pct: number; done: boolean } | null>(null);
   const [ratesBusy, setRatesBusy] = useState(false);
+  const [sound, setSound] = useState(soundEnabled());
+  const [space, setSpaceState] = useState(getSpace());
+  const [joinCode, setJoinCode] = useState('');
+  const [syncState, setSyncState] = useState<'idle' | 'busy' | 'ok' | 'fail'>('idle');
+  const [copiedSpace, setCopiedSpace] = useState(false);
+
+  const runSync = async () => {
+    setSyncState('busy');
+    try { await syncDiary(); setSyncState('ok'); sfx.saved(); }
+    catch { setSyncState('fail'); }
+    setTimeout(() => setSyncState('idle'), 3000);
+  };
   const [ratesMsg, setRatesMsg] = useState<string | null>(null);
 
   const refreshRates = async () => {
@@ -191,6 +206,53 @@ export default function SettingsPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section icon="book" title={t('diary.title')}>
+        <div className="card stack" style={{ gap: 'var(--s3)' }}>
+          <div className="stack" style={{ gap: 6 }}>
+            <span className="tiny muted" style={{ fontWeight: 700 }}>{t('diary.space')}</span>
+            <div className="row" style={{ gap: 'var(--s2)' }}>
+              <code className="grow num" style={{
+                background: 'var(--surface-2)', padding: '10px var(--s3)',
+                borderRadius: 'var(--r-ctl)', letterSpacing: '.12em', fontWeight: 700,
+              }}>{space}</code>
+              <button className="btn" style={{ minWidth: 44, padding: 0 }} onClick={async () => {
+                try { await navigator.clipboard.writeText(space); } catch { /* denied */ }
+                setCopiedSpace(true); setTimeout(() => setCopiedSpace(false), 2000);
+              }} aria-label={t('common.copy')}>
+                <Icon name={copiedSpace ? 'check' : 'copy'} size={13} />
+              </button>
+            </div>
+            <span className="tiny faint">{t('diary.spaceNote')}</span>
+          </div>
+
+          <div className="row" style={{ gap: 'var(--s2)' }}>
+            <input className="input grow" placeholder={t('diary.spaceJoin')} value={joinCode}
+              onChange={(e) => setJoinCode(e.target.value)} autoCapitalize="none" spellCheck={false} />
+            <button className="btn" disabled={!joinCode.trim()} onClick={() => {
+              if (setSpace(joinCode)) { setSpaceState(getSpace()); setJoinCode(''); sfx.saved(); }
+              else alert(t('diary.spaceBad'));
+            }}>
+              <Icon name="check" size={13} />
+            </button>
+          </div>
+
+          <button className="btn btn-gold" onClick={() => void runSync()}
+            disabled={syncState === 'busy' || !navigator.onLine}>
+            <Icon name={syncState === 'busy' ? 'spinner' : syncState === 'ok' ? 'check' : 'rotate'}
+              size={13} spin={syncState === 'busy'} />
+            {syncState === 'ok' ? t('diary.synced')
+              : syncState === 'fail' ? t('common.error') : t('diary.syncNow')}
+          </button>
+        </div>
+      </Section>
+
+      <Section icon="bell" title={t('diary.sound')}>
+        <button className={`chip ${sound ? 'active' : ''}`} style={{ alignSelf: 'flex-start' }}
+          onClick={() => { const next = !sound; setSound(next); setSoundEnabled(next); if (next) sfx.check(); }}>
+          <Icon name={sound ? 'bell' : 'ban'} size={11} /> {sound ? t('common.yes') : t('common.no')}
+        </button>
       </Section>
 
       <Section icon="cloud-download" title={t('settings.offline')}>

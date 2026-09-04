@@ -56,3 +56,102 @@
     transition-duration:.01ms !important; scroll-behavior:auto !important;
   }
 }
+
+/* ---------------- diary: a real book ---------------- */
+
+.book{
+  perspective:1800px;
+  perspective-origin:50% 45%;
+}
+
+.page{
+  position:relative;
+  background:
+    linear-gradient(105deg, rgb(0 0 0/.05) 0 2px, transparent 2px 14px),
+    var(--paper, #FBF7EE);
+  border:1px solid var(--line);
+  border-radius:4px 14px 14px 4px;
+  box-shadow:
+    inset 14px 0 22px -18px rgb(60 40 20/.55),
+    var(--shadow);
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  transform-origin:left center;
+}
+[data-theme="dark"] .page{ --paper:#231C16 }
+
+/* the ruled sheet */
+.page-lines{
+  position:absolute; inset:0; pointer-events:none; border-radius:inherit;
+  background-image:repeating-linear-gradient(
+    to bottom, transparent 0 27px, color-mix(in srgb, var(--gold) 22%, transparent) 27px 28px);
+  opacity:.5;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0 78px, #000 78px);
+          mask-image:linear-gradient(to bottom, transparent 0 78px, #000 78px);
+}
+
+/* the binding edge */
+.page-spine{
+  position:absolute; left:0; top:0; bottom:0; width:26px; border-radius:4px 0 0 4px;
+  background:linear-gradient(90deg,
+    color-mix(in srgb, var(--gold-deep) 28%, transparent) 0%,
+    transparent 70%);
+  pointer-events:none;
+}
+.page-holes{
+  position:absolute; left:9px; top:0; bottom:0; width:8px;
+  display:flex; flex-direction:column; justify-content:space-evenly; padding:34px 0;
+  pointer-events:none;
+}
+.page-holes i{
+  width:8px; height:8px; border-radius:50%;
+  background:color-mix(in srgb, var(--ink) 16%, transparent);
+  box-shadow:inset 0 1px 1px rgb(0 0 0/.35);
+}
+
+/* photos taped onto the page */
+.taped{ position:relative; background:#fff; padding:8px 8px 30px; border-radius:2px;
+  box-shadow:0 6px 14px rgb(40 28 16/.22); }
+[data-theme="dark"] .taped{ background:#EFE7DA }
+.taped::before,
+.taped::after{
+  content:''; position:absolute; width:56px; height:20px; top:-10px;
+  background:color-mix(in srgb, var(--gold) 45%, #fff);
+  opacity:.55; box-shadow:0 1px 3px rgb(0 0 0/.18);
+}
+.taped::before{ left:-14px; transform:rotate(-28deg) }
+.taped::after{ right:-14px; transform:rotate(28deg) }
+.taped img, .taped video{ display:block; width:100%; border-radius:1px }
+.taped figcaption{
+  position:absolute; left:0; right:0; bottom:6px; text-align:center;
+  font-family:var(--font-ar); font-size:12px; color:#4a3d2f;
+}
+
+/* handwriting-ish field that still reads cleanly */
+.ink{
+  width:100%; border:0; background:transparent; resize:none; outline:none;
+  font-family:var(--font-body); font-size:16px; line-height:28px;
+  color:var(--ink); padding:0;
+}
+.ink::placeholder{ color:color-mix(in srgb, var(--ink) 34%, transparent); font-style:italic }
+
+/* cassette-player look for audio notes */
+.cassette{
+  background:linear-gradient(180deg, var(--surface-2), var(--surface-3));
+  border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+}
+.reel{
+  width:26px; height:26px; border-radius:50%;
+  border:3px solid color-mix(in srgb, var(--ink) 45%, transparent);
+  border-top-color:var(--gold); position:relative;
+}
+.reel.spin{ animation:spin 1.4s linear infinite }
+
+@keyframes page-flip-next{
+  from{ transform:rotateY(0deg) }
+  to{ transform:rotateY(-165deg) }
+}
+@keyframes page-flip-prev{
+  from{ transform:rotateY(165deg) }
+  to{ transform:rotateY(0deg) }
+}

@@ -1,11 +1,21 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Kept for Git-triggered builds. Direct deploys read dist/_redirects instead.
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 404
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[build.environment]
-  NODE_VERSION = "22"

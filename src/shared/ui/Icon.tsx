@@ -17,6 +17,7 @@ import {
   faSun, faTaxi, faTemperatureHalf, faTrainSubway, faTrash, faTriangleExclamation, faUmbrellaBeach,
   faUser, faUserGroup, faUsers, faUtensils, faVenus, faWallet, faWandMagicSparkles, faWifi,
   faXmark, faStore, faScaleBalanced, faBellConcierge, faKitMedical, faSocks, faBaby,
+  faWind, faVolumeHigh, faCat, faSeedling,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCircle, faSquare, faSquareCheck, faStar as faStarO, faClock as faClockO } from '@fortawesome/free-regular-svg-icons';
 
@@ -52,6 +53,7 @@ const REGISTRY = {
   users: faUsers, food: faUtensils, venus: faVenus, wallet: faWallet, magic: faWandMagicSparkles,
   wifi: faWifi, x: faXmark, store: faStore, scale: faScaleBalanced, concierge: faBellConcierge,
   kit: faKitMedical, socks: faSocks, baby: faBaby,
+  nose: faWind, ear: faVolumeHigh, cat: faCat, plant: faSeedling,
   'o-circle': faCircle, 'o-square': faSquare, 'o-check': faSquareCheck, 'o-star': faStarO,
   'o-clock': faClockO,
 } satisfies Record<string, IconProp>;

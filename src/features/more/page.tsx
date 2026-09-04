@@ -4,6 +4,7 @@ import { Icon, type IconName } from '@/shared/ui/Icon';
 import { PageHeader } from '@/shared/ui/PageHeader';
 
 const LINKS: { to: string; icon: IconName; title: TKey; note: TKey }[] = [
+  { to: '/diary', icon: 'book', title: 'diary.title', note: 'more.diary' },
   { to: '/map', icon: 'map', title: 'map.title', note: 'more.map' },
   { to: '/poi', icon: 'pin', title: 'places.title', note: 'more.places' },
   { to: '/services', icon: 'taxi', title: 'services.title', note: 'more.services' },

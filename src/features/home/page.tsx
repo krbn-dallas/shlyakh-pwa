@@ -181,7 +181,7 @@ const QUICK = [
   { to: '/sos', icon: 'shield-half', label: 'SOS', tone: 'red' },
   { to: '/checklist', icon: 'o-check', label: 'nav.checklist' },
   { to: '/map', icon: 'map', label: 'map.title' },
-  { to: '/phrases', icon: 'comment', label: 'phrases.title' },
+  { to: '/diary', icon: 'book', label: 'diary.title' },
 ] as const;
 
 export default function HomePage() {

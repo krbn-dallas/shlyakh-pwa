@@ -20,6 +20,7 @@ const ServicesPage = lazyWithReload(() => import('@/features/services/page'));
 const SafetyPage = lazyWithReload(() => import('@/features/safety/page'));
 const PhrasesPage = lazyWithReload(() => import('@/features/phrases/page'));
 const GuidePage = lazyWithReload(() => import('@/features/guide/page'));
+const DiaryPage = lazyWithReload(() => import('@/features/diary/page'));
 const SettingsPage = lazyWithReload(() => import('@/features/settings/page'));
 
 const L = (node: ReactNode) => <Suspense fallback={<Spinner />}>{node}</Suspense>;
@@ -50,6 +51,7 @@ export const router = createBrowserRouter([
       { path: 'safety', element: L(<SafetyPage />) },
       { path: 'phrases', element: L(<PhrasesPage />) },
       { path: 'guide', element: L(<GuidePage />) },
+      { path: 'diary', element: L(<DiaryPage />) },
       { path: 'settings', element: L(<SettingsPage />) },
       { path: '*', element: <HomePage /> },
     ],

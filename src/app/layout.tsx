@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Header } from '@/widgets/Header';
 import { TabBar } from '@/widgets/TabBar';
-import { SosFab } from '@/widgets/SosFab';
 import { OfflineBadge } from '@/widgets/OfflineBadge';
 import { UpdatePrompt } from '@/widgets/UpdatePrompt';
 import { useStore } from '@/app/store';
 import { load } from '@/shared/lib/data';
 import { cityByCoord, getPosition } from '@/shared/lib/geo';
 import { useMotion } from '@/shared/lib/usePageEnter';
+import { useGlobalSound } from '@/shared/lib/useGlobalSound';
 
 export function AppLayout() {
   const { pathname } = useLocation();
@@ -35,6 +35,8 @@ export function AppLayout() {
 
   // One entrance animation for every screen, replayed on navigation.
   useMotion(mainRef, 'pageEnter', [pathname]);
+  // One delegated listener gives every control its click.
+  useGlobalSound();
 
   return (
     <div style={{ minHeight: '100dvh', display: 'flex', flexDirection: 'column' }}>
@@ -52,7 +54,6 @@ export function AppLayout() {
       >
         <Outlet />
       </main>
-      <SosFab />
       <TabBar />
       <UpdatePrompt />
     </div>
