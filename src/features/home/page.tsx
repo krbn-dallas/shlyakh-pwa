@@ -1,14 +1,16 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useStore, resolveTheme } from '@/app/store';
 import { useT } from '@/shared/i18n';
 import { Icon } from '@/shared/ui/Icon';
+import { Flag } from '@/shared/ui/Flag';
 import { Section } from '@/shared/ui/Section';
 import { useData } from '@/shared/lib/data';
 import { tr } from '@/shared/lib/l10n';
-import { countdown, fmtDate, parseDate, todayMidnight, tripPosition, addDays } from '@/shared/lib/trip';
+import { countdown, fmtDate, parseDate, tripPosition, addDays } from '@/shared/lib/trip';
 import { haversine, fmtDistance } from '@/shared/lib/haversine';
 import { getPosition } from '@/shared/lib/geo';
+import { TipCard } from '@/widgets/TipCard';
 
 function HeroVideo() {
   const theme = useStore((s) => s.theme);
@@ -151,8 +153,8 @@ function MyStay() {
 function Rates() {
   const { t } = useT();
   const rates = useStore((s) => s.rates);
-  const rows: [string, number, string][] = [
-    ['🇺🇦 UAH', rates.uah, '₴'], ['🇲🇩 MDL', rates.mdl, 'L'], ['🇲🇦 MAD', rates.mad, 'د.م'],
+  const rows: [string, string, number, string][] = [
+    ['ua', 'UAH', rates.uah, '₴'], ['md', 'MDL', rates.mdl, 'L'], ['ma', 'MAD', rates.mad, 'د.م'],
   ];
   return (
     <div className="card stack" style={{ gap: 'var(--s3)' }}>
@@ -165,10 +167,12 @@ function Rates() {
         </Link>
       </div>
       <div className="row" style={{ justifyContent: 'space-between' }}>
-        {rows.map(([label, v, sym]) => (
-          <div key={label} className="stack" style={{ gap: 0, alignItems: 'center' }}>
+        {rows.map(([cc, code, v, sym]) => (
+          <div key={code} className="stack" style={{ gap: 2, alignItems: 'center' }}>
             <span className="num" style={{ fontSize: 19, fontWeight: 700 }}>{v}</span>
-            <span className="tiny muted">{label} {sym}</span>
+            <span className="row tiny muted" style={{ gap: 5 }}>
+              <Flag code={cc} size={11} /> {code} {sym}
+            </span>
           </div>
         ))}
       </div>
@@ -189,18 +193,9 @@ export default function HomePage() {
   const departure = useStore((s) => s.departure);
   const ret = useStore((s) => s.ret);
   const { data: days } = useData('itinerary');
-  const { data: safety } = useData('safety');
 
   const pos = tripPosition(departure, ret, days?.length ?? 6);
   const today = pos.dayIndex !== null && days ? days[pos.dayIndex] : null;
-
-  // Rotate the tip by day so it changes daily but never mid-session.
-  const tip = useMemo(() => {
-    const tips = (safety ?? []).flatMap((s) => s.tips);
-    if (!tips.length) return null;
-    const today = todayMidnight().getTime();
-    return tips[Math.floor(today / 86_400_000) % tips.length];
-  }, [safety]);
 
   return (
     <div className="stack" style={{ gap: 'var(--s5)' }} data-stagger>
@@ -263,14 +258,7 @@ export default function HomePage() {
       <MyStay />
       <Rates />
 
-      {tip && (
-        <div className="card-flat stack" style={{ gap: 6 }}>
-          <span className="row tiny" style={{ gap: 8, fontWeight: 800, color: 'var(--gold-deep)' }}>
-            <Icon name="tip" size={12} /> {t('home.tip')}
-          </span>
-          <span className="small">{tr(tip, lang)}</span>
-        </div>
-      )}
+      <TipCard />
     </div>
   );
 }

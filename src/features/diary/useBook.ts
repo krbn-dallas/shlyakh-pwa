@@ -20,6 +20,7 @@ interface Opts {
 export function useBook({ count, index, onSettle }: Opts) {
   const turning = useRef<HTMLDivElement>(null);
   const shade = useRef<HTMLDivElement>(null);
+  const cast = useRef<HTMLDivElement>(null);
   const [dir, setDir] = useState<Dir | null>(null);
   const [dragging, setDragging] = useState(false);
   const busy = useRef(false);
@@ -37,7 +38,10 @@ export function useBook({ count, index, onSettle }: Opts) {
     const angle = d === 'next' ? -p * 180 : -(1 - p) * 180;
     el.style.transform = `rotateY(${angle}deg)`;
     // The lift reads as a curl: brightest at the spine, dark across the fold.
-    if (shade.current) shade.current.style.opacity = String(Math.sin(p * Math.PI) * 0.75);
+    if (shade.current) shade.current.style.opacity = String(Math.sin(p * Math.PI) * 0.55);
+    // And the sheet drops a shadow on the page it is uncovering, strongest
+    // while it stands upright.
+    if (cast.current) cast.current.style.opacity = String(Math.sin(p * Math.PI) * 0.9);
   }, []);
 
   const animate = useCallback(async (d: Dir, from: number) => {
@@ -79,6 +83,7 @@ export function useBook({ count, index, onSettle }: Opts) {
     onSettle(d === 'next' ? index + 1 : index - 1);
     setDir(null);
     if (shade.current) shade.current.style.opacity = '0';
+    if (cast.current) cast.current.style.opacity = '0';
     busy.current = false;
   }, [animate, canGo, index, onSettle, paint]);
 
@@ -86,6 +91,10 @@ export function useBook({ count, index, onSettle }: Opts) {
 
   const onPointerDown = useCallback((e: React.PointerEvent) => {
     if (busy.current || e.pointerType === 'mouse') return;
+    // A drag that starts on something you write or press belongs to that
+    // control, not to the book.
+    const t = e.target as HTMLElement | null;
+    if (t?.closest('textarea, input, button, a, [role="button"], video, audio')) return;
     start.current = { x: e.clientX, y: e.clientY, active: true, decided: false, horizontal: false };
   }, []);
 
@@ -136,6 +145,7 @@ export function useBook({ count, index, onSettle }: Opts) {
     }
     setDir(null);
     if (shade.current) shade.current.style.opacity = '0';
+    if (cast.current) cast.current.style.opacity = '0';
     busy.current = false;
   }, [animate, index, onSettle, snapBack]);
 
@@ -144,8 +154,11 @@ export function useBook({ count, index, onSettle }: Opts) {
     if (turning.current) turning.current.style.transform = '';
   }, [index]);
 
+  /** Which page the turn is heading towards, so it can be rendered underneath. */
+  const targetIndex = dir === 'next' ? index + 1 : dir === 'prev' ? index - 1 : null;
+
   return {
-    turning, shade, dir, dragging, go, canGo,
+    turning, shade, cast, dir, dragging, go, canGo, targetIndex,
     swipeHandlers: {
       onPointerDown, onPointerMove, onPointerUp, onPointerCancel: onPointerUp,
     },

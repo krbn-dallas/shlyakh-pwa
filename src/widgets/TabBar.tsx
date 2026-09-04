@@ -27,39 +27,29 @@ export function TabBar() {
   const sosActive = pathname === '/sos';
 
   return (
-    <nav
-      aria-label={t('nav.home')}
-      style={{
-        position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 'var(--z-sticky)',
-        background: 'color-mix(in srgb, var(--surface) 92%, transparent)',
-        backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-        borderTop: '1px solid var(--line)',
-        paddingBottom: 'env(safe-area-inset-bottom)',
-      }}
-    >
-      <div className="container" style={{
-        display: 'grid', gridTemplateColumns: '1fr 1fr 76px 1fr 1fr',
-        minHeight: 'var(--tabbar-h)', padding: 0, alignItems: 'center',
-      }}>
+    <nav className="tabbar" aria-label={t('nav.home')}>
+      <div className="tabbar-glass">
         {tabs.slice(0, 2).map((tab) => <TabLink key={tab.to} tab={tab} />)}
 
         {/* SOS lives in the middle so it is never more than one tap away. */}
         <NavLink
           to="/sos"
           aria-label="SOS"
+          className={sosActive ? undefined : 'sos-pulse'}
           style={{
-            justifySelf: 'center', width: 62, height: 62, borderRadius: '50%',
+            justifySelf: 'center', width: 58, height: 58, borderRadius: '50%',
             background: 'var(--red)', color: 'var(--on-red)',
             display: 'grid', placeItems: 'center', textDecoration: 'none',
-            marginTop: -26,
-            border: '4px solid var(--surface)',
-            boxShadow: sosActive ? '0 0 0 3px var(--gold)' : 'var(--shadow-lg)',
-            fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 12,
+            marginTop: -22,
+            border: '3px solid color-mix(in srgb, var(--surface) 80%, transparent)',
+            boxShadow: sosActive
+              ? '0 0 0 3px var(--gold), 0 8px 20px -4px rgb(193 39 45/.5)'
+              : '0 8px 20px -4px rgb(193 39 45/.5)',
+            fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 11.5,
             letterSpacing: '.05em',
           }}
-          className={sosActive ? undefined : 'sos-pulse'}
         >
-          <Icon name="shield-half" size={17} />
+          <Icon name="shield-half" size={16} />
           <span style={{ marginTop: -2 }}>SOS</span>
         </NavLink>
 

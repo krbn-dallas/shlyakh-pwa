@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useStore, PRIMARY_CITIES, type Theme } from '@/app/store';
 import { useT } from '@/shared/i18n';
 import { Icon } from '@/shared/ui/Icon';
+import { Flag } from '@/shared/ui/Flag';
 import { BrokenHeart } from '@/shared/ui/Logo';
 import { fetchRates } from '@/shared/lib/rates';
 import { getSpace, setSpace } from '@/shared/lib/diary';
@@ -209,7 +210,7 @@ export default function SettingsPage() {
           <div className="wrap">
             {primaries.map((c) => (
               <button key={c.id} className={`chip ${s.city === c.id ? 'active' : ''}`} onClick={() => s.setCity(c.id, true)}>
-                <span aria-hidden>{c.flag}</span> {tr(c.name, lang)}
+                <Flag code={c.country} size={13} /> {tr(c.name, lang)}
               </button>
             ))}
           </div>
@@ -226,9 +227,11 @@ export default function SettingsPage() {
             <Icon name={ratesBusy ? 'spinner' : 'rotate'} size={13} spin={ratesBusy} />
             {ratesMsg ?? t('settings.ratesRefresh')}
           </button>
-          {([['uah', '🇺🇦 UAH'], ['mdl', '🇲🇩 MDL'], ['mad', '🇲🇦 MAD']] as const).map(([k, label]) => (
+          {([['uah', 'ua', 'UAH'], ['mdl', 'md', 'MDL'], ['mad', 'ma', 'MAD']] as const).map(([k, cc, label]) => (
             <div key={k} className="row-between">
-              <span className="small" style={{ fontWeight: 700 }}>{label}</span>
+              <span className="row small" style={{ gap: 7, fontWeight: 700 }}>
+                <Flag code={cc} size={13} /> {label}
+              </span>
               <input className="input" type="number" step="0.1" min="0" style={{ maxWidth: 110, textAlign: 'right' }}
                 value={s.rates[k]} onChange={(e) => s.setRates({ [k]: Number(e.target.value) })} />
             </div>

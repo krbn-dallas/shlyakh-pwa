@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { useStore } from '@/app/store';
-import { useT } from '@/shared/i18n';
+import { useT, type TKey } from '@/shared/i18n';
 import { Icon } from '@/shared/ui/Icon';
 import { Spinner } from '@/shared/ui/Spinner';
 import { useData } from '@/shared/lib/data';
@@ -10,9 +10,48 @@ import { getEntry, mediaFor, setTaskDone, tripDays, upsertEntry } from '@/shared
 import { aiDayTasks, aiEveningQuestions, aiReflect, fallbackTasks, FALLBACK_QUESTIONS } from '@/shared/lib/ai';
 import { sfx } from '@/shared/lib/sound';
 import { MOODS, type DiaryEntry, type DiaryMedia } from '@/shared/model/diary';
+import type { ItinDay, Lang } from '@/shared/model/types';
 import { Capture } from './Capture';
 import { MediaStrip } from './MediaStrip';
 import { useBook } from './useBook';
+
+/** The paper itself: rules, spine and punch holes. */
+function PageChrome() {
+  return (
+    <>
+      <span className="page-lines" aria-hidden />
+      <span className="page-spine" aria-hidden />
+      <span className="page-holes" aria-hidden>{Array.from({ length: 8 }, (_, n) => <i key={n} />)}</span>
+    </>
+  );
+}
+
+/**
+ * A read-only sketch of the destination page. Enough to look like the real
+ * thing mid-turn without mounting a second set of live inputs.
+ */
+function PagePreview({ day, index, lang, itinerary, t }: {
+  day: string; index: number; lang: Lang;
+  itinerary: ItinDay[] | null; t: (k: TKey) => string;
+}) {
+  const date = parseDate(day);
+  const itinDay = itinerary?.[index];
+  return (
+    <div className="stack" style={{ gap: 'var(--s4)', position: 'relative' }}>
+      <div className="row-between">
+        <span className="badge badge-gold">
+          <Icon name="calendar" size={10} /> {fmtWeekday(date, lang)}, {fmtDate(date, lang)}
+        </span>
+        {itinDay && (
+          <span className="tiny muted truncate" style={{ maxWidth: 140 }}>{tr(itinDay.title, lang)}</span>
+        )}
+      </div>
+      <span className="tiny" style={{ fontWeight: 800, color: 'var(--gold-deep)' }}>{t('diary.plan')}</span>
+      <span className="hand muted" style={{ opacity: .45 }}>{t('diary.planPlaceholder')}</span>
+      <span className="tiny" style={{ fontWeight: 800, color: 'var(--gold-deep)' }}>{t('diary.tasks')}</span>
+    </div>
+  );
+}
 
 const PAGE_STYLE: CSSProperties = {
   gap: 'var(--s4)',
@@ -53,6 +92,7 @@ export default function DiaryPage() {
   const book = useBook({ count: days.length, index: i, onSettle: setI });
 
   const day = days[i];
+  const targetDay = book.targetIndex !== null ? days[book.targetIndex] : null;
   const cityName = cities?.find((c) => c.id === city);
   const save = useAutosave(day ?? todayIso, () => void reload());
 
@@ -156,23 +196,24 @@ export default function DiaryPage() {
       </div>
 
       <div className="book" {...book.swipeHandlers}>
-        {/* The sheet underneath is what you are turning towards. */}
-        {book.dir && (
-          <div className="page page-under" aria-hidden style={PAGE_STYLE}>
-            <span className="page-lines" />
-            <span className="page-spine" />
-            <span className="page-holes">{Array.from({ length: 8 }, (_, n) => <i key={n} />)}</span>
+        {/* The page you are turning towards, rendered for real — an empty sheet
+            under the fold was what made the turn look broken. */}
+        {book.dir !== null && targetDay && (
+          <div className="page page-under stack" aria-hidden style={PAGE_STYLE}>
+            <PageChrome />
+            <span className="page-cast" ref={book.cast} />
+            <PagePreview day={targetDay} index={book.targetIndex ?? 0} lang={lang} itinerary={itinerary} t={t} />
           </div>
         )}
 
         <div
           ref={book.turning}
-          className={`page stack ${book.dir ? 'page-turning' : ''}`}
+          className={`page stack page-face ${book.dir ? 'page-turning' : ''}`}
           style={{ ...PAGE_STYLE, transition: book.dragging ? 'none' : undefined }}
         >
-          <span className="page-lines" aria-hidden />
-          <span className="page-spine" aria-hidden />
-          <span className="page-holes" aria-hidden>{Array.from({ length: 8 }, (_, n) => <i key={n} />)}</span>
+          <PageChrome />
+          {/* Past 90° you see the reverse of the sheet, which is blank paper. */}
+          {book.dir !== null && <span className="page-back" aria-hidden />}
           <span className="page-shade" ref={book.shade} aria-hidden />
 
           <div className="row-between" style={{ position: 'relative' }}>

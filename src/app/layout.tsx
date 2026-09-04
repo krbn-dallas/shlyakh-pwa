@@ -49,8 +49,8 @@ export function AppLayout() {
         style={{
           flex: 1, width: '100%',
           display: 'flex', flexDirection: 'column',
-          paddingTop: 'var(--s4)',
-          paddingBottom: 'calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--s5))',
+          paddingTop: 'calc(var(--header-h) + env(safe-area-inset-top) + var(--s4))',
+          paddingBottom: 'calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--s6))',
         }}
       >
         <Outlet />

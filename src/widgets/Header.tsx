@@ -1,18 +1,22 @@
 import { Link } from 'react-router-dom';
 import { Logo, Wordmark } from '@/shared/ui/Logo';
 import { useT } from '@/shared/i18n';
-import { CitySwitcher } from './CitySwitcher';
-import { WeatherChip } from './WeatherChip';
+import { LocationChip } from './LocationChip';
 
 export function Header() {
   const { t } = useT();
   return (
+    // `fixed`, not `sticky`: on iOS a sticky element with a backdrop filter
+    // visibly lags and rubber-bands behind momentum scrolling. Fixed is pinned
+    // to the viewport and does not move at all.
     <header style={{
-      position: 'sticky', top: 0, zIndex: 'var(--z-sticky)',
-      background: 'color-mix(in srgb, var(--bg) 88%, transparent)',
-      backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-      borderBottom: '1px solid var(--line)',
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 'var(--z-sticky)',
+      background: 'color-mix(in srgb, var(--bg) 82%, transparent)',
+      backdropFilter: 'blur(20px) saturate(180%)',
+      WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+      borderBottom: '1px solid color-mix(in srgb, var(--line) 70%, transparent)',
       paddingTop: 'env(safe-area-inset-top)',
+      transform: 'translateZ(0)',
     }}>
       <div className="container row-between" style={{ minHeight: 'var(--header-h)', gap: 'var(--s2)' }}>
         <Link to="/" className="row" style={{ gap: 10, textDecoration: 'none', minWidth: 0 }}>
@@ -27,8 +31,7 @@ export function Header() {
         </Link>
 
         <div className="row" style={{ gap: 'var(--s2)', flex: '0 0 auto' }}>
-          <WeatherChip />
-          <CitySwitcher compact />
+          <LocationChip />
         </div>
       </div>
     </header>

@@ -16,7 +16,12 @@ export function OfflineBadge() {
 
   if (online) return null;
   return (
-    <div role="status" style={{ background: 'var(--gold-soft)', borderBottom: '1px solid var(--gold)' }}>
+    <div role="status" style={{
+      position: 'fixed', left: 0, right: 0,
+      top: 'calc(var(--header-h) + env(safe-area-inset-top))',
+      zIndex: 'calc(var(--z-sticky) - 1)',
+      background: 'var(--gold-soft)', borderBottom: '1px solid var(--gold)',
+    }}>
       <div className="container row" style={{ gap: 8, padding: '8px var(--s4)' }}>
         <Icon name="wifi" size={13} color="var(--gold-deep)" />
         <span className="tiny" style={{ color: 'var(--gold-deep)' }}>

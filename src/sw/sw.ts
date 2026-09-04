@@ -52,6 +52,7 @@ registerRoute(/\/media\/.*\.(mp4|webm)$/i, cacheFirst('app-media', 6, YEAR));
 registerRoute(/^https:\/\/(?:[a-c]\.)?tile\.openstreetmap\.org\/.*/i, cacheFirst('osm-tiles', 900, MONTH));
 // Diary photos, so pages you have already opened still show their pictures offline.
 registerRoute(/^https:\/\/res\.cloudinary\.com\/.*/i, cacheFirst('diary-media', 300, YEAR));
+registerRoute(/^https:\/\/flagcdn\.com\/.*/i, cacheFirst('flags', 40, YEAR));
 
 registerRoute(/^https:\/\/routing\.openstreetmap\.de\/.*/i, networkFirst('osrm-routes', 6, 80, WEEK));
 registerRoute(/^https:\/\/nominatim\.openstreetmap\.org\/.*/i, networkFirst('geocode', 8, 60, MONTH));

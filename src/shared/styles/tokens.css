@@ -25,7 +25,7 @@
 
   --tap:44px;
   --header-h:56px;
-  --tabbar-h:64px;
+  --tabbar-h:70px;   /* floating bar: 60px tall + 10px of air beneath */
 }
 
 [data-theme="dark"]{
