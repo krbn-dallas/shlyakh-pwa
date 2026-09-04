@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { useStore } from '@/app/store';
 import { useT } from '@/shared/i18n';
 import { Icon } from '@/shared/ui/Icon';
@@ -12,6 +12,12 @@ import { sfx } from '@/shared/lib/sound';
 import { MOODS, type DiaryEntry, type DiaryMedia } from '@/shared/model/diary';
 import { Capture } from './Capture';
 import { MediaStrip } from './MediaStrip';
+import { useBook } from './useBook';
+
+const PAGE_STYLE: CSSProperties = {
+  gap: 'var(--s4)',
+  padding: 'var(--s5) var(--s4) var(--s6) 46px',
+};
 
 /** Debounced auto-save so typing never blocks on IndexedDB. */
 function useAutosave(day: string, onSaved: () => void) {
@@ -43,8 +49,8 @@ export default function DiaryPage() {
   const [entry, setEntry] = useState<DiaryEntry | null>(null);
   const [media, setMedia] = useState<DiaryMedia[]>([]);
   const [busy, setBusy] = useState(false);
-  const [flip, setFlip] = useState<'next' | 'prev' | null>(null);
   const [tab, setTab] = useState<'morning' | 'evening'>('morning');
+  const book = useBook({ count: days.length, index: i, onSettle: setI });
 
   const day = days[i];
   const cityName = cities?.find((c) => c.id === city);
@@ -78,14 +84,6 @@ export default function DiaryPage() {
     })();
     return () => { alive = false; ctrl.abort(); };
   }, [day, entry?.prompts.length, lang, i, days.length]);
-
-  const turn = (dir: 'next' | 'prev') => {
-    const target = dir === 'next' ? i + 1 : i - 1;
-    if (target < 0 || target >= days.length) return;
-    sfx.pageTurn();
-    setFlip(dir);
-    window.setTimeout(() => { setI(target); setFlip(null); }, 320);
-  };
 
   const ensureEntry = async () => (await getEntry(day)) ?? (await upsertEntry(day, {}));
 
@@ -133,11 +131,16 @@ export default function DiaryPage() {
   const doneCount = entry?.prompts.filter((p) => p.done).length ?? 0;
 
   return (
-    <div className="stack" style={{ gap: 'var(--s3)' }}>
+    <div className="stack" style={{
+      // main is a flex column that already fills what the header and tab bar
+      // leave; growing into it beats computing a height and overshooting by
+      // main's own padding, which used to make the whole document scroll.
+      gap: 'var(--s3)', flex: 1, minHeight: 0,
+    }}>
       {/* page counter + turners */}
       <div className="row-between">
         <button className="btn btn-ghost" style={{ minWidth: 44, padding: 0 }}
-          onClick={() => turn('prev')} disabled={i === 0} aria-label={t('common.back')}>
+          onClick={() => void book.go('prev')} disabled={!book.canGo('prev')} aria-label={t('common.back')}>
           <Icon name="chevron-left" size={14} />
         </button>
         <span className="stack" style={{ alignItems: 'center', gap: 0 }}>
@@ -147,23 +150,30 @@ export default function DiaryPage() {
           </span>
         </span>
         <button className="btn btn-ghost" style={{ minWidth: 44, padding: 0 }}
-          onClick={() => turn('next')} disabled={i === days.length - 1} aria-label={t('common.next')}>
+          onClick={() => void book.go('next')} disabled={!book.canGo('next')} aria-label={t('common.next')}>
           <Icon name="chevron-right" size={14} />
         </button>
       </div>
 
-      <div className="book">
+      <div className="book" {...book.swipeHandlers}>
+        {/* The sheet underneath is what you are turning towards. */}
+        {book.dir && (
+          <div className="page page-under" aria-hidden style={PAGE_STYLE}>
+            <span className="page-lines" />
+            <span className="page-spine" />
+            <span className="page-holes">{Array.from({ length: 8 }, (_, n) => <i key={n} />)}</span>
+          </div>
+        )}
+
         <div
-          className="page stack"
-          style={{
-            gap: 'var(--s4)', padding: 'var(--s5) var(--s4) var(--s6) 42px',
-            minHeight: '52vh',
-            animation: flip ? `page-flip-${flip} .32s cubic-bezier(.4,0,.2,1) forwards` : undefined,
-          }}
+          ref={book.turning}
+          className={`page stack ${book.dir ? 'page-turning' : ''}`}
+          style={{ ...PAGE_STYLE, transition: book.dragging ? 'none' : undefined }}
         >
           <span className="page-lines" aria-hidden />
           <span className="page-spine" aria-hidden />
-          <span className="page-holes" aria-hidden>{Array.from({ length: 7 }, (_, n) => <i key={n} />)}</span>
+          <span className="page-holes" aria-hidden>{Array.from({ length: 8 }, (_, n) => <i key={n} />)}</span>
+          <span className="page-shade" ref={book.shade} aria-hidden />
 
           <div className="row-between" style={{ position: 'relative' }}>
             <span className="badge badge-gold">

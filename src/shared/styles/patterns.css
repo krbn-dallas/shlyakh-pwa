@@ -60,56 +60,76 @@
 /* ---------------- diary: a real book ---------------- */
 
 .book{
-  perspective:1800px;
-  perspective-origin:50% 45%;
+  position:relative;
+  perspective:2000px;
+  perspective-origin:0% 50%;
+  /* Fills whatever the header and tab bar leave behind. */
+  flex:1;
+  min-height:0;
 }
 
+/* The sheet that is currently readable. */
 .page{
-  position:relative;
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  overflow-y:auto; overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
   background:
     linear-gradient(105deg, rgb(0 0 0/.05) 0 2px, transparent 2px 14px),
     var(--paper, #FBF7EE);
   border:1px solid var(--line);
-  border-radius:4px 14px 14px 4px;
+  border-radius:3px 12px 12px 3px;
   box-shadow:
-    inset 14px 0 22px -18px rgb(60 40 20/.55),
+    inset 16px 0 26px -20px rgb(60 40 20/.6),
     var(--shadow);
+  transform-origin:left center;
   transform-style:preserve-3d;
   backface-visibility:hidden;
-  transform-origin:left center;
+  will-change:transform;
 }
 [data-theme="dark"] .page{ --paper:#231C16 }
 
-/* the ruled sheet */
+/* The sheet being turned sits above and casts onto the one underneath. */
+.page-turning{ z-index:3 }
+.page-under{ z-index:1 }
+
+/* Shading that deepens as the sheet lifts — this is what sells the fold. */
+.page-shade{
+  position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(90deg, rgb(0 0 0/.55) 0%, rgb(0 0 0/.12) 22%, rgb(0 0 0/0) 55%);
+  opacity:0;
+}
+
+/* Ruled sheet. */
 .page-lines{
   position:absolute; inset:0; pointer-events:none; border-radius:inherit;
   background-image:repeating-linear-gradient(
-    to bottom, transparent 0 27px, color-mix(in srgb, var(--gold) 22%, transparent) 27px 28px);
-  opacity:.5;
-  -webkit-mask-image:linear-gradient(to bottom, transparent 0 78px, #000 78px);
-          mask-image:linear-gradient(to bottom, transparent 0 78px, #000 78px);
+    to bottom, transparent 0 31px, color-mix(in srgb, var(--gold) 26%, transparent) 31px 32px);
+  opacity:.45;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0 96px, #000 96px);
+          mask-image:linear-gradient(to bottom, transparent 0 96px, #000 96px);
 }
 
-/* the binding edge */
+/* Binding edge. */
 .page-spine{
-  position:absolute; left:0; top:0; bottom:0; width:26px; border-radius:4px 0 0 4px;
+  position:absolute; left:0; top:0; bottom:0; width:30px; border-radius:3px 0 0 3px;
   background:linear-gradient(90deg,
-    color-mix(in srgb, var(--gold-deep) 28%, transparent) 0%,
-    transparent 70%);
+    color-mix(in srgb, var(--gold-deep) 30%, transparent) 0%,
+    transparent 72%);
   pointer-events:none;
 }
 .page-holes{
-  position:absolute; left:9px; top:0; bottom:0; width:8px;
-  display:flex; flex-direction:column; justify-content:space-evenly; padding:34px 0;
+  position:absolute; left:10px; top:0; bottom:0; width:9px;
+  display:flex; flex-direction:column; justify-content:space-evenly; padding:40px 0;
   pointer-events:none;
 }
 .page-holes i{
-  width:8px; height:8px; border-radius:50%;
-  background:color-mix(in srgb, var(--ink) 16%, transparent);
+  width:9px; height:9px; border-radius:50%;
+  background:color-mix(in srgb, var(--ink) 18%, transparent);
   box-shadow:inset 0 1px 1px rgb(0 0 0/.35);
 }
 
-/* photos taped onto the page */
+/* Photos taped onto the page. */
 .taped{ position:relative; background:#fff; padding:8px 8px 30px; border-radius:2px;
   box-shadow:0 6px 14px rgb(40 28 16/.22); }
 [data-theme="dark"] .taped{ background:#EFE7DA }
@@ -123,19 +143,22 @@
 .taped::after{ right:-14px; transform:rotate(28deg) }
 .taped img, .taped video{ display:block; width:100%; border-radius:1px }
 .taped figcaption{
-  position:absolute; left:0; right:0; bottom:6px; text-align:center;
-  font-family:var(--font-ar); font-size:12px; color:#4a3d2f;
+  position:absolute; left:0; right:0; bottom:5px; text-align:center;
+  font-family:var(--font-hand); font-size:15px; color:#4a3d2f;
 }
 
-/* handwriting-ish field that still reads cleanly */
+/* Handwriting, sitting on the ruled lines. */
 .ink{
   width:100%; border:0; background:transparent; resize:none; outline:none;
-  font-family:var(--font-body); font-size:16px; line-height:28px;
+  font-family:var(--font-hand);
+  font-size:23px; line-height:32px; letter-spacing:.01em;
   color:var(--ink); padding:0;
 }
-.ink::placeholder{ color:color-mix(in srgb, var(--ink) 34%, transparent); font-style:italic }
+[data-theme="dark"] .ink{ color:#EBDFCB }
+.ink::placeholder{ color:color-mix(in srgb, var(--ink) 32%, transparent) }
+.hand{ font-family:var(--font-hand); font-size:21px; line-height:30px }
 
-/* cassette-player look for audio notes */
+/* Cassette-player look for audio notes. */
 .cassette{
   background:linear-gradient(180deg, var(--surface-2), var(--surface-3));
   border:1px solid var(--line); border-radius:8px; padding:10px 12px;
@@ -146,12 +169,3 @@
   border-top-color:var(--gold); position:relative;
 }
 .reel.spin{ animation:spin 1.4s linear infinite }
-
-@keyframes page-flip-next{
-  from{ transform:rotateY(0deg) }
-  to{ transform:rotateY(-165deg) }
-}
-@keyframes page-flip-prev{
-  from{ transform:rotateY(165deg) }
-  to{ transform:rotateY(0deg) }
-}

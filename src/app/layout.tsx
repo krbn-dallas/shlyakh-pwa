@@ -48,8 +48,9 @@ export function AppLayout() {
         className="container"
         style={{
           flex: 1, width: '100%',
+          display: 'flex', flexDirection: 'column',
           paddingTop: 'var(--s4)',
-          paddingBottom: 'calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--s8))',
+          paddingBottom: 'calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--s5))',
         }}
       >
         <Outlet />
