@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStore, PRIMARY_CITIES, type Theme } from '@/app/store';
 import { useT } from '@/shared/i18n';
@@ -8,6 +8,10 @@ import { fetchRates } from '@/shared/lib/rates';
 import { getSpace, setSpace } from '@/shared/lib/diary';
 import { syncDiary } from '@/shared/lib/sync';
 import { setSoundEnabled, soundEnabled, sfx } from '@/shared/lib/sound';
+import {
+  isPushSubscribed, pushConfigured, pushPermission, pushSupported,
+  subscribePush, unsubscribePush,
+} from '@/shared/lib/push';
 import { PageHeader } from '@/shared/ui/PageHeader';
 import { Section } from '@/shared/ui/Section';
 import { useData } from '@/shared/lib/data';
@@ -51,6 +55,30 @@ export default function SettingsPage() {
   const [joinCode, setJoinCode] = useState('');
   const [syncState, setSyncState] = useState<'idle' | 'busy' | 'ok' | 'fail'>('idle');
   const [copiedSpace, setCopiedSpace] = useState(false);
+  const [push, setPush] = useState<'off' | 'on' | 'busy' | 'blocked'>('off');
+  const [hours, setHours] = useState({ morning: 8, evening: 21 });
+
+  useEffect(() => {
+    if (!pushSupported()) return;
+    if (pushPermission() === 'denied') { setPush('blocked'); return; }
+    void isPushSubscribed().then((on) => setPush(on ? 'on' : 'off'));
+  }, []);
+
+  /** The server upserts by endpoint, so re-sending is how hours get saved. */
+  const savePush = async (h = hours) => {
+    const ok = await subscribePush({
+      lang: s.lang, city: s.city, departure: s.departure, ret: s.ret,
+      morningHour: h.morning, eveningHour: h.evening,
+    });
+    if (ok) { setPush('on'); sfx.saved(); }
+    else setPush(pushPermission() === 'denied' ? 'blocked' : 'off');
+  };
+
+  const togglePush = async () => {
+    if (push === 'on') { setPush('busy'); await unsubscribePush(); setPush('off'); return; }
+    setPush('busy');
+    await savePush();
+  };
 
   const runSync = async () => {
     setSyncState('busy');
@@ -247,6 +275,44 @@ export default function SettingsPage() {
           </button>
         </div>
       </Section>
+
+      {pushConfigured() && pushSupported() && (
+        <Section icon="bell" title={t('push.title')} note={t('push.note')}>
+          <div className="card stack" style={{ gap: 'var(--s3)' }}>
+            {push === 'blocked' ? (
+              <span className="row small" style={{ gap: 8, color: 'var(--warn)' }}>
+                <Icon name="warn" size={13} /> {t('push.blocked')}
+              </span>
+            ) : (
+              <button className={`btn ${push === 'on' ? 'btn-gold' : ''}`}
+                onClick={() => void togglePush()} disabled={push === 'busy'}>
+                <Icon name={push === 'busy' ? 'spinner' : push === 'on' ? 'check' : 'bell'}
+                  size={13} spin={push === 'busy'} />
+                {push === 'on' ? t('push.on') : t('push.enable')}
+              </button>
+            )}
+
+            {push === 'on' && (
+              <div className="row-between">
+                <label className="stack tiny" style={{ gap: 4 }}>
+                  <span className="muted" style={{ fontWeight: 700 }}>{t('push.morning')}</span>
+                  <input className="input" type="number" min={5} max={12} style={{ maxWidth: 90 }}
+                    value={hours.morning}
+                    onChange={(e) => setHours((h) => ({ ...h, morning: Number(e.target.value) }))}
+                    onBlur={() => void savePush()} />
+                </label>
+                <label className="stack tiny" style={{ gap: 4 }}>
+                  <span className="muted" style={{ fontWeight: 700 }}>{t('push.evening')}</span>
+                  <input className="input" type="number" min={17} max={23} style={{ maxWidth: 90 }}
+                    value={hours.evening}
+                    onChange={(e) => setHours((h) => ({ ...h, evening: Number(e.target.value) }))}
+                    onBlur={() => void savePush()} />
+                </label>
+              </div>
+            )}
+          </div>
+        </Section>
+      )}
 
       <Section icon="bell" title={t('diary.sound')}>
         <button className={`chip ${sound ? 'active' : ''}`} style={{ alignSelf: 'flex-start' }}

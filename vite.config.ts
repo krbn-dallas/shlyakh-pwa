@@ -3,8 +3,6 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const YEAR = 365 * 24 * 60 * 60
-
 export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
@@ -22,6 +20,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'prompt',
+      strategies: 'injectManifest',
+      srcDir: 'src/sw',
+      filename: 'sw.ts',
       includeAssets: ['favicon.svg', 'icons/*.png', 'illustrations/*'],
       manifest: {
         name: 'ШЛЯХ — Київ · Chișinău · Марракеш',
@@ -45,99 +46,9 @@ export default defineConfig({
           { name: 'Розмовник', short_name: 'Розмовник', url: '/phrases', icons: [{ src: 'icons/icon-192.png', sizes: '192x192' }] },
         ],
       },
-      workbox: {
-        // Fonts and hero video are runtime-cached instead of precached — keeps the
-        // install payload small while still working offline after the first load.
+      injectManifest: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,json}'],
-        navigateFallback: '/index.html',
-        navigateFallbackDenylist: [/^\/data\//, /^\/fonts\//, /^\/media\//],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
-        cleanupOutdatedCaches: true,
-        runtimeCaching: [
-          {
-            urlPattern: /\/fonts\/.*\.woff2$/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'app-fonts',
-              expiration: { maxEntries: 40, maxAgeSeconds: YEAR },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /\/media\/.*\.(mp4|webm)$/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'app-media',
-              rangeRequests: true,
-              expiration: { maxEntries: 6, maxAgeSeconds: YEAR },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/(?:[a-c]\.)?tile\.openstreetmap\.org\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'osm-tiles',
-              expiration: { maxEntries: 900, maxAgeSeconds: 30 * 24 * 60 * 60 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/routing\.openstreetmap\.de\/.*/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'osrm-routes',
-              networkTimeoutSeconds: 6,
-              expiration: { maxEntries: 80, maxAgeSeconds: 7 * 24 * 60 * 60 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/nominatim\.openstreetmap\.org\/.*/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'geocode',
-              networkTimeoutSeconds: 8,
-              expiration: { maxEntries: 60, maxAgeSeconds: 30 * 24 * 60 * 60 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/open\.er-api\.com\/.*/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'rates',
-              networkTimeoutSeconds: 5,
-              expiration: { maxEntries: 4, maxAgeSeconds: 24 * 60 * 60 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/overpass-api\.de\/.*/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'overpass',
-              networkTimeoutSeconds: 12,
-              expiration: { maxEntries: 40, maxAgeSeconds: 7 * 24 * 60 * 60 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/api\.open-meteo\.com\/.*/i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'weather',
-              networkTimeoutSeconds: 5,
-              expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-          {
-            urlPattern: /\/data\/.*\.json$/i,
-            handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'app-data', expiration: { maxEntries: 40, maxAgeSeconds: 30 * 24 * 60 * 60 } },
-          },
-        ],
       },
       devOptions: { enabled: false, navigateFallback: 'index.html' },
     }),

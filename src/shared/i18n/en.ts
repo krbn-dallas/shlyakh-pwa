@@ -227,5 +227,13 @@ export const en: Dict = {
     sound: 'Sounds', offlineAi: 'Prompts appear once you are online',
   },
 
+  push: {
+    title: 'Reminders',
+    note: 'Quests in the morning, a nudge to write the day down in the evening.',
+    enable: 'Turn reminders on', on: 'Reminders are on',
+    blocked: 'Notifications are blocked in your phone settings',
+    morning: 'Morning, h', evening: 'Evening, h',
+  },
+
   cityName: { kyiv: 'Kyiv', chisinau: 'Chișinău', marrakech: 'Marrakesh' },
 };
