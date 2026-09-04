@@ -15,6 +15,9 @@ async function ask<T>(payload: Record<string, unknown>, signal?: AbortSignal): P
       body: JSON.stringify(payload),
       signal,
     });
+    // 202 means the model is still working. The caller shows its own prompts;
+    // this quietly checks back so the page fills in without a refresh.
+    if (res.status === 202) return null;
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {
@@ -22,21 +25,37 @@ async function ask<T>(payload: Record<string, unknown>, signal?: AbortSignal): P
   }
 }
 
+/**
+ * Asks, and if the answer is still being generated, checks back a few times.
+ * Resolves null rather than throwing so a page is never blocked on the model.
+ */
+async function askWithRetry<T>(
+  payload: Record<string, unknown>, signal?: AbortSignal, tries = 4, gapMs = 9000,
+): Promise<T | null> {
+  for (let i = 0; i < tries; i++) {
+    const r = await ask<T>(payload, signal);
+    if (r) return r;
+    if (signal?.aborted || !navigator.onLine) return null;
+    if (i < tries - 1) await new Promise((res) => setTimeout(res, gapMs));
+  }
+  return null;
+}
+
 export const aiDayTasks = (
-  ctx: { lang: Lang; city: string; dayNumber: number; totalDays: number; weather?: string },
+  ctx: { lang: Lang; city: string; day?: string; dayNumber: number; totalDays: number; weather?: string },
   signal?: AbortSignal,
-) => ask<{ tasks: DayTask[] }>({ kind: 'dayTasks', ...ctx }, signal).then((r) => r?.tasks ?? null);
+) => askWithRetry<{ tasks: DayTask[] }>({ kind: 'dayTasks', ...ctx }, signal).then((r) => r?.tasks ?? null);
 
 export const aiEveningQuestions = (
-  ctx: { lang: Lang; city: string; planned?: string },
+  ctx: { lang: Lang; city: string; day?: string; planned?: string },
   signal?: AbortSignal,
-) => ask<{ questions: string[] }>({ kind: 'eveningQuestions', ...ctx }, signal).then((r) => r?.questions ?? null);
+) => askWithRetry<{ questions: string[] }>({ kind: 'eveningQuestions', ...ctx }, signal).then((r) => r?.questions ?? null);
 
-export const aiFact = (ctx: { lang: Lang; city: string }, signal?: AbortSignal) =>
-  ask<{ fact: string }>({ kind: 'fact', ...ctx }, signal).then((r) => r?.fact ?? null);
+export const aiFact = (ctx: { lang: Lang; city: string; day?: string }, signal?: AbortSignal) =>
+  askWithRetry<{ fact: string }>({ kind: 'fact', ...ctx }, signal).then((r) => r?.fact ?? null);
 
 export const aiReflect = (ctx: { lang: Lang; notes: string }, signal?: AbortSignal) =>
-  ask<{ summary: string }>({ kind: 'reflect', ...ctx }, signal).then((r) => r?.summary ?? null);
+  askWithRetry<{ summary: string }>({ kind: 'reflect', ...ctx }, signal, 5, 4000).then((r) => r?.summary ?? null);
 
 /**
  * Offline stand-ins so a page is never empty. Deliberately gentle and easy —

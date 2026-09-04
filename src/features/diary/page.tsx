@@ -114,8 +114,8 @@ export default function DiaryPage() {
     setBusy(true);
     void (async () => {
       const tasks = await aiDayTasks({
-        lang, city: cityName ? tr(cityName.name, lang) : 'Marrakesh',
-        dayNumber: i + 1, totalDays: days.length,
+        lang, city: cityName ? tr(cityName.name, lang) : 'Morocco',
+        day, dayNumber: i + 1, totalDays: days.length,
       }, ctrl.signal);
       if (!alive) return;
       await upsertEntry(day, { prompts: tasks ?? fallbackTasks(lang, i + 1) });
@@ -132,7 +132,7 @@ export default function DiaryPage() {
     if (e.questions?.length) return;
     setBusy(true);
     const qs = await aiEveningQuestions({
-      lang, city: cityName ? tr(cityName.name, lang) : '', planned: e.morningPlan,
+      lang, city: cityName ? tr(cityName.name, lang) : '', day, planned: e.morningPlan,
     });
     await upsertEntry(day, { questions: qs ?? FALLBACK_QUESTIONS[lang] });
     await reload();
