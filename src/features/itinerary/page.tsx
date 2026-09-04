@@ -1,53 +1,116 @@
-import { usePageEnter } from '../../shared/lib/usePageEnter';
-import { useEffect, useState } from 'react';
-import { useStore } from '../../app/store';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useStore } from '@/app/store';
+import { useT } from '@/shared/i18n';
+import { Icon, type IconName } from '@/shared/ui/Icon';
+import { PageHeader } from '@/shared/ui/PageHeader';
+import { Spinner } from '@/shared/ui/Spinner';
+import { useData } from '@/shared/lib/data';
+import { tr } from '@/shared/lib/l10n';
+import { addDays, fmtDate, fmtWeekday, tripPosition } from '@/shared/lib/trip';
+import { useMotion } from '@/shared/lib/usePageEnter';
+import type { BlockType } from '@/shared/model/types';
 
-const typeIcon:Record<string,string>={move:'→',sight:'◈',food:'☕',stay:'⌂',shop:'♦',rest:'○'};
+const BLOCK_ICON: Record<BlockType, IconName> = {
+  move: 'plane', sight: 'museum', food: 'food', stay: 'bed',
+  shop: 'bag', rest: 'cafe', tour: 'mountain',
+};
 
-export function ItineraryPage(){
-  const ref=usePageEnter() as any;
-  const [days,setDays]=useState<any[]>([]);
-  const [active,setActive]=useState(0);
-  const {departure}=useStore();
-  useEffect(()=>{ fetch('/data/itinerary.json').then(r=>r.json()).then(d=>{setDays(d); const start=new Date(departure); const idx=Math.max(0,Math.min(d.length-1,Math.floor((Date.now()-start.getTime())/86400000))); setActive(idx); });},[departure]);
-  if(!days.length) return <div ref={ref}>Завантаження...</div>;
-  const day=days[active];
-  const date=new Date(departure); date.setDate(date.getDate()+active);
+export default function ItineraryPage() {
+  const { t, lang } = useT();
+  const departure = useStore((s) => s.departure);
+  const ret = useStore((s) => s.ret);
+  const { data: days, loading } = useData('itinerary');
+  const [sel, setSel] = useState<number | null>(null);
+  const chipsRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  const pos = tripPosition(departure, ret, days?.length ?? 6);
+  const active = sel ?? pos.dayIndex ?? 0;
+
+  // Scroll the current day's chip into view on first paint.
+  useEffect(() => {
+    if (!days) return;
+    chipsRef.current?.children[active]?.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }, [days, active]);
+
+  // Redrawn whenever the selected day changes.
+  useMotion(timelineRef, 'drawTimeline', [active, days]);
+
+  if (loading || !days) return <Spinner label={t('common.loading')} />;
+  const day = days[active];
+
   return (
-    <div>
-      <h2 style={{marginBottom:12}}>Маршрут</h2>
-      <div style={{display:'flex',gap:8,overflowX:'auto',paddingBottom:8,scrollSnapType:'x mandatory'}}>
-        {days.map((d,i)=>(
-          <button key={d.id} className={`chip ${i===active?'active':''}`} style={{scrollSnapAlign:'start',whiteSpace:'nowrap'}} onClick={()=>setActive(i)}>
-            D{i+1} • {date.toLocaleDateString('uk-UA',{day:'2-digit',month:'2-digit'})}
-          </button>
-        ))}
-      </div>
-      <div className="card" style={{marginTop:12}}>
-        <div className="small muted">{date.toLocaleDateString('uk-UA',{weekday:'long', day:'numeric', month:'long'})}</div>
-        <h3>{day.title?.uk || day.title}</h3>
-        {day.stay && <div className="small" style={{background:'var(--surface-2)',padding:'6px 10px',borderRadius:8,marginTop:6}}>Ночівля: {day.stay}</div>}
+    <div className="stack" style={{ gap: 'var(--s4)' }}>
+      <PageHeader title={t('itin.title')} />
+
+      <div className="scroll-x" ref={chipsRef}>
+        {days.map((d, i) => {
+          const date = departure ? addDays(departure, i) : null;
+          const isToday = pos.dayIndex === i;
+          return (
+            <button key={d.id} className={`chip ${i === active ? 'active' : ''}`} onClick={() => setSel(i)}
+              style={{ flexDirection: 'column', gap: 1, minHeight: 52, paddingTop: 6, paddingBottom: 6 }}>
+              <span style={{ fontSize: 13 }}>
+                {t('itin.day')} {i + 1}
+                {isToday && <span style={{ color: i === active ? 'var(--gold)' : 'var(--red)' }}> ·</span>}
+              </span>
+              {date && (
+                <span className="tiny" style={{ opacity: .75, fontWeight: 600 }}>
+                  {fmtDate(date, lang, { day: 'numeric', month: 'short' })}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
-      <div style={{position:'relative',marginTop:16,paddingLeft:24}}>
-        <div style={{position:'absolute',left:9,top:8,bottom:8,width:0,borderLeft:'2px dashed var(--gold)'}}/>
-        <div style={{display:'flex',flexDirection:'column',gap:12}}>
-          {day.blocks.map((b:any,i:number)=>(
-            <div key={i} className="card" style={{position:'relative',padding:12}}>
-              <div style={{position:'absolute',left:-24,top:16,width:12,height:12,borderRadius:'50%',background:'var(--red)',border:'2px solid var(--bg)'}}/>
-              <div style={{display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}>
-                <span style={{fontWeight:800,color:'var(--gold)',fontFamily:'var(--font-display)'}}>{b.t}</span>
-                <span style={{background:'var(--surface-2)',padding:'2px 8px',borderRadius:999,fontSize:11}}>{typeIcon[b.type]||'•'} {b.type}</span>
-                {b.cost && <span style={{fontSize:11,background:'var(--gold)',color:'var(--on-gold)',padding:'2px 8px',borderRadius:999}}>{b.cost}</span>}
+      <div className="stack fade-up" key={day.id} ref={timelineRef} style={{ gap: 'var(--s4)' }}>
+        <div className="stack" style={{ gap: 6 }}>
+          <div className="row" style={{ gap: 'var(--s2)' }}>
+            {departure && (
+              <span className="badge badge-gold">
+                <Icon name="calendar" size={10} />
+                {fmtWeekday(addDays(departure, active), lang)}, {fmtDate(addDays(departure, active), lang)}
+              </span>
+            )}
+            {pos.dayIndex === active && <span className="badge badge-red">{t('common.today')}</span>}
+          </div>
+          <h2>{tr(day.title, lang)}</h2>
+          {day.summary && <p className="small muted" style={{ margin: 0 }}>{tr(day.summary, lang)}</p>}
+        </div>
+
+        <div className="dashed-gold stack" data-stagger style={{ gap: 'var(--s3)', position: 'relative' }}>
+          {day.blocks.map((b, i) => (
+            <div key={`${b.t}-${i}`} className="card stack" style={{ gap: 8, position: 'relative' }}>
+              <span className="timeline-pin" aria-hidden />
+              <div className="row-between">
+                <span className="row" style={{ gap: 8 }}>
+                  <span className="num small" style={{ fontWeight: 800, color: 'var(--red)' }}>{b.t}</span>
+                  <span className="badge badge-gold">
+                    <Icon name={BLOCK_ICON[b.type]} size={10} /> {t(`itin.types.${b.type}` as const)}
+                  </span>
+                </span>
+                {b.cost && <span className="tiny muted">{tr(b.cost, lang)}</span>}
               </div>
-              <div style={{fontWeight:700,marginTop:6}}>{b.title}</div>
-              {b.detail && <div className="small muted">{b.detail}</div>}
+              <span style={{ fontWeight: 700, lineHeight: 1.35 }}>{tr(b.title, lang)}</span>
+              {b.detail && <span className="small muted">{tr(b.detail, lang)}</span>}
+              {b.poi && (
+                <Link to={`/map?poi=${b.poi}`} className="chip" style={{ alignSelf: 'flex-start' }}>
+                  <Icon name="map" size={11} /> {t('common.onMap')}
+                </Link>
+              )}
             </div>
           ))}
         </div>
+
+        {day.stay && (
+          <div className="card-flat row" style={{ gap: 'var(--s3)' }}>
+            <Icon name="bed" size={17} color="var(--gold-deep)" />
+            <span className="grow small"><b>{t('itin.stay')}</b> — {day.stay}</span>
+          </div>
+        )}
       </div>
-      <Link to="/map" className="btn btn-gold" style={{marginTop:16,width:'100%'}}>Показати на карті</Link>
     </div>
   );
 }

@@ -1,14 +1,1212 @@
 [
-  {"uk":"Привіт!","ru":"Привет!","fr":"Bonjour !","ar":"مرحبا!","ro":"Bună!"},
-  {"uk":"Скільки коштує?","ru":"Сколько стоит?","fr":"Combien ça coûte ?","ar":"بكم؟","ro":"Cât costă?"},
-  {"uk":"Дякую","ru":"Спасибо","fr":"Merci","ar":"شكرا","ro":"Mulțumesc"},
-  {"uk":"Де туалет?","ru":"Где туалет?","fr":"Où sont les toilettes ?","ar":"أين الحمام؟","ro":"Unde este toaleta?"},
-  {"uk":"Викличте таксі","ru":"Вызовите такси","fr":"Appelez un taxi","ar":"اتصل بسيارة أجرة","ro":"Chemați un taxi"},
-  {"uk":"Я загубився","ru":"Я заблудился","fr":"Je suis perdu","ar":"أنا ضائع","ro":"M-am rătăcit"},
-  {"uk":"Допоможіть!","ru":"Помогите!","fr":"Au secours !","ar":"النجدة!","ro":"Ajutor!"},
-  {"uk":"Вода, будь ласка","ru":"Воды, пожалуйста","fr":"De l'eau, svp","ar":"ماء من فضلك","ro":"Apă, vă rog"},
-  {"uk":"Без гострого","ru":"Без острого","fr":"Pas épicé","ar":"بدون حار","ro":"Fără picant"},
-  {"uk":"До готелю, будь ласка","ru":"До отеля, пожалуйста","fr":"À l'hôtel, svp","ar":"إلى الفندق من فضلك","ro":"La hotel, vă rog"},
-  {"uk":"Скільки до ...?","ru":"Сколько до ...?","fr":"Combien jusqu'à ... ?","ar":"كم المسافة إلى...؟","ro":"Cât până la ...?"},
-  {"uk":"Ні, дякую","ru":"Нет, спасибо","fr":"Non merci","ar":"لا شكرا","ro":"Nu, mulțumesc"}
+ {
+  "id": "b1",
+  "cat": "basics",
+  "uk": "Привіт",
+  "en": "Hello",
+  "fr": "Bonjour",
+  "ar": "السلام عليكم",
+  "ar_lat": "s-salamu ʿalaykum",
+  "ro": "Bună ziua"
+ },
+ {
+  "id": "b2",
+  "cat": "basics",
+  "uk": "Доброго ранку",
+  "en": "Good morning",
+  "fr": "Bonjour",
+  "ar": "صباح الخير",
+  "ar_lat": "sbah l-khir",
+  "ro": "Bună dimineața"
+ },
+ {
+  "id": "b3",
+  "cat": "basics",
+  "uk": "Добрий вечір",
+  "en": "Good evening",
+  "fr": "Bonsoir",
+  "ar": "مساء الخير",
+  "ar_lat": "msa l-khir",
+  "ro": "Bună seara"
+ },
+ {
+  "id": "b4",
+  "cat": "basics",
+  "uk": "До побачення",
+  "en": "Goodbye",
+  "fr": "Au revoir",
+  "ar": "بسلامة",
+  "ar_lat": "bslama",
+  "ro": "La revedere"
+ },
+ {
+  "id": "b5",
+  "cat": "basics",
+  "uk": "Так",
+  "en": "Yes",
+  "fr": "Oui",
+  "ar": "نعم",
+  "ar_lat": "naʿam / iyeh",
+  "ro": "Da"
+ },
+ {
+  "id": "b6",
+  "cat": "basics",
+  "uk": "Ні",
+  "en": "No",
+  "fr": "Non",
+  "ar": "لا",
+  "ar_lat": "la",
+  "ro": "Nu"
+ },
+ {
+  "id": "b7",
+  "cat": "basics",
+  "uk": "Я не розумію",
+  "en": "I do not understand",
+  "fr": "Je ne comprends pas",
+  "ar": "ما فهمتش",
+  "ar_lat": "ma fhemtch",
+  "ro": "Nu înțeleg"
+ },
+ {
+  "id": "b8",
+  "cat": "basics",
+  "uk": "Ви говорите англійською?",
+  "en": "Do you speak English?",
+  "fr": "Parlez-vous anglais ?",
+  "ar": "واش كتهضر بالإنجليزية؟",
+  "ar_lat": "wach kathder b-l-ingliziya?",
+  "ro": "Vorbiți engleză?"
+ },
+ {
+  "id": "b9",
+  "cat": "basics",
+  "uk": "Я з України",
+  "en": "I am from Ukraine",
+  "fr": "Je viens d'Ukraine",
+  "ar": "أنا من أوكرانيا",
+  "ar_lat": "ana men Ukranya",
+  "ro": "Sunt din Ucraina"
+ },
+ {
+  "id": "b10",
+  "cat": "basics",
+  "uk": "Повторіть, будь ласка, повільніше",
+  "en": "Please repeat, more slowly",
+  "fr": "Répétez plus lentement, s'il vous plaît",
+  "ar": "عاود بشوية عافاك",
+  "ar_lat": "ʿawed b-chwiya ʿafak",
+  "ro": "Repetați mai rar, vă rog"
+ },
+ {
+  "id": "b11",
+  "cat": "basics",
+  "uk": "Як вас звати?",
+  "en": "What is your name?",
+  "fr": "Comment vous appelez-vous ?",
+  "ar": "شنو سميتك؟",
+  "ar_lat": "chnu smitek?",
+  "ro": "Cum vă numiți?"
+ },
+ {
+  "id": "b12",
+  "cat": "basics",
+  "uk": "Мене звати…",
+  "en": "My name is…",
+  "fr": "Je m'appelle…",
+  "ar": "سميتي…",
+  "ar_lat": "smiti…",
+  "ro": "Mă numesc…"
+ },
+ {
+  "id": "p1",
+  "cat": "polite",
+  "uk": "Будь ласка",
+  "en": "Please",
+  "fr": "S'il vous plaît",
+  "ar": "عافاك",
+  "ar_lat": "ʿafak",
+  "ro": "Vă rog"
+ },
+ {
+  "id": "p2",
+  "cat": "polite",
+  "uk": "Дякую",
+  "en": "Thank you",
+  "fr": "Merci",
+  "ar": "شكرا",
+  "ar_lat": "chukran",
+  "ro": "Mulțumesc"
+ },
+ {
+  "id": "p3",
+  "cat": "polite",
+  "uk": "Дуже дякую",
+  "en": "Thank you very much",
+  "fr": "Merci beaucoup",
+  "ar": "شكرا بزاف",
+  "ar_lat": "chukran bezzaf",
+  "ro": "Mulțumesc mult"
+ },
+ {
+  "id": "p4",
+  "cat": "polite",
+  "uk": "Вибачте",
+  "en": "Excuse me / sorry",
+  "fr": "Pardon",
+  "ar": "سمح ليا",
+  "ar_lat": "smeh liya",
+  "ro": "Scuzați-mă"
+ },
+ {
+  "id": "p5",
+  "cat": "polite",
+  "uk": "Нічого страшного",
+  "en": "No problem",
+  "fr": "Pas de problème",
+  "ar": "ماكاين مشكل",
+  "ar_lat": "makayn mushkil",
+  "ro": "Nicio problemă"
+ },
+ {
+  "id": "p6",
+  "cat": "polite",
+  "uk": "Дуже приємно",
+  "en": "Pleased to meet you",
+  "fr": "Enchanté",
+  "ar": "متشرفين",
+  "ar_lat": "mutcharrfin",
+  "ro": "Îmi pare bine"
+ },
+ {
+  "id": "p7",
+  "cat": "polite",
+  "uk": "Дуже смачно, дякую",
+  "en": "It is delicious, thank you",
+  "fr": "C'est délicieux, merci",
+  "ar": "بنين بزاف، شكرا",
+  "ar_lat": "bnin bezzaf, chukran",
+  "ro": "Este delicios, mulțumesc"
+ },
+ {
+  "id": "p8",
+  "cat": "polite",
+  "uk": "З вашого дозволу",
+  "en": "With your permission",
+  "fr": "Avec votre permission",
+  "ar": "بإذنك",
+  "ar_lat": "b-idnek",
+  "ro": "Cu permisiunea dvs."
+ },
+ {
+  "id": "t1",
+  "cat": "taxi",
+  "uk": "Увімкніть лічильник, будь ласка",
+  "en": "Turn on the meter, please",
+  "fr": "Mettez le compteur, s'il vous plaît",
+  "ar": "خدم الكونتور عافاك",
+  "ar_lat": "khdem l-kontor ʿafak",
+  "ro": "Porniți aparatul, vă rog"
+ },
+ {
+  "id": "t2",
+  "cat": "taxi",
+  "uk": "Скільки коштує доїхати до…?",
+  "en": "How much to get to…?",
+  "fr": "C'est combien pour aller à… ?",
+  "ar": "بشحال لـ…؟",
+  "ar_lat": "b-chhal l-…?",
+  "ro": "Cât costă până la…?"
+ },
+ {
+  "id": "t3",
+  "cat": "taxi",
+  "uk": "Це задорого",
+  "en": "That is too expensive",
+  "fr": "C'est trop cher",
+  "ar": "غالي بزاف",
+  "ar_lat": "ghali bezzaf",
+  "ro": "E prea scump"
+ },
+ {
+  "id": "t4",
+  "cat": "taxi",
+  "uk": "Відвезіть мене за цією адресою",
+  "en": "Take me to this address",
+  "fr": "Emmenez-moi à cette adresse",
+  "ar": "ديني لهاد العنوان",
+  "ar_lat": "dini l-had l-ʿunwan",
+  "ro": "Duceți-mă la această adresă"
+ },
+ {
+  "id": "t5",
+  "cat": "taxi",
+  "uk": "Зупиніть тут, будь ласка",
+  "en": "Stop here, please",
+  "fr": "Arrêtez-vous ici, s'il vous plaît",
+  "ar": "وقف هنا عافاك",
+  "ar_lat": "wqef hna ʿafak",
+  "ro": "Opriți aici, vă rog"
+ },
+ {
+  "id": "t6",
+  "cat": "taxi",
+  "uk": "Я поспішаю",
+  "en": "I am in a hurry",
+  "fr": "Je suis pressé",
+  "ar": "أنا زربان",
+  "ar_lat": "ana zerban",
+  "ro": "Mă grăbesc"
+ },
+ {
+  "id": "t7",
+  "cat": "taxi",
+  "uk": "Дайте решту, будь ласка",
+  "en": "My change, please",
+  "fr": "Ma monnaie, s'il vous plaît",
+  "ar": "الصرف عافاك",
+  "ar_lat": "s-sarf ʿafak",
+  "ro": "Restul, vă rog"
+ },
+ {
+  "id": "t8",
+  "cat": "taxi",
+  "uk": "Аеропорт",
+  "en": "Airport",
+  "fr": "L'aéroport",
+  "ar": "المطار",
+  "ar_lat": "l-matar",
+  "ro": "Aeroportul"
+ },
+ {
+  "id": "t9",
+  "cat": "taxi",
+  "uk": "Мій готель тут — подивіться",
+  "en": "My hotel is here — please look",
+  "fr": "Mon hôtel est ici — regardez",
+  "ar": "الأوطيل ديالي هنا، شوف",
+  "ar_lat": "l-otel dyali hna, chuf",
+  "ro": "Hotelul meu e aici — priviți"
+ },
+ {
+  "id": "t10",
+  "cat": "taxi",
+  "uk": "Чекайте, я повернусь за 10 хвилин",
+  "en": "Wait, I will be back in 10 minutes",
+  "fr": "Attendez, je reviens dans 10 minutes",
+  "ar": "تسنى، غادي نرجع من بعد عشر دقايق",
+  "ar_lat": "tsenna, ghadi nerjaʿ men baʿd ʿchr dqayq",
+  "ro": "Așteptați, revin în 10 minute"
+ },
+ {
+  "id": "g1",
+  "cat": "bargain",
+  "uk": "Скільки це коштує?",
+  "en": "How much is this?",
+  "fr": "Combien ça coûte ?",
+  "ar": "بشحال هادا؟",
+  "ar_lat": "b-chhal hada?",
+  "ro": "Cât costă?"
+ },
+ {
+  "id": "g2",
+  "cat": "bargain",
+  "uk": "Дуже дорого. Ваша найкраща ціна?",
+  "en": "Too expensive. Your best price?",
+  "fr": "Trop cher. Votre meilleur prix ?",
+  "ar": "غالي. آخر ثمن؟",
+  "ar_lat": "ghali. akhir taman?",
+  "ro": "Prea scump. Cel mai bun preț?"
+ },
+ {
+  "id": "g3",
+  "cat": "bargain",
+  "uk": "Я дам… дирхамів",
+  "en": "I will give you… dirhams",
+  "fr": "Je vous donne… dirhams",
+  "ar": "نعطيك… درهم",
+  "ar_lat": "naʿtik… derhem",
+  "ro": "Vă dau… dirhami"
+ },
+ {
+  "id": "g4",
+  "cat": "bargain",
+  "uk": "Дякую, я подумаю",
+  "en": "Thank you, I will think about it",
+  "fr": "Merci, je vais réfléchir",
+  "ar": "شكرا، غادي نفكر",
+  "ar_lat": "chukran, ghadi nfekker",
+  "ro": "Mulțumesc, mă mai gândesc"
+ },
+ {
+  "id": "g5",
+  "cat": "bargain",
+  "uk": "Ні, дякую",
+  "en": "No, thank you",
+  "fr": "Non merci",
+  "ar": "لا شكرا",
+  "ar_lat": "la chukran",
+  "ro": "Nu, mulțumesc"
+ },
+ {
+  "id": "g6",
+  "cat": "bargain",
+  "uk": "Я просто дивлюсь",
+  "en": "I am just looking",
+  "fr": "Je regarde seulement",
+  "ar": "غير كنشوف",
+  "ar_lat": "ghir kanchuf",
+  "ro": "Doar mă uit"
+ },
+ {
+  "id": "g7",
+  "cat": "bargain",
+  "uk": "Це справжнє арганове масло?",
+  "en": "Is this real argan oil?",
+  "fr": "Est-ce de la vraie huile d'argan ?",
+  "ar": "واش هادا زيت أركان الأصلي؟",
+  "ar_lat": "wach hada zit argan l-asli?",
+  "ro": "Este ulei de argan autentic?"
+ },
+ {
+  "id": "g8",
+  "cat": "bargain",
+  "uk": "Покажіть сертифікат, будь ласка",
+  "en": "Show me the certificate, please",
+  "fr": "Montrez-moi le certificat, s'il vous plaît",
+  "ar": "وريني الشهادة عافاك",
+  "ar_lat": "werrini ch-chahada ʿafak",
+  "ro": "Arătați-mi certificatul, vă rog"
+ },
+ {
+  "id": "g9",
+  "cat": "bargain",
+  "uk": "Можна заплатити карткою?",
+  "en": "Can I pay by card?",
+  "fr": "Puis-je payer par carte ?",
+  "ar": "واش يمكن نخلص بالكارت؟",
+  "ar_lat": "wach yemken nkhelles b-l-kart?",
+  "ro": "Pot plăti cu cardul?"
+ },
+ {
+  "id": "g10",
+  "cat": "bargain",
+  "uk": "Дайте, будь ласка, чек",
+  "en": "A receipt, please",
+  "fr": "Un reçu, s'il vous plaît",
+  "ar": "الفاكتورة عافاك",
+  "ar_lat": "l-faktura ʿafak",
+  "ro": "O chitanță, vă rog"
+ },
+ {
+  "id": "g11",
+  "cat": "bargain",
+  "uk": "Загорніть, будь ласка",
+  "en": "Please wrap it up",
+  "fr": "Emballez-le, s'il vous plaît",
+  "ar": "لفو ليا عافاك",
+  "ar_lat": "leffu liya ʿafak",
+  "ro": "Împachetați, vă rog"
+ },
+ {
+  "id": "f1",
+  "cat": "food",
+  "uk": "Меню, будь ласка",
+  "en": "The menu, please",
+  "fr": "La carte, s'il vous plaît",
+  "ar": "المنيو عافاك",
+  "ar_lat": "l-menu ʿafak",
+  "ro": "Meniul, vă rog"
+ },
+ {
+  "id": "f2",
+  "cat": "food",
+  "uk": "Я не їм м'яса",
+  "en": "I do not eat meat",
+  "fr": "Je ne mange pas de viande",
+  "ar": "ما كناكلش اللحم",
+  "ar_lat": "ma kanakulch l-lham",
+  "ro": "Nu mănânc carne"
+ },
+ {
+  "id": "f3",
+  "cat": "food",
+  "uk": "Без гострого, будь ласка",
+  "en": "Not spicy, please",
+  "fr": "Pas épicé, s'il vous plaît",
+  "ar": "بلا حار عافاك",
+  "ar_lat": "bla har ʿafak",
+  "ro": "Fără iute, vă rog"
+ },
+ {
+  "id": "f4",
+  "cat": "food",
+  "uk": "У мене алергія на…",
+  "en": "I am allergic to…",
+  "fr": "Je suis allergique à…",
+  "ar": "عندي حساسية من…",
+  "ar_lat": "ʿandi hassasiya men…",
+  "ro": "Sunt alergică la…"
+ },
+ {
+  "id": "f5",
+  "cat": "food",
+  "uk": "Бутильована вода, будь ласка",
+  "en": "Bottled water, please",
+  "fr": "De l'eau en bouteille, s'il vous plaît",
+  "ar": "الما ديال القرعة عافاك",
+  "ar_lat": "l-ma dyal l-qerʿa ʿafak",
+  "ro": "Apă îmbuteliată, vă rog"
+ },
+ {
+  "id": "f6",
+  "cat": "food",
+  "uk": "Рахунок, будь ласка",
+  "en": "The bill, please",
+  "fr": "L'addition, s'il vous plaît",
+  "ar": "الحساب عافاك",
+  "ar_lat": "l-hsab ʿafak",
+  "ro": "Nota, vă rog"
+ },
+ {
+  "id": "f7",
+  "cat": "food",
+  "uk": "М'ятний чай",
+  "en": "Mint tea",
+  "fr": "Thé à la menthe",
+  "ar": "أتاي بالنعناع",
+  "ar_lat": "atay b-n-neʿnaʿ",
+  "ro": "Ceai de mentă"
+ },
+ {
+  "id": "f8",
+  "cat": "food",
+  "uk": "Це вегетаріанське?",
+  "en": "Is this vegetarian?",
+  "fr": "C'est végétarien ?",
+  "ar": "واش هادا بلا لحم؟",
+  "ar_lat": "wach hada bla lham?",
+  "ro": "Este vegetarian?"
+ },
+ {
+  "id": "f9",
+  "cat": "food",
+  "uk": "Де тут туалет?",
+  "en": "Where is the toilet?",
+  "fr": "Où sont les toilettes ?",
+  "ar": "فين كاين المرحاض؟",
+  "ar_lat": "fin kayn l-mirhad?",
+  "ro": "Unde este toaleta?"
+ },
+ {
+  "id": "f10",
+  "cat": "food",
+  "uk": "Одну порцію, будь ласка",
+  "en": "One portion, please",
+  "fr": "Une portion, s'il vous plaît",
+  "ar": "واحد الطبق عافاك",
+  "ar_lat": "wahed t-tbaq ʿafak",
+  "ro": "O porție, vă rog"
+ },
+ {
+  "id": "h1",
+  "cat": "hotel",
+  "uk": "У мене бронювання на ім'я…",
+  "en": "I have a booking under the name…",
+  "fr": "J'ai une réservation au nom de…",
+  "ar": "عندي حجز باسم…",
+  "ar_lat": "ʿandi hajz b-ism…",
+  "ro": "Am o rezervare pe numele…"
+ },
+ {
+  "id": "h2",
+  "cat": "hotel",
+  "uk": "О котрій сніданок?",
+  "en": "What time is breakfast?",
+  "fr": "À quelle heure est le petit-déjeuner ?",
+  "ar": "فوقاش الفطور؟",
+  "ar_lat": "fuqach l-ftur?",
+  "ro": "La ce oră este micul dejun?"
+ },
+ {
+  "id": "h3",
+  "cat": "hotel",
+  "uk": "Кондиціонер не працює",
+  "en": "The air conditioning is not working",
+  "fr": "La climatisation ne marche pas",
+  "ar": "الكليماتيزور ما خدامش",
+  "ar_lat": "l-klimatizor ma khddamch",
+  "ro": "Aerul condiționat nu funcționează"
+ },
+ {
+  "id": "h4",
+  "cat": "hotel",
+  "uk": "Гарячої води немає",
+  "en": "There is no hot water",
+  "fr": "Il n'y a pas d'eau chaude",
+  "ar": "ما كاينش الما السخون",
+  "ar_lat": "ma kaynch l-ma s-skhun",
+  "ro": "Nu este apă caldă"
+ },
+ {
+  "id": "h5",
+  "cat": "hotel",
+  "uk": "Можна залишити валізи?",
+  "en": "May I leave my luggage?",
+  "fr": "Puis-je laisser mes bagages ?",
+  "ar": "واش يمكن نخلي الباكاج؟",
+  "ar_lat": "wach yemken nkhelli l-bagaj?",
+  "ro": "Pot lăsa bagajele?"
+ },
+ {
+  "id": "h6",
+  "cat": "hotel",
+  "uk": "Викличте таксі, будь ласка",
+  "en": "Call a taxi, please",
+  "fr": "Appelez un taxi, s'il vous plaît",
+  "ar": "عيط لطاكسي عافاك",
+  "ar_lat": "ʿayyet l-taksi ʿafak",
+  "ro": "Chemați un taxi, vă rog"
+ },
+ {
+  "id": "h7",
+  "cat": "hotel",
+  "uk": "Який пароль від Wi-Fi?",
+  "en": "What is the Wi-Fi password?",
+  "fr": "Quel est le mot de passe Wi-Fi ?",
+  "ar": "شنو كود الويفي؟",
+  "ar_lat": "chnu kod l-wifi?",
+  "ro": "Care este parola de Wi-Fi?"
+ },
+ {
+  "id": "h8",
+  "cat": "hotel",
+  "uk": "Яка аптека працює вночі?",
+  "en": "Which pharmacy is open at night?",
+  "fr": "Quelle pharmacie est de garde ?",
+  "ar": "شمن فارماسيان دي غارد؟",
+  "ar_lat": "chmen farmasyan de garde?",
+  "ro": "Ce farmacie este de gardă?"
+ },
+ {
+  "id": "d1",
+  "cat": "directions",
+  "uk": "Де я?",
+  "en": "Where am I?",
+  "fr": "Où suis-je ?",
+  "ar": "فين أنا؟",
+  "ar_lat": "fin ana?",
+  "ro": "Unde mă aflu?"
+ },
+ {
+  "id": "d2",
+  "cat": "directions",
+  "uk": "Я загубилася",
+  "en": "I am lost",
+  "fr": "Je suis perdue",
+  "ar": "توضرت",
+  "ar_lat": "twedert",
+  "ro": "M-am rătăcit"
+ },
+ {
+  "id": "d3",
+  "cat": "directions",
+  "uk": "Як пройти до…?",
+  "en": "How do I get to…?",
+  "fr": "Comment aller à… ?",
+  "ar": "كيفاش نمشي لـ…؟",
+  "ar_lat": "kifach nemchi l-…?",
+  "ro": "Cum ajung la…?"
+ },
+ {
+  "id": "d4",
+  "cat": "directions",
+  "uk": "Це далеко?",
+  "en": "Is it far?",
+  "fr": "C'est loin ?",
+  "ar": "واش بعيد؟",
+  "ar_lat": "wach bʿid?",
+  "ro": "Este departe?"
+ },
+ {
+  "id": "d5",
+  "cat": "directions",
+  "uk": "Праворуч",
+  "en": "Right",
+  "fr": "À droite",
+  "ar": "على اليمين",
+  "ar_lat": "ʿla l-limen",
+  "ro": "La dreapta"
+ },
+ {
+  "id": "d6",
+  "cat": "directions",
+  "uk": "Ліворуч",
+  "en": "Left",
+  "fr": "À gauche",
+  "ar": "على اليسار",
+  "ar_lat": "ʿla l-isar",
+  "ro": "La stânga"
+ },
+ {
+  "id": "d7",
+  "cat": "directions",
+  "uk": "Прямо",
+  "en": "Straight ahead",
+  "fr": "Tout droit",
+  "ar": "نيشان",
+  "ar_lat": "nichan",
+  "ro": "Drept înainte"
+ },
+ {
+  "id": "d8",
+  "cat": "directions",
+  "uk": "Покажіть на карті, будь ласка",
+  "en": "Show me on the map, please",
+  "fr": "Montrez-moi sur la carte",
+  "ar": "وريني فالخريطة عافاك",
+  "ar_lat": "werrini f-l-kharita ʿafak",
+  "ro": "Arătați-mi pe hartă, vă rog"
+ },
+ {
+  "id": "d9",
+  "cat": "directions",
+  "uk": "Головна площа Джемаа-ель-Фна",
+  "en": "Jemaa el-Fna main square",
+  "fr": "La place Jemaa el-Fna",
+  "ar": "ساحة جامع الفنا",
+  "ar_lat": "sahat Jamaʿ l-Fna",
+  "ro": "Piața Jemaa el-Fna"
+ },
+ {
+  "id": "d10",
+  "cat": "directions",
+  "uk": "Я не потребую гіда, дякую",
+  "en": "I do not need a guide, thank you",
+  "fr": "Je n'ai pas besoin de guide, merci",
+  "ar": "ما محتاجاش گيد، شكرا",
+  "ar_lat": "ma mhtajach guide, chukran",
+  "ro": "Nu am nevoie de ghid, mulțumesc"
+ },
+ {
+  "id": "m1",
+  "cat": "health",
+  "uk": "Мені потрібен лікар",
+  "en": "I need a doctor",
+  "fr": "J'ai besoin d'un médecin",
+  "ar": "خصني طبيب",
+  "ar_lat": "khessni tbib",
+  "ro": "Am nevoie de un medic"
+ },
+ {
+  "id": "m2",
+  "cat": "health",
+  "uk": "Де найближча аптека?",
+  "en": "Where is the nearest pharmacy?",
+  "fr": "Où est la pharmacie la plus proche ?",
+  "ar": "فين أقرب فارماسيان؟",
+  "ar_lat": "fin aqrab farmasyan?",
+  "ro": "Unde este cea mai apropiată farmacie?"
+ },
+ {
+  "id": "m3",
+  "cat": "health",
+  "uk": "Мені погано",
+  "en": "I feel unwell",
+  "fr": "Je ne me sens pas bien",
+  "ar": "ما لباسش عليا",
+  "ar_lat": "ma labasch ʿliya",
+  "ro": "Nu mă simt bine"
+ },
+ {
+  "id": "m4",
+  "cat": "health",
+  "uk": "Болить живіт",
+  "en": "My stomach hurts",
+  "fr": "J'ai mal au ventre",
+  "ar": "كيوجعني كرشي",
+  "ar_lat": "kayujaʿni kerchi",
+  "ro": "Mă doare stomacul"
+ },
+ {
+  "id": "m5",
+  "cat": "health",
+  "uk": "Болить голова",
+  "en": "I have a headache",
+  "fr": "J'ai mal à la tête",
+  "ar": "كيوجعني راسي",
+  "ar_lat": "kayujaʿni rasi",
+  "ro": "Mă doare capul"
+ },
+ {
+  "id": "m6",
+  "cat": "health",
+  "uk": "У мене температура",
+  "en": "I have a fever",
+  "fr": "J'ai de la fièvre",
+  "ar": "عندي السخانة",
+  "ar_lat": "ʿandi s-skhana",
+  "ro": "Am febră"
+ },
+ {
+  "id": "m7",
+  "cat": "health",
+  "uk": "У мене алергія",
+  "en": "I have an allergy",
+  "fr": "J'ai une allergie",
+  "ar": "عندي حساسية",
+  "ar_lat": "ʿandi hassasiya",
+  "ro": "Am o alergie"
+ },
+ {
+  "id": "m8",
+  "cat": "health",
+  "uk": "Мені потрібні ці ліки",
+  "en": "I need this medicine",
+  "fr": "J'ai besoin de ce médicament",
+  "ar": "خصني هاد الدوا",
+  "ar_lat": "khessni had d-dwa",
+  "ro": "Am nevoie de acest medicament"
+ },
+ {
+  "id": "m9",
+  "cat": "health",
+  "uk": "У мене є страховка",
+  "en": "I have insurance",
+  "fr": "J'ai une assurance",
+  "ar": "عندي التأمين",
+  "ar_lat": "ʿandi t-taʾmin",
+  "ro": "Am asigurare"
+ },
+ {
+  "id": "s1",
+  "cat": "sos",
+  "uk": "Допоможіть!",
+  "en": "Help!",
+  "fr": "Au secours !",
+  "ar": "عاونوني!",
+  "ar_lat": "ʿawnuni!",
+  "ro": "Ajutor!"
+ },
+ {
+  "id": "s2",
+  "cat": "sos",
+  "uk": "Викличте поліцію",
+  "en": "Call the police",
+  "fr": "Appelez la police",
+  "ar": "عيط للبوليس",
+  "ar_lat": "ʿayyet l-l-bulis",
+  "ro": "Chemați poliția"
+ },
+ {
+  "id": "s3",
+  "cat": "sos",
+  "uk": "Викличте швидку",
+  "en": "Call an ambulance",
+  "fr": "Appelez une ambulance",
+  "ar": "عيط للإسعاف",
+  "ar_lat": "ʿayyet l-l-isʿaf",
+  "ro": "Chemați o ambulanță"
+ },
+ {
+  "id": "s4",
+  "cat": "sos",
+  "uk": "У мене вкрали сумку",
+  "en": "My bag was stolen",
+  "fr": "On m'a volé mon sac",
+  "ar": "تسرقات ليا الساك",
+  "ar_lat": "tsreqat liya s-sak",
+  "ro": "Mi-a fost furată geanta"
+ },
+ {
+  "id": "s5",
+  "cat": "sos",
+  "uk": "Я загубила паспорт",
+  "en": "I lost my passport",
+  "fr": "J'ai perdu mon passeport",
+  "ar": "توضر ليا الباسبور",
+  "ar_lat": "twedder liya l-baspor",
+  "ro": "Mi-am pierdut pașaportul"
+ },
+ {
+  "id": "s6",
+  "cat": "sos",
+  "uk": "Мені потрібне посольство України",
+  "en": "I need the Ukrainian embassy",
+  "fr": "J'ai besoin de l'ambassade d'Ukraine",
+  "ar": "بغيت سفارة أوكرانيا",
+  "ar_lat": "bghit sifarat Ukranya",
+  "ro": "Am nevoie de ambasada Ucrainei"
+ },
+ {
+  "id": "s7",
+  "cat": "sos",
+  "uk": "Зателефонуйте за цим номером",
+  "en": "Call this number",
+  "fr": "Appelez ce numéro",
+  "ar": "عيط لهاد الرقم",
+  "ar_lat": "ʿayyet l-had r-raqm",
+  "ro": "Sunați la acest număr"
+ },
+ {
+  "id": "s8",
+  "cat": "sos",
+  "uk": "Я не сама, чоловік поруч",
+  "en": "I am not alone, my husband is nearby",
+  "fr": "Je ne suis pas seule, mon mari est là",
+  "ar": "ما بوحدي، راجلي قريب",
+  "ar_lat": "ma buhdi, rajli qrib",
+  "ro": "Nu sunt singură, soțul e aproape"
+ },
+ {
+  "id": "n1",
+  "cat": "numbers",
+  "uk": "Один",
+  "en": "One",
+  "fr": "Un",
+  "ar": "واحد",
+  "ar_lat": "wahed",
+  "ro": "Unu"
+ },
+ {
+  "id": "n2",
+  "cat": "numbers",
+  "uk": "Два",
+  "en": "Two",
+  "fr": "Deux",
+  "ar": "جوج",
+  "ar_lat": "juj",
+  "ro": "Doi"
+ },
+ {
+  "id": "n3",
+  "cat": "numbers",
+  "uk": "Три",
+  "en": "Three",
+  "fr": "Trois",
+  "ar": "تلاتة",
+  "ar_lat": "tlata",
+  "ro": "Trei"
+ },
+ {
+  "id": "n4",
+  "cat": "numbers",
+  "uk": "П'ять",
+  "en": "Five",
+  "fr": "Cinq",
+  "ar": "خمسة",
+  "ar_lat": "khamsa",
+  "ro": "Cinci"
+ },
+ {
+  "id": "n5",
+  "cat": "numbers",
+  "uk": "Десять",
+  "en": "Ten",
+  "fr": "Dix",
+  "ar": "عشرة",
+  "ar_lat": "ʿachra",
+  "ro": "Zece"
+ },
+ {
+  "id": "n6",
+  "cat": "numbers",
+  "uk": "Двадцять",
+  "en": "Twenty",
+  "fr": "Vingt",
+  "ar": "عشرين",
+  "ar_lat": "ʿachrin",
+  "ro": "Douăzeci"
+ },
+ {
+  "id": "n7",
+  "cat": "numbers",
+  "uk": "П'ятдесят",
+  "en": "Fifty",
+  "fr": "Cinquante",
+  "ar": "خمسين",
+  "ar_lat": "khamsin",
+  "ro": "Cincizeci"
+ },
+ {
+  "id": "n8",
+  "cat": "numbers",
+  "uk": "Сто",
+  "en": "One hundred",
+  "fr": "Cent",
+  "ar": "مية",
+  "ar_lat": "miya",
+  "ro": "O sută"
+ },
+ {
+  "id": "n9",
+  "cat": "numbers",
+  "uk": "Двісті",
+  "en": "Two hundred",
+  "fr": "Deux cents",
+  "ar": "ميتين",
+  "ar_lat": "mitin",
+  "ro": "Două sute"
+ },
+ {
+  "id": "n10",
+  "cat": "numbers",
+  "uk": "Половина",
+  "en": "Half",
+  "fr": "La moitié",
+  "ar": "نص",
+  "ar_lat": "nuss",
+  "ro": "Jumătate"
+ },
+ {
+  "id": "w1",
+  "cat": "time",
+  "uk": "Котра година?",
+  "en": "What time is it?",
+  "fr": "Quelle heure est-il ?",
+  "ar": "شحال فالساعة؟",
+  "ar_lat": "chhal f-s-saʿa?",
+  "ro": "Cât e ceasul?"
+ },
+ {
+  "id": "w2",
+  "cat": "time",
+  "uk": "Сьогодні",
+  "en": "Today",
+  "fr": "Aujourd'hui",
+  "ar": "اليوم",
+  "ar_lat": "l-yum",
+  "ro": "Astăzi"
+ },
+ {
+  "id": "w3",
+  "cat": "time",
+  "uk": "Завтра",
+  "en": "Tomorrow",
+  "fr": "Demain",
+  "ar": "غدا",
+  "ar_lat": "ghedda",
+  "ro": "Mâine"
+ },
+ {
+  "id": "w4",
+  "cat": "time",
+  "uk": "Зараз",
+  "en": "Now",
+  "fr": "Maintenant",
+  "ar": "دابا",
+  "ar_lat": "daba",
+  "ro": "Acum"
+ },
+ {
+  "id": "w5",
+  "cat": "time",
+  "uk": "О котрій відкривається?",
+  "en": "What time does it open?",
+  "fr": "À quelle heure ça ouvre ?",
+  "ar": "فوقاش كيحل؟",
+  "ar_lat": "fuqach kayhell?",
+  "ro": "La ce oră se deschide?"
+ },
+ {
+  "id": "w6",
+  "cat": "time",
+  "uk": "О котрій зачиняється?",
+  "en": "What time does it close?",
+  "fr": "À quelle heure ça ferme ?",
+  "ar": "فوقاش كيسد؟",
+  "ar_lat": "fuqach kaysedd?",
+  "ro": "La ce oră se închide?"
+ },
+ {
+  "id": "w7",
+  "cat": "time",
+  "uk": "Зачекайте хвилину",
+  "en": "Wait a minute",
+  "fr": "Attendez une minute",
+  "ar": "تسنى شوية",
+  "ar_lat": "tsenna chwiya",
+  "ro": "Așteptați un minut"
+ },
+ {
+  "id": "v1",
+  "cat": "women",
+  "uk": "Ні. Дайте мені спокій",
+  "en": "No. Leave me alone",
+  "fr": "Non. Laissez-moi tranquille",
+  "ar": "لا. خليني",
+  "ar_lat": "la. khellini",
+  "ro": "Nu. Lăsați-mă în pace"
+ },
+ {
+  "id": "v2",
+  "cat": "women",
+  "uk": "Я заміжня",
+  "en": "I am married",
+  "fr": "Je suis mariée",
+  "ar": "أنا مزوجة",
+  "ar_lat": "ana mzewja",
+  "ro": "Sunt căsătorită"
+ },
+ {
+  "id": "v3",
+  "cat": "women",
+  "uk": "Мій чоловік чекає на мене",
+  "en": "My husband is waiting for me",
+  "fr": "Mon mari m'attend",
+  "ar": "راجلي كيتسناني",
+  "ar_lat": "rajli kaytsennani",
+  "ro": "Soțul meu mă așteaptă"
+ },
+ {
+  "id": "v4",
+  "cat": "women",
+  "uk": "Не йдіть за мною",
+  "en": "Do not follow me",
+  "fr": "Ne me suivez pas",
+  "ar": "ما تبعنيش",
+  "ar_lat": "ma tebʿanich",
+  "ro": "Nu mă urmăriți"
+ },
+ {
+  "id": "v5",
+  "cat": "women",
+  "uk": "Мені не потрібна допомога, дякую",
+  "en": "I do not need help, thank you",
+  "fr": "Je n'ai pas besoin d'aide, merci",
+  "ar": "ما محتاجاش المساعدة، شكرا",
+  "ar_lat": "ma mhtajach l-musaʿada, chukran",
+  "ro": "Nu am nevoie de ajutor, mulțumesc"
+ },
+ {
+  "id": "v6",
+  "cat": "women",
+  "uk": "Досить",
+  "en": "That is enough",
+  "fr": "Ça suffit",
+  "ar": "بركا",
+  "ar_lat": "baraka",
+  "ro": "Ajunge"
+ },
+ {
+  "id": "v7",
+  "cat": "women",
+  "uk": "Я викличу поліцію",
+  "en": "I will call the police",
+  "fr": "Je vais appeler la police",
+  "ar": "غادي نعيط للبوليس",
+  "ar_lat": "ghadi nʿayyet l-l-bulis",
+  "ro": "Voi chema poliția"
+ },
+ {
+  "id": "v8",
+  "cat": "women",
+  "uk": "Не фотографуйте мене",
+  "en": "Do not photograph me",
+  "fr": "Ne me photographiez pas",
+  "ar": "ما تصورنيش",
+  "ar_lat": "ma tsewwernich",
+  "ro": "Nu mă fotografiați"
+ },
+ {
+  "id": "y1",
+  "cat": "family",
+  "uk": "Дуже рада знайомству",
+  "en": "I am very glad to meet you",
+  "fr": "Très heureuse de vous rencontrer",
+  "ar": "فرحانة بمعرفتك",
+  "ar_lat": "ferhana b-maʿriftek",
+  "ro": "Mă bucur să vă cunosc"
+ },
+ {
+  "id": "y2",
+  "cat": "family",
+  "uk": "Дякую за гостинність",
+  "en": "Thank you for your hospitality",
+  "fr": "Merci pour votre hospitalité",
+  "ar": "شكرا على الضيافة",
+  "ar_lat": "chukran ʿla d-diyafa",
+  "ro": "Mulțumesc pentru ospitalitate"
+ },
+ {
+  "id": "y3",
+  "cat": "family",
+  "uk": "У вас прекрасний дім",
+  "en": "You have a beautiful home",
+  "fr": "Vous avez une belle maison",
+  "ar": "دارك زوينة",
+  "ar_lat": "darek zwina",
+  "ro": "Aveți o casă frumoasă"
+ },
+ {
+  "id": "y4",
+  "cat": "family",
+  "uk": "Це вам маленький подарунок",
+  "en": "A small gift for you",
+  "fr": "Un petit cadeau pour vous",
+  "ar": "هادي هدية صغيرة ليكم",
+  "ar_lat": "hadi hadiya sghira likum",
+  "ro": "Un mic cadou pentru dvs."
+ },
+ {
+  "id": "y5",
+  "cat": "family",
+  "uk": "Це мій чоловік",
+  "en": "This is my husband",
+  "fr": "Voici mon mari",
+  "ar": "هادا راجلي",
+  "ar_lat": "hada rajli",
+  "ro": "Acesta este soțul meu"
+ },
+ {
+  "id": "y6",
+  "cat": "family",
+  "uk": "Як ваша родина?",
+  "en": "How is your family?",
+  "fr": "Comment va votre famille ?",
+  "ar": "كيداير العايلة؟",
+  "ar_lat": "kidayer l-ʿayla?",
+  "ro": "Ce mai face familia?"
+ },
+ {
+  "id": "y7",
+  "cat": "family",
+  "uk": "Дуже смачно, хто готував?",
+  "en": "Delicious — who cooked it?",
+  "fr": "C'est délicieux, qui a cuisiné ?",
+  "ar": "بنين بزاف، شكون طيب؟",
+  "ar_lat": "bnin bezzaf, chkun tayyeb?",
+  "ro": "Delicios — cine a gătit?"
+ },
+ {
+  "id": "y8",
+  "cat": "family",
+  "uk": "Ми приїхали познайомитися з вами",
+  "en": "We came to meet you",
+  "fr": "Nous sommes venus vous rencontrer",
+  "ar": "جينا باش نتعرفو عليكم",
+  "ar_lat": "jina bach ntʿarfu ʿlikum",
+  "ro": "Am venit să vă cunoaștem"
+ },
+ {
+  "id": "y9",
+  "cat": "family",
+  "uk": "Сподіваємось побачитись знову",
+  "en": "We hope to see you again",
+  "fr": "Nous espérons vous revoir",
+  "ar": "نتمناو نتلاقاو مرة أخرى",
+  "ar_lat": "ntmennaw ntlaqaw merra khra",
+  "ro": "Sperăm să ne revedem"
+ },
+ {
+  "id": "y10",
+  "cat": "family",
+  "uk": "Передавайте вітання всім",
+  "en": "Give my regards to everyone",
+  "fr": "Saluez tout le monde de ma part",
+  "ar": "سلم على الجميع",
+  "ar_lat": "sellem ʿla l-jamiʿ",
+  "ro": "Transmiteți salutări tuturor"
+ }
 ]

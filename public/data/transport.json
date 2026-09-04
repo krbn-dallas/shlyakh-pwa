@@ -1,0 +1,347 @@
+[
+ {
+  "id": "ua-md-rail",
+  "scope": "ua",
+  "kind": "rail",
+  "icon": "train",
+  "title": {
+   "uk": "Київ → Кишинів наземно",
+   "en": "Kyiv → Chișinău overland"
+  },
+  "desc": {
+   "uk": "Небо над Україною закрите, тож це плече долається поїздом, автобусом або авто. 8–9 годин разом із прикордонним контролем.",
+   "en": "Ukrainian airspace is closed, so this leg goes by train, bus or car. 8–9 hours including the border check."
+  },
+  "facts": [
+   {
+    "uk": "Поїзд: квитки на proizd.ua, є прямі та з пересадкою",
+    "en": "Train: tickets on proizd.ua, direct and connecting services"
+   },
+   {
+    "uk": "Автобус: infobus, зазвичай дешевше й частіше",
+    "en": "Bus: infobus, usually cheaper and more frequent"
+   },
+   {
+    "uk": "Черга на кордоні непередбачувана — закладай запас до рейсу з KIV",
+    "en": "Border queues are unpredictable — leave a buffer before your KIV flight"
+   },
+   {
+    "uk": "Документи, вода і павербанк — у ручній поклажі",
+    "en": "Documents, water and a power bank in hand luggage"
+   }
+  ],
+  "url": "https://proizd.ua/"
+ },
+ {
+  "id": "md-transport",
+  "scope": "md",
+  "kind": "bus",
+  "icon": "bus",
+  "title": {
+   "uk": "Транспорт у Кишиневі",
+   "en": "Getting around Chișinău"
+  },
+  "desc": {
+   "uk": "Місто невелике, центр можна обійти пішки. Маршрутки й тролейбуси — найдешевше, таксі — найзручніше.",
+   "en": "The city is small and the centre is walkable. Marshrutkas and trolleybuses are cheapest, taxis most convenient."
+  },
+  "facts": [
+   {
+    "uk": "Маршрутка ~6 MDL, готівкою водієві",
+    "en": "Marshrutka ~6 MDL, cash to the driver"
+   },
+   {
+    "uk": "Тролейбус ~2 MDL — найдешевший транспорт",
+    "en": "Trolleybus ~2 MDL — the cheapest option"
+   },
+   {
+    "uk": "Таксі за коротким номером: 14444, 14222, 14999",
+    "en": "Taxi on a short number: 14444, 14222, 14999"
+   },
+   {
+    "uk": "Аеропорт KIV ↔ центр: ~15 хвилин, 150–250 MDL",
+    "en": "KIV airport ↔ centre: ~15 minutes, 150–250 MDL"
+   }
+  ]
+ },
+ {
+  "id": "ma-oncf",
+  "scope": "ma",
+  "kind": "rail",
+  "icon": "train",
+  "title": {
+   "uk": "Потяги ONCF — найкращий транспорт Марокко",
+   "en": "ONCF trains — Morocco's best transport"
+  },
+  "desc": {
+   "uk": "Державна залізниця охоплює всю країну. Швидко, комфортно, надійно — і значно спокійніше за дороги.",
+   "en": "The state railway covers the whole country. Fast, comfortable and reliable — and far calmer than the roads."
+  },
+  "facts": [
+   {
+    "uk": "Al Boraq: Танжер — Касабланка за 2 години, високошвидкісний",
+    "en": "Al Boraq: Tangier to Casablanca in 2 hours, high-speed"
+   },
+   {
+    "uk": "Два коридори: Танжер–Рабат–Касабланка–Марракеш і Касабланка–Фес–Уджда",
+    "en": "Two corridors: Tangier–Rabat–Casablanca–Marrakesh and Casablanca–Fes–Oujda"
+   },
+   {
+    "uk": "Бронювання відкривається за 3 місяці на oncf.ma або в застосунку",
+    "en": "Booking opens 3 months ahead at oncf.ma or in the app"
+   },
+   {
+    "uk": "Влітку 2026 ONCF планує до 237 потягів на день",
+    "en": "For summer 2026 ONCF plans up to 237 trains a day"
+   },
+   {
+    "uk": "Перший клас трохи дорожчий і помітно спокійніший",
+    "en": "First class costs a little more and is noticeably calmer"
+   }
+  ],
+  "url": "https://www.oncf.ma/"
+ },
+ {
+  "id": "ma-bus",
+  "scope": "ma",
+  "kind": "bus",
+  "icon": "bus",
+  "title": {
+   "uk": "Автобуси CTM і Supratours",
+   "en": "CTM and Supratours buses"
+  },
+  "desc": {
+   "uk": "Дешевша альтернатива потягам і єдиний варіант для міст без залізниці — Ессувейри, Шефшауена, Мерзуги.",
+   "en": "A cheaper alternative to the train and the only option for towns without rail — Essaouira, Chefchaouen, Merzouga."
+  },
+  "facts": [
+   {
+    "uk": "CTM — найвідоміший перевізник, автобуси комфортні",
+    "en": "CTM is the best-known operator, with comfortable coaches"
+   },
+   {
+    "uk": "Supratours належить ONCF і стикується з потягами",
+    "en": "Supratours is owned by ONCF and connects with the trains"
+   },
+   {
+    "uk": "Марракеш → Ессувейра близько 3 годин",
+    "en": "Marrakesh → Essaouira takes about 3 hours"
+   },
+   {
+    "uk": "Квитки краще брати заздалегідь у касі або онлайн",
+    "en": "Buy tickets in advance at the counter or online"
+   },
+   {
+    "uk": "Багаж оплачується окремо, дрібна сума",
+    "en": "Luggage is charged separately, a small fee"
+   }
+  ],
+  "url": "https://www.ctm.ma/"
+ },
+ {
+  "id": "ma-tram",
+  "scope": "casablanca",
+  "kind": "tram",
+  "icon": "train",
+  "title": {
+   "uk": "Casa Tramway",
+   "en": "Casa Tramway"
+  },
+  "desc": {
+   "uk": "Найрозвиненіша міська система країни: 4 лінії, 73 км. Покриває центр, набережну, Morocco Mall і аеропортовий напрямок.",
+   "en": "The country's most developed urban network: 4 lines, 73 km. It covers the centre, the corniche, Morocco Mall and the airport direction."
+  },
+  "facts": [
+   {
+    "uk": "Квиток 8 MAD",
+    "en": "8 MAD ticket"
+   },
+   {
+    "uk": "Пересадка протягом 2 годин безкоштовна",
+    "en": "Transfers free within 2 hours"
+   },
+   {
+    "uk": "Ходить з 5:30 до 22:30",
+    "en": "Runs 05:30 to 22:30"
+   },
+   {
+    "uk": "Чисто, надійно й без ризику торгуватись із таксистом",
+    "en": "Clean, reliable and no haggling with a driver"
+   }
+  ],
+  "url": "https://www.casatramway.ma/"
+ },
+ {
+  "id": "ma-petit",
+  "scope": "ma",
+  "kind": "taxi",
+  "icon": "taxi",
+  "title": {
+   "uk": "Petit taxi — як користуватись",
+   "en": "Petit taxi — how it works"
+  },
+  "desc": {
+   "uk": "Маленькі міські таксі, у кожному місті свого кольору. Максимум 3 пасажири, за межі міста не виїжджають.",
+   "en": "Small city taxis, a different colour in each city. Three passengers maximum, and they do not leave the city limits."
+  },
+  "facts": [
+   {
+    "uk": "Марракеш — червоні, Касабланка — білі, Фес — сині, Танжер — жовті",
+    "en": "Marrakesh red, Casablanca white, Fes blue, Tangier yellow"
+   },
+   {
+    "uk": "База 7 MAD. По лічильнику в межах медини 15–30 MAD",
+    "en": "7 MAD base. Metered inside the medina, 15–30 MAD"
+   },
+   {
+    "uk": "Без лічильника — не більше 30–50 MAD по місту",
+    "en": "Without a meter, no more than 30–50 MAD across town"
+   },
+   {
+    "uk": "«Лічильник не працює» — просто вийди й візьми наступне",
+    "en": "\"The meter is broken\" — just get out and take the next one"
+   },
+   {
+    "uk": "Май дрібні: решти в водіїв ніколи немає",
+    "en": "Carry small notes: drivers never have change"
+   },
+   {
+    "uk": "Диспетчер у Марракеші: 0524 40 94 99, подача 15 MAD",
+    "en": "Marrakesh dispatcher: 0524 40 94 99, 15 MAD call-out"
+   }
+  ],
+  "tel": "+212524409499"
+ },
+ {
+  "id": "ma-grand",
+  "scope": "ma",
+  "kind": "taxi",
+  "icon": "taxi",
+  "title": {
+   "uk": "Grand taxi — міжміські",
+   "en": "Grand taxi — intercity"
+  },
+  "desc": {
+   "uk": "Великі бежеві седани для поїздок між містами й до сіл. Дешево, але тісно.",
+   "en": "Large beige sedans for trips between towns and out to villages. Cheap but cramped."
+  },
+  "facts": [
+   {
+    "uk": "Виїжджають, коли набереться 6 пасажирів",
+    "en": "They leave when 6 passengers are aboard"
+   },
+   {
+    "uk": "Можна викупити всі місця й поїхати одразу",
+    "en": "You can buy all the seats and leave immediately"
+   },
+   {
+    "uk": "Ціни фіксовані за маршрутом — питай у кількох водіїв",
+    "en": "Fares are fixed per route — ask a few drivers"
+   },
+   {
+    "uk": "Для довгих відстаней потяг або CTM набагато комфортніші",
+    "en": "For long distances the train or CTM are far more comfortable"
+   }
+  ]
+ },
+ {
+  "id": "ma-apps",
+  "scope": "ma",
+  "kind": "taxi",
+  "icon": "phone_app",
+  "title": {
+   "uk": "Застосунки таксі: inDrive, Careem, Uber",
+   "en": "Ride-hailing: inDrive, Careem, Uber"
+  },
+  "desc": {
+   "uk": "Дуже популярні в Касабланці, Марракеші, Рабаті й Танжері. Ціна видно наперед — це головна перевага.",
+   "en": "Very popular in Casablanca, Marrakesh, Rabat and Tangier. The price is visible up front — that is the main advantage."
+  },
+  "facts": [
+   {
+    "uk": "Уряд не видає ліцензій цим сервісам — правовий статус не врегульовано",
+    "en": "The government issues no licences to these services — the legal status is unresolved"
+   },
+   {
+    "uk": "Uber повернувся наприкінці 2025, працює лише з ліцензованими авто",
+    "en": "Uber returned in late 2025, limited to licensed vehicles"
+   },
+   {
+    "uk": "Профспілки таксистів проти — бували конфлікти біля вокзалів і аеропортів",
+    "en": "Taxi unions oppose them — there have been confrontations at stations and airports"
+   },
+   {
+    "uk": "Офіційне petit taxi надійніше, хоч і потребує торгу",
+    "en": "An official petit taxi is safer, even if it needs haggling"
+   }
+  ]
+ },
+ {
+  "id": "ma-walk",
+  "scope": "marrakech",
+  "kind": "walk",
+  "icon": "walk",
+  "title": {
+   "uk": "Пішки медина",
+   "en": "The medina on foot"
+  },
+  "desc": {
+   "uk": "У медині немає автомобілів — і це єдиний спосіб її побачити. Але заблукати тут дуже легко.",
+   "en": "There are no cars in the medina, and walking is the only way to see it. But getting lost is very easy."
+  },
+  "facts": [
+   {
+    "uk": "Завантаж офлайн-карту ЗАРАНІ — сигналу всередині майже немає",
+    "en": "Download the offline map FIRST — there is barely any signal inside"
+   },
+   {
+    "uk": "Орієнтуйся по брамах (Bab) і мінарету Кутубії",
+    "en": "Navigate by the gates (Bab) and the Koutoubia minaret"
+   },
+   {
+    "uk": "Кросівки обов'язково: бруківка стирає ноги за пів дня",
+    "en": "Trainers are essential: the cobbles wreck your feet in half a day"
+   },
+   {
+    "uk": "Мопеди їздять впритул — тримайся ближче до стін",
+    "en": "Mopeds pass close — keep to the walls"
+   },
+   {
+    "uk": "Питай дорогу в жінок або в продавців за прилавком",
+    "en": "Ask directions of women or shopkeepers behind a counter"
+   }
+  ]
+ },
+ {
+  "id": "ma-air",
+  "scope": "ma",
+  "kind": "air",
+  "icon": "plane",
+  "title": {
+   "uk": "Аеропорти",
+   "en": "Airports"
+  },
+  "desc": {
+   "uk": "Головні: Касабланка (CMN) — найбільший, і Марракеш (RAK) — найзручніший для нашого маршруту.",
+   "en": "The main ones: Casablanca (CMN), the largest, and Marrakesh (RAK), the most convenient for our route."
+  },
+  "facts": [
+   {
+    "uk": "RAK ↔ медина: ~20 км, таксі близько 150 MAD",
+    "en": "RAK ↔ medina: ~20 km, taxi about 150 MAD"
+   },
+   {
+    "uk": "CMN має пряме залізничне сполучення з містом",
+    "en": "CMN has a direct rail link into the city"
+   },
+   {
+    "uk": "Прибудь за 2 години до міжнародного рейсу",
+    "en": "Arrive 2 hours before an international flight"
+   },
+   {
+    "uk": "Розміняй залишок дирхамів ДО реєстрації — вивозити їх не можна",
+    "en": "Change leftover dirhams BEFORE check-in — you may not take them out"
+   }
+  ]
+ }
+]

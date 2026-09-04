@@ -1,18 +1,470 @@
 [
-  {
-    "id":"medina-classic","city":"marrakech","kind":"scenic","emoji":"🕌","title":{"uk":"Класика медини","ru":"Классика медины"},"desc":{"uk":"~6 км — Кутубія → суки → Бен Юсеф → Café des Épices → Бахіа → захід на Джемаа","ru":"~6 км — Кутубия → суки → Бен Юсеф → Café des Épices → Бахия → закат на Джемаа"},
-    "stops":[{"poi":"koutoubia","dwell":15},{"poi":"souk-semarine","dwell":40,"note":{"uk":"Торгуйся ввічливо","ru":"Торгуйся вежливо"}},{"poi":"ben-youssef","dwell":30},{"poi":"cafe-epices","dwell":40},{"poi":"bahia","dwell":30},{"poi":"jemaa","dwell":60}]
+ {
+  "id": "mrk-classic",
+  "city": "marrakech",
+  "kind": "scenic",
+  "icon": "mosque",
+  "title": {
+   "uk": "Класика медини",
+   "en": "Medina classics"
   },
-  {
-    "id":"short-main","city":"marrakech","kind":"short","emoji":"⚡","title":{"uk":"Коротко і головне","ru":"Коротко и главное"},"desc":{"uk":"~2.5 км — Джемаа → Кутубія → Бахіа","ru":"~2.5 км — Джемаа → Кутубия → Бахия"},
-    "stops":[{"poi":"jemaa","dwell":20},{"poi":"koutoubia","dwell":15},{"poi":"bahia","dwell":30}]
+  "desc": {
+   "uk": "~6 км, повний день. Найголовніше в правильному порядку: від мінарету через суки до заходу сонця на Джемаа.",
+   "en": "~6 km, a full day. The essentials in the right order: from the minaret through the souks to sunset on Jemaa."
   },
-  {
-    "id":"gardens-gueliz","city":"marrakech","kind":"scenic","emoji":"🌵","title":{"uk":"Сади і Геліз","ru":"Сады и Гелиз"},"desc":{"uk":"Мажорель → шопінг Геліз → кава","ru":"Мажорель → шопинг Гелиз → кофе"},
-    "stops":[{"poi":"majorelle","dwell":60},{"poi":"gueliz","dwell":90},{"poi":"cafe-epices","dwell":30}]
+  "stops": [
+   {
+    "poi": "mrk-koutoubia",
+    "dwell": 20,
+    "note": {
+     "uk": "Почни зранку, поки не спекотно",
+     "en": "Start early, before the heat"
+    }
+   },
+   {
+    "poi": "mrk-souk-semarine",
+    "dwell": 50,
+    "note": {
+     "uk": "Спершу подивись ціни, торгуйся на зворотному шляху",
+     "en": "Look at prices first, haggle on the way back"
+    }
+   },
+   {
+    "poi": "mrk-benyoussef",
+    "dwell": 40
+   },
+   {
+    "poi": "mrk-cafe-epices",
+    "dwell": 50,
+    "note": {
+     "uk": "Обід і перепочинок на терасі",
+     "en": "Lunch and a break on the terrace"
+    }
+   },
+   {
+    "poi": "mrk-bahia",
+    "dwell": 45
+   },
+   {
+    "poi": "mrk-jemaa",
+    "dwell": 90,
+    "note": {
+     "uk": "Прийди до заходу сонця — площа оживає на очах",
+     "en": "Arrive before sunset — the square comes alive as you watch"
+    }
+   }
+  ]
+ },
+ {
+  "id": "mrk-short",
+  "city": "marrakech",
+  "kind": "short",
+  "icon": "bolt",
+  "title": {
+   "uk": "Коротко і головне",
+   "en": "The short version"
   },
-  {
-    "id":"chisinau-evening","city":"chisinau","kind":"scenic","emoji":"🇲🇩","title":{"uk":"Вечірня прогулянка","ru":"Вечерняя прогулка"},"desc":{"uk":"Арка → собор → парк Штефана","ru":"Арка → собор → парк Штефана"},
-    "stops":[{"poi":"arch-chisinau","dwell":10},{"poi":"park-stefan","dwell":30},{"poi":"chisinau-market","dwell":20}]
-  }
+  "desc": {
+   "uk": "~2,5 км, пів дня. Якщо часу мало, а побачити хочеться найважливіше.",
+   "en": "~2.5 km, half a day. When time is short but you still want the essentials."
+  },
+  "stops": [
+   {
+    "poi": "mrk-jemaa",
+    "dwell": 40
+   },
+   {
+    "poi": "mrk-koutoubia",
+    "dwell": 25
+   },
+   {
+    "poi": "mrk-bahia",
+    "dwell": 45
+   }
+  ]
+ },
+ {
+  "id": "mrk-gardens",
+  "city": "marrakech",
+  "kind": "scenic",
+  "icon": "beach",
+  "title": {
+   "uk": "Сади й Геліз",
+   "en": "Gardens and Guéliz"
+  },
+  "desc": {
+   "uk": "Прохолодний маршрут для спекотного дня: сади, музей, кава й шопінг із фіксованими цінами.",
+   "en": "A cool route for a hot day: gardens, a museum, coffee and fixed-price shopping."
+  },
+  "stops": [
+   {
+    "poi": "mrk-majorelle",
+    "dwell": 70,
+    "note": {
+     "uk": "Квитки лише онлайн заздалегідь — черги великі",
+     "en": "Tickets online in advance only — the queues are long"
+    }
+   },
+   {
+    "poi": "mrk-islamicart",
+    "dwell": 40
+   },
+   {
+    "poi": "mrk-kaowa",
+    "dwell": 40,
+    "note": {
+     "uk": "Кава просто біля виходу з садів",
+     "en": "Coffee right by the garden exit"
+    }
+   },
+   {
+    "poi": "mrk-gueliz",
+    "dwell": 90,
+    "note": {
+     "uk": "Тут ціни фіксовані — торгуватись не треба",
+     "en": "Prices are fixed here — no haggling"
+    }
+   }
+  ]
+ },
+ {
+  "id": "mrk-shopping",
+  "city": "marrakech",
+  "kind": "shop",
+  "icon": "bag",
+  "title": {
+   "uk": "Розумний шопінг",
+   "en": "Shopping, done right"
+  },
+  "desc": {
+   "uk": "Спочатку дізнаєшся реальні ціни там, де вони фіксовані, і лише потім ідеш торгуватись у суки.",
+   "en": "First learn the real prices where they are fixed, and only then go and haggle in the souks."
+  },
+  "stops": [
+   {
+    "poi": "mrk-ensemble",
+    "dwell": 60,
+    "note": {
+     "uk": "Фіксовані ціни — це твій прайс-лист на весь день",
+     "en": "Fixed prices — this is your price list for the day"
+    }
+   },
+   {
+    "poi": "mrk-souk-attarine",
+    "dwell": 45,
+    "note": {
+     "uk": "Шафран 120–200 MAD за грам — усе дешевше підозріле",
+     "en": "Saffron 120–200 MAD/g — anything cheaper is suspect"
+    }
+   },
+   {
+    "poi": "mrk-souk-semarine",
+    "dwell": 70,
+    "note": {
+     "uk": "Тепер ти знаєш ціни. Починай із третини від названої",
+     "en": "Now you know the prices. Start at a third of what they ask"
+    }
+   },
+   {
+    "poi": "mrk-medinamall",
+    "dwell": 40
+   }
+  ]
+ },
+ {
+  "id": "mrk-evening",
+  "city": "marrakech",
+  "kind": "short",
+  "icon": "moon",
+  "title": {
+   "uk": "Вечірня Джемаа",
+   "en": "Jemaa by night"
+  },
+  "desc": {
+   "uk": "Коротка вечірня петля: захід сонця з тераси, потім униз у нічний карнавал площі.",
+   "en": "A short evening loop: sunset from a terrace, then down into the square's night carnival."
+  },
+  "stops": [
+   {
+    "poi": "mrk-cafe-epices",
+    "dwell": 50,
+    "note": {
+     "uk": "Займи місце на терасі за годину до заходу",
+     "en": "Grab a terrace seat an hour before sunset"
+    }
+   },
+   {
+    "poi": "mrk-jemaa",
+    "dwell": 100,
+    "note": {
+     "uk": "Фуд-корти, барабанщики, оповідачі. Сумку — спереду",
+     "en": "Food stalls, drummers, storytellers. Bag in front"
+    }
+   }
+  ]
+ },
+ {
+  "id": "mrk-morning",
+  "city": "marrakech",
+  "kind": "short",
+  "icon": "sun",
+  "title": {
+   "uk": "Медина без натовпу",
+   "en": "The medina without the crowds"
+  },
+  "desc": {
+   "uk": "Вийди о 8 ранку — суки тільки прокидаються, продавці ще не наполегливі, світло найкраще для фото.",
+   "en": "Set out at 8am — the souks are just waking, sellers are not yet pushy, and the light is at its best."
+  },
+  "stops": [
+   {
+    "poi": "mrk-secretgarden",
+    "dwell": 50,
+    "note": {
+     "uk": "Відкривається о 9:30 — ідеальний тихий старт",
+     "en": "Opens at 9:30 — a perfectly quiet start"
+    }
+   },
+   {
+    "poi": "mrk-souk-semarine",
+    "dwell": 40
+   },
+   {
+    "poi": "mrk-benyoussef",
+    "dwell": 40,
+    "note": {
+     "uk": "До 10:00 тут майже порожньо",
+     "en": "Almost empty before 10:00"
+    }
+   }
+  ]
+ },
+ {
+  "id": "casa-classic",
+  "city": "casablanca",
+  "kind": "scenic",
+  "icon": "mosque",
+  "title": {
+   "uk": "Касабланка за день",
+   "en": "Casablanca in a day"
+  },
+  "desc": {
+   "uk": "Мечеть Хассана II, набережна й ринок за справжньою арганою.",
+   "en": "The Hassan II Mosque, the corniche and the market for real argan oil."
+  },
+  "stops": [
+   {
+    "poi": "casa-hassan2",
+    "dwell": 90,
+    "note": {
+     "uk": "Єдина мечеть Марокко, відкрита для немусульман",
+     "en": "The only mosque in Morocco open to non-Muslims"
+    }
+   },
+   {
+    "poi": "casa-corniche",
+    "dwell": 60
+   },
+   {
+    "poi": "casa-marche",
+    "dwell": 50,
+    "note": {
+     "uk": "Найнадійніше місто для купівлі арганової олії",
+     "en": "The most reliable city to buy argan oil"
+    }
+   },
+   {
+    "poi": "casa-habous",
+    "dwell": 60
+   }
+  ]
+ },
+ {
+  "id": "fes-crafts",
+  "city": "fes",
+  "kind": "scenic",
+  "icon": "kit",
+  "title": {
+   "uk": "Фес: місто ремесел",
+   "en": "Fes: the city of crafts"
+  },
+  "desc": {
+   "uk": "Від синьої брами вниз через головну артерію медини до чинбарень і мідників.",
+   "en": "From the Blue Gate down the medina's main artery to the tanneries and coppersmiths."
+  },
+  "stops": [
+   {
+    "poi": "fes-boujloud",
+    "dwell": 15,
+    "note": {
+     "uk": "Запам'ятай браму — це твоя точка повернення",
+     "en": "Memorise the gate — it is your way back"
+    }
+   },
+   {
+    "poi": "fes-bouinania",
+    "dwell": 30
+   },
+   {
+    "poi": "fes-talaa",
+    "dwell": 60
+   },
+   {
+    "poi": "fes-seffarine",
+    "dwell": 30
+   },
+   {
+    "poi": "fes-chouara",
+    "dwell": 45,
+    "note": {
+     "uk": "Дивись із тераси крамниці. Гілочку м'яти запропонують не безкоштовно",
+     "en": "View it from a shop terrace. The mint sprig is not free"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ess-day",
+  "city": "essaouira",
+  "kind": "scenic",
+  "icon": "beach",
+  "title": {
+   "uk": "Ессувейра одним днем",
+   "en": "Essaouira in a day"
+  },
+  "desc": {
+   "uk": "Найспокійніша медина Марокко, порт із синіми човнами й кооперативи арганії дорогою.",
+   "en": "Morocco's calmest medina, a port full of blue boats, and argan co-ops along the way."
+  },
+  "stops": [
+   {
+    "poi": "arg-marjana",
+    "dwell": 50,
+    "note": {
+     "uk": "Дорогою з Марракеша — зупинка в кооперативі",
+     "en": "A co-op stop on the way from Marrakesh"
+    }
+   },
+   {
+    "poi": "ess-medina",
+    "dwell": 90
+   },
+   {
+    "poi": "ess-port",
+    "dwell": 45
+   },
+   {
+    "poi": "ess-thuya",
+    "dwell": 40
+   }
+  ]
+ },
+ {
+  "id": "chi-evening",
+  "city": "chisinau",
+  "kind": "short",
+  "icon": "moon",
+  "title": {
+   "uk": "Вечірній Кишинів",
+   "en": "Chișinău in the evening"
+  },
+  "desc": {
+   "uk": "Рівно те, що встигаєш побачити за вечір транзитної зупинки. Усе поруч, пішки.",
+   "en": "Exactly what fits into one transit evening. Everything is walkable."
+  },
+  "stops": [
+   {
+    "poi": "chi-arch",
+    "dwell": 15
+   },
+   {
+    "poi": "chi-cathedral",
+    "dwell": 20
+   },
+   {
+    "poi": "chi-park",
+    "dwell": 30
+   },
+   {
+    "poi": "chi-food",
+    "dwell": 90,
+    "note": {
+     "uk": "Тераси, молдовська кухня, вино за бажанням",
+     "en": "Terraces, Moldovan food, wine if you like"
+    }
+   }
+  ]
+ },
+ {
+  "id": "chi-market",
+  "city": "chisinau",
+  "kind": "short",
+  "icon": "cart",
+  "title": {
+   "uk": "Ринок і центр",
+   "en": "Market and centre"
+  },
+  "desc": {
+   "uk": "Якщо є пів дня: ринок за сиром і вином, потім центр.",
+   "en": "If you have half a day: the market for cheese and wine, then the centre."
+  },
+  "stops": [
+   {
+    "poi": "chi-market",
+    "dwell": 60,
+    "note": {
+     "uk": "Бринза, вино, фрукти — гарний сувенір із Молдови",
+     "en": "Brânză, wine, fruit — a good souvenir from Moldova"
+    }
+   },
+   {
+    "poi": "chi-arch",
+    "dwell": 15
+   },
+   {
+    "poi": "chi-park",
+    "dwell": 30
+   }
+  ]
+ },
+ {
+  "id": "kyi-start",
+  "city": "kyiv",
+  "kind": "short",
+  "icon": "train",
+  "title": {
+   "uk": "Виїзд із Києва",
+   "en": "Leaving Kyiv"
+  },
+  "desc": {
+   "uk": "Не прогулянка, а чекліст останнього дня: обміняти євро, докупити аптечку, дістатись вокзалу.",
+   "en": "Not a walk but a last-day checklist: change euros, top up the first-aid kit, get to the station."
+  },
+  "stops": [
+   {
+    "poi": "kyi-exch-1",
+    "dwell": 30,
+    "note": {
+     "uk": "Купи EUR дрібними — далі курс гірший",
+     "en": "Buy EUR in small notes — rates get worse from here"
+    }
+   },
+   {
+    "poi": "kyi-pharm-1",
+    "dwell": 20,
+    "note": {
+     "uk": "Останній шанс докупити ліки за звичними назвами",
+     "en": "Your last chance to buy medicines under familiar names"
+    }
+   },
+   {
+    "poi": "kyi-station",
+    "dwell": 40,
+    "note": {
+     "uk": "Приїдь за годину. Офіційне таксі — з південного боку",
+     "en": "Arrive an hour early. Official taxis are on the south side"
+    }
+   }
+  ]
+ }
 ]

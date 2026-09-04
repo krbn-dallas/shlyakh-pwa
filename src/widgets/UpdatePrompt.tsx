@@ -1,0 +1,33 @@
+import { useRegisterSW } from 'virtual:pwa-register/react';
+import { Icon } from '@/shared/ui/Icon';
+import { useT } from '@/shared/i18n';
+
+/** The previous build shipped `skipWaiting` with no UI, so data updates landed silently. */
+export function UpdatePrompt() {
+  const { t } = useT();
+  const { needRefresh: [needRefresh, setNeedRefresh], updateServiceWorker } = useRegisterSW();
+
+  if (!needRefresh) return null;
+  return (
+    <div className="fade-up" style={{
+      position: 'fixed', left: 'var(--s3)', right: 'var(--s3)',
+      bottom: 'calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--s3))',
+      zIndex: 'var(--z-sheet)', background: 'var(--surface)', border: '1px solid var(--gold)',
+      borderRadius: 'var(--r-card)', boxShadow: 'var(--shadow-lg)', padding: 'var(--s3) var(--s4)',
+    }}>
+      <div className="row" style={{ gap: 'var(--s3)' }}>
+        <Icon name="cloud-download" size={20} color="var(--gold-deep)" />
+        <div className="grow" style={{ minWidth: 0 }}>
+          <div style={{ fontWeight: 800, fontSize: 14 }}>{t('update.title')}</div>
+          <div className="tiny muted">{t('update.body')}</div>
+        </div>
+        <button className="btn btn-gold" style={{ minHeight: 38, padding: '0 14px' }} onClick={() => void updateServiceWorker(true)}>
+          {t('update.action')}
+        </button>
+        <button className="btn btn-ghost" style={{ minWidth: 38, padding: 0 }} onClick={() => setNeedRefresh(false)} aria-label={t('common.close')}>
+          <Icon name="x" size={13} />
+        </button>
+      </div>
+    </div>
+  );
+}

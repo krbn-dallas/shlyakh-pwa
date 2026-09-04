@@ -1,5 +1,12 @@
 [
-  {"id":"kyiv","name":{"uk":"Київ","ru":"Киев"},"flag":"🇺🇦","tz":"Europe/Kyiv","currency":"UAH","bbox":[50.36,30.35,50.59,30.72]},
-  {"id":"chisinau","name":{"uk":"Кишинів","ru":"Кишинёв"},"flag":"🇲🇩","tz":"Europe/Chisinau","currency":"MDL","bbox":[46.92,28.78,47.10,28.97]},
-  {"id":"marrakech","name":{"uk":"Марракеш","ru":"Марракеш"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","bbox":[31.57,-8.08,31.70,-7.93]}
+  {"id":"kyiv","country":"ua","primary":true,"name":{"uk":"Київ","en":"Kyiv"},"flag":"🇺🇦","tz":"Europe/Kyiv","currency":"UAH","center":[50.4501,30.5234],"bbox":[50.36,30.35,50.59,30.72]},
+  {"id":"chisinau","country":"md","primary":true,"name":{"uk":"Кишинів","en":"Chișinău"},"flag":"🇲🇩","tz":"Europe/Chisinau","currency":"MDL","center":[47.0105,28.8638],"bbox":[46.92,28.78,47.10,28.97]},
+  {"id":"marrakech","country":"ma","primary":true,"name":{"uk":"Марракеш","en":"Marrakesh"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[31.6295,-7.9811],"bbox":[31.55,-8.09,31.72,-7.90],"taxiColor":{"uk":"Червоні petit taxi","en":"Red petit taxis"}},
+  {"id":"casablanca","country":"ma","primary":false,"name":{"uk":"Касабланка","en":"Casablanca"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[33.5731,-7.5898],"bbox":[33.48,-7.72,33.65,-7.45],"taxiColor":{"uk":"Білі petit taxi","en":"White petit taxis"}},
+  {"id":"fes","country":"ma","primary":false,"name":{"uk":"Фес","en":"Fes"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[34.0331,-5.0003],"bbox":[33.96,-5.09,34.10,-4.92],"taxiColor":{"uk":"Сині petit taxi","en":"Blue petit taxis"}},
+  {"id":"rabat","country":"ma","primary":false,"name":{"uk":"Рабат","en":"Rabat"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[34.0209,-6.8416],"bbox":[33.94,-6.93,34.06,-6.75],"taxiColor":{"uk":"Сині petit taxi","en":"Blue petit taxis"}},
+  {"id":"tangier","country":"ma","primary":false,"name":{"uk":"Танжер","en":"Tangier"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[35.7595,-5.8340],"bbox":[35.70,-5.93,35.82,-5.72],"taxiColor":{"uk":"Жовті petit taxi","en":"Yellow petit taxis"}},
+  {"id":"agadir","country":"ma","primary":false,"name":{"uk":"Агадір","en":"Agadir"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[30.4278,-9.5981],"bbox":[30.36,-9.68,30.51,-9.50],"taxiColor":{"uk":"Помаранчеві petit taxi","en":"Orange petit taxis"}},
+  {"id":"essaouira","country":"ma","primary":false,"name":{"uk":"Ессувейра","en":"Essaouira"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[31.5085,-9.7595],"bbox":[31.46,-9.82,31.56,-9.70],"taxiColor":{"uk":"Сині petit taxi","en":"Blue petit taxis"}},
+  {"id":"ouarzazate","country":"ma","primary":false,"name":{"uk":"Уарзазат","en":"Ouarzazate"},"flag":"🇲🇦","tz":"Africa/Casablanca","currency":"MAD","center":[30.9189,-6.8934],"bbox":[30.86,-6.97,30.98,-6.82]}
 ]

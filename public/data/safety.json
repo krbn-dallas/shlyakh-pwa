@@ -1,9 +1,976 @@
 [
-  {"id":"marrakech-dark-alleys","city":"marrakech","level":"caution","title":{"uk":"Темні провулки медини вночі","ru":"Тёмные переулки медины ночью"},"why":{"uk":"Порожні провулки після 22:00 — ризик дезорієнтації та крадіжок","ru":"Пустые переулки после 22:00 — риск дезориентации и краж"},"tips":[{"uk":"Тримайся головних артерій — вони живі до півночі","ru":"Держись главных артерий — они живые до полуночи"},{"uk":"Візьми таксі після 23:00","ru":"Возьми такси после 23:00"}],
-   "lat":31.628,"lon":-7.985,"radiusM":800},
-  {"id":"marrakech-souk-pickpockets","city":"marrakech","level":"caution","title":{"uk":"Суки та входи в медину — кишенькові","ru":"Суки и входы в медину — карманники"},"why":{"uk":"Товкотнеча на ринках — увага до сумок","ru":"Толкотня на рынках — внимание к сумкам"},"tips":[{"uk":"Сумка через плече вперед, застібнута","ru":"Сумка через плечо вперёд, застёгнута"},{"uk":"Не діставай телефон у натовпі","ru":"Не доставай телефон в толпе"}]},
-  {"id":"marrakech-fake-guides","city":"marrakech","level":"caution","title":{"uk":"Фейкові гіди та «безкоштовні» браслети","ru":"Фейковые гиды и «бесплатные» браслеты"},"why":{"uk":"Нав'язливі пропозиції на площі Джемаа — розводи","ru":"Навязчивые предложения на площади Джемаа — разводы"},"tips":[{"uk":"Ввічливо «La shukran» і йди далі","ru":"Вежливо «La shukran» и иди дальше"},{"uk":"Ціну оговори до послуги","ru":"Цену оговори до услуги"}]},
-  {"id":"marrakech-evening","city":"marrakech","level":"caution","title":{"uk":"Вечірні правила","ru":"Вечерние правила"},"why":{"uk":"Головні артерії безпечні, бічні — ні","ru":"Главные артерии безопасны, боковые — нет"},"tips":[{"uk":"Плануй маршрут по освітлених вулицях","ru":"Планируй маршрут по освещённым улицам"}]},
-  {"id":"chisinau-market","city":"chisinau","level":"caution","title":{"uk":"Центральний ринок і вокзал увечері","ru":"Центральный рынок и вокзал вечером"},"why":{"uk":"Стандартна уважність — як у будь-якому місті","ru":"Стандартная внимательность — как в любом городе"},"tips":[{"uk":"Не залишай речі без нагляду","ru":"Не оставляй вещи без присмотра"}]},
-  {"id":"kyiv-curfew","city":"kyiv","level":"avoid","title":{"uk":"Комендантська година та повітряна тривога","ru":"Комендантский час и воздушная тревога"},"why":{"uk":"Дотримуйся сигналів тривоги та не знімай військові об'єкти","ru":"Соблюдай сигналы тревоги и не снимай военные объекты"},"tips":[{"uk":"Укриття — одразу при сирені","ru":"Укрытие — сразу при сирене"},{"uk":"До 00:00 будь у безпечному місці","ru":"До 00:00 будь в безопасном месте"}]}
+ {
+  "id": "mrk-medina-night",
+  "city": "marrakech",
+  "kind": "zone",
+  "level": "caution",
+  "title": {
+   "uk": "Вузькі провулки медини після опівночі",
+   "en": "Narrow medina alleys after midnight"
+  },
+  "why": {
+   "uk": "Порожні провулки без освітлення — ризик дезорієнтації та крадіжок. Головні артерії медини живі й безпечні майже до півночі, але бічні дербі порожніють різко.",
+   "en": "Empty unlit alleys mean disorientation and theft risk. The medina's main arteries stay lively and safe until almost midnight, but the side derbs empty out abruptly."
+  },
+  "tips": [
+   {
+    "uk": "Тримайся освітлених головних вулиць — вони людні до півночі",
+    "en": "Stick to the lit main streets — they are busy until midnight"
+   },
+   {
+    "uk": "Після 23:00 бери petit taxi до брами, ближчої до ріаду",
+    "en": "After 23:00 take a petit taxi to the gate nearest your riad"
+   },
+   {
+    "uk": "Запам'ятай назву своєї брами (Bab) — таксисти орієнтуються по них",
+    "en": "Memorise your gate name (Bab) — drivers navigate by them"
+   },
+   {
+    "uk": "Увімкни офлайн-карту ЗАРАНІ, доки є Wi-Fi",
+    "en": "Load the offline map BEFORE you set off, while you still have Wi-Fi"
+   }
+  ],
+  "lat": 31.628,
+  "lon": -7.985,
+  "radiusM": 900
+ },
+ {
+  "id": "mrk-jemaa-pickpocket",
+  "city": "marrakech",
+  "kind": "zone",
+  "level": "caution",
+  "title": {
+   "uk": "Джемаа-ель-Фна та суки — кишенькові",
+   "en": "Jemaa el-Fna and the souks — pickpockets"
+  },
+  "why": {
+   "uk": "Найщільніші натовпи міста. Кишенькові крадіжки й висмикування сумок — основний вид злочинності проти туристів, особливо ввечері під час вистав.",
+   "en": "The densest crowds in the city. Pickpocketing and bag-snatching are the main crime against tourists, especially during the evening performances."
+  },
+  "tips": [
+   {
+    "uk": "Сумка через плече, спереду, на блискавці",
+    "en": "Cross-body bag, worn in front, zipped"
+   },
+   {
+    "uk": "Телефон не в задній кишені й не в руці над столом",
+    "en": "Phone out of back pockets and off the table"
+   },
+   {
+    "uk": "Гроші розділені: дрібні в кишені, основне — в поясній сумці",
+    "en": "Split your cash: small notes in a pocket, the rest in a money belt"
+   },
+   {
+    "uk": "Не діставай велику купюру в натовпі",
+    "en": "Never pull out a large note in a crowd"
+   }
+  ],
+  "lat": 31.6258,
+  "lon": -7.9891,
+  "radiusM": 500
+ },
+ {
+  "id": "mrk-souk-moto",
+  "city": "marrakech",
+  "kind": "zone",
+  "level": "caution",
+  "title": {
+   "uk": "Мотоцикли у вузьких вулицях суків",
+   "en": "Motorbikes in the narrow souk lanes"
+  },
+  "why": {
+   "uk": "Мопеди мчать впритул до пішоходів у провулках шириною два метри. Окремий ризик — висмикування сумки з мотоцикла на ходу.",
+   "en": "Mopeds tear past pedestrians in two-metre-wide lanes. A separate risk is bag-snatching from a moving bike."
+  },
+  "tips": [
+   {
+    "uk": "Йди ближче до стін, не по центру провулка",
+    "en": "Walk close to the walls, not down the middle"
+   },
+   {
+    "uk": "Сумку неси з боку стіни, а не з боку проїзду",
+    "en": "Carry your bag on the wall side, away from traffic"
+   },
+   {
+    "uk": "Почула сигнал позаду — зупинись і притулись, не крутись",
+    "en": "If you hear a horn behind you, stop and step aside — do not spin round"
+   }
+  ],
+  "lat": 31.629,
+  "lon": -7.988,
+  "radiusM": 600
+ },
+ {
+  "id": "mrk-tanneries",
+  "city": "marrakech",
+  "kind": "scam",
+  "level": "caution",
+  "title": {
+   "uk": "«Безкоштовна» екскурсія на чинбарні",
+   "en": "The \"free\" tannery tour"
+  },
+  "why": {
+   "uk": "Класична схема: тебе ведуть до чинбарень, дають гілочку м'яти «від запаху», а на виході вимагають плату — і за екскурсію, і за м'яту.",
+   "en": "A classic scheme: you are led to the tanneries, handed a sprig of mint \"for the smell\", and at the exit payment is demanded — for the tour and for the mint."
+  },
+  "tips": [
+   {
+    "uk": "Нічого не бери з рук, якщо не збираєшся платити",
+    "en": "Take nothing from anyone's hand unless you intend to pay"
+   },
+   {
+    "uk": "Одразу питай ціну і кажи «ні, дякую», якщо не влаштовує",
+    "en": "Ask the price immediately and say no thank you if it does not suit"
+   },
+   {
+    "uk": "Справжні чинбарні — у Фесі, у Марракеші вони менші й туристичніші",
+    "en": "The real tanneries are in Fes; Marrakesh's are smaller and more touristy"
+   }
+  ]
+ },
+ {
+  "id": "ma-fake-guide",
+  "city": "ma",
+  "kind": "scam",
+  "level": "caution",
+  "title": {
+   "uk": "Фальшиві гіди",
+   "en": "Fake guides"
+  },
+  "why": {
+   "uk": "Людина «просто показує дорогу», йде з тобою кілька кварталів, а потім вимагає оплату — інколи наполегливо і з підвищенням голосу. Часто заводять не туди, куди ти йшла.",
+   "en": "Someone \"just shows you the way\", walks a few blocks with you, then demands payment — sometimes insistently and loudly. They often lead you somewhere other than where you were going."
+  },
+  "tips": [
+   {
+    "uk": "Тверде «Ла, шукран» (ні, дякую) і йди далі не зупиняючись",
+    "en": "A firm \"La, chukran\" (no, thank you) and keep walking"
+   },
+   {
+    "uk": "Не питай дорогу в чоловіків, які самі підійшли",
+    "en": "Do not ask directions of men who approached you first"
+   },
+   {
+    "uk": "Питай дорогу в жінок, у продавців за прилавком або в поліції",
+    "en": "Ask women, shopkeepers behind a counter, or the police"
+   },
+   {
+    "uk": "Офіційні гіди мають бейдж — можна попросити показати",
+    "en": "Official guides carry a badge — you may ask to see it"
+   },
+   {
+    "uk": "«Ця вулиця закрита», «там свято» — майже завжди неправда",
+    "en": "\"That street is closed\", \"there's a festival\" — almost always untrue"
+   }
+  ]
+ },
+ {
+  "id": "ma-tea-trap",
+  "city": "ma",
+  "kind": "scam",
+  "level": "caution",
+  "title": {
+   "uk": "«Чайна пастка»",
+   "en": "The tea trap"
+  },
+  "why": {
+   "uk": "Тебе запрошують на безкоштовний чай у крамницю. Після чаю починається тиск: відмовитися стає незручно, і ціна на килим чи масло виявляється втричі вищою за ринкову.",
+   "en": "You are invited into a shop for free tea. Afterwards the pressure starts: refusing feels rude, and the price of the rug or oil turns out to be triple the market rate."
+  },
+  "tips": [
+   {
+    "uk": "Чай — це нормальна марокканська гостинність, але він не зобов'язує купувати",
+    "en": "Tea is normal Moroccan hospitality — it does not oblige you to buy"
+   },
+   {
+    "uk": "Скажи одразу: «Я сьогодні не купую, тільки дивлюсь»",
+    "en": "Say up front: \"I am not buying today, just looking\""
+   },
+   {
+    "uk": "Заходь у крамницю з наміром і бюджетом, а не «просто подивитись»",
+    "en": "Enter a shop with an intention and a budget, not \"just to look\""
+   },
+   {
+    "uk": "Готова відповідь: «Дякую, я подумаю» — і виходь",
+    "en": "Have an exit line ready: \"Thank you, I will think about it\" — then leave"
+   }
+  ]
+ },
+ {
+  "id": "ma-fake-argan",
+  "city": "ma",
+  "kind": "scam",
+  "level": "caution",
+  "title": {
+   "uk": "Підробне арганове масло",
+   "en": "Counterfeit argan oil"
+  },
+  "why": {
+   "uk": "Найпоширеніша підробка в Марокко. Під виглядом чистого арганового продають суміш дешевих олій — соняшникової чи ріпакової — за спокусливо низькою ціною.",
+   "en": "The most common fake in Morocco. A blend of cheap oils — sunflower or rapeseed — is sold as pure argan at a temptingly low price."
+  },
+  "tips": [
+   {
+    "uk": "Реальна ціна: 150–250 MAD за 250 мл. 50 MAD — це підробка, без винятків",
+    "en": "The real price is 150–250 MAD per 250 ml. 50 MAD means fake, no exceptions"
+   },
+   {
+    "uk": "Тільки темне скло — масло руйнується від ультрафіолету",
+    "en": "Dark glass only — UV destroys the oil"
+   },
+   {
+    "uk": "Косметичне: світло-золотисте, майже без запаху. Кулінарне: темніше, виразний горіховий аромат",
+    "en": "Cosmetic: light golden, almost odourless. Culinary: darker, distinctly nutty"
+   },
+   {
+    "uk": "Прозора пластикова пляшка без запаху — точно не аргана",
+    "en": "A clear plastic bottle with no smell is definitely not argan"
+   },
+   {
+    "uk": "Шукай сертифікати ECOCERT або марокканський стандарт на етикетці",
+    "en": "Look for ECOCERT or the Moroccan standard on the label"
+   },
+   {
+    "uk": "Найнадійніше — жіночі кооперативи на трасі N1 між Ессувейрою та Агадіром",
+    "en": "The safest source is the women's co-ops on the N1 between Essaouira and Agadir"
+   }
+  ]
+ },
+ {
+  "id": "ma-taxi-meter",
+  "city": "ma",
+  "kind": "scam",
+  "level": "caution",
+  "title": {
+   "uk": "«Лічильник не працює»",
+   "en": "\"The meter is broken\""
+  },
+  "why": {
+   "uk": "Найчастіша фраза таксистів у туристичних містах. Без лічильника ціна називається вже після поїздки — і вона буде вдвічі-втричі вищою.",
+   "en": "The line you will hear most often in tourist cities. Without a meter the price is named after the ride — and it will be two or three times higher."
+  },
+  "tips": [
+   {
+    "uk": "Домовляйся про ціну ДО того, як сядеш, або наполягай на лічильнику",
+    "en": "Agree the fare BEFORE getting in, or insist on the meter"
+   },
+   {
+    "uk": "Petit taxi у межах медини по лічильнику: 15–30 MAD",
+    "en": "Petit taxi inside the medina, metered: 15–30 MAD"
+   },
+   {
+    "uk": "Без лічильника не погоджуйся більше ніж на 30–50 MAD по місту",
+    "en": "Without a meter, do not agree to more than 30–50 MAD across town"
+   },
+   {
+    "uk": "Аеропорт RAK ↔ медина: близько 150 MAD, узгодь заздалегідь",
+    "en": "Airport RAK ↔ medina: about 150 MAD, agree it in advance"
+   },
+   {
+    "uk": "Відмовляється? Просто вийди й візьми наступне — їх багато",
+    "en": "If he refuses, get out and take the next one — there are plenty"
+   }
+  ]
+ },
+ {
+  "id": "ma-bracelet",
+  "city": "ma",
+  "kind": "scam",
+  "level": "caution",
+  "title": {
+   "uk": "«Подарунок»: браслети, хна, мавпи, змії",
+   "en": "The \"gift\": bracelets, henna, monkeys, snakes"
+  },
+  "why": {
+   "uk": "Тобі надягають браслет на руку, саджають мавпу на плече або починають малювати хну — «безкоштовно, це подарунок». Після цього вимагають гроші, часто голосно й привселюдно.",
+   "en": "A bracelet is slipped onto your wrist, a monkey placed on your shoulder, or henna started on your hand — \"free, it's a gift\". Then money is demanded, often loudly and in public."
+  },
+  "tips": [
+   {
+    "uk": "Тримай руки при собі й не простягай їх назустріч",
+    "en": "Keep your hands to yourself and do not extend them"
+   },
+   {
+    "uk": "Якщо вже надягли — знімай і повертай одразу, не відходячи",
+    "en": "If it is already on, take it off and hand it back on the spot"
+   },
+   {
+    "uk": "Хна з чорним барвником може дати опік — не погоджуйся взагалі",
+    "en": "Black henna can cause chemical burns — refuse it outright"
+   },
+   {
+    "uk": "Фото з мавпою чи змією платне завжди, скільки б не казали",
+    "en": "A photo with a monkey or snake always costs money, whatever they say"
+   }
+  ]
+ },
+ {
+  "id": "ma-photo",
+  "city": "ma",
+  "kind": "rule",
+  "level": "caution",
+  "title": {
+   "uk": "Фотографування людей",
+   "en": "Photographing people"
+  },
+  "why": {
+   "uk": "Знімати людей без дозволу вважається образливим і часто закінчується конфліктом або вимогою грошей. Це стосується і продавців, і артистів на Джемаа.",
+   "en": "Photographing people without permission is considered offensive and often ends in a confrontation or a demand for money. This applies to sellers and to the Jemaa performers alike."
+  },
+  "tips": [
+   {
+    "uk": "Питай дозволу — жестом на камеру достатньо",
+    "en": "Ask permission — a gesture at the camera is enough"
+   },
+   {
+    "uk": "Артисти на Джемаа очікують 10–20 MAD за фото",
+    "en": "Jemaa performers expect 10–20 MAD for a photo"
+   },
+   {
+    "uk": "Не знімай усередині мечетей і поліцейських",
+    "en": "No photos inside mosques or of police officers"
+   },
+   {
+    "uk": "Знімати жінок без дозволу — особливо неприйнятно",
+    "en": "Photographing women without permission is especially unacceptable"
+   }
+  ]
+ },
+ {
+  "id": "ma-women-attention",
+  "city": "ma",
+  "kind": "women",
+  "level": "caution",
+  "title": {
+   "uk": "Небажана увага до жінок",
+   "en": "Unwanted attention towards women"
+  },
+  "why": {
+   "uk": "Пряме насильство щодо туристок трапляється рідко, але настирливі погляди, свист і коментарі — звичайна річ, особливо на ринках Марракеша й Феса. Це виснажує, навіть коли не небезпечно.",
+   "en": "Direct violence against female tourists is rare, but persistent staring, whistling and comments are common, especially at the markets of Marrakesh and Fes. It is draining even when it is not dangerous."
+  },
+  "tips": [
+   {
+    "uk": "Обручка помітно зменшує кількість чіплянь — за спостереженнями приблизно вдвічі",
+    "en": "A wedding ring noticeably cuts the harassment — by roughly half, by most accounts"
+   },
+   {
+    "uk": "Іди впевнено й цілеспрямовано, наче знаєш дорогу",
+    "en": "Walk with intent, as if you know exactly where you are going"
+   },
+   {
+    "uk": "Не вступай у розмову — навіть «ні, дякую» іноді читається як запрошення",
+    "en": "Do not engage — even \"no thank you\" is sometimes read as an opening"
+   },
+   {
+    "uk": "Сонцезахисні окуляри допомагають: зоровий контакт зчитується як інтерес",
+    "en": "Sunglasses help: eye contact is read as interest"
+   },
+   {
+    "uk": "Повертайся до ріаду ввечері разом із чоловіком, а не сама",
+    "en": "Return to the riad in the evening with your husband, not alone"
+   },
+   {
+    "uk": "Фес і Ессувейра в цьому плані помітно спокійніші за Марракеш",
+    "en": "Fes and Essaouira are noticeably calmer than Marrakesh in this respect"
+   }
+  ]
+ },
+ {
+  "id": "ma-women-dress",
+  "city": "ma",
+  "kind": "women",
+  "level": "info",
+  "title": {
+   "uk": "Як одягатися",
+   "en": "How to dress"
+  },
+  "why": {
+   "uk": "Марокко — ісламська країна. Хіджаб не обов'язковий для туристок, але закритий одяг помітно знижує увагу й відкриває двері в місця, куди інакше не пустять.",
+   "en": "Morocco is a Muslim country. A headscarf is not required of tourists, but covered clothing noticeably reduces attention and opens doors that would otherwise stay shut."
+  },
+  "tips": [
+   {
+    "uk": "Закриті плечі й коліна — базове правило для медини й сільської місцевості",
+    "en": "Covered shoulders and knees — the baseline for the medina and the countryside"
+   },
+   {
+    "uk": "Довгі спідниці або штани й сорочки з рукавом",
+    "en": "Long skirts or trousers, and sleeved shirts"
+   },
+   {
+    "uk": "Шарф у сумці завжди — накрити плечі чи голову за секунду",
+    "en": "Always keep a scarf in your bag — shoulders or head covered in a second"
+   },
+   {
+    "uk": "У Гелізі, готелях і біля басейну правила значно вільніші",
+    "en": "In Guéliz, hotels and by the pool the rules are much looser"
+   },
+   {
+    "uk": "У мечеті — обов'язково закрито; більшість мечетей і так закриті для немусульман",
+    "en": "In a mosque, covering is mandatory; most mosques are closed to non-Muslims anyway"
+   }
+  ]
+ },
+ {
+  "id": "ma-women-alone",
+  "city": "ma",
+  "kind": "women",
+  "level": "caution",
+  "title": {
+   "uk": "Пересування наодинці",
+   "en": "Moving around alone"
+  },
+  "why": {
+   "uk": "Удень основні туристичні райони безпечні. Ввечері порожні вулиці, віддалені пляжі й безлюдні ділянки медини краще не проходити самій.",
+   "en": "By day the main tourist areas are safe. In the evening, empty streets, remote beaches and deserted stretches of the medina are best not walked alone."
+  },
+  "tips": [
+   {
+    "uk": "Ввечері — таксі, а не пішки, навіть якщо «тут близько»",
+    "en": "In the evening take a taxi rather than walk, even if \"it's close\""
+   },
+   {
+    "uk": "Скинь рідним живу локацію на вечір",
+    "en": "Share your live location with family for the evening"
+   },
+   {
+    "uk": "Скажи в ріаді, коли плануєш повернутись",
+    "en": "Tell the riad when you expect to be back"
+   },
+   {
+    "uk": "Готова фраза: «Мій чоловік чекає на мене» — працює краще за «ні»",
+    "en": "A ready line — \"My husband is waiting for me\" — works better than \"no\""
+   }
+  ]
+ },
+ {
+  "id": "casa-districts",
+  "city": "casablanca",
+  "kind": "zone",
+  "level": "avoid",
+  "title": {
+   "uk": "Derb Sultan, Sidi Moumen, Hay Mohammadi",
+   "en": "Derb Sultan, Sidi Moumen, Hay Mohammadi"
+  },
+  "why": {
+   "uk": "Райони з підвищеним рівнем злочинності, особливо після заходу сонця. Туристичної причини туди їхати немає.",
+   "en": "Districts with elevated crime rates, especially after dark. There is no tourist reason to go there."
+  },
+  "tips": [
+   {
+    "uk": "Просто не їдь туди — у місті вистачає цікавого в інших районах",
+    "en": "Simply do not go — the city has plenty elsewhere"
+   },
+   {
+    "uk": "Безпечні зони: набережна Ain Diab, Habbous, центр, Maarif",
+    "en": "Safe areas: the Ain Diab corniche, Habbous, the centre, Maarif"
+   },
+   {
+    "uk": "Якщо таксі прокладає маршрут через них удень — це нормально",
+    "en": "If a taxi routes through them by day, that is fine"
+   }
+  ]
+ },
+ {
+  "id": "casa-market",
+  "city": "casablanca",
+  "kind": "zone",
+  "level": "caution",
+  "title": {
+   "uk": "Marché Central і стара медина Касабланки",
+   "en": "Marché Central and Casablanca's old medina"
+  },
+  "why": {
+   "uk": "Щільний натовп і вузькі проходи — типове місце для кишенькових крадіжок. Водночас це найкраще місто для купівлі справжнього арганового масла.",
+   "en": "Dense crowds and narrow aisles — a classic pickpocketing spot. It is also the best place in the city to buy genuine argan oil."
+  },
+  "tips": [
+   {
+    "uk": "Сумка спереду, гаманець не в задній кишені",
+    "en": "Bag in front, wallet out of your back pocket"
+   },
+   {
+    "uk": "Marché Central — фіксовані ціни, торгуватись не треба",
+    "en": "Marché Central has fixed prices — no haggling needed"
+   },
+   {
+    "uk": "Тут ціни нижчі, ніж у туристичних зонах: ринок обслуговує місцевих",
+    "en": "Prices are lower than in tourist areas: the market serves locals"
+   }
+  ],
+  "lat": 33.5962,
+  "lon": -7.6186,
+  "radiusM": 400
+ },
+ {
+  "id": "fes-getlost",
+  "city": "fes",
+  "kind": "zone",
+  "level": "caution",
+  "title": {
+   "uk": "Заблукати у Фес-ель-Балі",
+   "en": "Getting lost in Fes el-Bali"
+  },
+  "why": {
+   "uk": "Найбільша повністю пішохідна зона у світі — приблизно дев'ять тисяч провулків без логіки й без назв. Заблукати тут не виняток, а норма.",
+   "en": "The world's largest car-free urban area — roughly nine thousand lanes with no logic and no names. Getting lost here is the norm, not the exception."
+  },
+  "tips": [
+   {
+    "uk": "Завантаж офлайн-карту заздалегідь — сигналу всередині майже немає",
+    "en": "Download the offline map first — there is almost no signal inside"
+   },
+   {
+    "uk": "Орієнтуйся по брамах: Bab Boujloud — головний вхід",
+    "en": "Navigate by the gates: Bab Boujloud is the main entrance"
+   },
+   {
+    "uk": "Униз по схилу — до центру медини, вгору — до брам",
+    "en": "Downhill leads into the medina, uphill leads out to the gates"
+   },
+   {
+    "uk": "Офіційний гід на півдня коштує недорого й економить нерви",
+    "en": "An official guide for half a day is cheap and saves a lot of nerves"
+   },
+   {
+    "uk": "Рівень набридливості продавців тут нижчий, ніж у Марракеші",
+    "en": "Sellers here are noticeably less pushy than in Marrakesh"
+   }
+  ],
+  "lat": 34.065,
+  "lon": -4.977,
+  "radiusM": 1200
+ },
+ {
+  "id": "tangier-ok",
+  "city": "tangier",
+  "kind": "zone",
+  "level": "info",
+  "title": {
+   "uk": "Танжер після реконструкції",
+   "en": "Tangier after its redevelopment"
+  },
+  "why": {
+   "uk": "Місто пройшло масштабну програму оновлення: нова портова зона, набережна, освітлені вулиці. Один із найбезпечніших великих міст країни.",
+   "en": "The city went through a major redevelopment: a new port area, a corniche, lit streets. One of the safest big cities in the country."
+  },
+  "tips": [
+   {
+    "uk": "Звичайна міська уважність у людних місцях",
+    "en": "Ordinary city-level care in crowded places"
+   },
+   {
+    "uk": "Касба й набережна комфортні для прогулянок увечері",
+    "en": "The Kasbah and the corniche are comfortable for an evening walk"
+   }
+  ]
+ },
+ {
+  "id": "ma-water",
+  "city": "ma",
+  "kind": "health",
+  "level": "caution",
+  "title": {
+   "uk": "Вода з-під крана",
+   "en": "Tap water"
+  },
+  "why": {
+   "uk": "У багатьох регіонах водопровідна вода не вважається питною. Бутильована коштує копійки й продається скрізь.",
+   "en": "In many regions tap water is not considered potable. Bottled water costs pennies and is sold everywhere."
+  },
+  "tips": [
+   {
+    "uk": "Пий тільки бутильовану, перевіряй, що кришка не відкручена",
+    "en": "Drink bottled only, and check the seal is unbroken"
+   },
+   {
+    "uk": "Лід у туристичних закладах зазвичай безпечний, у вуличних — ні",
+    "en": "Ice in tourist venues is usually fine, from street stalls it is not"
+   },
+   {
+    "uk": "Мий фрукти бутильованою водою або бери ті, що чистяться",
+    "en": "Wash fruit in bottled water, or choose fruit you peel"
+   },
+   {
+    "uk": "Зуби чистити водою з-під крана можна",
+    "en": "Brushing teeth with tap water is fine"
+   }
+  ]
+ },
+ {
+  "id": "ma-healthcare",
+  "city": "ma",
+  "kind": "health",
+  "level": "info",
+  "title": {
+   "uk": "Медицина: державна і приватна",
+   "en": "Healthcare: public and private"
+  },
+  "why": {
+   "uk": "Якість державних лікарень сильно різниться. Приватні клініки у великих містах хороші, але вимагають оплату готівкою одразу.",
+   "en": "Public hospital quality varies widely. Private clinics in the big cities are good but expect immediate cash payment."
+  },
+  "tips": [
+   {
+    "uk": "Страховий поліс і телефон асистансу — офлайн у телефоні й на папері",
+    "en": "Keep your policy and the assistance number offline on your phone and on paper"
+   },
+   {
+    "uk": "Швидка й пожежні — 15, поліція з мобільного — 190",
+    "en": "Ambulance and fire — 15; police from a mobile — 190"
+   },
+   {
+    "uk": "Аптеки компетентні: фармацевт часто радить не гірше за лікаря",
+    "en": "Pharmacies are competent: the pharmacist often advises as well as a doctor"
+   },
+   {
+    "uk": "Нічні аптеки чергуються — «pharmacie de garde», список змінюється щотижня",
+    "en": "Night pharmacies rotate — \"pharmacie de garde\", the list changes weekly"
+   }
+  ]
+ },
+ {
+  "id": "ma-alcohol",
+  "city": "ma",
+  "kind": "legal",
+  "level": "caution",
+  "title": {
+   "uk": "Алкоголь",
+   "en": "Alcohol"
+  },
+  "why": {
+   "uk": "Продаж і вживання дозволені лише в ліцензованих закладах — ресторанах, барах, готелях і деяких ріадах. Публічне вживання і сп'яніння незаконні.",
+   "en": "Sale and consumption are permitted only in licensed venues — restaurants, bars, hotels and some riads. Drinking and being drunk in public are illegal."
+  },
+  "tips": [
+   {
+    "uk": "Не пий на вулиці й не носи відкриту пляшку",
+    "en": "Do not drink in the street or carry an open bottle"
+   },
+   {
+    "uk": "Купити можна в супермаркетах Carrefour і Marjane, у спеціальному відділі",
+    "en": "You can buy at Carrefour and Marjane supermarkets, in a separate section"
+   },
+   {
+    "uk": "У медині алкоголю практично немає — це нормально",
+    "en": "There is essentially no alcohol in the medina — that is normal"
+   }
+  ]
+ },
+ {
+  "id": "ma-pda",
+  "city": "ma",
+  "kind": "legal",
+  "level": "info",
+  "title": {
+   "uk": "Прояви ніжності на людях",
+   "en": "Public displays of affection"
+  },
+  "why": {
+   "uk": "Обійми й поцілунки в громадських місцях не прийняті й сприймаються як неповага. Тримання за руки подружжям — прийнятно.",
+   "en": "Hugging and kissing in public are not done and read as disrespectful. Married couples holding hands is fine."
+  },
+  "tips": [
+   {
+    "uk": "Тримання за руки — так, поцілунки — ні",
+    "en": "Holding hands yes, kissing no"
+   },
+   {
+    "uk": "У готелях і ріадах, орієнтованих на туристів, вільніше",
+    "en": "Tourist-oriented hotels and riads are more relaxed"
+   }
+  ]
+ },
+ {
+  "id": "ma-greeting",
+  "city": "ma",
+  "kind": "rule",
+  "level": "info",
+  "title": {
+   "uk": "Привітання й рукостискання",
+   "en": "Greetings and handshakes"
+  },
+  "why": {
+   "uk": "Марокканці дуже гостинні. Рукостискання з чоловіком — норма, але з жінкою краще дочекатись, поки вона сама подасть руку.",
+   "en": "Moroccans are very hospitable. A handshake with a man is normal, but with a woman it is better to wait for her to offer her hand first."
+  },
+  "tips": [
+   {
+    "uk": "Праву руку до серця після рукостискання — знак поваги",
+    "en": "A right hand to the heart after the handshake is a sign of respect"
+   },
+   {
+    "uk": "Їж і подавай правою рукою — ліва вважається нечистою",
+    "en": "Eat and pass things with your right hand — the left is considered unclean"
+   },
+   {
+    "uk": "Кілька слів арабською чи берберською цінують дуже високо",
+    "en": "A few words of Arabic or Berber are appreciated enormously"
+   }
+  ]
+ },
+ {
+  "id": "ma-terror",
+  "city": "ma",
+  "kind": "rule",
+  "level": "info",
+  "title": {
+   "uk": "Загальний рівень безпеки в країні",
+   "en": "The country's overall security level"
+  },
+  "why": {
+   "uk": "Марокко вважається однією з найбезпечніших країн Африки для туристів; серйозних терористичних інцидентів не фіксували з 2011 року. Водночас МЗС Великої Британії та Держдеп США тримають рівень підвищеної обережності.",
+   "en": "Morocco is considered one of Africa's safest countries for tourists; no serious terrorist incident has been recorded since 2011. At the same time the UK FCDO and the US State Department maintain a heightened-caution level."
+  },
+  "tips": [
+   {
+    "uk": "Уникай демонстрацій і великих скупчень — вони можуть змінити характер",
+    "en": "Avoid demonstrations and large gatherings — they can turn"
+   },
+   {
+    "uk": "Ризик викрадень стосується прикордоння з Алжиром і Мавританією та віддаленого півдня — не нашого маршруту",
+    "en": "The kidnapping risk concerns the Algerian and Mauritanian borderlands and the remote south — not our route"
+   },
+   {
+    "uk": "Основний реальний ризик для туриста — побутовий: кишенькові й шахрайство",
+    "en": "The real risk for a tourist is petty: pickpocketing and scams"
+   }
+  ]
+ },
+ {
+  "id": "ma-september",
+  "city": "ma",
+  "kind": "health",
+  "level": "caution",
+  "title": {
+   "uk": "Вересень: спека і раптові зливи",
+   "en": "September: heat and sudden downpours"
+  },
+  "why": {
+   "uk": "Вересень — один із кращих місяців, але денна спека ще тримається, а в горах і долинах-ваді можливі раптові сильні зливи з підтопленням і перекриттям доріг.",
+   "en": "September is one of the best months, but daytime heat lingers, and in the mountains and wadis sudden heavy rain can flood and close roads."
+  },
+  "tips": [
+   {
+    "uk": "Перед поїздкою в Атлас перевір прогноз і стан доріг",
+    "en": "Check the forecast and road conditions before heading into the Atlas"
+   },
+   {
+    "uk": "Вода з собою завжди, навіть на дві години в медині",
+    "en": "Always carry water, even for two hours in the medina"
+   },
+   {
+    "uk": "Найспекотніші години 12:00–16:00 — це час для ріаду або музею",
+    "en": "The hottest hours are 12:00–16:00 — riad or museum time"
+   },
+   {
+    "uk": "Це піковий туристичний місяць: квитки й житло бронюй заздалегідь",
+    "en": "It is peak season: book tickets and rooms well ahead"
+   }
+  ]
+ },
+ {
+  "id": "ma-atm",
+  "city": "ma",
+  "kind": "rule",
+  "level": "caution",
+  "title": {
+   "uk": "Банкомати й готівка",
+   "en": "ATMs and cash"
+  },
+  "why": {
+   "uk": "У медині карток майже не приймають. Знімати гроші краще в банкоматах при відділеннях банків, а не в окремо стоячих автоматах у туристичних місцях.",
+   "en": "Cards are barely accepted in the medina. Withdraw from ATMs attached to bank branches rather than stand-alone machines in tourist spots."
+  },
+  "tips": [
+   {
+    "uk": "Прикривай клавіатуру при введенні PIN",
+    "en": "Cover the keypad when entering your PIN"
+   },
+   {
+    "uk": "Знімай удень і в приміщенні банку, а не вночі на вулиці",
+    "en": "Withdraw by day and inside a branch, not at night on the street"
+   },
+   {
+    "uk": "Дирхам — закрита валюта: вивозити його з Марокко не можна",
+    "en": "The dirham is a closed currency — you may not take it out of Morocco"
+   },
+   {
+    "uk": "Розміняй залишок у аеропорту перед вильотом",
+    "en": "Change what is left at the airport before you fly"
+   }
+  ]
+ },
+ {
+  "id": "chisinau-market",
+  "city": "chisinau",
+  "kind": "zone",
+  "level": "caution",
+  "title": {
+   "uk": "Центральний ринок і район вокзалу ввечері",
+   "en": "The Central Market and station area in the evening"
+  },
+  "why": {
+   "uk": "Стандартна для великого міста уважність: щільний натовп удень, порожньо й погано освітлено ввечері.",
+   "en": "Standard big-city care: dense crowds by day, empty and poorly lit in the evening."
+  },
+  "tips": [
+   {
+    "uk": "Ввечері бери таксі, а не йди пішки від вокзалу",
+    "en": "In the evening take a taxi rather than walking from the station"
+   },
+   {
+    "uk": "Викликай таксі за коротким номером — 14444 або через застосунок",
+    "en": "Order a taxi on a short number — 14444 — or through an app"
+   },
+   {
+    "uk": "Не сідай до «приватних» водіїв, що пропонують послуги в залі",
+    "en": "Do not get into \"private\" cars offered inside the terminal"
+   }
+  ],
+  "lat": 47.023,
+  "lon": 28.833,
+  "radiusM": 600
+ },
+ {
+  "id": "chisinau-general",
+  "city": "chisinau",
+  "kind": "rule",
+  "level": "info",
+  "title": {
+   "uk": "Кишинів загалом",
+   "en": "Chișinău in general"
+  },
+  "why": {
+   "uk": "Спокійне європейське місто. Центр безпечний і вдень, і ввечері.",
+   "en": "A calm European city. The centre is safe both by day and in the evening."
+  },
+  "tips": [
+   {
+    "uk": "Валюта — молдовський лей (MDL), карти приймають майже скрізь",
+    "en": "The currency is the Moldovan leu (MDL); cards are accepted almost everywhere"
+   },
+   {
+    "uk": "Маршрутки коштують близько 6 MDL, готівкою водієві",
+    "en": "Marshrutkas cost about 6 MDL, cash to the driver"
+   },
+   {
+    "uk": "Мова: румунська і російська, англійська в туристичних місцях",
+    "en": "Languages: Romanian and Russian; English in tourist spots"
+   }
+  ]
+ },
+ {
+  "id": "kyiv-curfew",
+  "city": "kyiv",
+  "kind": "rule",
+  "level": "avoid",
+  "title": {
+   "uk": "Комендантська година",
+   "en": "Curfew"
+  },
+  "why": {
+   "uk": "Пересування в години комендантської заборонене. Години змінюються — перевіряй актуальні на день виїзду.",
+   "en": "Movement during curfew hours is prohibited. The hours change — check them for your departure day."
+  },
+  "tips": [
+   {
+    "uk": "Плануй виїзд так, щоб не потрапити в комендантську",
+    "en": "Plan your departure so you do not run into curfew"
+   },
+   {
+    "uk": "Нічні поїзди й автобуси мають окремий режим — уточни при купівлі",
+    "en": "Night trains and buses have their own arrangements — ask when buying"
+   },
+   {
+    "uk": "Документи при собі завжди",
+    "en": "Carry your documents at all times"
+   }
+  ]
+ },
+ {
+  "id": "kyiv-airalert",
+  "city": "kyiv",
+  "kind": "rule",
+  "level": "avoid",
+  "title": {
+   "uk": "Повітряна тривога",
+   "en": "Air-raid alert"
+  },
+  "why": {
+   "uk": "Під час тривоги потрібно йти в укриття. На вокзалах і в метро укриття позначені.",
+   "en": "During an alert you must go to a shelter. At stations and in the metro, shelters are signposted."
+  },
+  "tips": [
+   {
+    "uk": "Постав застосунок «Повітряна тривога» до виїзду",
+    "en": "Install the air-alert app before you travel"
+   },
+   {
+    "uk": "Метро працює як укриття",
+    "en": "The metro doubles as a shelter"
+   },
+   {
+    "uk": "На вокзалі слідуй вказівкам персоналу",
+    "en": "At the station follow the staff's instructions"
+   }
+  ]
+ },
+ {
+  "id": "kyiv-photo",
+  "city": "kyiv",
+  "kind": "legal",
+  "level": "avoid",
+  "title": {
+   "uk": "Заборона зйомки військових об'єктів",
+   "en": "No filming of military objects"
+  },
+  "why": {
+   "uk": "Фотографувати військову техніку, блокпости, наслідки влучань і роботу ППО заборонено законом.",
+   "en": "Photographing military equipment, checkpoints, strike aftermath or air-defence work is prohibited by law."
+  },
+  "tips": [
+   {
+    "uk": "Не знімай і не публікуй такого в соцмережах",
+    "en": "Do not photograph it and do not post it"
+   },
+   {
+    "uk": "Це стосується і випадкових кадрів на задньому плані",
+    "en": "This includes incidental shots in the background"
+   }
+  ]
+ },
+ {
+  "id": "kyiv-transit",
+  "city": "kyiv",
+  "kind": "rule",
+  "level": "caution",
+  "title": {
+   "uk": "Виїзд до Кишинева — наземно",
+   "en": "Leaving for Chișinău — overland"
+  },
+  "why": {
+   "uk": "Небо над Україною закрите, тож плече Київ → Кишинів долається поїздом, автобусом або авто. Це 8–9 годин плюс контроль на кордоні.",
+   "en": "Ukrainian airspace is closed, so the Kyiv → Chișinău leg is by train, bus or car. That is 8–9 hours plus the border check."
+  },
+  "tips": [
+   {
+    "uk": "Розклад звіряй на proizd.ua та infobus за кілька днів",
+    "en": "Check schedules on proizd.ua and infobus a few days ahead"
+   },
+   {
+    "uk": "Черга на кордоні непередбачувана — закладай запас до рейсу з KIV",
+    "en": "Border queues are unpredictable — leave a buffer before your KIV flight"
+   },
+   {
+    "uk": "Вода, перекуси й павербанк — у ручну поклажу",
+    "en": "Water, snacks and a power bank in your hand luggage"
+   },
+   {
+    "uk": "Засіб від заколисування, якщо автобус",
+    "en": "Motion-sickness tablets if you take the bus"
+   }
+  ]
+ }
 ]

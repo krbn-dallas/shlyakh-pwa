@@ -1,86 +1,276 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useStore } from '../../app/store';
-import { useTranslation } from 'react-i18next';
-import { CitySwitcher } from '../../widgets/CitySwitcher';
-import { usePageEnter } from '../../shared/lib/usePageEnter';
+import { useStore, resolveTheme } from '@/app/store';
+import { useT } from '@/shared/i18n';
+import { Icon } from '@/shared/ui/Icon';
+import { Section } from '@/shared/ui/Section';
+import { useData } from '@/shared/lib/data';
+import { tr } from '@/shared/lib/l10n';
+import { countdown, fmtDate, parseDate, todayMidnight, tripPosition, addDays } from '@/shared/lib/trip';
+import { haversine, fmtDistance } from '@/shared/lib/haversine';
+import { getPosition } from '@/shared/lib/geo';
 
-function Countdown({departure}:{departure:string}){
-  const [,tick]=useState(0);
-  useEffect(()=>{ const id=setInterval(()=>tick(v=>v+1),1000); return()=>clearInterval(id);},[]);
-  const target=new Date(departure+'T00:00:00');
-  const diff=Math.max(0, target.getTime()-Date.now());
-  const d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
-  return <div style={{display:'flex',gap:8,justifyContent:'center'}}>
-    {[['ДН',d],['ГОД',h],['ХВ',m],['СЕК',s]].map(([l,v])=>(
-      <div key={l} style={{background:'var(--surface)',border:'1px solid var(--line)',borderRadius:12,padding:'10px 12px',minWidth:64,textAlign:'center'}}>
-        <div style={{fontFamily:'var(--font-display)',fontSize:24,lineHeight:1,fontWeight:800}}>{String(v).padStart(2,'0')}</div>
-        <div className="tiny muted">{l}</div>
-      </div>
-    ))}
-  </div>;
+function HeroVideo() {
+  const theme = useStore((s) => s.theme);
+  const [play, setPlay] = useState(false);
+  const resolved = resolveTheme(theme);
+
+  useEffect(() => {
+    // Respect reduced motion and metered connections — the clips are ~3 MB each.
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    setPlay(!reduce && !conn?.saveData && navigator.onLine);
+  }, []);
+
+  const poster = resolved === 'dark' ? '/illustrations/hero-night.webp' : '/illustrations/hero-day.webp';
+  return (
+    <div style={{
+      position: 'relative', borderRadius: 'var(--r-card)', overflow: 'hidden',
+      border: '1px solid var(--line)', aspectRatio: '16/9', background: 'var(--surface-2)',
+    }}>
+      {play ? (
+        <video
+          key={resolved}
+          src={resolved === 'dark' ? '/media/hero-night.mp4' : '/media/hero-day.mp4'}
+          poster={poster}
+          autoPlay muted loop playsInline preload="none"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+      ) : (
+        <img src={poster} alt="" width={1200} height={669} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      )}
+    </div>
+  );
 }
 
-export function HomePage(){
-  const ref=usePageEnter();
-  const {departure}=useStore();
-  const {t}=useTranslation();
-  const [itinerary,setItinerary]=useState<any[]>([]);
-  useEffect(()=>{ fetch('/data/itinerary.json').then(r=>r.json()).then(setItinerary).catch(()=>{});},[]);
-  // find today index
-  const start=new Date(departure);
-  const todayIdx=Math.max(0, Math.min(itinerary.length-1, Math.floor((Date.now()-start.getTime())/86400000)));
-  const today=itinerary[todayIdx];
+function Countdown({ departure }: { departure: string }) {
+  const { t, lang } = useT();
+  const [c, setC] = useState(() => countdown(departure));
+  const prev = useRef(c.days);
+
+  useEffect(() => {
+    const id = setInterval(() => setC(countdown(departure)), 1000);
+    return () => clearInterval(id);
+  }, [departure]);
+
+  useEffect(() => { prev.current = c.days; }, [c.days]);
+
+  const units: [number, string][] = [
+    [c.days, t('home.days')], [c.hours, t('home.hoursShort')],
+    [c.minutes, t('home.minutes')], [c.seconds, t('home.seconds')],
+  ];
+
   return (
-    <div ref={ref as any} data-stagger>
-      <div className="card zellige" style={{textAlign:'center',padding:20}}>
-        <div className="small muted" style={{letterSpacing:'.08em',fontWeight:700}}>{t('countdown')}</div>
-        <h1 style={{margin:'6px 0 12px'}}>{departure.split('-').reverse().join('.')}</h1>
-        <Countdown departure={departure}/>
-        <div className="small muted" style={{marginTop:8}}>Київ → Chișinău → مراكش</div>
+    <div className="card zellige stack" style={{ gap: 'var(--s3)' }}>
+      <div className="row-between">
+        <span className="small muted" style={{ fontWeight: 700 }}>
+          {c.past ? t('home.started') : t('home.until')}
+        </span>
+        <span className="badge badge-gold">
+          <Icon name="calendar" size={10} /> {fmtDate(parseDate(departure), lang)}
+        </span>
       </div>
-
-      <div style={{marginTop:16}}>
-        <div className="small muted" style={{marginBottom:8,fontWeight:700}}>Ти зараз у:</div>
-        <CitySwitcher/>
-      </div>
-
-      {today && (
-        <div className="card" style={{marginTop:16}}>
-          <div className="small muted" style={{fontWeight:700}}>📌 {t('today')} — {today.title?.uk || today.title}</div>
-          <h3 style={{marginTop:6}}>{today.title?.uk}</h3>
-          <div style={{marginTop:8,display:'flex',flexDirection:'column',gap:6}}>
-            {today.blocks.slice(0,4).map((b:any,i:number)=><div key={i} style={{display:'flex',gap:10,alignItems:'center',fontSize:14}}><span style={{color:'var(--gold)',fontWeight:800}}>{b.t}</span><span>{b.title}</span></div>)}
+      <div className="row" style={{ gap: 'var(--s4)' }}>
+        {units.map(([n, label], i) => (
+          <div key={label} className="stack" style={{ gap: 0, alignItems: 'center' }}>
+            <span className="num" style={{
+              fontSize: i === 0 ? 40 : 28, fontWeight: 800, lineHeight: 1,
+              color: i === 0 ? 'var(--red)' : 'var(--ink)',
+            }}>
+              {String(n).padStart(2, '0')}
+            </span>
+            <span className="tiny muted">{label}</span>
           </div>
-          <Link to="/itinerary" className="btn btn-ghost" style={{marginTop:12,width:'100%'}}>Відкрити маршрут →</Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MyStay() {
+  const { t, lang } = useT();
+  const city = useStore((s) => s.city);
+  const stay = useStore((s) => s.stays[city]);
+  const [dist, setDist] = useState<number | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!stay?.lat || !stay.lon) return;
+    let alive = true;
+    getPosition(6000)
+      .then((p) => { if (alive) setDist(haversine(p.coords.latitude, p.coords.longitude, stay.lat!, stay.lon!)); })
+      .catch(() => { /* no location, no distance — the address still works */ });
+    return () => { alive = false; };
+  }, [stay?.lat, stay?.lon]);
+
+  const copy = async () => {
+    if (!stay) return;
+    try { await navigator.clipboard.writeText(`${stay.name}\n${stay.address}`); } catch { /* denied */ }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  if (!stay) {
+    return (
+      <Link to="/settings" className="card row" style={{ gap: 'var(--s3)', textDecoration: 'none' }}>
+        <Icon name="bed" size={20} color="var(--muted)" />
+        <span className="grow small muted">{t('home.noHome')}</span>
+        <span className="chip">{t('home.addHome')}</span>
+      </Link>
+    );
+  }
+
+  return (
+    <div className="card stack" style={{ gap: 'var(--s3)', borderColor: 'var(--gold)' }}>
+      <div className="row-between">
+        <span className="row small" style={{ gap: 8, fontWeight: 800 }}>
+          <Icon name="house" size={14} color="var(--gold-deep)" /> {t('home.myHome')}
+        </span>
+        {dist !== null && <span className="badge badge-gold">{fmtDistance(dist)}</span>}
+      </div>
+      <div className="stack" style={{ gap: 2 }}>
+        <span style={{ fontWeight: 700 }}>{stay.name}</span>
+        <span className="tiny muted">{stay.address}</span>
+      </div>
+      <div className="row" style={{ gap: 'var(--s2)' }}>
+        <button className="btn btn-gold grow" onClick={() => void copy()}>
+          <Icon name={copied ? 'check' : 'copy'} size={13} />
+          {copied ? t('common.copied') : t('home.takeMeHome')}
+        </button>
+        {stay.lat && (
+          <Link className="btn" to="/map" aria-label={t('common.onMap')}>
+            <Icon name="map" size={14} />
+          </Link>
+        )}
+      </div>
+      <span className="tiny faint">{t('home.addressForDriver')} · {tr({ uk: 'покажи екран водієві', en: 'show this screen to the driver' }, lang)}</span>
+    </div>
+  );
+}
+
+function Rates() {
+  const { t } = useT();
+  const rates = useStore((s) => s.rates);
+  const rows: [string, number, string][] = [
+    ['🇺🇦 UAH', rates.uah, '₴'], ['🇲🇩 MDL', rates.mdl, 'L'], ['🇲🇦 MAD', rates.mad, 'د.م'],
+  ];
+  return (
+    <div className="card stack" style={{ gap: 'var(--s3)' }}>
+      <div className="row-between">
+        <span className="row small" style={{ gap: 8, fontWeight: 800 }}>
+          <Icon name="money" size={14} color="var(--gold-deep)" /> {t('home.rates')}
+        </span>
+        <Link to="/settings" className="tiny muted" style={{ textDecoration: 'none' }}>
+          {t('common.edit')} <Icon name="chevron-right" size={9} />
+        </Link>
+      </div>
+      <div className="row" style={{ justifyContent: 'space-between' }}>
+        {rows.map(([label, v, sym]) => (
+          <div key={label} className="stack" style={{ gap: 0, alignItems: 'center' }}>
+            <span className="num" style={{ fontSize: 19, fontWeight: 700 }}>{v}</span>
+            <span className="tiny muted">{label} {sym}</span>
+          </div>
+        ))}
+      </div>
+      <span className="tiny faint">{t('home.ratesNote')}</span>
+    </div>
+  );
+}
+
+const QUICK = [
+  { to: '/sos', icon: 'shield-half', label: 'SOS', tone: 'red' },
+  { to: '/checklist', icon: 'o-check', label: 'nav.checklist' },
+  { to: '/map', icon: 'map', label: 'map.title' },
+  { to: '/phrases', icon: 'comment', label: 'phrases.title' },
+] as const;
+
+export default function HomePage() {
+  const { t, lang } = useT();
+  const departure = useStore((s) => s.departure);
+  const ret = useStore((s) => s.ret);
+  const { data: days } = useData('itinerary');
+  const { data: safety } = useData('safety');
+
+  const pos = tripPosition(departure, ret, days?.length ?? 6);
+  const today = pos.dayIndex !== null && days ? days[pos.dayIndex] : null;
+
+  // Rotate the tip by day so it changes daily but never mid-session.
+  const tip = useMemo(() => {
+    const tips = (safety ?? []).flatMap((s) => s.tips);
+    if (!tips.length) return null;
+    const today = todayMidnight().getTime();
+    return tips[Math.floor(today / 86_400_000) % tips.length];
+  }, [safety]);
+
+  return (
+    <div className="stack" style={{ gap: 'var(--s5)' }} data-stagger>
+      <HeroVideo />
+      {departure && <Countdown departure={departure} />}
+
+      {today && departure && (
+        <Section icon="calendar" title={t('home.todayCard')}
+          action={<Link to="/itinerary" className="chip">{t('common.more')}</Link>}>
+          <Link to="/itinerary" className="card stack" style={{ gap: 'var(--s3)', textDecoration: 'none' }}>
+            <div className="row-between">
+              <span className="badge badge-red">
+                {t('home.dayN', { n: (pos.dayIndex ?? 0) + 1 })}
+              </span>
+              <span className="tiny muted">
+                {fmtDate(addDays(departure, pos.dayIndex ?? 0), lang)}
+              </span>
+            </div>
+            <h3>{tr(today.title, lang)}</h3>
+            {today.summary && <p className="small muted" style={{ margin: 0 }}>{tr(today.summary, lang)}</p>}
+            <div className="stack dashed-gold" style={{ gap: 6, marginTop: 4 }}>
+              {today.blocks.slice(0, 3).map((b) => (
+                <div key={b.t} className="row small" style={{ gap: 10 }}>
+                  <span className="num tiny muted" style={{ minWidth: 38 }}>{b.t}</span>
+                  <span className="grow truncate">{tr(b.title, lang)}</span>
+                </div>
+              ))}
+            </div>
+          </Link>
+        </Section>
+      )}
+
+      {pos.before && departure && (
+        <div className="card-flat row" style={{ gap: 'var(--s3)' }}>
+          <Icon name="luggage" size={20} color="var(--gold-deep)" />
+          <span className="grow small">
+            <b>{t('home.beforeTrip')}</b> — {t('check.title').toLowerCase()}
+          </span>
+          <Link to="/checklist" className="chip gold">{t('common.show')}</Link>
         </div>
       )}
 
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginTop:16}}>
-        <Link to="/sos" className="btn btn-primary" style={{flexDirection:'column',padding:'14px 8px'}}>SOS</Link>
-        <Link to="/checklist" className="btn btn-ghost" style={{flexDirection:'column'}}>Чек-листи</Link>
-        <Link to="/map" className="btn btn-ghost" style={{flexDirection:'column'}}>Карта</Link>
-      </div>
+      <Section icon="bolt" title={t('home.quick')}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--s2)' }}>
+          {QUICK.map((q) => (
+            <Link key={q.to} to={q.to} className="stack" style={{
+              alignItems: 'center', gap: 6, padding: 'var(--s3) 4px', textDecoration: 'none',
+              background: 'var(--surface)', border: '1px solid var(--line)',
+              borderRadius: 'var(--r-card)', minHeight: 76, justifyContent: 'center',
+            }}>
+              <Icon name={q.icon} size={18} color={'tone' in q ? 'var(--red)' : 'var(--gold-deep)'} />
+              <span className="tiny" style={{ fontWeight: 700, textAlign: 'center' }}>
+                {q.label === 'SOS' ? 'SOS' : t(q.label)}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
 
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12,marginTop:16}}>
-        <div className="card">
-          <div className="small muted">Валюта підказка</div>
-          <div style={{fontSize:13,marginTop:6,lineHeight:1.5}}>1 € ≈ 46 ₴ / 19.5 MDL / 10.8 MAD<br/><span className="muted tiny">редагується в Налаштуваннях</span></div>
-        </div>
-        <div className="card">
-          <div className="small muted">Порада дня</div>
-          <div style={{fontSize:13,marginTop:6}}>У суках торгуйся ввічливо — це частина культури. Почни з 50% ціни.</div>
-        </div>
-      </div>
+      <MyStay />
+      <Rates />
 
-      <div className="card" style={{marginTop:16, display:'flex', gap:12, alignItems:'center'}}>
-        <img src="/illustrations/hero-day.webp" alt="" style={{width:96,height:96,objectFit:'cover',borderRadius:12,flexShrink:0}}/>
-        <div>
-          <div style={{fontWeight:700}}>Сімейна подорож — 4 дні культури</div>
-          <div className="small muted">Медина, сади Мажорель, Атлас та шопінг у Гелізі</div>
-          <Link to="/itinerary" className="small" style={{color:'var(--red)',fontWeight:700}}>Детальний план →</Link>
+      {tip && (
+        <div className="card-flat stack" style={{ gap: 6 }}>
+          <span className="row tiny" style={{ gap: 8, fontWeight: 800, color: 'var(--gold-deep)' }}>
+            <Icon name="tip" size={12} /> {t('home.tip')}
+          </span>
+          <span className="small">{tr(tip, lang)}</span>
         </div>
-      </div>
+      )}
     </div>
   );
 }

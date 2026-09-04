@@ -1,20 +1,42 @@
 :root{
-  --bg:#FAF6EE; --surface:#FFFFFF; --surface-2:#F1E9DB;
-  --ink:#201A17; --muted:#6E655C; --line:#E7DCC9;
-  --red:#C1272D; --red-strong:#A61B21; --on-red:#FFF7F0;
-  --gold:#E3B341; --gold-deep:#8A6D1D; --on-gold:#201A17;
-  --ok:#1F7A50; --warn:#B7791F; --danger:#B3261E;
-  --shadow:0 8px 24px rgb(32 26 23/.08); --r-card:16px; --r-ctl:12px;
-  --font-display:"Unbounded", system-ui, sans-serif;
-  --font-body:"Manrope", system-ui, sans-serif;
-  --font-ar:"Amiri", serif;
+  /* LIGHT — "desert paper". The default, per the spec. */
+  --bg:#FAF6EE; --surface:#FFFFFF; --surface-2:#F1E9DB; --surface-3:#EDE3D2;
+  --ink:#201A17; --muted:#6E655C; --faint:#948a7e; --line:#E7DCC9;
+  --red:#C1272D; --red-strong:#A61B21; --red-soft:#F7E7E4; --on-red:#FFF7F0;
+  --gold:#E3B341; --gold-deep:#8A6D1D; --gold-soft:#FBF1D8; --on-gold:#201A17;
+  --ok:#1F7A50; --ok-soft:#E4F2EA;
+  --warn:#B7791F; --warn-soft:#FBF0DA;
+  --danger:#B3261E; --danger-soft:#FBE6E4;
+
+  --shadow:0 8px 24px rgb(32 26 23/.08);
+  --shadow-sm:0 2px 8px rgb(32 26 23/.06);
+  --shadow-lg:0 16px 40px rgb(32 26 23/.14);
+  --r-card:16px; --r-ctl:12px; --r-pill:999px;
+
+  /* 4/8pt scale — no more literal 16s scattered through style objects */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px; --s8:32px; --s10:40px; --s12:48px;
+
+  --z-map:1; --z-sticky:20; --z-fab:30; --z-sheet:40; --z-gate:100;
+
+  --font-display:"Unbounded", ui-sans-serif, system-ui, sans-serif;
+  --font-body:"Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-ar:"Amiri", "Geeza Pro", serif;
+
+  --tap:44px;
+  --header-h:56px;
+  --tabbar-h:64px;
 }
+
 [data-theme="dark"]{
-  --bg:#14100D; --surface:#1E1813; --surface-2:#2A211A;
-  --ink:#F4EBDD; --muted:#A79A8B; --line:#3A2F25;
-  --red:#E8564A; --red-strong:#FF7A6E; --on-red:#1A0F0D;
-  --gold:#E6B54C; --gold-deep:#E6B54C;
-  --ok:#4CC38A; --warn:#E0A43C; --danger:#FF6B5E;
+  --bg:#14100D; --surface:#1E1813; --surface-2:#2A211A; --surface-3:#342A21;
+  --ink:#F4EBDD; --muted:#A79A8B; --faint:#7d7264; --line:#3A2F25;
+  --red:#E8564A; --red-strong:#FF7A6E; --red-soft:#3A1E1B; --on-red:#1A0F0D;
+  --gold:#E6B54C; --gold-deep:#E6B54C; --gold-soft:#33280F; --on-gold:#201A17;
+  --ok:#4CC38A; --ok-soft:#163024;
+  --warn:#E0A43C; --warn-soft:#332714;
+  --danger:#FF6B5E; --danger-soft:#3A1B18;
+
   --shadow:0 8px 24px rgb(0 0 0/.45);
+  --shadow-sm:0 2px 8px rgb(0 0 0/.3);
+  --shadow-lg:0 16px 40px rgb(0 0 0/.55);
 }
-* { scrollbar-color: var(--gold) transparent; }

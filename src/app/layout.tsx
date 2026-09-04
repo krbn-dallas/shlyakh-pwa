@@ -1,36 +1,60 @@
-import { Outlet, useNavigate } from 'react-router-dom';
-import { Header } from '../widgets/Header';
-import { TabBar } from '../widgets/TabBar';
-import { SosFab } from '../widgets/SosFab';
-import { OfflineBadge } from '../widgets/OfflineBadge';
-import { useEffect } from 'react';
-import { useStore } from './store';
-import { cityByCoord } from '../shared/lib/geo';
+import { useEffect, useRef } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { Header } from '@/widgets/Header';
+import { TabBar } from '@/widgets/TabBar';
+import { SosFab } from '@/widgets/SosFab';
+import { OfflineBadge } from '@/widgets/OfflineBadge';
+import { UpdatePrompt } from '@/widgets/UpdatePrompt';
+import { useStore } from '@/app/store';
+import { load } from '@/shared/lib/data';
+import { cityByCoord, getPosition } from '@/shared/lib/geo';
+import { useMotion } from '@/shared/lib/usePageEnter';
 
-export function AppLayout(){
-  const {cityManual, setCity, onboarded} = useStore();
-  const nav=useNavigate();
-  useEffect(()=>{ if(!onboarded) nav('/onboarding'); },[onboarded, nav]);
-  useEffect(()=>{
-    if(cityManual) return;
-    if(!navigator.geolocation) return;
-    const id=setTimeout(()=>{
-      navigator.geolocation.getCurrentPosition(pos=>{
-        const c=cityByCoord(pos.coords.latitude, pos.coords.longitude);
-        if(c) setCity(c,false);
-      }, ()=>{}, {enableHighAccuracy:false, timeout:5000, maximumAge:600000});
-    }, 800);
-    return()=>clearTimeout(id);
-  },[cityManual, setCity]);
+export function AppLayout() {
+  const { pathname } = useLocation();
+  const mainRef = useRef<HTMLElement>(null);
+  const cityManual = useStore((s) => s.cityManual);
+  const geoAsked = useStore((s) => s.geoAsked);
+  const setCity = useStore((s) => s.setCity);
+
+  // Auto-detect the city only when the user hasn't pinned one and has already
+  // been asked about location during onboarding.
+  useEffect(() => {
+    if (cityManual || !geoAsked) return;
+    let alive = true;
+    const id = setTimeout(async () => {
+      try {
+        const [pos, cities] = await Promise.all([getPosition(), load('cities')]);
+        if (!alive) return;
+        const found = cityByCoord(pos.coords.latitude, pos.coords.longitude, cities);
+        if (found) setCity(found, false);
+      } catch { /* denied, timed out, or offline — the manual switcher still works */ }
+    }, 600);
+    return () => { alive = false; clearTimeout(id); };
+  }, [cityManual, geoAsked, setCity]);
+
+  // One entrance animation for every screen, replayed on navigation.
+  useMotion(mainRef, 'pageEnter', [pathname]);
+
   return (
-    <div style={{minHeight:'100dvh', background:'var(--bg)', paddingBottom:72}}>
-      <Header/>
-      <OfflineBadge/>
-      <main className="container" style={{paddingTop:16, paddingBottom:16}}>
-        <Outlet/>
+    <div style={{ minHeight: '100dvh', display: 'flex', flexDirection: 'column' }}>
+      <Header />
+      <OfflineBadge />
+      <main
+        ref={mainRef}
+        key={pathname}
+        className="container"
+        style={{
+          flex: 1, width: '100%',
+          paddingTop: 'var(--s4)',
+          paddingBottom: 'calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--s8))',
+        }}
+      >
+        <Outlet />
       </main>
-      <SosFab/>
-      <TabBar/>
+      <SosFab />
+      <TabBar />
+      <UpdatePrompt />
     </div>
   );
 }

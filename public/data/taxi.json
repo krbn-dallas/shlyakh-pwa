@@ -1,15 +1,37 @@
 [
-  {"id":"kyiv-uklon","city":"kyiv","name":"Uklon","kind":"app","value":"https://uklon.com.ua","note":{"uk":"Додаток","ru":"Приложение"}},
-  {"id":"kyiv-bolt","city":"kyiv","name":"Bolt","kind":"app","value":"https://bolt.eu","note":{"uk":"Додаток","ru":"Приложение"}},
-  {"id":"kyiv-uber","city":"kyiv","name":"Uber","kind":"app","value":"https://uber.com","note":{"uk":"Додаток","ru":"Приложение"}},
-  {"id":"kyiv-ontaxi","city":"kyiv","name":"OnTaxi","kind":"phone","value":"2000","note":{"uk":"Короткий номер","ru":"Короткий номер"}},
-  {"id":"kyiv-opti","city":"kyiv","name":"Opti Taxi","kind":"phone","value":"579","note":{"uk":"Короткий номер","ru":"Короткий номер"}},
-  {"id":"chisinau-14444","city":"chisinau","name":"Taxi 14444","kind":"phone","value":"14444"},
+  {"id":"kyiv-uklon","city":"kyiv","name":"Uklon","kind":"app","value":"https://uklon.com.ua/","note":{"uk":"Найпоширеніший у Києві. Ціна фіксується до поїздки","en":"The most common in Kyiv. Price is fixed before the ride"}},
+  {"id":"kyiv-bolt","city":"kyiv","name":"Bolt","kind":"app","value":"https://bolt.eu/uk/","note":{"uk":"Часто дешевше за Uklon у години пік","en":"Often cheaper than Uklon at peak times"}},
+  {"id":"kyiv-uber","city":"kyiv","name":"Uber","kind":"app","value":"https://m.uber.com/","note":{"uk":"Працює, але автопарк менший","en":"Works, but a smaller fleet"}},
+  {"id":"kyiv-ontaxi","city":"kyiv","name":"OnTaxi","kind":"phone","value":"2000","note":{"uk":"Короткий номер із мобільного","en":"Short number from a mobile"}},
+  {"id":"kyiv-opti","city":"kyiv","name":"Opti","kind":"phone","value":"579","note":{"uk":"Короткий номер, диспетчер","en":"Short dispatcher number"}},
+  {"id":"kyiv-rail","city":"kyiv","name":"Таксі на вокзалі","kind":"phone","value":"1545","note":{"uk":"Офіційна стоянка з південного боку вокзалу. Нелегальні таксисти в залі — обходь","en":"Official rank on the south side of the station. Ignore touts inside the hall"},"warn":{"uk":"На вокзалі до тебе підійдуть із пропозицією «таксі?» — ціна буде втричі вища","en":"Touts at the station will offer a ride at triple the fare"}},
+
+  {"id":"chisinau-14444","city":"chisinau","name":"Taxi 14444","kind":"phone","value":"14444","note":{"uk":"Найвідоміший диспетчер міста","en":"The city's best-known dispatcher"}},
   {"id":"chisinau-14222","city":"chisinau","name":"Taxi 14222","kind":"phone","value":"14222"},
   {"id":"chisinau-14999","city":"chisinau","name":"Taxi 14999","kind":"phone","value":"14999"},
   {"id":"chisinau-14002","city":"chisinau","name":"Taxi 14002","kind":"phone","value":"14002"},
-  {"id":"chisinau-yandex","city":"chisinau","name":"Yandex Go","kind":"phone","value":"14700","note":{"uk":"Додаток/короткий","ru":"Приложение/короткий"}},
-  {"id":"marrakech-indrive","city":"marrakech","name":"inDrive","kind":"app","value":"https://indrive.com","note":{"uk":"Популярно в Марракеші","ru":"Популярно в Марракеше"}},
-  {"id":"marrakech-heetch","city":"marrakech","name":"Heetch / Careem","kind":"app","value":"https://heetch.com","note":{"uk":"Альтернатива","ru":"Альтернатива"}},
-  {"id":"marrakech-dispatcher","city":"marrakech","name":"Диспетчер petit taxi","kind":"phone","value":"+212524409499","note":{"uk":"Подача 15 MAD. petit taxi: база 7 MAD, поїздка 20–30 MAD","ru":"Подача 15 MAD. petit taxi: база 7 MAD, поездка 20–30 MAD"}}
+  {"id":"chisinau-yandex","city":"chisinau","name":"Yandex Go","kind":"phone","value":"14700","note":{"uk":"Є і застосунок, і короткий номер","en":"Both an app and a short number"}},
+  {"id":"chisinau-bolt","city":"chisinau","name":"Bolt","kind":"app","value":"https://bolt.eu/ro-md/","note":{"uk":"Працює в Кишиневі, ціна видно наперед","en":"Works in Chișinău, price shown up front"}},
+  {"id":"chisinau-airport","city":"chisinau","name":"Аеропорт KIV → центр","kind":"phone","value":"14444","note":{"uk":"~15 хв, приблизно 150–250 MDL (10–15 €). Офіційна стоянка праворуч від виходу","en":"~15 min, roughly 150–250 MDL (€10–15). Official rank to the right of the exit"}},
+
+  {"id":"marrakech-dispatcher","city":"marrakech","name":"Диспетчер petit taxi","kind":"phone","value":"+212524409499","note":{"uk":"Подача 15 MAD. Зручно, коли не хочеш ловити на вулиці","en":"15 MAD call-out fee. Handy when you would rather not flag one down"}},
+  {"id":"marrakech-petit","city":"marrakech","name":"Petit taxi (червоні)","kind":"phone","value":"+212524409499","note":{"uk":"База 7 MAD. По лічильнику в межах медини — 15–30 MAD. Без лічильника не більше 30–50 MAD. До 3 пасажирів","en":"7 MAD base. Metered inside the medina 15–30 MAD. Without a meter, 30–50 MAD max. Up to 3 passengers"},"warn":{"uk":"Класика: «лічильник не працює». Наполягай на лічильнику або домовляйся про ціну ДО посадки","en":"The classic line is \"the meter is broken\". Insist on the meter or agree the fare BEFORE getting in"}},
+  {"id":"marrakech-airport","city":"marrakech","name":"Аеропорт RAK ↔ медина","kind":"phone","value":"+212524409499","note":{"uk":"~20 км, приблизно 150 MAD (15 €). Ціну узгоджуй заздалегідь — на аеропортовому маршруті лічильник зазвичай не вмикають","en":"~20 km, about 150 MAD (€15). Agree the price in advance — the airport run is rarely metered"}},
+  {"id":"marrakech-indrive","city":"marrakech","name":"inDrive","kind":"app","value":"https://indrive.com/","note":{"uk":"Дуже популярний у Марокко. Сам пропонуєш ціну","en":"Very popular in Morocco. You name your own price"},"warn":{"uk":"Уряд не видає ліцензій сервісам виклику авто — правовий статус не врегульовано","en":"The government issues no licences to ride-hailing services — the legal status is unresolved"}},
+  {"id":"marrakech-heetch","city":"marrakech","name":"Heetch","kind":"app","value":"https://www.heetch.com/","warn":{"uk":"Той самий правовий вакуум, що й inDrive","en":"Same legal grey area as inDrive"}},
+  {"id":"marrakech-careem","city":"marrakech","name":"Careem","kind":"app","value":"https://www.careem.com/","warn":{"uk":"Той самий правовий вакуум","en":"Same legal grey area"}},
+  {"id":"marrakech-uber","city":"marrakech","name":"Uber","kind":"app","value":"https://m.uber.com/","note":{"uk":"Повернувся на ринок Марокко наприкінці 2025, працює лише з ліцензованими авто","en":"Returned to Morocco in late 2025, limited to licensed vehicles"}},
+  {"id":"marrakech-grand","city":"marrakech","name":"Grand taxi (міжміські)","kind":"phone","value":"+212524409499","note":{"uk":"Великі бежеві седани для поїздок за місто. Їдуть, коли набереться 6 пасажирів, або викуповуєш усі місця","en":"Large beige sedans for out-of-town trips. They leave when 6 passengers are aboard, or you buy all the seats"}},
+
+  {"id":"casablanca-petit","city":"casablanca","name":"Petit taxi (білі)","kind":"phone","value":"19","note":{"uk":"Проси ввімкнути лічильник. Дехто відмовляється — тоді бери інше","en":"Ask for the meter. Some refuse — take the next one"}},
+  {"id":"casablanca-tram","city":"casablanca","name":"Casa Tramway","kind":"app","value":"https://www.casatramway.ma/","note":{"uk":"4 лінії, 73 км. Квиток 8 MAD, пересадка протягом 2 годин безкоштовна. Ходить 5:30–22:30","en":"4 lines, 73 km. 8 MAD ticket, transfers free within 2 hours. Runs 05:30–22:30"}},
+  {"id":"casablanca-indrive","city":"casablanca","name":"inDrive","kind":"app","value":"https://indrive.com/","warn":{"uk":"Правовий статус не врегульовано","en":"Legal status unresolved"}},
+
+  {"id":"fes-petit","city":"fes","name":"Petit taxi (сині)","kind":"phone","value":"19","note":{"uk":"У медину не заїжджають — вона пішохідна. Висадять біля брами","en":"They cannot enter the medina — it is pedestrian. They drop you at a gate"}},
+  {"id":"tangier-petit","city":"tangier","name":"Petit taxi (жовті)","kind":"phone","value":"19"},
+  {"id":"agadir-petit","city":"agadir","name":"Petit taxi (помаранчеві)","kind":"phone","value":"19"},
+  {"id":"essaouira-petit","city":"essaouira","name":"Petit taxi (сині)","kind":"phone","value":"19"},
+  {"id":"rabat-petit","city":"rabat","name":"Petit taxi (сині)","kind":"phone","value":"19"},
+  {"id":"rabat-tram","city":"rabat","name":"Трамвай Рабат–Сале","kind":"app","value":"https://www.tram-way.ma/","note":{"uk":"2 лінії, зв'язує Рабат і Сале. Квиток ~6 MAD","en":"2 lines linking Rabat and Salé. Ticket ~6 MAD"}},
+  {"id":"ouarzazate-petit","city":"ouarzazate","name":"Petit taxi","kind":"phone","value":"19"}
 ]

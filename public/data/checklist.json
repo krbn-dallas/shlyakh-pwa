@@ -1,52 +1,1473 @@
 [
-  {"id":"docs","icon":"📄","title":{"uk":"Документи","ru":"Документы"},"items":[
-    {"id":"doc-passport","text":{"uk":"Закордонний паспорт (≥6 міс.)","ru":"Загранпаспорт (≥6 мес.)"},"critical":true},
-    {"id":"doc-visa","text":{"uk":"Транзитні документи Молдови (роздруківка)","ru":"Транзитные документы Молдовы (распечатка)"},"critical":true},
-    {"id":"doc-tickets","text":{"uk":"Квитки Київ→Кишинів та Кишинів→Марракеш (+назад)","ru":"Билеты Киев→Кишинёв и Кишинёв→Марракеш (+обратно)"},"critical":true},
-    {"id":"doc-hotel","text":{"uk":"Броні житла (ріад/готель)","ru":"Брони жилья (риад/отель)"},"critical":true},
-    {"id":"doc-insurance","text":{"uk":"Медстраховка з покриттям Марокко","ru":"Медстраховка с покрытием Марокко"},"critical":true},
-    {"id":"doc-copies","text":{"uk":"Копії документів (папір + хмара)","ru":"Копии документов (бумага + облако)"}},
-    {"id":"doc-bank","text":{"uk":"Повідомити банк про поїздку","ru":"Уведомить банк о поездке"}},
-    {"id":"doc-cash","text":{"uk":"Готівка EUR дрібними купюрами","ru":"Наличные EUR мелкими купюрами"},"qty":"300–400 €"}
-  ]},
-  {"id":"meds","icon":"💊","title":{"uk":"Аптечка","ru":"Аптечка"},"items":[
-    {"id":"med-fever","text":{"uk":"Жарознижувальне / знеболювальне","ru":"Жаропонижающее / обезболивающее"}},
-    {"id":"med-sorbent","text":{"uk":"Сорбент","ru":"Сорбент"}},
-    {"id":"med-regidron","text":{"uk":"Регідрон","ru":"Регидрон"}},
-    {"id":"med-loperamid","text":{"uk":"Лоперамід","ru":"Лоперамид"}},
-    {"id":"med-antihist","text":{"uk":"Антигістамін","ru":"Антигистамин"}},
-    {"id":"med-chlorhex","text":{"uk":"Хлоргексидин","ru":"Хлоргексидин"}},
-    {"id":"med-plaster","text":{"uk":"Пластирі + еластичний бинт","ru":"Пластыри + эластичный бинт"}},
-    {"id":"med-personal","text":{"uk":"Особисті препарати","ru":"Личные препараты"},"critical":true,"note":{"uk":"Перевір із лікарем","ru":"Сверь с врачом"}},
-    {"id":"med-spf","text":{"uk":"SPF 50 + пантенол","ru":"SPF 50 + пантенол"}},
-    {"id":"med-motion","text":{"uk":"Від захитування (дорога!)","ru":"От укачивания (дорога!)"}},
-    {"id":"med-sanitizer","text":{"uk":"Санітайзер","ru":"Санитайзер"}}
-  ]},
-  {"id":"clothes","icon":"👗","title":{"uk":"Речі","ru":"Вещи"},"items":[
-    {"id":"clo-light","text":{"uk":"Легкий одяг + 1 скромний комплект (плечі/коліна)","ru":"Лёгкая одежда + 1 скромный комплект (плечи/колени)"},"note":{"uk":"Для мечетей","ru":"Для мечетей"}},
-    {"id":"clo-hat","text":{"uk":"Головний убір","ru":"Головной убор"},"critical":true},
-    {"id":"clo-shoes","text":{"uk":"Зручне взуття для бруківки","ru":"Удобная обувь для булыжников"},"critical":true},
-    {"id":"clo-sandals","text":{"uk":"Сандалі","ru":"Сандалии"}},
-    {"id":"clo-wind","text":{"uk":"Вітровка","ru":"Ветровка"}},
-    {"id":"clo-glasses","text":{"uk":"Окуляри","ru":"Очки"}},
-    {"id":"clo-scarf","text":{"uk":"Шарф / парео","ru":"Шарф / парео"}},
-    {"id":"clo-backpack","text":{"uk":"Денний рюкзак","ru":"Дневной рюкзак"}}
-  ]},
-  {"id":"tech","icon":"🔌","title":{"uk":"Техніка","ru":"Техника"},"items":[
-    {"id":"tech-powerbank","text":{"uk":"Powerbank 20 000 (у ручну поклажу)","ru":"Powerbank 20 000 (в ручную кладь)"}},
-    {"id":"tech-adapter","text":{"uk":"Адаптер тип C/E (Марокко)","ru":"Адаптер тип C/E (Марокко)"}},
-    {"id":"tech-esim","text":{"uk":"eSIM Марокко (Airalo/Orange)","ru":"eSIM Марокко (Airalo/Orange)"}},
-    {"id":"tech-offline-maps","text":{"uk":"Офлайн-карти заздалегідь","ru":"Офлайн-карты заранее"},"critical":true},
-    {"id":"tech-headphones","text":{"uk":"Навушники","ru":"Наушники"}}
-  ]},
-  {"id":"money","icon":"💰","title":{"uk":"Гроші","ru":"Деньги"},"items":[
-    {"id":"money-eur","text":{"uk":"EUR готівка","ru":"EUR наличные"}},
-    {"id":"money-card","text":{"uk":"Карта без комісії за конвертацію","ru":"Карта без комиссии за конвертацию"}},
-    {"id":"money-belt","text":{"uk":"Поясна прихована сумка","ru":"Поясная скрытая сумка"},"critical":true}
-  ]},
-  {"id":"home","icon":"🏠","title":{"uk":"Дім","ru":"Дом"},"items":[
-    {"id":"home-bills","text":{"uk":"Оплатити рахунки","ru":"Оплатить счета"}},
-    {"id":"home-watch","text":{"uk":"Домовитися про нагляд за домом","ru":"Договориться о присмотре за домом"}},
-    {"id":"home-bank","text":{"uk":"Банк-повідомлення","ru":"Банк-уведомление"}}
-  ]}
+ {
+  "id": "docs",
+  "icon": "passport",
+  "title": {
+   "uk": "Документи",
+   "en": "Documents"
+  },
+  "note": {
+   "uk": "Зроби фото кожного документа й поклади в хмару — це рятує найчастіше.",
+   "en": "Photograph every document and put it in the cloud — this is what saves people most often."
+  },
+  "items": [
+   {
+    "id": "doc-passport",
+    "text": {
+     "uk": "Закордонний паспорт",
+     "en": "International passport"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Дійсний ще щонайменше 6 місяців після дати повернення — це вимога Марокко",
+     "en": "Valid for at least 6 months beyond your return date — a Moroccan requirement"
+    },
+    "perPerson": true
+   },
+   {
+    "id": "doc-visa-md",
+    "text": {
+     "uk": "Транзитна віза / підстава в'їзду в Молдову",
+     "en": "Moldova transit visa or entry basis"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Роздрукуй. Прикордонник може попросити папір",
+     "en": "Print it. The border officer may ask for paper"
+    }
+   },
+   {
+    "id": "doc-visa-ma",
+    "text": {
+     "uk": "Марокко — віза не потрібна до 90 днів",
+     "en": "Morocco — no visa for stays up to 90 days"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Для громадян України. Достатньо паспорта",
+     "en": "For Ukrainian citizens. A passport is enough"
+    }
+   },
+   {
+    "id": "doc-tickets-out",
+    "text": {
+     "uk": "Квитки Київ → Кишинів",
+     "en": "Tickets Kyiv → Chișinău"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Наземно: поїзд або автобус, ~8–9 годин. Перевір на proizd.ua та infobus",
+     "en": "Overland: train or bus, ~8–9 hours. Check proizd.ua and infobus"
+    }
+   },
+   {
+    "id": "doc-tickets-fly",
+    "text": {
+     "uk": "Квитки Кишинів → Марракеш і назад",
+     "en": "Tickets Chișinău → Marrakesh and back"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Зазвичай з однією пересадкою. Роздруківка + PDF офлайн у телефоні",
+     "en": "Usually with one connection. Print plus an offline PDF on your phone"
+    }
+   },
+   {
+    "id": "doc-hotel",
+    "text": {
+     "uk": "Броні житла (Кишинів і Марракеш)",
+     "en": "Accommodation bookings (Chișinău and Marrakesh)"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Адреса марокканською/французькою — щоб показати таксисту",
+     "en": "Address in Arabic or French — to show a taxi driver"
+    }
+   },
+   {
+    "id": "doc-insurance",
+    "text": {
+     "uk": "Медстраховка з покриттям Марокко",
+     "en": "Travel insurance covering Morocco"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Приватні клініки очікують оплату готівкою одразу — без поліса це дорого",
+     "en": "Private clinics expect immediate cash payment — without a policy this gets expensive"
+    },
+    "perPerson": true
+   },
+   {
+    "id": "doc-copies",
+    "text": {
+     "uk": "Копії всіх документів — папір і хмара",
+     "en": "Copies of all documents — paper and cloud"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "doc-cards",
+    "text": {
+     "uk": "Банківські картки + попередити банк про поїздку",
+     "en": "Bank cards + notify the bank about the trip"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Інакше картку заблокують на першій же операції в Марокко",
+     "en": "Otherwise the card gets blocked on the first Moroccan transaction"
+    }
+   },
+   {
+    "id": "doc-driver",
+    "text": {
+     "uk": "Водійське посвідчення (міжнародне)",
+     "en": "Driving licence (international)"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Тільки якщо плануєте орендувати авто",
+     "en": "Only if you plan to rent a car"
+    }
+   },
+   {
+    "id": "doc-photos",
+    "text": {
+     "uk": "2 фото 3×4 про запас",
+     "en": "2 passport photos, spare"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Для відновлення документів у разі втрати",
+     "en": "For replacing documents if they are lost"
+    }
+   },
+   {
+    "id": "doc-contacts",
+    "text": {
+     "uk": "Список контактів на папері",
+     "en": "Contact list on paper"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Телефон розряджається саме тоді, коли потрібен номер посольства",
+     "en": "Your phone dies exactly when you need the embassy number"
+    }
+   },
+   {
+    "id": "doc-itinerary",
+    "text": {
+     "uk": "Маршрут і адреси надіслані рідним",
+     "en": "Itinerary and addresses sent to family"
+    },
+    "audience": "both"
+   }
+  ]
+ },
+ {
+  "id": "meds",
+  "icon": "kit",
+  "title": {
+   "uk": "Аптечка",
+   "en": "First-aid kit"
+  },
+  "note": {
+   "uk": "Склад узгодь з лікарем — це орієнтир, а не призначення. Усі ліки — в оригінальних упаковках, рецепти англійською.",
+   "en": "Agree the contents with a doctor — this is a guide, not a prescription. Keep everything in original packaging, prescriptions in English."
+  },
+  "items": [
+   {
+    "id": "med-fever",
+    "text": {
+     "uk": "Жарознижувальне (парацетамол, ібупрофен)",
+     "en": "Antipyretic (paracetamol, ibuprofen)"
+    },
+    "audience": "both",
+    "qty": "2 упак.",
+    "critical": true
+   },
+   {
+    "id": "med-pain",
+    "text": {
+     "uk": "Знеболювальне",
+     "en": "Painkiller"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "med-sorbent",
+    "text": {
+     "uk": "Сорбент (активоване вугілля, смекта)",
+     "en": "Sorbent (activated charcoal, smectite)"
+    },
+    "audience": "both",
+    "qty": "10 доз",
+    "critical": true,
+    "note": {
+     "uk": "Перше, що знадобиться після вуличної їжі",
+     "en": "The first thing you will need after street food"
+    }
+   },
+   {
+    "id": "med-rehydron",
+    "text": {
+     "uk": "Регідрон або аналог",
+     "en": "Oral rehydration salts"
+    },
+    "audience": "both",
+    "qty": "5 пакетів",
+    "critical": true,
+    "note": {
+     "uk": "Спека плюс отруєння — зневоднення настає швидко",
+     "en": "Heat plus food poisoning dehydrates you fast"
+    }
+   },
+   {
+    "id": "med-loperamide",
+    "text": {
+     "uk": "Лоперамід",
+     "en": "Loperamide"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "med-enzymes",
+    "text": {
+     "uk": "Ферменти для травлення",
+     "en": "Digestive enzymes"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Марокканська кухня жирніша, ніж звикла",
+     "en": "Moroccan food is richer than you are used to"
+    }
+   },
+   {
+    "id": "med-spasm",
+    "text": {
+     "uk": "Спазмолітик (но-шпа)",
+     "en": "Antispasmodic"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-antihistamine",
+    "text": {
+     "uk": "Антигістамінне",
+     "en": "Antihistamine"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Спеції, нова їжа, пил, укуси — реакція може бути несподіваною",
+     "en": "Spices, new food, dust, bites — reactions can surprise you"
+    }
+   },
+   {
+    "id": "med-nasal",
+    "text": {
+     "uk": "Спрей для носа",
+     "en": "Nasal spray"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Кондиціонери й сухе повітря",
+     "en": "Air conditioning and dry air"
+    }
+   },
+   {
+    "id": "med-throat",
+    "text": {
+     "uk": "Від болю в горлі",
+     "en": "Sore throat remedy"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-cough",
+    "text": {
+     "uk": "Від кашлю",
+     "en": "Cough remedy"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-antiseptic",
+    "text": {
+     "uk": "Антисептик (хлоргексидин, мірамістин)",
+     "en": "Antiseptic"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "med-plasters",
+    "text": {
+     "uk": "Пластирі звичайні",
+     "en": "Standard plasters"
+    },
+    "audience": "both",
+    "qty": "20 шт"
+   },
+   {
+    "id": "med-blisters",
+    "text": {
+     "uk": "Пластирі від мозолів",
+     "en": "Blister plasters"
+    },
+    "audience": "both",
+    "qty": "10 шт",
+    "critical": true,
+    "note": {
+     "uk": "Бруківка медини стирає ноги за півдня — це не жарт",
+     "en": "The medina's cobbles will wreck your feet in half a day — not a joke"
+    }
+   },
+   {
+    "id": "med-bandage",
+    "text": {
+     "uk": "Бинт та еластичний бинт",
+     "en": "Gauze and elastic bandage"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-scissors",
+    "text": {
+     "uk": "Ножиці й пінцет",
+     "en": "Scissors and tweezers"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Тільки у валізу в багаж, не в ручну поклажу",
+     "en": "Checked luggage only, never hand baggage"
+    }
+   },
+   {
+    "id": "med-thermometer",
+    "text": {
+     "uk": "Термометр",
+     "en": "Thermometer"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-spf",
+    "text": {
+     "uk": "Сонцезахисний крем SPF 50",
+     "en": "Sunscreen SPF 50"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Вересень у Марракеші ще спекотний, сонце обпікає за 20 хвилин",
+     "en": "September in Marrakesh is still hot; the sun burns in 20 minutes"
+    }
+   },
+   {
+    "id": "med-panthenol",
+    "text": {
+     "uk": "Пантенол після сонця",
+     "en": "After-sun panthenol"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-motion",
+    "text": {
+     "uk": "Від заколисування",
+     "en": "Motion sickness tablets"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Дорога Київ → Кишинів 8–9 годин, серпантини в Атласі",
+     "en": "The Kyiv → Chișinău leg is 8–9 hours, and the Atlas roads are winding"
+    }
+   },
+   {
+    "id": "med-sanitizer",
+    "text": {
+     "uk": "Санітайзер для рук",
+     "en": "Hand sanitiser"
+    },
+    "audience": "both",
+    "qty": "2 шт",
+    "critical": true
+   },
+   {
+    "id": "med-wipes",
+    "text": {
+     "uk": "Антибактеріальні серветки",
+     "en": "Antibacterial wipes"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-repellent",
+    "text": {
+     "uk": "Репелент від комах",
+     "en": "Insect repellent"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-eyedrops",
+    "text": {
+     "uk": "Краплі для очей",
+     "en": "Eye drops"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Пил і пісок у медині",
+     "en": "Dust and sand in the medina"
+    }
+   },
+   {
+    "id": "med-thrush",
+    "text": {
+     "uk": "Засіб від молочниці",
+     "en": "Thrush treatment"
+    },
+    "audience": "her",
+    "critical": true,
+    "note": {
+     "uk": "Спека, зміна води й харчування — часта проблема в подорожі. У Марокко купити без рецепта складніше",
+     "en": "Heat and a change of water and diet make this common on trips. Harder to buy over the counter in Morocco"
+    }
+   },
+   {
+    "id": "med-cystitis",
+    "text": {
+     "uk": "Засіб від циститу",
+     "en": "Cystitis remedy"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "Класика літньої подорожі",
+     "en": "A classic summer-travel problem"
+    }
+   },
+   {
+    "id": "med-contraception",
+    "text": {
+     "uk": "Контрацепція",
+     "en": "Contraception"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "med-personal",
+    "text": {
+     "uk": "Особисті призначені ліки",
+     "en": "Personal prescription medication"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "З запасом на 3 дні понад тривалість поїздки",
+     "en": "With a 3-day buffer beyond the trip length"
+    },
+    "perPerson": true
+   },
+   {
+    "id": "med-rx",
+    "text": {
+     "uk": "Рецепти англійською на всі призначені ліки",
+     "en": "Prescriptions in English for all medication"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Митниця й аптеки просять підтвердження",
+     "en": "Customs and pharmacies ask for proof"
+    }
+   }
+  ]
+ },
+ {
+  "id": "her",
+  "icon": "venus",
+  "title": {
+   "uk": "Мої речі",
+   "en": "My clothes"
+  },
+  "note": {
+   "uk": "У медині й мечетях плечі та коліна мають бути закриті. Це не формальність — так спокійніше й помітно менше уваги.",
+   "en": "Shoulders and knees must be covered in the medina and mosques. Not a formality — it is calmer and draws noticeably less attention."
+  },
+  "items": [
+   {
+    "id": "her-modest",
+    "text": {
+     "uk": "Скромний комплект: закриті плечі й коліна",
+     "en": "Modest outfit: shoulders and knees covered"
+    },
+    "audience": "her",
+    "qty": "2",
+    "critical": true,
+    "note": {
+     "uk": "Обов'язково для мечетей і старих кварталів",
+     "en": "Required for mosques and old quarters"
+    }
+   },
+   {
+    "id": "her-scarf",
+    "text": {
+     "uk": "Шарф або паріо",
+     "en": "Scarf or pareo"
+    },
+    "audience": "her",
+    "qty": "2",
+    "critical": true,
+    "note": {
+     "uk": "Найуніверсальніша річ: покрити плечі, голову від сонця, сісти на камінь",
+     "en": "The most versatile item: cover shoulders, shade your head, sit on stone"
+    }
+   },
+   {
+    "id": "her-dress",
+    "text": {
+     "uk": "Довга сукня або спідниця",
+     "en": "Long dress or skirt"
+    },
+    "audience": "her",
+    "qty": "2"
+   },
+   {
+    "id": "her-trousers",
+    "text": {
+     "uk": "Лляні штани",
+     "en": "Linen trousers"
+    },
+    "audience": "her",
+    "qty": "2",
+    "note": {
+     "uk": "Легші за джинси й закривають ноги",
+     "en": "Lighter than jeans and they cover your legs"
+    }
+   },
+   {
+    "id": "her-tshirts",
+    "text": {
+     "uk": "Футболки й топи з рукавом",
+     "en": "T-shirts and sleeved tops"
+    },
+    "audience": "her",
+    "qty": "4"
+   },
+   {
+    "id": "her-cardigan",
+    "text": {
+     "uk": "Легкий кардиган або сорочка навипуск",
+     "en": "Light cardigan or loose shirt"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-underwear",
+    "text": {
+     "uk": "Білизна",
+     "en": "Underwear"
+    },
+    "audience": "her",
+    "qty": "за днями +2",
+    "perPerson": true
+   },
+   {
+    "id": "her-socks",
+    "text": {
+     "uk": "Шкарпетки",
+     "en": "Socks"
+    },
+    "audience": "her",
+    "qty": "4 пари"
+   },
+   {
+    "id": "her-pyjamas",
+    "text": {
+     "uk": "Піжама",
+     "en": "Pyjamas"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-swim",
+    "text": {
+     "uk": "Купальник",
+     "en": "Swimsuit"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "Басейн у ріаді. На людних пляжах краще закритий",
+     "en": "For the riad pool. On busy beaches a modest one is better"
+    }
+   },
+   {
+    "id": "her-sneakers",
+    "text": {
+     "uk": "Кросівки для бруківки",
+     "en": "Trainers for cobblestones"
+    },
+    "audience": "her",
+    "critical": true,
+    "note": {
+     "uk": "Медина — це кілометри нерівного каменю",
+     "en": "The medina is kilometres of uneven stone"
+    }
+   },
+   {
+    "id": "her-sandals",
+    "text": {
+     "uk": "Сандалі",
+     "en": "Sandals"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-hat",
+    "text": {
+     "uk": "Капелюх або панама",
+     "en": "Hat"
+    },
+    "audience": "her",
+    "critical": true
+   },
+   {
+    "id": "her-sunglasses",
+    "text": {
+     "uk": "Сонцезахисні окуляри",
+     "en": "Sunglasses"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-windbreaker",
+    "text": {
+     "uk": "Вітровка",
+     "en": "Light jacket"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "Вечори в Марракеші у вересні прохолодні, в Атласі — тим паче",
+     "en": "Marrakesh evenings are cool in September; the Atlas more so"
+    }
+   },
+   {
+    "id": "her-bag",
+    "text": {
+     "uk": "Сумка через плече на блискавці",
+     "en": "Cross-body bag with a zip"
+    },
+    "audience": "her",
+    "critical": true,
+    "note": {
+     "uk": "Носити спереду. Кишенькові крадіжки — головний ризик у суках",
+     "en": "Wear it in front. Pickpocketing is the main risk in the souks"
+    }
+   },
+   {
+    "id": "her-daypack",
+    "text": {
+     "uk": "Невеликий рюкзак на день",
+     "en": "Small daypack"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-fakering",
+    "text": {
+     "uk": "Обручка (навіть якщо не носиш)",
+     "en": "Wedding ring (even if you do not wear one)"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "У дослідженні прямо сказано: помітно зменшує небажану увагу на ринках",
+     "en": "The research says plainly: it noticeably reduces unwanted attention at markets"
+    }
+   },
+   {
+    "id": "her-cosmetics",
+    "text": {
+     "uk": "Косметичка (мінімум)",
+     "en": "Make-up bag (minimal)"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-hygiene",
+    "text": {
+     "uk": "Засоби гігієни",
+     "en": "Toiletries"
+    },
+    "audience": "her"
+   },
+   {
+    "id": "her-pads",
+    "text": {
+     "uk": "Прокладки й тампони",
+     "en": "Pads and tampons"
+    },
+    "audience": "her",
+    "critical": true,
+    "note": {
+     "uk": "У Марокко тампони знайти важче й дорожче — вези своє",
+     "en": "Tampons are harder to find and pricier in Morocco — bring your own"
+    }
+   },
+   {
+    "id": "her-haircare",
+    "text": {
+     "uk": "Догляд за волоссям",
+     "en": "Hair care"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "Вода жорстка, суха спека",
+     "en": "The water is hard and the heat dry"
+    }
+   },
+   {
+    "id": "her-jewelry",
+    "text": {
+     "uk": "Прикраси — мінімум",
+     "en": "Jewellery — keep it minimal"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "Не демонструвати статок — базове правило безпеки в туристичних зонах",
+     "en": "Not flashing wealth is a basic safety rule in tourist areas"
+    }
+   }
+  ]
+ },
+ {
+  "id": "him",
+  "icon": "user",
+  "title": {
+   "uk": "Речі чоловіка",
+   "en": "His clothes"
+  },
+  "note": {
+   "uk": "Шорти в медині виглядають недоречно — довгі штани зручніші й привертають менше уваги.",
+   "en": "Shorts look out of place in the medina — long trousers are more comfortable and draw less attention."
+  },
+  "items": [
+   {
+    "id": "him-shirts",
+    "text": {
+     "uk": "Сорочки з довгим рукавом",
+     "en": "Long-sleeved shirts"
+    },
+    "audience": "him",
+    "qty": "2",
+    "note": {
+     "uk": "Захист від сонця й доречний вигляд",
+     "en": "Sun protection and appropriate for the setting"
+    }
+   },
+   {
+    "id": "him-tshirts",
+    "text": {
+     "uk": "Футболки",
+     "en": "T-shirts"
+    },
+    "audience": "him",
+    "qty": "4"
+   },
+   {
+    "id": "him-trousers",
+    "text": {
+     "uk": "Легкі штани",
+     "en": "Light trousers"
+    },
+    "audience": "him",
+    "qty": "2",
+    "critical": true,
+    "note": {
+     "uk": "Не шорти — у старих кварталах і мечетях це недоречно",
+     "en": "Not shorts — inappropriate in old quarters and mosques"
+    }
+   },
+   {
+    "id": "him-shorts",
+    "text": {
+     "uk": "Шорти (для басейну й ріаду)",
+     "en": "Shorts (for the pool and riad)"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-underwear",
+    "text": {
+     "uk": "Білизна",
+     "en": "Underwear"
+    },
+    "audience": "him",
+    "qty": "за днями +2",
+    "perPerson": true
+   },
+   {
+    "id": "him-socks",
+    "text": {
+     "uk": "Шкарпетки",
+     "en": "Socks"
+    },
+    "audience": "him",
+    "qty": "5 пар"
+   },
+   {
+    "id": "him-pyjamas",
+    "text": {
+     "uk": "Домашній одяг",
+     "en": "Sleepwear"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-swim",
+    "text": {
+     "uk": "Плавки",
+     "en": "Swimming trunks"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-sneakers",
+    "text": {
+     "uk": "Кросівки",
+     "en": "Trainers"
+    },
+    "audience": "him",
+    "critical": true
+   },
+   {
+    "id": "him-sandals",
+    "text": {
+     "uk": "Сандалі",
+     "en": "Sandals"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-cap",
+    "text": {
+     "uk": "Кепка",
+     "en": "Cap"
+    },
+    "audience": "him",
+    "critical": true
+   },
+   {
+    "id": "him-sunglasses",
+    "text": {
+     "uk": "Окуляри від сонця",
+     "en": "Sunglasses"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-jacket",
+    "text": {
+     "uk": "Вітровка",
+     "en": "Light jacket"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-razor",
+    "text": {
+     "uk": "Бритва й піна",
+     "en": "Razor and shaving foam"
+    },
+    "audience": "him",
+    "note": {
+     "uk": "Бритву — тільки в багаж",
+     "en": "Razor in checked luggage only"
+    }
+   },
+   {
+    "id": "him-deodorant",
+    "text": {
+     "uk": "Дезодорант",
+     "en": "Deodorant"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-hygiene",
+    "text": {
+     "uk": "Засоби гігієни",
+     "en": "Toiletries"
+    },
+    "audience": "him"
+   },
+   {
+    "id": "him-belt",
+    "text": {
+     "uk": "Ремінь",
+     "en": "Belt"
+    },
+    "audience": "him"
+   }
+  ]
+ },
+ {
+  "id": "kids",
+  "icon": "baby",
+  "title": {
+   "uk": "Дитячі речі",
+   "en": "For the children"
+  },
+  "items": [
+   {
+    "id": "kid-docs",
+    "text": {
+     "uk": "Документи дитини й дозвіл на виїзд",
+     "en": "Child's documents and travel consent"
+    },
+    "audience": "kids",
+    "critical": true,
+    "note": {
+     "uk": "Якщо дитина їде не з обома батьками — нотаріальний дозвіл",
+     "en": "If the child is not travelling with both parents, a notarised consent"
+    }
+   },
+   {
+    "id": "kid-meds",
+    "text": {
+     "uk": "Дитячі жарознижувальні й сорбент",
+     "en": "Children's antipyretic and sorbent"
+    },
+    "audience": "kids",
+    "critical": true
+   },
+   {
+    "id": "kid-spf",
+    "text": {
+     "uk": "Дитячий SPF 50",
+     "en": "Children's SPF 50"
+    },
+    "audience": "kids",
+    "critical": true
+   },
+   {
+    "id": "kid-clothes",
+    "text": {
+     "uk": "Одяг за днями +2 комплекти",
+     "en": "Clothes for each day, plus 2 sets"
+    },
+    "audience": "kids",
+    "perPerson": true
+   },
+   {
+    "id": "kid-hat",
+    "text": {
+     "uk": "Панама",
+     "en": "Sun hat"
+    },
+    "audience": "kids",
+    "critical": true
+   },
+   {
+    "id": "kid-shoes",
+    "text": {
+     "uk": "Зручне взуття",
+     "en": "Comfortable shoes"
+    },
+    "audience": "kids"
+   },
+   {
+    "id": "kid-snacks",
+    "text": {
+     "uk": "Перекуси в дорогу",
+     "en": "Snacks for the journey"
+    },
+    "audience": "kids",
+    "note": {
+     "uk": "8–9 годин до Кишинева",
+     "en": "8–9 hours to Chișinău"
+    }
+   },
+   {
+    "id": "kid-entertain",
+    "text": {
+     "uk": "Чим зайняти в дорозі",
+     "en": "Something to do on the way"
+    },
+    "audience": "kids"
+   },
+   {
+    "id": "kid-water",
+    "text": {
+     "uk": "Пляшка для води",
+     "en": "Water bottle"
+    },
+    "audience": "kids"
+   }
+  ]
+ },
+ {
+  "id": "tech",
+  "icon": "plug",
+  "title": {
+   "uk": "Техніка",
+   "en": "Electronics"
+  },
+  "items": [
+   {
+    "id": "tech-powerbank",
+    "text": {
+     "uk": "Павербанк 20 000 mAh",
+     "en": "20,000 mAh power bank"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Тільки в ручну поклажу — в багаж літаки не приймають",
+     "en": "Hand baggage only — never checked"
+    }
+   },
+   {
+    "id": "tech-cables",
+    "text": {
+     "uk": "Кабелі для всіх пристроїв",
+     "en": "Cables for every device"
+    },
+    "audience": "both",
+    "qty": "+1 запасний"
+   },
+   {
+    "id": "tech-adapter",
+    "text": {
+     "uk": "Перехідник тип C/E",
+     "en": "Type C/E plug adapter"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Марокко — європейські розетки, 220 В. Молдова так само",
+     "en": "Morocco uses European sockets, 220 V. Moldova the same"
+    }
+   },
+   {
+    "id": "tech-esim",
+    "text": {
+     "uk": "eSIM для Марокко",
+     "en": "eSIM for Morocco"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Airalo, Orange Maroc або Maroc Telecom. Купи й активуй ДО вильоту",
+     "en": "Airalo, Orange Maroc or Maroc Telecom. Buy and activate BEFORE you fly"
+    }
+   },
+   {
+    "id": "tech-offlinemaps",
+    "text": {
+     "uk": "Офлайн-карти завантажені",
+     "en": "Offline maps downloaded"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "У цьому застосунку: Карта → «Завантажити карту міста». Плюс Google Maps офлайн",
+     "en": "In this app: Map → \"Download city map\". Plus Google Maps offline"
+    }
+   },
+   {
+    "id": "tech-headphones",
+    "text": {
+     "uk": "Навушники",
+     "en": "Headphones"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "tech-charger",
+    "text": {
+     "uk": "Зарядні пристрої",
+     "en": "Chargers"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "tech-camera",
+    "text": {
+     "uk": "Фотоапарат і карта пам'яті",
+     "en": "Camera and memory card"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "tech-multiplug",
+    "text": {
+     "uk": "Трійник або подовжувач",
+     "en": "Multi-socket adapter"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Одна розетка в номері на чотири пристрої",
+     "en": "One socket in the room, four devices"
+    }
+   }
+  ]
+ },
+ {
+  "id": "money",
+  "icon": "wallet",
+  "title": {
+   "uk": "Гроші",
+   "en": "Money"
+  },
+  "note": {
+   "uk": "У медині карток майже не приймають. Дирхам — закрита валюта: вивозити його з Марокко не можна.",
+   "en": "Cards are rarely accepted in the medina. The dirham is a closed currency — you cannot take it out of Morocco."
+  },
+  "items": [
+   {
+    "id": "money-eur",
+    "text": {
+     "uk": "Готівка EUR дрібними купюрами",
+     "en": "EUR cash in small notes"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "По 20 і 50 — так вигідніший курс і легше розміняти",
+     "en": "20s and 50s — better rates and easier to break"
+    }
+   },
+   {
+    "id": "money-card",
+    "text": {
+     "uk": "Картка без комісії за конвертацію",
+     "en": "A card with no conversion fee"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "money-belt",
+    "text": {
+     "uk": "Прихована поясна сумка",
+     "en": "Hidden money belt"
+    },
+    "audience": "both",
+    "critical": true,
+    "note": {
+     "uk": "Основна сума й запасна картка — окремо від гаманця",
+     "en": "Main cash and a spare card, kept apart from your wallet"
+    }
+   },
+   {
+    "id": "money-small",
+    "text": {
+     "uk": "Дрібні MAD на таксі й чайові",
+     "en": "Small MAD notes for taxis and tips"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Розміняй одразу в аеропорту — водії «не мають решти»",
+     "en": "Break a note at the airport — drivers never \"have change\""
+    }
+   },
+   {
+    "id": "money-split",
+    "text": {
+     "uk": "Гроші розділені між двома сумками",
+     "en": "Cash split between two bags"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "money-atm",
+    "text": {
+     "uk": "Відомі банкомати замість вуличних",
+     "en": "Bank ATMs rather than street machines"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Прикривай PIN. У людних місцях це базова обережність",
+     "en": "Cover the keypad. Basic care in crowded places"
+    }
+   }
+  ]
+ },
+ {
+  "id": "medina",
+  "icon": "bag",
+  "title": {
+   "uk": "Для медини й шопінгу",
+   "en": "For the medina and shopping"
+  },
+  "items": [
+   {
+    "id": "shop-bag",
+    "text": {
+     "uk": "Складана сумка для покупок",
+     "en": "Foldable shopping bag"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "shop-bottle",
+    "text": {
+     "uk": "Порожня пляшка для води",
+     "en": "Empty water bottle"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "У ріадах і кафе наливають безкоштовно",
+     "en": "Riads and cafés refill it for free"
+    }
+   },
+   {
+    "id": "shop-cash",
+    "text": {
+     "uk": "Дрібні купюри для торгу",
+     "en": "Small notes for haggling"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "З великою купюрою знижку не дадуть",
+     "en": "No one gives a discount when you hand over a big note"
+    }
+   },
+   {
+    "id": "shop-wipes",
+    "text": {
+     "uk": "Вологі серветки",
+     "en": "Wet wipes"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "shop-photos",
+    "text": {
+     "uk": "Фото речей, які шукаєш",
+     "en": "Photos of what you are looking for"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "Показати продавцю простіше, ніж пояснити",
+     "en": "Easier to show a seller than to explain"
+    }
+   },
+   {
+    "id": "shop-list",
+    "text": {
+     "uk": "Список подарунків із бюджетом",
+     "en": "Gift list with a budget"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "shop-argan",
+    "text": {
+     "uk": "Пам'ятка про арганове масло",
+     "en": "Argan oil cheat sheet"
+    },
+    "audience": "both",
+    "note": {
+     "uk": "150–250 MAD за 250 мл, темне скло, легкий горіховий запах. 50 MAD — підробка",
+     "en": "150–250 MAD per 250 ml, dark glass, faint nutty smell. 50 MAD means fake"
+    }
+   }
+  ]
+ },
+ {
+  "id": "carryon",
+  "icon": "luggage",
+  "title": {
+   "uk": "Ручна поклажа",
+   "en": "Hand luggage"
+  },
+  "note": {
+   "uk": "Усе, без чого не обійдешся, якщо валіза загубиться на пересадці.",
+   "en": "Everything you cannot do without if the suitcase goes missing at the connection."
+  },
+  "items": [
+   {
+    "id": "carry-docs",
+    "text": {
+     "uk": "Документи й квитки",
+     "en": "Documents and tickets"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "carry-meds",
+    "text": {
+     "uk": "Ліки на 2 дні",
+     "en": "Two days of medication"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "carry-powerbank",
+    "text": {
+     "uk": "Павербанк",
+     "en": "Power bank"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "carry-underwear",
+    "text": {
+     "uk": "Зміна білизни",
+     "en": "A change of underwear"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "carry-charger",
+    "text": {
+     "uk": "Зарядка й кабель",
+     "en": "Charger and cable"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "carry-scarf",
+    "text": {
+     "uk": "Шарф",
+     "en": "Scarf"
+    },
+    "audience": "her",
+    "note": {
+     "uk": "У літаку холодно, а в Марракеші одразу знадобиться",
+     "en": "Planes are cold and you will need it the moment you land"
+    }
+   },
+   {
+    "id": "carry-toothbrush",
+    "text": {
+     "uk": "Зубна щітка й міні-паста",
+     "en": "Toothbrush and travel toothpaste"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "carry-valuables",
+    "text": {
+     "uk": "Цінності й техніка",
+     "en": "Valuables and electronics"
+    },
+    "audience": "both",
+    "critical": true
+   }
+  ]
+ },
+ {
+  "id": "home",
+  "icon": "house",
+  "title": {
+   "uk": "Дім перед виїздом",
+   "en": "Home before you leave"
+  },
+  "items": [
+   {
+    "id": "home-bills",
+    "text": {
+     "uk": "Оплатити рахунки",
+     "en": "Pay the bills"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "home-water",
+    "text": {
+     "uk": "Перекрити воду",
+     "en": "Turn off the water"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "home-gas",
+    "text": {
+     "uk": "Перевірити газ і плиту",
+     "en": "Check the gas and stove"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "home-plugs",
+    "text": {
+     "uk": "Вимкнути техніку з розеток",
+     "en": "Unplug appliances"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "home-fridge",
+    "text": {
+     "uk": "Розібрати холодильник",
+     "en": "Clear out the fridge"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "home-plants",
+    "text": {
+     "uk": "Домовитись про рослини й тварин",
+     "en": "Arrange care for plants and pets"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "home-keys",
+    "text": {
+     "uk": "Залишити ключі комусь",
+     "en": "Leave keys with someone"
+    },
+    "audience": "both"
+   },
+   {
+    "id": "home-bank",
+    "text": {
+     "uk": "Попередити банк про поїздку",
+     "en": "Notify the bank about the trip"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "home-route",
+    "text": {
+     "uk": "Надіслати рідним маршрут і контакти",
+     "en": "Send family your itinerary and contacts"
+    },
+    "audience": "both",
+    "critical": true
+   },
+   {
+    "id": "home-trash",
+    "text": {
+     "uk": "Винести сміття",
+     "en": "Take out the rubbish"
+    },
+    "audience": "both"
+   }
+  ]
+ }
 ]

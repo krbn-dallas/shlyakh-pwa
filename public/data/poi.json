@@ -1,22 +1,2251 @@
 [
-  {"id":"jemaa","city":"marrakech","cat":"sight","name":"Площа Джемаа-ель-Фна","lat":31.6259,"lon":-7.9893,"hours":"24/7","tags":["UNESCO","центр"],"desc":{"uk":"Серце Марракеша — вуличні артисти, фуд-корти ввечері","ru":"Сердце Марракеша — уличные артисты, фуд-корты вечером"},"address":"Jemaa el-Fna, Marrakech"},
-  {"id":"koutoubia","city":"marrakech","cat":"sight","name":"Мечеть Кутубія","lat":31.6237,"lon":-7.9937,"tags":["мечеть","XII ст"],"desc":{"uk":"77-метровий мінарет — орієнтир у медині","ru":"77-метровый минарет — ориентир в медине"},"address":"Avenue Mohammed V, Marrakech"},
-  {"id":"ben-youssef","city":"marrakech","cat":"sight","name":"Медресе Бен Юсеф","lat":31.6305,"lon":-7.9866,"hours":"09:00-18:00","tags":["медресе","архітектура"],"desc":{"uk":"Шедевр зелліджа та різьблення XVI ст.","ru":"Шедевр зеллиджа и резьбы XVI в."},"address":"Souk Ben Youssef, Marrakech"},
-  {"id":"bahia","city":"marrakech","cat":"sight","name":"Палац Бахіа","lat":31.6215,"lon":-7.9829,"hours":"09:00-17:00","tags":["палац","XIX ст"],"desc":{"uk":"Розпис, внутрішні двори, гарем","ru":"Роспись, внутренние дворы, гарем"},"address":"Rue Riad Zitoun el Jdid, Marrakech"},
-  {"id":"majorelle","city":"marrakech","cat":"sight","name":"Сад Мажорель","lat":31.6416,"lon":-8.0031,"hours":"08:30-18:00","tags":["сад","YSL"],"desc":{"uk":"Яскравий ботанічний сад у фірмовому синьому","ru":"Яркий ботанический сад в фирменном синем"},"address":"Rue Yves Saint Laurent, Marrakech"},
-  {"id":"souk-semarine","city":"marrakech","cat":"market","name":"Сук Семарин","lat":31.628,"lon":-7.986,"hours":"08:00-18:00","tags":["ринок","торг"],"desc":{"uk":"Лабіринт ремісничих лавок, спеції, тканини","ru":"Лабиринт ремесленных лавок, специи, ткани"},"address":"Souk Semmarine, Medina, Marrakech"},
-  {"id":"cafe-epices","city":"marrakech","cat":"food","name":"Café des Épices","lat":31.6295,"lon":-7.9845,"hours":"08:30-22:00","tags":["кафе","тераса"],"desc":{"uk":"Тераса над суками — тажин та м'ята","ru":"Терраса над суками — тажин и мята"},"address":"Rahba Kedima 75, Marrakech"},
-  {"id":"gueliz","city":"marrakech","cat":"shop","name":"Район Геліз (Guéliz)","lat":31.6341,"lon":-8.0125,"tags":["шопінг","сучасний"],"desc":{"uk":"Бутики, кав'ярні, європейський шопінг","ru":"Бутики, кофейни, европейский шопинг"},"address":"Avenue Mohammed V, Guéliz, Marrakech"},
-  {"id":"marrakech-station","city":"marrakech","cat":"transport","name":"Вокзал Марракеш","lat":31.6253,"lon":-8.0005,"tags":["вокзал","транспорт"],"address":"ONCF Gare, Marrakech"},
-  {"id":"rak-airport","city":"marrakech","cat":"transport","name":"Аеропорт RAK","lat":31.6069,"lon":-8.0363,"tags":["аеропорт"],"address":"Aéroport Marrakech Ménara"},
-  {"id":"riad-dar-anika","city":"marrakech","cat":"stay","name":"Riad Dar Anika","lat":31.631,"lon":-7.988,"tags":["ріад","медина"],"desc":{"uk":"Derb Arjan 34, Bab Doukkala — 98 €/ніч","ru":"Derb Arjan 34, Bab Doukkala — 98 €/ночь"},"address":"Derb Arjan 34, Bab Doukkala, Medina, Marrakech"},
-  {"id":"arch-chisinau","city":"chisinau","cat":"sight","name":"Тріумфальна арка","lat":47.0139,"lon":28.8357,"desc":{"uk":"Символ Кишинева в центрі","ru":"Символ Кишинёва в центре"},"address":"Bulevardul Ștefan cel Mare, Chișinău"},
-  {"id":"park-stefan","city":"chisinau","cat":"sight","name":"Парк Штефан чел Маре","lat":47.0145,"lon":28.8325,"tags":["парк"],"address":"Parcul Ștefan cel Mare, Chișinău"},
-  {"id":"chisinau-market","city":"chisinau","cat":"market","name":"Центральний ринок","lat":47.015,"lon":28.84,"tags":["ринок"],"address":"Strada Mitropolit Varlaam, Chișinău"},
-  {"id":"kiv-airport","city":"chisinau","cat":"transport","name":"Аеропорт KIV","lat":47.9277,"lon":28.931,"tags":["аеропорт"],"address":"Aeroportul Chișinău"},
-  {"id":"hotel-national","city":"chisinau","cat":"stay","name":"Hotel National Premium","lat":47.025,"lon":28.831,"tags":["готель"],"desc":{"uk":"Strada Alexandru cel Bun 115 — 85 €/ніч","ru":"Strada Alexandru cel Bun 115 — 85 €/ночь"},"address":"Strada Alexandru cel Bun 115, Chișinău"},
-  {"id":"kyiv-station","city":"kyiv","cat":"transport","name":"Центральний вокзал","lat":50.4405,"lon":30.4907,"tags":["вокзал"],"address":"Вокзальна площа 1, Київ"},
-  {"id":"exchange-kiev","city":"kyiv","cat":"exchange","name":"Обмінник — Хрещатик","lat":50.444,"lon":30.521,"tags":["обмін"],"hours":"09:00-20:00"},
-  {"id":"pharmacy-marrakech","city":"marrakech","cat":"pharmacy","name":"Pharmacie de la Liberté","lat":31.635,"lon":-8.008,"hours":"08:00-22:00"},
-  {"id":"pharmacy-chisinau","city":"chisinau","cat":"pharmacy","name":"Farmacia Familiei","lat":47.016,"lon":28.834,"hours":"08:00-22:00"}
+ {
+  "id": "mrk-jemaa",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Площа Джемаа-ель-Фна",
+   "en": "Jemaa el-Fna"
+  },
+  "lat": 31.6259,
+  "lon": -7.9893,
+  "desc": {
+   "uk": "Серце міста й об'єкт ЮНЕСКО. Удень — соки й пряності, увечері перетворюється на живий цирк: оповідачі, барабанщики, фуд-корти.",
+   "en": "The city's heart and a UNESCO site. Juice and spices by day; by night it becomes a living circus of storytellers, drummers and food stalls."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Jemaa el-Fna, Medina, Marrakech",
+  "tags": [
+   "UNESCO",
+   "центр",
+   "вечір"
+  ]
+ },
+ {
+  "id": "mrk-koutoubia",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Мечеть Кутубія",
+   "en": "Koutoubia Mosque"
+  },
+  "lat": 31.6237,
+  "lon": -7.9937,
+  "desc": {
+   "uk": "Символ Марракеша, мінарет XII століття 77 метрів. Усередину пускають лише мусульман, але сади довкола відкриті всім і красиві на заході.",
+   "en": "Marrakesh's emblem, a 77-metre 12th-century minaret. Only Muslims may enter, but the surrounding gardens are open to all and lovely at sunset."
+  },
+  "hours": "сади цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Avenue Mohammed V, Marrakech",
+  "tags": [
+   "орієнтир",
+   "захід сонця"
+  ]
+ },
+ {
+  "id": "mrk-benyoussef",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Медресе Бен Юсеф",
+   "en": "Ben Youssef Madrasa"
+  },
+  "lat": 31.6305,
+  "lon": -7.9866,
+  "desc": {
+   "uk": "Найкрасивіша різьба по кедру й зелідж у місті. Після реставрації 2022 року — одне з найсильніших вражень медини.",
+   "en": "The finest cedar carving and zellij in the city. Since the 2022 restoration, one of the medina's strongest impressions."
+  },
+  "hours": "09:00–18:00",
+  "price": {
+   "uk": "~70 MAD",
+   "en": "~70 MAD"
+  },
+  "address": "Rue Assouel, Medina, Marrakech",
+  "tags": [
+   "архітектура",
+   "зелідж"
+  ]
+ },
+ {
+  "id": "mrk-bahia",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Палац Бахія",
+   "en": "Bahia Palace"
+  },
+  "lat": 31.6215,
+  "lon": -7.9829,
+  "desc": {
+   "uk": "Шедевр марокканської архітектури XIX століття: розписані стелі, внутрішні дворики, гарем.",
+   "en": "A 19th-century masterpiece: painted ceilings, courtyards and the harem quarters."
+  },
+  "hours": "09:00–17:00",
+  "price": {
+   "uk": "~70 MAD",
+   "en": "~70 MAD"
+  },
+  "address": "Avenue Imam El Ghazali, Medina, Marrakech",
+  "tags": [
+   "палац",
+   "фото"
+  ]
+ },
+ {
+  "id": "mrk-badi",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Палац Ель-Баді",
+   "en": "El Badi Palace"
+  },
+  "lat": 31.6183,
+  "lon": -7.986,
+  "desc": {
+   "uk": "Руїни колись найрозкішнішого палацу країни. Лелеки на стінах і панорама медини з тераси.",
+   "en": "The ruins of what was once the country's most lavish palace. Storks on the walls and a medina panorama from the terrace."
+  },
+  "hours": "09:00–17:00",
+  "price": {
+   "uk": "~70 MAD",
+   "en": "~70 MAD"
+  },
+  "address": "Ksibat Nhass, Medina, Marrakech",
+  "tags": [
+   "руїни",
+   "панорама"
+  ]
+ },
+ {
+  "id": "mrk-saadian",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Гробниці Саадитів",
+   "en": "Saadian Tombs"
+  },
+  "lat": 31.6178,
+  "lon": -7.9891,
+  "desc": {
+   "uk": "Королівський некрополь XVI століття, замурований на три століття й знайдений лише 1917 року.",
+   "en": "A 16th-century royal necropolis, walled up for three centuries and rediscovered only in 1917."
+  },
+  "hours": "09:00–17:00",
+  "price": {
+   "uk": "~70 MAD",
+   "en": "~70 MAD"
+  },
+  "address": "Rue de la Kasbah, Marrakech",
+  "tags": [
+   "історія"
+  ]
+ },
+ {
+  "id": "mrk-majorelle",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Сади Мажорель",
+   "en": "Jardin Majorelle"
+  },
+  "lat": 31.6416,
+  "lon": -8.0031,
+  "desc": {
+   "uk": "Ботанічний сад у фірмовому синьому кольорі, врятований Івом Сен-Лораном. Черги великі — квитки тільки онлайн заздалегідь.",
+   "en": "A botanical garden in its signature blue, saved by Yves Saint Laurent. Queues are long — buy tickets online in advance."
+  },
+  "hours": "08:00–18:00",
+  "price": {
+   "uk": "~70 MAD, музей окремо",
+   "en": "~70 MAD, museum extra"
+  },
+  "address": "Rue Yves St Laurent, Guéliz, Marrakech",
+  "tags": [
+   "сад",
+   "онлайн-квиток"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "mrk-ysl",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Музей Ів Сен-Лорана",
+   "en": "Yves Saint Laurent Museum"
+  },
+  "lat": 31.641,
+  "lon": -8.0027,
+  "desc": {
+   "uk": "Поряд із садами Мажорель. Колекція кутюру й тимчасові виставки.",
+   "en": "Next to the Majorelle gardens. A couture collection and temporary exhibitions."
+  },
+  "hours": "10:00–18:00, ср вихідний",
+  "price": {
+   "uk": "~100 MAD",
+   "en": "~100 MAD"
+  },
+  "address": "Rue Yves St Laurent, Guéliz",
+  "tags": [
+   "музей"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "mrk-islamicart",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Музей ісламського мистецтва (вілла Мажорель)",
+   "en": "Museum of Islamic Art (Majorelle Villa)"
+  },
+  "lat": 31.6414,
+  "lon": -8.0034,
+  "desc": {
+   "uk": "Кераміка, рукописи й текстиль у синій віллі всередині садів.",
+   "en": "Ceramics, manuscripts and textiles in the blue villa inside the gardens."
+  },
+  "hours": "08:00–18:00",
+  "price": {
+   "uk": "~60 MAD",
+   "en": "~60 MAD"
+  },
+  "address": "Jardin Majorelle, Guéliz",
+  "tags": [
+   "музей"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "mrk-secretgarden",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Le Jardin Secret",
+   "en": "Le Jardin Secret"
+  },
+  "lat": 31.6301,
+  "lon": -7.9895,
+  "desc": {
+   "uk": "Відновлений сад-ріад у самій медині. Тераса з видом на дахи й тихий притулок від суків.",
+   "en": "A restored riad garden inside the medina. A rooftop view and a quiet refuge from the souks."
+  },
+  "hours": "09:30–18:30",
+  "price": {
+   "uk": "~80 MAD",
+   "en": "~80 MAD"
+  },
+  "address": "121 Rue Mouassine, Medina",
+  "tags": [
+   "тиша",
+   "тераса"
+  ]
+ },
+ {
+  "id": "mrk-menara",
+  "city": "marrakech",
+  "cat": "nature",
+  "name": {
+   "uk": "Сади Менара",
+   "en": "Menara Gardens"
+  },
+  "lat": 31.6132,
+  "lon": -8.0209,
+  "desc": {
+   "uk": "Оливковий гай і павільйон біля басейну з видом на Атлас. Місцеві приходять сюди на захід сонця.",
+   "en": "An olive grove and a pavilion by a pool with the Atlas behind. Locals come here for the sunset."
+  },
+  "hours": "08:00–17:00",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Avenue de la Ménara, Marrakech",
+  "tags": [
+   "захід сонця",
+   "Атлас"
+  ]
+ },
+ {
+  "id": "mrk-souk-semarine",
+  "city": "marrakech",
+  "cat": "market",
+  "name": {
+   "uk": "Сук Семарін",
+   "en": "Souk Semmarine"
+  },
+  "lat": 31.6272,
+  "lon": -7.9884,
+  "desc": {
+   "uk": "Головна торгова артерія медини: тканини, шкіра, лампи, сувеніри. Торгуватись обов'язково.",
+   "en": "The medina's main trading artery: fabrics, leather, lamps, souvenirs. Haggling is expected."
+  },
+  "hours": "09:00–20:00, пт коротший день",
+  "address": "Souk Semmarine, Medina",
+  "tags": [
+   "торг",
+   "сувеніри"
+  ]
+ },
+ {
+  "id": "mrk-souk-attarine",
+  "city": "marrakech",
+  "cat": "market",
+  "name": {
+   "uk": "Сук Аттарін — спеції й парфуми",
+   "en": "Souk Attarine — spices and perfumes"
+  },
+  "lat": 31.6288,
+  "lon": -7.9877,
+  "desc": {
+   "uk": "Пряності, олії, арабські парфумні масла. Тут купують ras el hanout і шафран.",
+   "en": "Spices, oils and Arabic perfume oils. This is where you buy ras el hanout and saffron."
+  },
+  "hours": "09:00–20:00",
+  "price": {
+   "uk": "шафран 120–200 MAD/г",
+   "en": "saffron 120–200 MAD/g"
+  },
+  "address": "Souk Attarine, Medina",
+  "tags": [
+   "спеції",
+   "шафран"
+  ]
+ },
+ {
+  "id": "mrk-ensemble",
+  "city": "marrakech",
+  "cat": "craft",
+  "name": {
+   "uk": "Ensemble Artisanal",
+   "en": "Ensemble Artisanal"
+  },
+  "lat": 31.6293,
+  "lon": -7.9985,
+  "desc": {
+   "uk": "Державний ремісничий комплекс із ФІКСОВАНИМИ цінами. Ідеально, щоб дізнатись реальну вартість перед торгом у суках.",
+   "en": "A state crafts complex with FIXED prices. Perfect for learning the real value of things before haggling in the souks."
+  },
+  "hours": "09:30–19:00",
+  "price": {
+   "uk": "фіксовані ціни",
+   "en": "fixed prices"
+  },
+  "address": "Avenue Mohammed V, Marrakech",
+  "tags": [
+   "без торгу",
+   "орієнтир цін"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "mrk-mellah",
+  "city": "marrakech",
+  "cat": "sight",
+  "name": {
+   "uk": "Меллах — єврейський квартал",
+   "en": "Mellah — the Jewish quarter"
+  },
+  "lat": 31.6193,
+  "lon": -7.9825,
+  "desc": {
+   "uk": "Історичний квартал із синагогою, цвинтарем і ринком спецій. Тихіший за головні суки.",
+   "en": "A historic quarter with a synagogue, cemetery and spice market. Quieter than the main souks."
+  },
+  "address": "Mellah, Medina, Marrakech",
+  "tags": [
+   "історія"
+  ]
+ },
+ {
+  "id": "mrk-gueliz",
+  "city": "marrakech",
+  "cat": "shop",
+  "name": {
+   "uk": "Геліз — новий район",
+   "en": "Guéliz — the new town"
+  },
+  "lat": 31.6341,
+  "lon": -8.0125,
+  "desc": {
+   "uk": "Бутики, кафе, галереї, фіксовані ціни й європейський темп. Тут купують каптани й сучасний марокканський дизайн.",
+   "en": "Boutiques, cafés, galleries, fixed prices and a European pace. This is where you buy kaftans and modern Moroccan design."
+  },
+  "hours": "магазини з 10:00",
+  "address": "Guéliz, Marrakech",
+  "tags": [
+   "шопінг",
+   "кафе"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "mrk-medinamall",
+  "city": "marrakech",
+  "cat": "shop",
+  "name": {
+   "uk": "Medina Mall",
+   "en": "Medina Mall"
+  },
+  "lat": 31.6265,
+  "lon": -7.9905,
+  "desc": {
+   "uk": "Торговий центр із фіксованими цінами поруч із Джемаа.",
+   "en": "A fixed-price shopping centre near Jemaa el-Fna."
+  },
+  "hours": "10:00–22:00",
+  "address": "Medina Mall, Marrakech",
+  "tags": [
+   "без торгу"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "mrk-cafe-epices",
+  "city": "marrakech",
+  "cat": "food",
+  "name": {
+   "uk": "Café des Épices",
+   "en": "Café des Épices"
+  },
+  "lat": 31.6299,
+  "lon": -7.9873,
+  "desc": {
+   "uk": "Тераса над ринком спецій — класична зупинка посеред медини.",
+   "en": "A terrace above the spice market — the classic mid-medina stop."
+  },
+  "hours": "09:00–23:00",
+  "price": {
+   "uk": "~80–120 MAD",
+   "en": "~80–120 MAD"
+  },
+  "address": "75 Rahba Lakdima, Medina",
+  "tags": [
+   "тераса",
+   "кава"
+  ]
+ },
+ {
+  "id": "mrk-mozaik",
+  "city": "marrakech",
+  "cat": "food",
+  "name": {
+   "uk": "Mozaïk'Art — All Day Brunch",
+   "en": "Mozaïk'Art — All Day Brunch"
+  },
+  "lat": 31.6262,
+  "lon": -7.9899,
+  "desc": {
+   "uk": "Сучасна кухня, бюджетний варіант просто в медині. Працює з 08:30.",
+   "en": "Modern cooking, an affordable option right in the medina. Open from 08:30."
+  },
+  "hours": "08:30–23:00",
+  "price": {
+   "uk": "~150 MAD/особу",
+   "en": "~150 MAD per person"
+  },
+  "address": "Medina Mall, Marrakech",
+  "tags": [
+   "сніданок"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-nomad",
+  "city": "marrakech",
+  "cat": "food",
+  "name": {
+   "uk": "Nomad",
+   "en": "Nomad"
+  },
+  "lat": 31.6297,
+  "lon": -7.9871,
+  "desc": {
+   "uk": "Дахова тераса з видом на Rahba Lakdima. Сучасне прочитання марокканської кухні.",
+   "en": "A rooftop overlooking Rahba Lakdima. A modern take on Moroccan cooking."
+  },
+  "hours": "12:00–23:00",
+  "price": {
+   "uk": "~150–250 MAD",
+   "en": "~150–250 MAD"
+  },
+  "address": "1 Derb Aarjan, Rahba Lakdima",
+  "tags": [
+   "тераса",
+   "вечеря"
+  ]
+ },
+ {
+  "id": "mrk-foundouk",
+  "city": "marrakech",
+  "cat": "food",
+  "name": {
+   "uk": "Le Foundouk",
+   "en": "Le Foundouk"
+  },
+  "lat": 31.632,
+  "lon": -7.9855,
+  "desc": {
+   "uk": "Марокканська й європейська кухня в старому фондуку. Гарний варіант на вечерю.",
+   "en": "Moroccan and European cooking in an old caravanserai. A good dinner choice."
+  },
+  "hours": "12:00–23:00",
+  "price": {
+   "uk": "~200–250 MAD",
+   "en": "~200–250 MAD"
+  },
+  "address": "55 Souk Hal Fassi, Medina",
+  "tags": [
+   "вечеря"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-naranj",
+  "city": "marrakech",
+  "cat": "food",
+  "name": {
+   "uk": "Naranj",
+   "en": "Naranj"
+  },
+  "lat": 31.6242,
+  "lon": -7.9846,
+  "desc": {
+   "uk": "Левантійська кухня — приємна зміна після тажинів. Часто радять як обід перед вильотом.",
+   "en": "Levantine cooking — a welcome change from tagines. Often recommended as a pre-flight lunch."
+  },
+  "hours": "12:00–23:00",
+  "price": {
+   "uk": "~150–200 MAD",
+   "en": "~150–200 MAD"
+  },
+  "address": "84 Rue Riad Zitoun Jdid, Medina",
+  "tags": [
+   "обід"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-kaowa",
+  "city": "marrakech",
+  "cat": "food",
+  "name": {
+   "uk": "Kaowa",
+   "en": "Kaowa"
+  },
+  "lat": 31.6413,
+  "lon": -8.0022,
+  "desc": {
+   "uk": "Кав'ярня біля садів Мажорель — сніданки, смузі, кава.",
+   "en": "A café by the Majorelle gardens — breakfasts, smoothies, coffee."
+  },
+  "hours": "08:00–19:00",
+  "price": {
+   "uk": "~60–120 MAD",
+   "en": "~60–120 MAD"
+  },
+  "address": "34 Rue Yves St Laurent, Guéliz",
+  "tags": [
+   "кава"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-station",
+  "city": "marrakech",
+  "cat": "transport",
+  "name": {
+   "uk": "Вокзал Marrakech ONCF",
+   "en": "Marrakesh ONCF station"
+  },
+  "lat": 31.6297,
+  "lon": -8.0121,
+  "desc": {
+   "uk": "Головний залізничний вокзал. Потяги на Касабланку, Рабат, Танжер, Фес. Бронювання за 3 місяці на oncf.ma.",
+   "en": "The main rail station. Trains to Casablanca, Rabat, Tangier and Fes. Booking opens 3 months ahead at oncf.ma."
+  },
+  "hours": "06:00–23:00",
+  "address": "Avenue Mohammed VI, Guéliz",
+  "tags": [
+   "ONCF"
+  ]
+ },
+ {
+  "id": "mrk-airport",
+  "city": "marrakech",
+  "cat": "transport",
+  "name": {
+   "uk": "Аеропорт Marrakech Menara (RAK)",
+   "en": "Marrakesh Menara Airport (RAK)"
+  },
+  "lat": 31.6069,
+  "lon": -8.0363,
+  "desc": {
+   "uk": "~20 км від медини, таксі приблизно 150 MAD. Ціну узгоджуй заздалегідь.",
+   "en": "~20 km from the medina, taxi about 150 MAD. Agree the fare in advance."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "таксі ~150 MAD",
+   "en": "taxi ~150 MAD"
+  },
+  "address": "Aéroport Marrakech Menara",
+  "tags": [
+   "аеропорт"
+  ]
+ },
+ {
+  "id": "mrk-bus",
+  "city": "marrakech",
+  "cat": "transport",
+  "name": {
+   "uk": "Автовокзал CTM / Supratours",
+   "en": "CTM / Supratours bus station"
+  },
+  "lat": 31.6303,
+  "lon": -8.0129,
+  "desc": {
+   "uk": "Міжміські автобуси: Ессувейра, Агадір, Касабланка, Уарзазат. Дешевше за потяг.",
+   "en": "Intercity buses: Essaouira, Agadir, Casablanca, Ouarzazate. Cheaper than the train."
+  },
+  "hours": "05:00–22:00",
+  "address": "Gare Routière, Guéliz, Marrakech",
+  "tags": [
+   "автобус"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-pharm-1",
+  "city": "marrakech",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Pharmacie de la Place — Джемаа",
+   "en": "Pharmacie de la Place — Jemaa"
+  },
+  "lat": 31.6255,
+  "lon": -7.9887,
+  "desc": {
+   "uk": "Аптека біля головної площі. Фармацевти говорять французькою, часто й англійською.",
+   "en": "A pharmacy by the main square. Pharmacists speak French and often English."
+  },
+  "hours": "09:00–21:00",
+  "address": "Place Jemaa el-Fna, Medina",
+  "tags": [
+   "центр"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-pharm-2",
+  "city": "marrakech",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Pharmacie du Progrès",
+   "en": "Pharmacie du Progrès"
+  },
+  "lat": 31.6349,
+  "lon": -8.0093,
+  "desc": {
+   "uk": "Велика аптека в Гелізі з широким асортиментом.",
+   "en": "A large, well-stocked pharmacy in Guéliz."
+  },
+  "hours": "09:00–20:00",
+  "address": "Avenue Mohammed V, Guéliz",
+  "tags": [
+   "Геліз"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-pharm-3",
+  "city": "marrakech",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Pharmacie de garde (нічна чергова)",
+   "en": "Pharmacie de garde (night duty)"
+  },
+  "lat": 31.6295,
+  "lon": -8.008,
+  "desc": {
+   "uk": "Нічні аптеки в Марокко чергуються за графіком. Список змінюється щотижня — питай у рецепції ріаду або дивись оголошення на дверях найближчої аптеки.",
+   "en": "Night pharmacies in Morocco work on a rota. The list changes weekly — ask your riad reception or check the notice on the nearest pharmacy door."
+  },
+  "hours": "20:00–09:00 за графіком",
+  "address": "Guéliz / Medina — за графіком",
+  "tags": [
+   "24/7",
+   "чергова"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-exch-1",
+  "city": "marrakech",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмінники на Rue Bab Agnaou",
+   "en": "Bureaux de change, Rue Bab Agnaou"
+  },
+  "lat": 31.6237,
+  "lon": -7.9895,
+  "desc": {
+   "uk": "Скупчення офіційних обмінників біля Джемаа. Курс кращий, ніж у готелях і аеропорту.",
+   "en": "A cluster of official bureaux near Jemaa el-Fna. Better rates than hotels or the airport."
+  },
+  "hours": "09:00–20:00",
+  "price": {
+   "uk": "курс ~10.8 MAD за 1 €",
+   "en": "rate ~10.8 MAD per €1"
+  },
+  "address": "Rue Bab Agnaou, Medina",
+  "tags": [
+   "офіційний"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-exch-2",
+  "city": "marrakech",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмінники в Гелізі (Avenue Mohammed V)",
+   "en": "Bureaux de change in Guéliz (Avenue Mohammed V)"
+  },
+  "lat": 31.634,
+  "lon": -8.01,
+  "desc": {
+   "uk": "Офіційні обмінники й відділення банків. Курс зазвичай найкращий у місті.",
+   "en": "Official bureaux and bank branches. Usually the best rates in town."
+  },
+  "hours": "09:00–19:00",
+  "address": "Avenue Mohammed V, Guéliz",
+  "tags": [
+   "офіційний",
+   "банк"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-exch-airport",
+  "city": "marrakech",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмін в аеропорту RAK",
+   "en": "Currency exchange at RAK airport"
+  },
+  "lat": 31.6069,
+  "lon": -8.0363,
+  "desc": {
+   "uk": "Курс гірший, але тут можна розміняти залишок дирхамів назад перед вильотом — вивозити їх не можна.",
+   "en": "The rate is worse, but this is where you change leftover dirhams back before departure — you may not take them out."
+  },
+  "hours": "цілодобово",
+  "address": "Aéroport Marrakech Menara",
+  "tags": [
+   "виліт"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-atm",
+  "city": "marrakech",
+  "cat": "money",
+  "name": {
+   "uk": "Банкомати на Джемаа-ель-Фна",
+   "en": "ATMs at Jemaa el-Fna"
+  },
+  "lat": 31.6262,
+  "lon": -7.9885,
+  "desc": {
+   "uk": "Банкомати при відділеннях банків біля площі. Знімай удень і прикривай PIN.",
+   "en": "Bank-branch ATMs by the square. Withdraw by day and cover your PIN."
+  },
+  "hours": "цілодобово",
+  "address": "Place Jemaa el-Fna",
+  "tags": [
+   "банкомат"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-riad",
+  "city": "marrakech",
+  "cat": "stay",
+  "name": {
+   "uk": "Riad Dar Anika",
+   "en": "Riad Dar Anika"
+  },
+  "lat": 31.633,
+  "lon": -7.995,
+  "desc": {
+   "uk": "Ріад у Баб-Дуккала, приблизно 98 € за ніч за даними дослідження. Традиційний привітальний чай при заселенні.",
+   "en": "A riad in Bab Doukkala, about €98 per night per the research. Traditional welcome tea on arrival."
+  },
+  "price": {
+   "uk": "~98 €/ніч",
+   "en": "~€98/night"
+  },
+  "address": "Derb Arjan 34, Bab Doukkala, Medina, Marrakech 40000",
+  "tags": [
+   "ріад"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-hammam",
+  "city": "marrakech",
+  "cat": "craft",
+  "name": {
+   "uk": "Хаммам у медині",
+   "en": "Hammam in the medina"
+  },
+  "lat": 31.6285,
+  "lon": -7.986,
+  "desc": {
+   "uk": "Традиційна лазня. Є суто місцеві (дешеві, без церемоній) і туристичні спа. Жіночі й чоловічі години розділені.",
+   "en": "A traditional bathhouse. There are purely local ones (cheap, no ceremony) and tourist spas. Women's and men's hours are separate."
+  },
+  "hours": "залежить від закладу",
+  "price": {
+   "uk": "100–400 MAD",
+   "en": "100–400 MAD"
+  },
+  "address": "Medina, Marrakech",
+  "tags": [
+   "хаммам"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "mrk-atlas",
+  "city": "marrakech",
+  "cat": "nature",
+  "name": {
+   "uk": "Атлаські гори — долина Урика",
+   "en": "Atlas Mountains — Ourika Valley"
+  },
+  "lat": 31.2833,
+  "lon": -7.7833,
+  "desc": {
+   "uk": "Одноденна екскурсія: берберські села, водоспади, чай у місцевих. ~1,5 години дороги. Бронюй за 2–3 дні.",
+   "en": "A day trip: Berber villages, waterfalls, tea with locals. About 1.5 hours' drive. Book 2–3 days ahead."
+  },
+  "hours": "виїзд ~07:30",
+  "price": {
+   "uk": "~300–400 MAD із гідом",
+   "en": "~300–400 MAD with a guide"
+  },
+  "address": "Ourika Valley, High Atlas",
+  "tags": [
+   "екскурсія",
+   "гори"
+  ]
+ },
+ {
+  "id": "casa-hassan2",
+  "city": "casablanca",
+  "cat": "sight",
+  "name": {
+   "uk": "Мечеть Хассана II",
+   "en": "Hassan II Mosque"
+  },
+  "lat": 33.6083,
+  "lon": -7.6325,
+  "desc": {
+   "uk": "Одна з найбільших мечетей світу й ЄДИНА в Марокко, відкрита для немусульман. Стоїть просто над океаном.",
+   "en": "One of the world's largest mosques and the ONLY one in Morocco open to non-Muslims. It stands right over the ocean."
+  },
+  "hours": "екскурсії 09:00–15:00, крім пт",
+  "price": {
+   "uk": "~130 MAD екскурсія",
+   "en": "~130 MAD guided tour"
+  },
+  "address": "Boulevard de la Corniche, Casablanca",
+  "tags": [
+   "UNESCO",
+   "обов'язково"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "casa-corniche",
+  "city": "casablanca",
+  "cat": "nature",
+  "name": {
+   "uk": "Набережна Ain Diab",
+   "en": "Ain Diab Corniche"
+  },
+  "lat": 33.592,
+  "lon": -7.672,
+  "desc": {
+   "uk": "Атлантична набережна з кафе й пляжами. Безпечний і приємний район для вечірньої прогулянки.",
+   "en": "An Atlantic promenade with cafés and beaches. A safe, pleasant area for an evening walk."
+  },
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Boulevard de la Corniche, Ain Diab",
+  "tags": [
+   "океан"
+  ]
+ },
+ {
+  "id": "casa-habous",
+  "city": "casablanca",
+  "cat": "market",
+  "name": {
+   "uk": "Квартал Habous",
+   "en": "Habous quarter"
+  },
+  "lat": 33.5769,
+  "lon": -7.6106,
+  "desc": {
+   "uk": "«Нова медина», збудована в 1930-х за зразком старих марокканських міст. Кераміка, книги, солодощі.",
+   "en": "The \"new medina\", built in the 1930s in the style of old Moroccan towns. Ceramics, books and pastries."
+  },
+  "hours": "09:00–19:00",
+  "address": "Quartier Habous, Casablanca",
+  "tags": [
+   "архітектура",
+   "ремесла"
+  ]
+ },
+ {
+  "id": "casa-marche",
+  "city": "casablanca",
+  "cat": "market",
+  "name": {
+   "uk": "Marché Central",
+   "en": "Marché Central"
+  },
+  "lat": 33.5962,
+  "lon": -7.6186,
+  "desc": {
+   "uk": "Ринок в стилі ар-деко 1930-х. Найкраще місце в місті для СПРАВЖНЬОГО арганового масла — ціни нижчі, бо ринок обслуговує місцевих і професіоналів.",
+   "en": "A 1930s art-deco market. The best place in the city for GENUINE argan oil — prices are lower because it serves locals and professionals."
+  },
+  "hours": "07:00–14:00",
+  "price": {
+   "uk": "аргана 150–250 MAD/250 мл",
+   "en": "argan 150–250 MAD/250 ml"
+  },
+  "address": "Boulevard Mohammed V, Casablanca",
+  "tags": [
+   "аргана",
+   "спеції"
+  ]
+ },
+ {
+  "id": "casa-moroccomall",
+  "city": "casablanca",
+  "cat": "shop",
+  "name": {
+   "uk": "Morocco Mall",
+   "en": "Morocco Mall"
+  },
+  "lat": 33.5586,
+  "lon": -7.6926,
+  "desc": {
+   "uk": "Найбільший торговий центр Африки: міжнародні бренди, акваріум, IMAX. Ціни фіксовані.",
+   "en": "Africa's largest mall: international brands, an aquarium and an IMAX. Fixed prices."
+  },
+  "hours": "10:00–22:00",
+  "address": "Boulevard de l'Océan Atlantique, Casablanca",
+  "tags": [
+   "бренди"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "casa-anfa",
+  "city": "casablanca",
+  "cat": "shop",
+  "name": {
+   "uk": "Anfa Place",
+   "en": "Anfa Place"
+  },
+  "lat": 33.5936,
+  "lon": -7.654,
+  "desc": {
+   "uk": "Елітний район і торговий центр — тут купують якісні каптани й дизайнерський одяг.",
+   "en": "An upmarket district and mall — the place for quality kaftans and designer clothing."
+  },
+  "hours": "10:00–21:00",
+  "address": "Boulevard de la Corniche, Anfa",
+  "tags": [
+   "каптани"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "casa-maarif",
+  "city": "casablanca",
+  "cat": "shop",
+  "name": {
+   "uk": "Maarif — модний квартал",
+   "en": "Maarif fashion quarter"
+  },
+  "lat": 33.5843,
+  "lon": -7.632,
+  "desc": {
+   "uk": "Бутики, вулична мода, магазин парфумів Parfums Madini, де складають аромат із понад 100 есенцій.",
+   "en": "Boutiques, street fashion, and Parfums Madini where they blend a scent from over 100 essences."
+  },
+  "hours": "10:00–20:00",
+  "address": "Quartier Maarif, Casablanca",
+  "tags": [
+   "мода",
+   "парфуми"
+  ]
+ },
+ {
+  "id": "casa-gauthier",
+  "city": "casablanca",
+  "cat": "shop",
+  "name": {
+   "uk": "Quartier Gauthier & Racine",
+   "en": "Quartier Gauthier & Racine"
+  },
+  "lat": 33.5878,
+  "lon": -7.6248,
+  "desc": {
+   "uk": "Центр сучасної марокканської моди — дизайнери, що вчилися в Парижі, Мілані й Лондоні.",
+   "en": "The hub of contemporary Moroccan fashion — designers trained in Paris, Milan and London."
+  },
+  "address": "Gauthier, Casablanca",
+  "tags": [
+   "дизайн"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "casa-apia",
+  "city": "casablanca",
+  "cat": "shop",
+  "name": {
+   "uk": "Apia — органічні продукти",
+   "en": "Apia — organic products"
+  },
+  "lat": 33.585,
+  "lon": -7.633,
+  "desc": {
+   "uk": "Мережа магазинів органічних продуктів. Надійне джерело сертифікованого арганового масла з чіткою етикеткою.",
+   "en": "A chain of organic shops. A reliable source of certified argan oil with proper labelling."
+  },
+  "hours": "09:00–20:00",
+  "address": "Maarif, Casablanca",
+  "tags": [
+   "аргана",
+   "сертифікат"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "casa-serghini",
+  "city": "casablanca",
+  "cat": "craft",
+  "name": {
+   "uk": "Maison Poterie Serghini",
+   "en": "Maison Poterie Serghini"
+  },
+  "lat": 33.5772,
+  "lon": -7.611,
+  "desc": {
+   "uk": "Керамічна майстерня в Habous — можна побачити роботу майстрів і купити традиційні візерунки.",
+   "en": "A pottery workshop in Habous — watch the craftsmen and buy traditional patterns."
+  },
+  "hours": "09:00–19:00",
+  "address": "Quartier Habous, Casablanca",
+  "tags": [
+   "кераміка"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "casa-station",
+  "city": "casablanca",
+  "cat": "transport",
+  "name": {
+   "uk": "Вокзал Casa Voyageurs",
+   "en": "Casa Voyageurs station"
+  },
+  "lat": 33.5892,
+  "lon": -7.557,
+  "desc": {
+   "uk": "Головний вокзал: Al Boraq до Танжера за 2 години, потяги на Марракеш, Фес, Рабат.",
+   "en": "The main station: Al Boraq to Tangier in 2 hours, plus trains to Marrakesh, Fes and Rabat."
+  },
+  "hours": "05:00–23:00",
+  "address": "Boulevard Ba Hmad, Casablanca",
+  "tags": [
+   "ONCF",
+   "Al Boraq"
+  ]
+ },
+ {
+  "id": "casa-airport",
+  "city": "casablanca",
+  "cat": "transport",
+  "name": {
+   "uk": "Аеропорт Mohammed V (CMN)",
+   "en": "Mohammed V Airport (CMN)"
+  },
+  "lat": 33.3675,
+  "lon": -7.5899,
+  "desc": {
+   "uk": "Головний аеропорт країни, ~30 км від центру. До міста ходить потяг просто з терміналу.",
+   "en": "The country's main airport, ~30 km from the centre. A train runs into the city straight from the terminal."
+  },
+  "hours": "цілодобово",
+  "address": "Nouasseur, Casablanca",
+  "tags": [
+   "аеропорт",
+   "потяг"
+  ]
+ },
+ {
+  "id": "casa-tram",
+  "city": "casablanca",
+  "cat": "transport",
+  "name": {
+   "uk": "Casa Tramway",
+   "en": "Casa Tramway"
+  },
+  "lat": 33.5892,
+  "lon": -7.6034,
+  "desc": {
+   "uk": "4 лінії, 73 км. Квиток 8 MAD, пересадка протягом 2 годин безкоштовна. Ходить 5:30–22:30. Покриває центр, набережну й Morocco Mall.",
+   "en": "4 lines, 73 km. An 8 MAD ticket, free transfers within 2 hours. Runs 05:30–22:30. Covers the centre, the corniche and Morocco Mall."
+  },
+  "hours": "05:30–22:30",
+  "price": {
+   "uk": "8 MAD",
+   "en": "8 MAD"
+  },
+  "address": "Casablanca",
+  "tags": [
+   "трамвай",
+   "дешево"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "casa-pharm",
+  "city": "casablanca",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Аптеки в Maarif",
+   "en": "Pharmacies in Maarif"
+  },
+  "lat": 33.5845,
+  "lon": -7.6325,
+  "desc": {
+   "uk": "Кілька великих аптек у сучасному районі, фармацевти говорять французькою.",
+   "en": "Several large pharmacies in the modern district; pharmacists speak French."
+  },
+  "hours": "09:00–20:00",
+  "address": "Quartier Maarif, Casablanca",
+  "coordsApprox": true
+ },
+ {
+  "id": "casa-exch",
+  "city": "casablanca",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмінники на бульварі Мохаммеда V",
+   "en": "Bureaux de change, Boulevard Mohammed V"
+  },
+  "lat": 33.593,
+  "lon": -7.618,
+  "desc": {
+   "uk": "Банки й офіційні обмінники в центрі. Курс кращий, ніж в аеропорту.",
+   "en": "Banks and official bureaux in the centre. Better rates than the airport."
+  },
+  "hours": "09:00–19:00",
+  "address": "Boulevard Mohammed V, Casablanca",
+  "tags": [
+   "офіційний"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "fes-elbali",
+  "city": "fes",
+  "cat": "sight",
+  "name": {
+   "uk": "Медина Фес-ель-Балі",
+   "en": "Fes el-Bali medina"
+  },
+  "lat": 34.065,
+  "lon": -4.977,
+  "desc": {
+   "uk": "Найбільша повністю пішохідна зона у світі та об'єкт ЮНЕСКО. Автомобілів немає — тільки люди, віслюки й звуки майстерень.",
+   "en": "The world's largest car-free urban area and a UNESCO site. No cars — only people, donkeys and the sound of workshops."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Fes el-Bali",
+  "tags": [
+   "UNESCO",
+   "пішохідна"
+  ]
+ },
+ {
+  "id": "fes-chouara",
+  "city": "fes",
+  "cat": "craft",
+  "name": {
+   "uk": "Чинбарня Шуара",
+   "en": "Chouara Tannery"
+  },
+  "lat": 34.0658,
+  "lon": -4.97,
+  "desc": {
+   "uk": "Одна з найстаріших чинбарень світу, працює з XI століття. Шкіру фарбують рослинними барвниками. Дивитись — із терас навколишніх крамниць.",
+   "en": "One of the world's oldest tanneries, working since the 11th century. Leather dyed with plant pigments. Viewed from the terraces of surrounding shops."
+  },
+  "hours": "08:00–18:00",
+  "price": {
+   "uk": "вхід на терасу зазвичай безкоштовний, але очікують покупку",
+   "en": "terrace access usually free, but a purchase is expected"
+  },
+  "address": "Chouara, Fes el-Bali",
+  "tags": [
+   "шкіра",
+   "фото"
+  ]
+ },
+ {
+  "id": "fes-talaa",
+  "city": "fes",
+  "cat": "market",
+  "name": {
+   "uk": "Вулиця Talaa Kbira",
+   "en": "Talaa Kbira street"
+  },
+  "lat": 34.0632,
+  "lon": -4.98,
+  "desc": {
+   "uk": "Головна торгова артерія медини від брами Bab Boujloud углиб. Кераміка, метал, тканини.",
+   "en": "The medina's main trading artery, running in from Bab Boujloud. Ceramics, metalwork, fabrics."
+  },
+  "hours": "09:00–19:00",
+  "address": "Talaa Kbira, Fes el-Bali",
+  "tags": [
+   "торг"
+  ]
+ },
+ {
+  "id": "fes-seffarine",
+  "city": "fes",
+  "cat": "craft",
+  "name": {
+   "uk": "Place Seffarine — мідники",
+   "en": "Place Seffarine — coppersmiths"
+  },
+  "lat": 34.0644,
+  "lon": -4.9727,
+  "desc": {
+   "uk": "Площа мідників: чути роботу молотків за квартал. Купують тут таджини, чайники, підноси.",
+   "en": "The coppersmiths' square: you hear the hammers a block away. Tagines, teapots and trays are bought here."
+  },
+  "hours": "09:00–18:00",
+  "address": "Place Seffarine, Fes el-Bali",
+  "tags": [
+   "метал"
+  ]
+ },
+ {
+  "id": "fes-bouinania",
+  "city": "fes",
+  "cat": "sight",
+  "name": {
+   "uk": "Медресе Бу-Інанія",
+   "en": "Bou Inania Madrasa"
+  },
+  "lat": 34.0637,
+  "lon": -4.9822,
+  "desc": {
+   "uk": "Медресе XIV століття — одне з небагатьох релігійних споруд Фесу, відкритих для немусульман.",
+   "en": "A 14th-century madrasa — one of the few religious buildings in Fes open to non-Muslims."
+  },
+  "hours": "09:00–17:00",
+  "price": {
+   "uk": "~20 MAD",
+   "en": "~20 MAD"
+  },
+  "address": "Talaa Kbira, Fes el-Bali",
+  "tags": [
+   "архітектура"
+  ]
+ },
+ {
+  "id": "fes-boujloud",
+  "city": "fes",
+  "cat": "sight",
+  "name": {
+   "uk": "Брама Bab Boujloud",
+   "en": "Bab Boujloud gate"
+  },
+  "lat": 34.0617,
+  "lon": -4.9838,
+  "desc": {
+   "uk": "Синя брама — головний вхід до медини й найзручніший орієнтир, щоб не заблукати.",
+   "en": "The Blue Gate — the medina's main entrance and the handiest landmark for finding your way out."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Bab Boujloud, Fes",
+  "tags": [
+   "орієнтир"
+  ]
+ },
+ {
+  "id": "fes-pottery",
+  "city": "fes",
+  "cat": "craft",
+  "name": {
+   "uk": "Керамічні майстерні Фесу",
+   "en": "Fes pottery workshops"
+  },
+  "lat": 34.043,
+  "lon": -4.968,
+  "desc": {
+   "uk": "Знаменита феська синьо-біла глазур і мозаїка зелідж ручної роботи. Такого не знайти більше ніде в Марокко.",
+   "en": "The famous Fes blue-and-white glaze and hand-cut zellij mosaic. You will not find this anywhere else in Morocco."
+  },
+  "hours": "09:00–18:00",
+  "address": "Ain Nokbi, Fes",
+  "tags": [
+   "кераміка",
+   "зелідж"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "fes-station",
+  "city": "fes",
+  "cat": "transport",
+  "name": {
+   "uk": "Вокзал Фес ONCF",
+   "en": "Fes ONCF station"
+  },
+  "lat": 34.043,
+  "lon": -5.006,
+  "desc": {
+   "uk": "Потяги на Касабланку, Рабат, Танжер, Уджду.",
+   "en": "Trains to Casablanca, Rabat, Tangier and Oujda."
+  },
+  "hours": "06:00–22:00",
+  "address": "Boulevard Chefchaouni, Fes",
+  "tags": [
+   "ONCF"
+  ]
+ },
+ {
+  "id": "fes-pharm",
+  "city": "fes",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Аптеки біля Bab Boujloud",
+   "en": "Pharmacies near Bab Boujloud"
+  },
+  "lat": 34.062,
+  "lon": -4.9845,
+  "desc": {
+   "uk": "Аптеки біля головної брами — найзручніші, якщо живеш у медині.",
+   "en": "Pharmacies by the main gate — the handiest if you are staying in the medina."
+  },
+  "hours": "09:00–20:00",
+  "address": "Bab Boujloud, Fes",
+  "coordsApprox": true
+ },
+ {
+  "id": "fes-exch",
+  "city": "fes",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмінники у Віль-Нувель",
+   "en": "Bureaux de change, Ville Nouvelle"
+  },
+  "lat": 34.038,
+  "lon": -5.002,
+  "desc": {
+   "uk": "Банки в новому місті — надійніше, ніж міняти в медині.",
+   "en": "Banks in the new town — safer than changing money in the medina."
+  },
+  "hours": "09:00–18:00",
+  "address": "Ville Nouvelle, Fes",
+  "coordsApprox": true
+ },
+ {
+  "id": "rabat-embassy",
+  "city": "rabat",
+  "cat": "sight",
+  "name": {
+   "uk": "Посольство України в Марокко",
+   "en": "Embassy of Ukraine in Morocco"
+  },
+  "lat": 33.953,
+  "lon": -6.848,
+  "desc": {
+   "uk": "Villa 212, rue Mouaouya Ben Houdaig, Souissi. Телефон +212 537 65 78 40, гаряча лінія 24/7 +212 661 186 390.",
+   "en": "Villa 212, rue Mouaouya Ben Houdaig, Souissi. Phone +212 537 65 78 40, 24/7 hotline +212 661 186 390."
+  },
+  "hours": "пн–пт 09:00–18:00",
+  "address": "Villa 212, rue Mouaouya Ben Houdaig, Souissi, Rabat",
+  "tel": "+212537657840",
+  "tags": [
+   "посольство",
+   "важливо"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "rabat-udayas",
+  "city": "rabat",
+  "cat": "sight",
+  "name": {
+   "uk": "Касба Удайя",
+   "en": "Kasbah of the Udayas"
+  },
+  "lat": 34.03,
+  "lon": -6.8367,
+  "desc": {
+   "uk": "Біло-блакитна фортеця над гирлом річки. Андалузький сад усередині.",
+   "en": "A blue-and-white fortress above the river mouth, with an Andalusian garden inside."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Kasbah des Oudaias, Rabat",
+  "tags": [
+   "UNESCO",
+   "фото"
+  ]
+ },
+ {
+  "id": "rabat-hassan",
+  "city": "rabat",
+  "cat": "sight",
+  "name": {
+   "uk": "Вежа Хассана й мавзолей Мохаммеда V",
+   "en": "Hassan Tower and Mausoleum of Mohammed V"
+  },
+  "lat": 34.0242,
+  "lon": -6.8226,
+  "desc": {
+   "uk": "Незакінчений мінарет XII століття й мавзолей навпроти.",
+   "en": "An unfinished 12th-century minaret and the mausoleum opposite."
+  },
+  "hours": "08:00–18:00",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Boulevard Mohamed Lyazidi, Rabat",
+  "tags": [
+   "UNESCO"
+  ]
+ },
+ {
+  "id": "rabat-station",
+  "city": "rabat",
+  "cat": "transport",
+  "name": {
+   "uk": "Вокзал Rabat-Ville",
+   "en": "Rabat-Ville station"
+  },
+  "lat": 34.0142,
+  "lon": -6.836,
+  "desc": {
+   "uk": "Al Boraq і звичайні потяги. Центр міста поруч.",
+   "en": "Al Boraq and regular trains. The city centre is right there."
+  },
+  "hours": "06:00–23:00",
+  "address": "Avenue Mohammed V, Rabat",
+  "tags": [
+   "ONCF"
+  ]
+ },
+ {
+  "id": "tng-kasbah",
+  "city": "tangier",
+  "cat": "sight",
+  "name": {
+   "uk": "Касба Танжера",
+   "en": "Tangier Kasbah"
+  },
+  "lat": 35.7889,
+  "lon": -5.813,
+  "desc": {
+   "uk": "Стара фортеця з видом на Гібралтарську протоку — в ясний день видно береги Іспанії.",
+   "en": "The old citadel overlooking the Strait of Gibraltar — on a clear day you can see Spain."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Place de la Kasbah, Tangier",
+  "tags": [
+   "панорама"
+  ]
+ },
+ {
+  "id": "tng-madini",
+  "city": "tangier",
+  "cat": "shop",
+  "name": {
+   "uk": "Madani Oriental Perfumes",
+   "en": "Madani Oriental Perfumes"
+  },
+  "lat": 35.7845,
+  "lon": -5.813,
+  "desc": {
+   "uk": "Родинна парфумерна майстерня, де аромати створюють за традиційними методами поколіннями.",
+   "en": "A family perfume workshop where scents have been made by traditional methods for generations."
+  },
+  "hours": "10:00–19:00",
+  "address": "Medina, Tangier",
+  "tags": [
+   "парфуми"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "tng-corniche",
+  "city": "tangier",
+  "cat": "nature",
+  "name": {
+   "uk": "Набережна Танжера",
+   "en": "Tangier corniche"
+  },
+  "lat": 35.781,
+  "lon": -5.8,
+  "desc": {
+   "uk": "Оновлена набережна після масштабної реконструкції міста. Освітлена й безпечна ввечері.",
+   "en": "A renewed waterfront after the city's major redevelopment. Lit and safe in the evening."
+  },
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Avenue Mohammed VI, Tangier",
+  "tags": [
+   "прогулянка"
+  ]
+ },
+ {
+  "id": "tng-station",
+  "city": "tangier",
+  "cat": "transport",
+  "name": {
+   "uk": "Вокзал Tanger Ville",
+   "en": "Tanger Ville station"
+  },
+  "lat": 35.744,
+  "lon": -5.8,
+  "desc": {
+   "uk": "Кінцева Al Boraq: до Касабланки за 2 години.",
+   "en": "The Al Boraq terminus: Casablanca in 2 hours."
+  },
+  "hours": "06:00–23:00",
+  "address": "Tanger Ville, Tangier",
+  "tags": [
+   "Al Boraq"
+  ]
+ },
+ {
+  "id": "ess-medina",
+  "city": "essaouira",
+  "cat": "sight",
+  "name": {
+   "uk": "Медина Ессувейри",
+   "en": "Essaouira medina"
+  },
+  "lat": 31.5131,
+  "lon": -9.77,
+  "desc": {
+   "uk": "Приморська медина ЮНЕСКО: біло-блакитна, вітряна й помітно спокійніша за Марракеш. Мало настирливих продавців.",
+   "en": "A UNESCO seaside medina: blue-and-white, windy and noticeably calmer than Marrakesh. Few pushy sellers."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Medina, Essaouira",
+  "tags": [
+   "UNESCO",
+   "спокійно"
+  ]
+ },
+ {
+  "id": "ess-port",
+  "city": "essaouira",
+  "cat": "sight",
+  "name": {
+   "uk": "Порт і рибний ринок",
+   "en": "The port and fish market"
+  },
+  "lat": 31.51,
+  "lon": -9.773,
+  "desc": {
+   "uk": "Сині рибальські човни, чайки, свіжа риба на грилі просто в порту.",
+   "en": "Blue fishing boats, gulls and fresh fish grilled right at the port."
+  },
+  "hours": "08:00–18:00",
+  "price": {
+   "uk": "риба 50–150 MAD",
+   "en": "fish 50–150 MAD"
+  },
+  "address": "Port de pêche, Essaouira",
+  "tags": [
+   "риба"
+  ]
+ },
+ {
+  "id": "ess-thuya",
+  "city": "essaouira",
+  "cat": "craft",
+  "name": {
+   "uk": "Майстерні з туї",
+   "en": "Thuya woodwork workshops"
+  },
+  "lat": 31.5125,
+  "lon": -9.7695,
+  "desc": {
+   "uk": "Ессувейра відома виробами з коріння туї — скриньки, дошки, меблі.",
+   "en": "Essaouira is known for thuya-root woodwork — boxes, boards and furniture."
+  },
+  "hours": "09:00–19:00",
+  "address": "Medina, Essaouira",
+  "tags": [
+   "дерево"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "arg-marjana",
+  "city": "essaouira",
+  "cat": "shop",
+  "name": {
+   "uk": "Кооператив Marjana (аргана)",
+   "en": "Marjana argan co-op"
+  },
+  "lat": 31.545,
+  "lon": -9.56,
+  "desc": {
+   "uk": "Жіночий кооператив біля села Ounagha на трасі N1. Показують увесь процес — від розколювання горіхів до олії. Ціна справедлива, підробки виключені.",
+   "en": "A women's co-op near the village of Ounagha on the N1. They show the whole process, from cracking the nuts to the oil. Fair price, no fakes."
+  },
+  "hours": "09:00–18:00",
+  "price": {
+   "uk": "150–250 MAD за 250 мл",
+   "en": "150–250 MAD per 250 ml"
+  },
+  "address": "N1 near Ounagha, between Essaouira and Agadir",
+  "tags": [
+   "аргана",
+   "кооператив",
+   "автентично"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "arg-amal",
+  "city": "agadir",
+  "cat": "shop",
+  "name": {
+   "uk": "Кооператив Amal (аргана)",
+   "en": "Amal argan co-op"
+  },
+  "lat": 30.75,
+  "lon": -9.5,
+  "desc": {
+   "uk": "Жіночий кооператив біля Tizgzaouine. Такий самий формат: екскурсія плюс покупка напряму.",
+   "en": "A women's co-op near Tizgzaouine. Same format: a tour plus buying direct."
+  },
+  "hours": "09:00–18:00",
+  "price": {
+   "uk": "150–250 MAD за 250 мл",
+   "en": "150–250 MAD per 250 ml"
+  },
+  "address": "N1 near Tizgzaouine",
+  "tags": [
+   "аргана",
+   "кооператив"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "agadir-beach",
+  "city": "agadir",
+  "cat": "nature",
+  "name": {
+   "uk": "Пляж Агадіра",
+   "en": "Agadir beach"
+  },
+  "lat": 30.418,
+  "lon": -9.61,
+  "desc": {
+   "uk": "Десять кілометрів піску й курортна інфраструктура. Найкурортніше місце Марокко.",
+   "en": "Ten kilometres of sand and full resort infrastructure. The most resort-like place in Morocco."
+  },
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Agadir Bay",
+  "tags": [
+   "пляж"
+  ]
+ },
+ {
+  "id": "agadir-souk",
+  "city": "agadir",
+  "cat": "market",
+  "name": {
+   "uk": "Souk El Had, Агадір",
+   "en": "Souk El Had, Agadir"
+  },
+  "lat": 30.423,
+  "lon": -9.582,
+  "desc": {
+   "uk": "Один із найбільших ринків півдня: спеції, аргана, кераміка, одяг.",
+   "en": "One of the largest markets in the south: spices, argan, ceramics, clothing."
+  },
+  "hours": "06:00–20:00, пн вихідний",
+  "address": "Souk El Had, Agadir",
+  "tags": [
+   "ринок"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "ouz-aitbenhaddou",
+  "city": "ouarzazate",
+  "cat": "sight",
+  "name": {
+   "uk": "Айт-Бен-Хадду",
+   "en": "Aït Benhaddou"
+  },
+  "lat": 31.047,
+  "lon": -7.1318,
+  "desc": {
+   "uk": "Глиняне укріплене село ЮНЕСКО, знімальний майданчик десятків фільмів. ~3 години від Марракеша через перевал Тізі-н-Тішка.",
+   "en": "A UNESCO earthen fortified village and the set of dozens of films. About 3 hours from Marrakesh over the Tizi n'Tichka pass."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "~30 MAD",
+   "en": "~30 MAD"
+  },
+  "address": "Aït Benhaddou, Ouarzazate",
+  "tags": [
+   "UNESCO",
+   "кіно"
+  ]
+ },
+ {
+  "id": "chi-arch",
+  "city": "chisinau",
+  "cat": "sight",
+  "name": {
+   "uk": "Тріумфальна арка",
+   "en": "Triumphal Arch"
+  },
+  "lat": 47.0246,
+  "lon": 28.8322,
+  "desc": {
+   "uk": "Символ Кишинева навпроти собору й парку. Центр міста починається тут.",
+   "en": "Chișinău's emblem, facing the cathedral and the park. The city centre starts here."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Bulevardul Ștefan cel Mare, Chișinău",
+  "tags": [
+   "центр"
+  ]
+ },
+ {
+  "id": "chi-cathedral",
+  "city": "chisinau",
+  "cat": "sight",
+  "name": {
+   "uk": "Кафедральний собор Різдва Христового",
+   "en": "Nativity Cathedral"
+  },
+  "lat": 47.0244,
+  "lon": 28.8313,
+  "desc": {
+   "uk": "Головний православний собор міста, у парку поруч із аркою.",
+   "en": "The city's main Orthodox cathedral, in the park beside the arch."
+  },
+  "hours": "07:00–20:00",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Piața Marii Adunări Naționale, Chișinău",
+  "tags": [
+   "центр"
+  ]
+ },
+ {
+  "id": "chi-park",
+  "city": "chisinau",
+  "cat": "nature",
+  "name": {
+   "uk": "Парк Штефана чел Маре",
+   "en": "Ștefan cel Mare Park"
+  },
+  "lat": 47.025,
+  "lon": 28.829,
+  "desc": {
+   "uk": "Найстаріший парк міста, тінисті алеї — приємне місце скоротати вечір перед вильотом.",
+   "en": "The city's oldest park, with shaded avenues — a pleasant way to spend the evening before your flight."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Chișinău",
+  "tags": [
+   "прогулянка"
+  ]
+ },
+ {
+  "id": "chi-market",
+  "city": "chisinau",
+  "cat": "market",
+  "name": {
+   "uk": "Центральний ринок",
+   "en": "Central Market"
+  },
+  "lat": 47.023,
+  "lon": 28.833,
+  "desc": {
+   "uk": "Великий міський ринок: фрукти, сир, вино, бринза. Ввечері район краще проходити без затримок.",
+   "en": "A big city market: fruit, cheese, wine, brânză. In the evening, do not linger in the area."
+  },
+  "hours": "07:00–18:00",
+  "address": "Strada Tighina, Chișinău",
+  "tags": [
+   "ринок"
+  ]
+ },
+ {
+  "id": "chi-hotel",
+  "city": "chisinau",
+  "cat": "stay",
+  "name": {
+   "uk": "Hotel National Premium",
+   "en": "Hotel National Premium"
+  },
+  "lat": 47.018,
+  "lon": 28.842,
+  "desc": {
+   "uk": "Готель із дослідження, приблизно 85 € за ніч. У центрі, поруч із головними вулицями.",
+   "en": "The hotel from the research, about €85 per night. Central, near the main streets."
+  },
+  "price": {
+   "uk": "~85 €/ніч",
+   "en": "~€85/night"
+  },
+  "address": "Strada Alexandru cel Bun 115, Chișinău 2001",
+  "tags": [
+   "готель"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-station",
+  "city": "chisinau",
+  "cat": "transport",
+  "name": {
+   "uk": "Залізничний вокзал Кишинева",
+   "en": "Chișinău railway station"
+  },
+  "lat": 47.0135,
+  "lon": 28.86,
+  "desc": {
+   "uk": "Прибуття потяга з Києва. До центру ~10 хвилин таксі.",
+   "en": "Where the train from Kyiv arrives. About 10 minutes by taxi to the centre."
+  },
+  "hours": "цілодобово",
+  "address": "Aleea Gării 1, Chișinău",
+  "tags": [
+   "потяг"
+  ]
+ },
+ {
+  "id": "chi-bus",
+  "city": "chisinau",
+  "cat": "transport",
+  "name": {
+   "uk": "Північний автовокзал",
+   "en": "North Bus Station"
+  },
+  "lat": 47.048,
+  "lon": 28.858,
+  "desc": {
+   "uk": "Міжнародні автобуси, зокрема з України.",
+   "en": "International buses, including from Ukraine."
+  },
+  "hours": "05:00–23:00",
+  "address": "Strada Calea Moșilor 2/1, Chișinău",
+  "tags": [
+   "автобус"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-airport",
+  "city": "chisinau",
+  "cat": "transport",
+  "name": {
+   "uk": "Аеропорт Кишинева (KIV)",
+   "en": "Chișinău Airport (KIV)"
+  },
+  "lat": 46.9277,
+  "lon": 28.931,
+  "desc": {
+   "uk": "~13 км від центру, таксі 15 хвилин, приблизно 150–250 MDL. Звідси виліт до Марракеша з пересадкою.",
+   "en": "~13 km from the centre, a 15-minute taxi, roughly 150–250 MDL. Departures to Marrakesh connect through a hub."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "таксі ~15 €",
+   "en": "taxi ~€15"
+  },
+  "address": "Aeroportul Internațional Chișinău",
+  "tags": [
+   "аеропорт"
+  ]
+ },
+ {
+  "id": "chi-pharm-1",
+  "city": "chisinau",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Farmacia Familiei — центр",
+   "en": "Farmacia Familiei — centre"
+  },
+  "lat": 47.024,
+  "lon": 28.835,
+  "desc": {
+   "uk": "Велика аптечна мережа Молдови, відділення по всьому центру.",
+   "en": "Moldova's large pharmacy chain, with branches across the centre."
+  },
+  "hours": "08:00–21:00",
+  "address": "Bulevardul Ștefan cel Mare, Chișinău",
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-pharm-2",
+  "city": "chisinau",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Аптека 24/7 біля вокзалу",
+   "en": "24/7 pharmacy near the station"
+  },
+  "lat": 47.015,
+  "lon": 28.858,
+  "desc": {
+   "uk": "Цілодобова аптека поруч із залізничним вокзалом — зручно після нічного приїзду.",
+   "en": "A 24-hour pharmacy by the railway station — handy after a night arrival."
+  },
+  "hours": "цілодобово",
+  "address": "Aleea Gării, Chișinău",
+  "tags": [
+   "24/7"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-pharm-3",
+  "city": "chisinau",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Orient — аптечна мережа",
+   "en": "Orient pharmacy chain"
+  },
+  "lat": 47.0225,
+  "lon": 28.83,
+  "desc": {
+   "uk": "Ще одна поширена мережа, відділення в центрі й біля ринку.",
+   "en": "Another common chain, with branches in the centre and by the market."
+  },
+  "hours": "08:00–20:00",
+  "address": "Chișinău centru",
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-exch-1",
+  "city": "chisinau",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмінники на бул. Штефана чел Маре",
+   "en": "Bureaux de change, Bd. Ștefan cel Mare"
+  },
+  "lat": 47.0242,
+  "lon": 28.834,
+  "desc": {
+   "uk": "Головна вулиця міста — багато офіційних обмінників, курс конкурентний.",
+   "en": "The city's main street, with plenty of official bureaux and competitive rates."
+  },
+  "hours": "09:00–19:00",
+  "price": {
+   "uk": "~19.5 MDL за 1 €",
+   "en": "~19.5 MDL per €1"
+  },
+  "address": "Bulevardul Ștefan cel Mare, Chișinău",
+  "tags": [
+   "офіційний"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-exch-2",
+  "city": "chisinau",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмін в аеропорту KIV",
+   "en": "Currency exchange at KIV airport"
+  },
+  "lat": 46.9277,
+  "lon": 28.931,
+  "desc": {
+   "uk": "Курс гірший за міський — міняй мінімум, решту в центрі.",
+   "en": "Rates are worse than in town — change the minimum here and the rest in the centre."
+  },
+  "hours": "цілодобово",
+  "address": "Aeroportul Chișinău",
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-food",
+  "city": "chisinau",
+  "cat": "food",
+  "name": {
+   "uk": "Ресторани в центрі",
+   "en": "Restaurants in the centre"
+  },
+  "lat": 47.0245,
+  "lon": 28.833,
+  "desc": {
+   "uk": "Тераси навколо головної площі: молдовська кухня, вино. Вечеря приблизно 60 MDL з особи за даними дослідження.",
+   "en": "Terraces around the main square: Moldovan food and wine. Dinner around 60 MDL a head per the research."
+  },
+  "hours": "10:00–23:00",
+  "price": {
+   "uk": "~60 MDL/особу",
+   "en": "~60 MDL per person"
+  },
+  "address": "Centru, Chișinău",
+  "tags": [
+   "вечеря",
+   "вино"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-station",
+  "city": "kyiv",
+  "cat": "transport",
+  "name": {
+   "uk": "Центральний залізничний вокзал",
+   "en": "Kyiv Central railway station"
+  },
+  "lat": 50.4405,
+  "lon": 30.4907,
+  "desc": {
+   "uk": "Звідси вирушає плече до Кишинева. Офіційна стоянка таксі — з південного боку.",
+   "en": "The Chișinău leg starts here. The official taxi rank is on the south side."
+  },
+  "hours": "цілодобово",
+  "address": "Вокзальна площа 1, Київ",
+  "tags": [
+   "потяг",
+   "старт"
+  ]
+ },
+ {
+  "id": "kyi-bus",
+  "city": "kyiv",
+  "cat": "transport",
+  "name": {
+   "uk": "Центральний автовокзал",
+   "en": "Kyiv Central Bus Station"
+  },
+  "lat": 50.4183,
+  "lon": 30.5222,
+  "desc": {
+   "uk": "Міжнародні автобуси до Кишинева. Розклад — на infobus.",
+   "en": "International buses to Chișinău. Timetables on infobus."
+  },
+  "hours": "05:00–23:00",
+  "address": "Московська площа 3, Київ",
+  "tags": [
+   "автобус"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-metro",
+  "city": "kyiv",
+  "cat": "transport",
+  "name": {
+   "uk": "Метро",
+   "en": "Metro"
+  },
+  "lat": 50.447,
+  "lon": 30.517,
+  "desc": {
+   "uk": "Найшвидший транспорт міста й водночас укриття під час тривоги.",
+   "en": "The fastest way around the city, and a shelter during an air-raid alert."
+  },
+  "hours": "06:00–23:00 (може змінюватись)",
+  "address": "Київ",
+  "tags": [
+   "укриття"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-pharm-1",
+  "city": "kyiv",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Аптека 24/7 біля вокзалу",
+   "en": "24/7 pharmacy near the station"
+  },
+  "lat": 50.4415,
+  "lon": 30.489,
+  "desc": {
+   "uk": "Цілодобова аптека поруч із вокзалом — останній шанс докупити щось в аптечку перед виїздом.",
+   "en": "A 24-hour pharmacy by the station — the last chance to top up your first-aid kit."
+  },
+  "hours": "цілодобово",
+  "address": "Вокзальна площа, Київ",
+  "tags": [
+   "24/7"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-pharm-2",
+  "city": "kyiv",
+  "cat": "pharmacy",
+  "name": {
+   "uk": "Мережі АНЦ / Подорожник / Бажаємо здоров'я",
+   "en": "ANC / Podorozhnyk / Bazhaemo Zdorovya chains"
+  },
+  "lat": 50.4501,
+  "lon": 30.5234,
+  "desc": {
+   "uk": "Найпоширеніші аптечні мережі. Багато точок працюють цілодобово, є доставка.",
+   "en": "The most widespread pharmacy chains. Many branches are open 24 hours and deliver."
+  },
+  "hours": "більшість 08:00–22:00, є 24/7",
+  "address": "по всьому місту",
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-exch-1",
+  "city": "kyiv",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмінники в центрі",
+   "en": "Bureaux de change in the centre"
+  },
+  "lat": 50.447,
+  "lon": 30.522,
+  "desc": {
+   "uk": "Офіційні обмінники й банки. Купи EUR дрібними купюрами ЗАРАНІ — у Кишиневі й Марракеші курс гірший.",
+   "en": "Official bureaux and banks. Buy EUR in small notes BEFORE you leave — rates in Chișinău and Marrakesh are worse."
+  },
+  "hours": "09:00–20:00",
+  "price": {
+   "uk": "~46 ₴ за 1 €",
+   "en": "~₴46 per €1"
+  },
+  "address": "Хрещатик, Київ",
+  "tags": [
+   "EUR",
+   "важливо"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-exch-2",
+  "city": "kyiv",
+  "cat": "exchange",
+  "name": {
+   "uk": "Обмін на вокзалі",
+   "en": "Exchange at the railway station"
+  },
+  "lat": 50.4408,
+  "lon": 30.49,
+  "desc": {
+   "uk": "Працює цілодобово, але курс гірший за міський. На крайній випадок.",
+   "en": "Open around the clock, but rates are worse than in town. For emergencies only."
+  },
+  "hours": "цілодобово",
+  "address": "Вокзальна площа 1, Київ",
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-embassy-md",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Посольство Молдови в Україні",
+   "en": "Embassy of Moldova in Ukraine"
+  },
+  "lat": 50.449,
+  "lon": 30.51,
+  "desc": {
+   "uk": "Питання транзиту й в'їзду до Молдови.",
+   "en": "For transit and Moldova entry questions."
+  },
+  "hours": "пн–пт 09:00–18:00",
+  "address": "вул. Січових Стрільців 6, Київ",
+  "tel": "+380445210044",
+  "tags": [
+   "посольство"
+  ],
+  "coordsApprox": true
+ }
 ]

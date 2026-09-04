@@ -1,0 +1,550 @@
+[
+ {
+  "id": "culture",
+  "icon": "handshake",
+  "title": {
+   "uk": "Культура й етикет",
+   "en": "Culture and etiquette"
+  },
+  "intro": {
+   "uk": "Марокко — ісламська країна з дуже теплою культурою гостинності. Кілька простих речей роблять візит помітно приємнішим — особливо коли їдеш знайомитись із родиною.",
+   "en": "Morocco is a Muslim country with a very warm culture of hospitality. A few simple things make the visit noticeably better — especially when you are going to meet family."
+  },
+  "items": [
+   {
+    "title": {
+     "uk": "Одяг",
+     "en": "Dress"
+    },
+    "body": {
+     "uk": "У медині, у сільській місцевості й біля релігійних об'єктів одяг має бути закритим. Жінкам — довгі спідниці чи штани й рукав; хіджаб не обов'язковий. Чоловікам краще уникати шортів і майок.",
+     "en": "In the medina, in the countryside and near religious sites, dress conservatively. Women: long skirts or trousers and sleeves; a headscarf is not required. Men are better off avoiding shorts and vests."
+    },
+    "tips": [
+     {
+      "uk": "Шарф у сумці вирішує все за секунду",
+      "en": "A scarf in your bag solves it in a second"
+     },
+     {
+      "uk": "У Гелізі, готелях і біля басейну правила вільніші",
+      "en": "In Guéliz, hotels and by the pool the rules relax"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Привітання",
+     "en": "Greetings"
+    },
+    "body": {
+     "uk": "Рукостискання з чоловіком — норма. З жінкою краще дочекатись, поки вона сама подасть руку. Права рука до серця після привітання — знак щирої поваги.",
+     "en": "A handshake with a man is normal. With a woman, wait for her to offer her hand. A right hand to the heart after greeting is a sign of genuine respect."
+    },
+    "tips": [
+     {
+      "uk": "«Салям алейкум» відкриває будь-які двері",
+      "en": "\"Salam alaykum\" opens any door"
+     },
+     {
+      "uk": "Їж і передавай речі правою рукою",
+      "en": "Eat and pass things with your right hand"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "У гостях у родини",
+     "en": "Visiting family"
+    },
+    "body": {
+     "uk": "Гостинність тут — це серйозно. Тебе годуватимуть багато й наполегливо; відмова від їжі може засмутити. Візьми невеликий подарунок: солодощі, чай, щось із України.",
+     "en": "Hospitality here is serious. You will be fed a great deal and insistently; refusing food can offend. Bring a small gift: sweets, tea, something from Ukraine."
+    },
+    "tips": [
+     {
+      "uk": "Взуття зазвичай знімають при вході",
+      "en": "Shoes usually come off at the door"
+     },
+     {
+      "uk": "Похвали дім і їжу — це найкращий комплімент",
+      "en": "Praising the home and the food is the best compliment"
+     },
+     {
+      "uk": "Кілька слів арабською цінують надзвичайно високо",
+      "en": "A few words of Arabic are hugely appreciated"
+     },
+     {
+      "uk": "Не квапся йти: чай після їжі — частина розмови",
+      "en": "Do not rush off: tea after the meal is part of the conversation"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Прояви ніжності",
+     "en": "Public affection"
+    },
+    "body": {
+     "uk": "Обійми й поцілунки в громадських місцях не прийняті. Подружжю тримати одне одного за руку — цілком нормально.",
+     "en": "Hugging and kissing in public are not done. A married couple holding hands is perfectly fine."
+    }
+   },
+   {
+    "title": {
+     "uk": "Фотографування",
+     "en": "Photography"
+    },
+    "body": {
+     "uk": "Не знімай людей без дозволу — це вважається образливим і часто закінчується вимогою грошей. Артисти на Джемаа очікують 10–20 MAD за кадр.",
+     "en": "Do not photograph people without permission — it is considered offensive and often ends in a demand for money. Jemaa performers expect 10–20 MAD a shot."
+    },
+    "tips": [
+     {
+      "uk": "Жест на камеру замість слів — достатньо",
+      "en": "A gesture at the camera says enough"
+     },
+     {
+      "uk": "Усередині мечетей і поліцейських — ніколи",
+      "en": "Never inside mosques, never police officers"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Торг",
+     "en": "Haggling"
+    },
+    "body": {
+     "uk": "У суках торг — не конфлікт, а форма спілкування й частина культури. У торгових центрах, кооперативах і Ensemble Artisanal ціни фіксовані.",
+     "en": "In the souks haggling is not a conflict but a form of conversation and part of the culture. In malls, co-ops and the Ensemble Artisanal prices are fixed."
+    },
+    "tips": [
+     {
+      "uk": "Починай приблизно з третини названої ціни",
+      "en": "Start at roughly a third of the asking price"
+     },
+     {
+      "uk": "Усміхайся: агресія тут не працює",
+      "en": "Smile: aggression does not work here"
+     },
+     {
+      "uk": "Готова піти — і ціна часто наздоганяє тебе на виході",
+      "en": "Be ready to walk away — the price often follows you out"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Рамадан",
+     "en": "Ramadan"
+    },
+    "body": {
+     "uk": "У вересні 2026 Рамадану немає, тож ресторани й кафе працюють у звичайному режимі.",
+     "en": "There is no Ramadan in September 2026, so restaurants and cafés run as normal."
+    }
+   }
+  ]
+ },
+ {
+  "id": "money",
+  "icon": "wallet",
+  "title": {
+   "uk": "Гроші",
+   "en": "Money"
+  },
+  "intro": {
+   "uk": "Дирхам (MAD) — закрита валюта. Це головне, що варто знати наперед.",
+   "en": "The dirham (MAD) is a closed currency. That is the main thing to know in advance."
+  },
+  "items": [
+   {
+    "title": {
+     "uk": "Дирхам не можна вивозити",
+     "en": "You may not take dirhams out"
+    },
+    "body": {
+     "uk": "Марокканський дирхам заборонено вивозити з країни. Розміняй усе, що лишилось, до реєстрації на зворотний рейс — в аеропорту є обмінники.",
+     "en": "Moroccan dirhams may not be taken out of the country. Change whatever is left before checking in for your flight home — there are bureaux at the airport."
+    }
+   },
+   {
+    "title": {
+     "uk": "Де міняти",
+     "en": "Where to change money"
+    },
+    "body": {
+     "uk": "Тільки банки й офіційні обмінники. Курс приблизно 10.8 MAD за євро. В аеропорту й готелях курс помітно гірший — міняй там мінімум.",
+     "en": "Banks and official bureaux only. The rate is about 10.8 MAD to the euro. Airports and hotels are noticeably worse — change the minimum there."
+    },
+    "tips": [
+     {
+      "uk": "Вези EUR готівкою дрібними купюрами",
+      "en": "Bring EUR cash in small notes"
+     },
+     {
+      "uk": "У Гелізі й на Rue Bab Agnaou — найкращий курс у Марракеші",
+      "en": "Guéliz and Rue Bab Agnaou have the best rates in Marrakesh"
+     },
+     {
+      "uk": "Купи євро ще в Києві — там курс вигідніший",
+      "en": "Buy your euros in Kyiv — the rate is better there"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Готівка чи картка",
+     "en": "Cash or card"
+    },
+    "body": {
+     "uk": "У медині, на ринках і в petit taxi — тільки готівка. Картки приймають у готелях, ресторанах Гелізу й торгових центрах.",
+     "en": "In the medina, at markets and in petit taxis it is cash only. Cards work in hotels, Guéliz restaurants and malls."
+    },
+    "tips": [
+     {
+      "uk": "Дрібні купюри — окремо: решти в водіїв не буває",
+      "en": "Keep small notes handy: drivers never have change"
+     },
+     {
+      "uk": "Попередь банк про поїздку, інакше картку заблокують",
+      "en": "Notify your bank about the trip or the card gets blocked"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Скільки це коштує",
+     "en": "What things cost"
+    },
+    "body": {
+     "uk": "Орієнтири з дослідження: обід у медині 80–150 MAD, вечеря в Гелізі 200–250 MAD, вхід до палацу ~70 MAD, petit taxi 20–30 MAD, тур в Атлас 300–400 MAD.",
+     "en": "Benchmarks from the research: lunch in the medina 80–150 MAD, dinner in Guéliz 200–250 MAD, palace entry ~70 MAD, petit taxi 20–30 MAD, an Atlas tour 300–400 MAD."
+    },
+    "tips": [
+     {
+      "uk": "Бюджет на людину без перельоту — приблизно 740–900 € на 5 днів",
+      "en": "Per person, excluding flights, about €740–900 for five days"
+     },
+     {
+      "uk": "Чайові: 10% у ресторані, 5–10 MAD носію",
+      "en": "Tipping: 10% in a restaurant, 5–10 MAD for a porter"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "shopping",
+  "icon": "bag",
+  "title": {
+   "uk": "Шопінг",
+   "en": "Shopping"
+  },
+  "intro": {
+   "uk": "Головне питання марокканського шопінгу — як не купити підробку. Особливо це стосується арганового масла.",
+   "en": "The central question of Moroccan shopping is how not to buy a fake. Argan oil above all."
+  },
+  "items": [
+   {
+    "title": {
+     "uk": "Арганове масло: як відрізнити справжнє",
+     "en": "Argan oil: how to spot the real thing"
+    },
+    "body": {
+     "uk": "Ринок переповнений підробками — сумішшю соняшникової чи ріпакової олії під виглядом аргани. Реальна ціна якісного масла: 150–250 MAD за 250 мл. Пляшка за 50 MAD — гарантована підробка.",
+     "en": "The market is full of fakes — sunflower or rapeseed blends sold as argan. The real price of quality oil is 150–250 MAD per 250 ml. A 50 MAD bottle is a guaranteed fake."
+    },
+    "tips": [
+     {
+      "uk": "Тільки темне скло: ультрафіолет руйнує масло",
+      "en": "Dark glass only: UV destroys the oil"
+     },
+     {
+      "uk": "Косметичне — світло-золотисте, майже без запаху",
+      "en": "Cosmetic oil is light golden and almost odourless"
+     },
+     {
+      "uk": "Кулінарне — темніше, з виразним горіховим ароматом (горіхи обсмажують)",
+      "en": "Culinary oil is darker with a distinct nutty aroma, from roasting the kernels"
+     },
+     {
+      "uk": "Прозорий пластик без запаху — точно не аргана",
+      "en": "Clear plastic with no smell is definitely not argan"
+     },
+     {
+      "uk": "Шукай ECOCERT або марокканський стандарт на етикетці",
+      "en": "Look for ECOCERT or the Moroccan standard on the label"
+     },
+     {
+      "uk": "Найнадійніше — жіночі кооперативи на трасі N1 між Ессувейрою та Агадіром",
+      "en": "The safest source is the women's co-ops on the N1 between Essaouira and Agadir"
+     },
+     {
+      "uk": "У Касабланці — Marché Central або мережа Apia",
+      "en": "In Casablanca — Marché Central or the Apia chain"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Що де купувати",
+     "en": "What to buy where"
+    },
+    "body": {
+     "uk": "Кожне місто має свою спеціалізацію — це економить і час, і гроші.",
+     "en": "Each city has its speciality — knowing them saves both time and money."
+    },
+    "tips": [
+     {
+      "uk": "Шкіра: Фес (чинбарні) і Марракеш",
+      "en": "Leather: Fes (the tanneries) and Marrakesh"
+     },
+     {
+      "uk": "Кераміка: Фес — синьо-біла глазур і зелідж; Сафі — яскравий побутовий посуд",
+      "en": "Ceramics: Fes for blue-and-white glaze and zellij; Safi for bright everyday ware"
+     },
+     {
+      "uk": "Спеції й шафран: Марракеш і Фес",
+      "en": "Spices and saffron: Marrakesh and Fes"
+     },
+     {
+      "uk": "Каптани й джелаби: Касабланка й Геліз у Марракеші",
+      "en": "Kaftans and djellabas: Casablanca and Guéliz in Marrakesh"
+     },
+     {
+      "uk": "Парфуми: Марракеш (арабські олії), Танжер (родинні майстерні)",
+      "en": "Perfume: Marrakesh for Arabic oils, Tangier for family workshops"
+     },
+     {
+      "uk": "Вироби з туї: Ессувейра",
+      "en": "Thuya woodwork: Essaouira"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Шафран",
+     "en": "Saffron"
+    },
+    "body": {
+     "uk": "Дорогий продукт: приблизно 120–200 MAD за грам. Значно дешевше — це або куркума, або фарбовані нитки.",
+     "en": "An expensive product: roughly 120–200 MAD per gram. Anything much cheaper is turmeric or dyed threads."
+    },
+    "tips": [
+     {
+      "uk": "Справжній шафран забарвлює воду в золотисто-жовтий повільно, а не миттєво",
+      "en": "Real saffron colours water golden-yellow slowly, not instantly"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Де ціни фіксовані",
+     "en": "Where prices are fixed"
+    },
+    "body": {
+     "uk": "Ensemble Artisanal у Марракеші, торгові центри, кооперативи й мережа Apia. Зайди туди ПЕРШИМ — дізнаєшся реальні ціни, і торг у суках стане набагато легшим.",
+     "en": "The Ensemble Artisanal in Marrakesh, malls, co-ops and the Apia chain. Go there FIRST — you learn the real prices and haggling in the souks becomes much easier."
+    }
+   },
+   {
+    "title": {
+     "uk": "Ras el hanout",
+     "en": "Ras el hanout"
+    },
+    "body": {
+     "uk": "Легендарна суміш приблизно з 30 спецій — найкращий і найлегший сувенір. У кожного продавця свій рецепт, можна попросити спробувати на запах.",
+     "en": "The legendary blend of around 30 spices — the best and lightest souvenir. Every seller has their own recipe; you can ask to smell it."
+    }
+   }
+  ]
+ },
+ {
+  "id": "events",
+  "icon": "calendar",
+  "title": {
+   "uk": "Події вересня 2026",
+   "en": "September 2026 events"
+  },
+  "intro": {
+   "uk": "Вересень — один із найкращих місяців для Марокко: спека спадає, а культурне життя оживає. Це також піковий туристичний місяць.",
+   "en": "September is one of the best months for Morocco: the heat eases and cultural life picks up. It is also peak tourist season."
+  },
+  "items": [
+   {
+    "title": {
+     "uk": "Фестиваль весіль в Імільчілі, 18–21 вересня",
+     "en": "Imilchil Marriage Festival, 18–21 September"
+    },
+    "body": {
+     "uk": "Унікальна берберська подія в горах: племена з'їжджаються, щоб самотні могли обрати собі пару. Традиційні костюми, музика, живий гірський уклад.",
+     "en": "A unique Berber event in the mountains: tribes gather so that single people can choose a partner. Traditional costume, music and a living mountain culture."
+    },
+    "tips": [
+     {
+      "uk": "Село Імільчіл у Високому Атласі — дорога довга, планувати заздалегідь",
+      "en": "The village of Imilchil in the High Atlas — a long drive, plan ahead"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Tanjazz у Танжері, 18–20 вересня",
+     "en": "Tanjazz in Tangier, 18–20 September"
+    },
+    "body": {
+     "uk": "23-й джазовий фестиваль: два платні концертні дні в Palais des Institutions Italiennes плюс безкоштовні виступи по всьому місту.",
+     "en": "The 23rd jazz festival: two paid concert days at the Palais des Institutions Italiennes plus free performances across the city."
+    }
+   },
+   {
+    "title": {
+     "uk": "Погода у вересні",
+     "en": "September weather"
+    },
+    "body": {
+     "uk": "У Марракеші ще спекотно вдень, але вже комфортно ввечері. У горах і долинах-ваді можливі раптові сильні зливи з підтопленням доріг.",
+     "en": "Marrakesh is still hot by day but comfortable in the evening. In the mountains and wadis, sudden heavy rain can flood and close roads."
+    },
+    "tips": [
+     {
+      "uk": "Перед виїздом в Атлас перевіряй прогноз",
+      "en": "Check the forecast before heading into the Atlas"
+     },
+     {
+      "uk": "12:00–16:00 — час для ріаду, музею або басейну",
+      "en": "12:00–16:00 is riad, museum or pool time"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Піковий сезон",
+     "en": "Peak season"
+    },
+    "body": {
+     "uk": "Вересень — місяць великого напливу туристів. Житло, квитки на Мажорель і тур в Атлас бронюй заздалегідь.",
+     "en": "September brings large numbers of visitors. Book accommodation, Majorelle tickets and the Atlas tour well in advance."
+    }
+   }
+  ]
+ },
+ {
+  "id": "health",
+  "icon": "kit",
+  "title": {
+   "uk": "Здоров'я",
+   "en": "Health"
+  },
+  "intro": {
+   "uk": "Нічого екзотичного — але кілька речей краще знати до, а не після.",
+   "en": "Nothing exotic — but a few things are better known before rather than after."
+  },
+  "items": [
+   {
+    "title": {
+     "uk": "Вода",
+     "en": "Water"
+    },
+    "body": {
+     "uk": "Водопровідну воду в багатьох регіонах не вважають питною. Пий тільки бутильовану — вона скрізь і коштує копійки. Зуби чистити водою з-під крана можна.",
+     "en": "Tap water is not considered potable in many regions. Drink bottled only — it is everywhere and costs pennies. Brushing your teeth with tap water is fine."
+    },
+    "tips": [
+     {
+      "uk": "Перевіряй, що кришка не відкручена",
+      "en": "Check the seal is unbroken"
+     },
+     {
+      "uk": "Лід у туристичних закладах безпечний, у вуличних — ні",
+      "en": "Ice is safe in tourist venues, not from street stalls"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Медицина",
+     "en": "Healthcare"
+    },
+    "body": {
+     "uk": "Державні лікарні нерівні за якістю. Приватні клініки у великих містах хороші, але вимагають оплату готівкою одразу — тому страховка обов'язкова.",
+     "en": "Public hospitals vary in quality. Private clinics in the big cities are good but expect immediate cash payment — which is why insurance is essential."
+    },
+    "tips": [
+     {
+      "uk": "Швидка й пожежні — 15",
+      "en": "Ambulance and fire — 15"
+     },
+     {
+      "uk": "Поліція з мобільного — 190, зі стаціонарного — 19",
+      "en": "Police from a mobile — 190, from a landline — 19"
+     },
+     {
+      "uk": "Тримай поліс і телефон асистансу офлайн і на папері",
+      "en": "Keep your policy and assistance number offline and on paper"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Аптеки",
+     "en": "Pharmacies"
+    },
+    "body": {
+     "uk": "Марокканські фармацевти компетентні й часто радять не гірше за лікаря. Багато ліків доступні без рецепта.",
+     "en": "Moroccan pharmacists are competent and often advise as well as a doctor. Many medicines are available without a prescription."
+    },
+    "tips": [
+     {
+      "uk": "Нічні аптеки чергуються — «pharmacie de garde», графік змінюється щотижня",
+      "en": "Night pharmacies rotate — \"pharmacie de garde\", the rota changes weekly"
+     },
+     {
+      "uk": "Список чергових питай у рецепції або дивись на дверях аптеки",
+      "en": "Ask reception for the duty list or check the notice on a pharmacy door"
+     },
+     {
+      "uk": "Свої призначені ліки вези з рецептом англійською",
+      "en": "Bring your own prescription medicines with an English prescription"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Шлунок",
+     "en": "Your stomach"
+    },
+    "body": {
+     "uk": "Найчастіша проблема мандрівників. Вулична їжа на Джемаа зазвичай безпечна — обирай стенди з чергою місцевих, де все готують при тобі.",
+     "en": "The most common traveller's complaint. Street food on Jemaa is usually fine — pick stalls with a queue of locals where everything is cooked in front of you."
+    },
+    "tips": [
+     {
+      "uk": "Сорбент і регідрон в аптечці — не зайве",
+      "en": "A sorbent and rehydration salts in your kit are not overkill"
+     },
+     {
+      "uk": "Фрукти — ті, що чистяться",
+      "en": "Fruit you can peel"
+     }
+    ]
+   },
+   {
+    "title": {
+     "uk": "Спека й сонце",
+     "en": "Heat and sun"
+    },
+    "body": {
+     "uk": "Вересень у Марракеші ще спекотний. SPF 50, головний убір і вода — не рекомендація, а необхідність.",
+     "en": "September in Marrakesh is still hot. SPF 50, a hat and water are a necessity, not a suggestion."
+    },
+    "tips": [
+     {
+      "uk": "Сонце обпікає за 20 хвилин навіть у хмарний день",
+      "en": "The sun burns in 20 minutes even on a cloudy day"
+     }
+    ]
+   }
+  ]
+ }
+]

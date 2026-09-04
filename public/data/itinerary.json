@@ -1,59 +1,782 @@
 [
-  {
-    "id":"d1","city":"chisinau","title":{"uk":"День 1 — Кишинів, транзит","ru":"День 1 — Кишинёв, транзит"},
-    "blocks":[
-      {"t":"14:00","type":"move","title":"Київ → Кишинів наземно","detail":"Поїзд/автобус ~8–9 год, або переліт (уточни на proizd.ua)","cost":"вкл. у квиток"},
-      {"t":"15:30","type":"move","title":"Трансфер аеропорт → готель","detail":"Таксі ~15 хв","cost":"~15 €"},
-      {"t":"16:00","type":"stay","title":"Заселення Hotel National Premium","detail":"Strada Alexandru cel Bun 115. Відпочинок після дороги","cost":"85 €/ніч"},
-      {"t":"18:00","type":"food","title":"Вечеря в центрі","detail":"Тераси, молдовська кухня, вино за бажанням","cost":"~60 MDL/ос."}
-    ],
-    "stay":"Hotel National Premium"
+ {
+  "id": "d1",
+  "city": "chisinau",
+  "title": {
+   "uk": "День 1 — Київ → Кишинів",
+   "en": "Day 1 — Kyiv → Chișinău"
   },
-  {
-    "id":"d2","city":"marrakech","title":{"uk":"День 2 — Переліт у Марракеш","ru":"День 2 — Перелёт в Марракеш"},
-    "blocks":[
-      {"t":"07:00","type":"move","title":"Кишинів (KIV) → Марракеш (RAK)","detail":"З пересадкою (Стамбул/Париж), ~6–8 год","cost":"вкл."},
-      {"t":"09:30","type":"move","title":"Трансфер в медину","detail":"Таксі ~20 км, тільки ліцензійні","cost":"~150 MAD (15 €)"},
-      {"t":"10:30","type":"stay","title":"Заселення Riad Dar Anika","detail":"Derb Arjan 34, Bab Doukkala. Вітальний чай.","cost":"98 €/ніч"},
-      {"t":"11:00","type":"sight","title":"Площа Джемаа-ель-Фна вдень","detail":"Вуличні артисти, торговці","cost":"безкоштовно"},
-      {"t":"12:30","type":"food","title":"Обід Mozaik' Art / Medina Mall","detail":"Сучасна кухня, з 08:30","cost":"~150 MAD/ос."},
-      {"t":"14:00","type":"shop","title":"Медина і суки","detail":"Лабіринт лавок, спеції. Торгуйся ввічливо","cost":"безкоштовно"},
-      {"t":"19:00","type":"sight","title":"Джемаа ввечері","detail":"Фуд-корти, барабанщики, маги","cost":"безкоштовно"}
-    ],
-    "stay":"Riad Dar Anika"
+  "summary": {
+   "uk": "Наземне плече. Небо над Україною закрите, тож до Кишинева їдемо поїздом або автобусом — 8–9 годин плюс кордон.",
+   "en": "The overland leg. Ukrainian airspace is closed, so we reach Chișinău by train or bus — 8–9 hours plus the border."
   },
-  {
-    "id":"d3","city":"marrakech","title":{"uk":"День 3 — Палаци, сади і музеї","ru":"День 3 — Дворцы, сады и музеи"},
-    "blocks":[
-      {"t":"08:00","type":"food","title":"Сніданок у ріаді","detail":"Включено: хліб, оливки, мед","cost":"вкл."},
-      {"t":"08:30","type":"sight","title":"Сади Мажорель","detail":"Бронюй квитки онлайн заздалегідь","cost":"70 MAD"},
-      {"t":"10:30","type":"sight","title":"Музей ісламського мистецтва","detail":"Поруч із садами — кераміка, рукописи","cost":"60 MAD"},
-      {"t":"12:00","type":"move","title":"Таксі/прогулянка в медину ~2 км","detail":"Пішки жарко — краще таксі","cost":"~30 MAD"},
-      {"t":"13:30","type":"sight","title":"Палац Бахіа","detail":"Розпис, двори, гарем","cost":"70 MAD"},
-      {"t":"15:30","type":"rest","title":"Відпочинок у ріаді","detail":"Сієста, планування","cost":"—"},
-      {"t":"17:00","type":"food","title":"Вечеря на Джемаа (тажин)","detail":"Фуд-стенди","cost":"80–120 MAD/ос."}
-    ],
-    "stay":"Riad Dar Anika"
+  "stay": "Hotel National Premium",
+  "blocks": [
+   {
+    "t": "07:00",
+    "type": "move",
+    "title": {
+     "uk": "Виїзд із Києва",
+     "en": "Departure from Kyiv"
+    },
+    "detail": {
+     "uk": "Поїзд або автобус, ~8–9 годин разом із контролем на кордоні. Розклад звір на proizd.ua та infobus за кілька днів.",
+     "en": "Train or bus, ~8–9 hours including the border check. Confirm schedules on proizd.ua and infobus a few days ahead."
+    },
+    "cost": {
+     "uk": "вкл. у квиток",
+     "en": "included"
+    },
+    "poi": "kyi-station"
+   },
+   {
+    "t": "09:00",
+    "type": "rest",
+    "title": {
+     "uk": "У дорозі",
+     "en": "On the road"
+    },
+    "detail": {
+     "uk": "Вода, перекуси й павербанк — у ручній поклажі. Засіб від заколисування, якщо автобус.",
+     "en": "Water, snacks and a power bank in hand luggage. Motion-sickness tablets if it is the bus."
+    }
+   },
+   {
+    "t": "16:00",
+    "type": "stay",
+    "title": {
+     "uk": "Заселення в готель",
+     "en": "Hotel check-in"
+    },
+    "detail": {
+     "uk": "Hotel National Premium, Strada Alexandru cel Bun 115. Відпочинок після дороги.",
+     "en": "Hotel National Premium, Strada Alexandru cel Bun 115. Rest after the journey."
+    },
+    "cost": {
+     "uk": "~85 €/ніч",
+     "en": "~€85/night"
+    },
+    "poi": "chi-hotel"
+   },
+   {
+    "t": "18:00",
+    "type": "sight",
+    "title": {
+     "uk": "Вечірній центр Кишинева",
+     "en": "Chișinău centre in the evening"
+    },
+    "detail": {
+     "uk": "Тріумфальна арка, собор, парк Штефана чел Маре. Усе поруч, пішки за годину.",
+     "en": "The Triumphal Arch, the cathedral and Ștefan cel Mare Park. All within an hour on foot."
+    },
+    "cost": {
+     "uk": "безкоштовно",
+     "en": "free"
+    },
+    "poi": "chi-arch"
+   },
+   {
+    "t": "19:30",
+    "type": "food",
+    "title": {
+     "uk": "Вечеря в центрі",
+     "en": "Dinner in the centre"
+    },
+    "detail": {
+     "uk": "Тераси навколо головної площі. Молдовська кухня, вино за бажанням.",
+     "en": "Terraces around the main square. Moldovan food, wine if you like."
+    },
+    "cost": {
+     "uk": "~60 MDL/особу",
+     "en": "~60 MDL per person"
+    },
+    "poi": "chi-food"
+   },
+   {
+    "t": "22:00",
+    "type": "rest",
+    "title": {
+     "uk": "Збори на завтра",
+     "en": "Pack for tomorrow"
+    },
+    "detail": {
+     "uk": "Документи, квитки й павербанк — окремо, щоб не шукати вранці.",
+     "en": "Documents, tickets and power bank set aside so you are not hunting for them in the morning."
+    }
+   }
+  ]
+ },
+ {
+  "id": "d2",
+  "city": "marrakech",
+  "title": {
+   "uk": "День 2 — Кишинів → Марракеш",
+   "en": "Day 2 — Chișinău → Marrakesh"
   },
-  {
-    "id":"d4","city":"marrakech","title":{"uk":"День 4 — Атласські гори","ru":"День 4 — Атласские горы"},
-    "blocks":[
-      {"t":"07:00","type":"food","title":"Ранній сніданок","detail":"Вкл.","cost":"вкл."},
-      {"t":"07:30","type":"move","title":"Трансфер в Атлас ~1.5 год","detail":"Груповий тур із гідом","cost":"300–400 MAD/ос."},
-      {"t":"09:00","type":"sight","title":"Берберські села, долина, трекінг","detail":"Чай у місцевих. Зручне взуття!","cost":"вкл. у тур"},
-      {"t":"15:00","type":"move","title":"Повернення в Марракеш","detail":"Залежить від трафіку","cost":"вкл."},
-      {"t":"18:00","type":"food","title":"Вечеря в Гелізі","detail":"Le Foundouk / Naranj — марокко+європа","cost":"200–250 MAD/ос."}
-    ],
-    "stay":"Riad Dar Anika"
+  "summary": {
+   "uk": "Переліт із пересадкою і перше знайомство з мединою. Ввечері — Джемаа-ель-Фна.",
+   "en": "A connecting flight and a first taste of the medina. Jemaa el-Fna in the evening."
   },
-  {
-    "id":"d5","city":"marrakech","title":{"uk":"День 5 — Шопінг і виліт","ru":"День 5 — Шопинг и вылет"},
-    "blocks":[
-      {"t":"08:00","type":"food","title":"Сніданок","detail":"Останній традиційний","cost":"вкл."},
-      {"t":"09:00","type":"shop","title":"Геліз — бутики та сувеніри","detail":"Відкрито з 10:00","cost":"—"},
-      {"t":"12:00","type":"food","title":"Фінальний обід","detail":"Kaowa / Naranj","cost":"150–200 MAD/ос."},
-      {"t":"13:30","type":"move","title":"Трансфер в аеропорт ~20 км","detail":"Замов таксі заздалегідь","cost":"~150 MAD"},
-      {"t":"14:30","type":"move","title":"Виліт RAK → ...","detail":"Будь в аеропорту за 2 год","cost":"вкл."}
-    ]
-  }
+  "stay": "Riad Dar Anika",
+  "blocks": [
+   {
+    "t": "05:30",
+    "type": "move",
+    "title": {
+     "uk": "Трансфер до аеропорту KIV",
+     "en": "Transfer to KIV airport"
+    },
+    "detail": {
+     "uk": "~13 км, 15 хвилин таксі. Замов напередодні або дзвони 14444.",
+     "en": "~13 km, a 15-minute taxi. Book the night before or call 14444."
+    },
+    "cost": {
+     "uk": "~15 €",
+     "en": "~€15"
+    },
+    "poi": "chi-airport"
+   },
+   {
+    "t": "07:00",
+    "type": "move",
+    "title": {
+     "uk": "Переліт Кишинів → Марракеш",
+     "en": "Flight Chișinău → Marrakesh"
+    },
+    "detail": {
+     "uk": "Зазвичай з однією пересадкою (Стамбул або Париж), 6–8 годин загалом. Прямих рейсів немає.",
+     "en": "Usually one connection (Istanbul or Paris), 6–8 hours in total. There are no direct flights."
+    },
+    "cost": {
+     "uk": "вкл. у квиток",
+     "en": "included"
+    }
+   },
+   {
+    "t": "14:30",
+    "type": "move",
+    "title": {
+     "uk": "Аеропорт RAK → медина",
+     "en": "RAK airport → medina"
+    },
+    "detail": {
+     "uk": "~20 км. Ціну узгодь ДО посадки: приблизно 150 MAD. Лічильник на цьому маршруті зазвичай не вмикають.",
+     "en": "~20 km. Agree the fare BEFORE getting in: about 150 MAD. This run is rarely metered."
+    },
+    "cost": {
+     "uk": "~150 MAD (15 €)",
+     "en": "~150 MAD (€15)"
+    },
+    "poi": "mrk-airport"
+   },
+   {
+    "t": "15:30",
+    "type": "stay",
+    "title": {
+     "uk": "Заселення в Riad Dar Anika",
+     "en": "Check in at Riad Dar Anika"
+    },
+    "detail": {
+     "uk": "Derb Arjan 34, Bab Doukkala. Привітальний чай — традиційний ритуал, не поспішай.",
+     "en": "Derb Arjan 34, Bab Doukkala. The welcome tea is a ritual — do not rush it."
+    },
+    "cost": {
+     "uk": "~98 €/ніч",
+     "en": "~€98/night"
+    },
+    "poi": "mrk-riad"
+   },
+   {
+    "t": "17:00",
+    "type": "sight",
+    "title": {
+     "uk": "Перший вихід: Кутубія",
+     "en": "First outing: Koutoubia"
+    },
+    "detail": {
+     "uk": "Мінарет XII століття й сади довкола. Найкращий орієнтир медини — видно майже звідусіль.",
+     "en": "The 12th-century minaret and its gardens. The medina's best landmark — visible from almost anywhere."
+    },
+    "cost": {
+     "uk": "безкоштовно",
+     "en": "free"
+    },
+    "poi": "mrk-koutoubia"
+   },
+   {
+    "t": "19:00",
+    "type": "food",
+    "title": {
+     "uk": "Вечеря",
+     "en": "Dinner"
+    },
+    "detail": {
+     "uk": "Фуд-стенди на Джемаа або тераса з видом на площу.",
+     "en": "Food stalls on Jemaa, or a terrace overlooking the square."
+    },
+    "cost": {
+     "uk": "~80–120 MAD/особу",
+     "en": "~80–120 MAD per person"
+    }
+   },
+   {
+    "t": "20:00",
+    "type": "sight",
+    "title": {
+     "uk": "Джемаа-ель-Фна ввечері",
+     "en": "Jemaa el-Fna at night"
+    },
+    "detail": {
+     "uk": "Площа перетворюється на живий цирк: барабанщики, оповідачі, фуд-корти. Сумку тримай спереду.",
+     "en": "The square becomes a living circus: drummers, storytellers, food stalls. Keep your bag in front."
+    },
+    "cost": {
+     "uk": "безкоштовно",
+     "en": "free"
+    },
+    "poi": "mrk-jemaa"
+   },
+   {
+    "t": "22:00",
+    "type": "rest",
+    "title": {
+     "uk": "Повернення в ріад",
+     "en": "Back to the riad"
+    },
+    "detail": {
+     "uk": "Після 23:00 бічними провулками не йди — бери taxi до брами Bab Doukkala.",
+     "en": "After 23:00 avoid the side alleys — take a taxi to the Bab Doukkala gate."
+    }
+   }
+  ]
+ },
+ {
+  "id": "d3",
+  "city": "marrakech",
+  "title": {
+   "uk": "День 3 — Класика медини",
+   "en": "Day 3 — Medina classics"
+  },
+  "summary": {
+   "uk": "Повний день пішки: мінарет, суки, медресе, палац і захід сонця на площі.",
+   "en": "A full day on foot: the minaret, the souks, the madrasa, the palace and sunset on the square."
+  },
+  "stay": "Riad Dar Anika",
+  "blocks": [
+   {
+    "t": "08:00",
+    "type": "food",
+    "title": {
+     "uk": "Сніданок у ріаді",
+     "en": "Breakfast at the riad"
+    },
+    "detail": {
+     "uk": "Зазвичай включений: хліб, оливки, мед, м'ятний чай.",
+     "en": "Usually included: bread, olives, honey and mint tea."
+    },
+    "cost": {
+     "uk": "включено",
+     "en": "included"
+    }
+   },
+   {
+    "t": "09:00",
+    "type": "shop",
+    "title": {
+     "uk": "Ensemble Artisanal — дізнатись реальні ціни",
+     "en": "Ensemble Artisanal — learn the real prices"
+    },
+    "detail": {
+     "uk": "Державний комплекс із ФІКСОВАНИМИ цінами. Пів години тут — і ти знаєш, скільки насправді коштує все, за що торгуватимешся далі.",
+     "en": "A state complex with FIXED prices. Half an hour here and you know what everything you are about to haggle over actually costs."
+    },
+    "cost": {
+     "uk": "фіксовані ціни",
+     "en": "fixed prices"
+    },
+    "poi": "mrk-ensemble"
+   },
+   {
+    "t": "10:30",
+    "type": "market",
+    "title": {
+     "uk": "Суки: Семарін і Аттарін",
+     "en": "The souks: Semmarine and Attarine"
+    },
+    "detail": {
+     "uk": "Тканини, лампи, шкіра, спеції. Починай торг із третини названої ціни. Шафран 120–200 MAD за грам.",
+     "en": "Fabrics, lamps, leather, spices. Start haggling at a third of the asking price. Saffron is 120–200 MAD per gram."
+    },
+    "poi": "mrk-souk-semarine"
+   },
+   {
+    "t": "12:30",
+    "type": "sight",
+    "title": {
+     "uk": "Медресе Бен Юсеф",
+     "en": "Ben Youssef Madrasa"
+    },
+    "detail": {
+     "uk": "Найкраща різьба по кедру й зелідж у місті.",
+     "en": "The finest cedar carving and zellij in the city."
+    },
+    "cost": {
+     "uk": "~70 MAD",
+     "en": "~70 MAD"
+    },
+    "poi": "mrk-benyoussef"
+   },
+   {
+    "t": "13:30",
+    "type": "food",
+    "title": {
+     "uk": "Обід на терасі",
+     "en": "Lunch on a terrace"
+    },
+    "detail": {
+     "uk": "Café des Épices над ринком спецій — класична зупинка посеред медини.",
+     "en": "Café des Épices above the spice market — the classic mid-medina stop."
+    },
+    "cost": {
+     "uk": "~80–120 MAD",
+     "en": "~80–120 MAD"
+    },
+    "poi": "mrk-cafe-epices"
+   },
+   {
+    "t": "15:00",
+    "type": "sight",
+    "title": {
+     "uk": "Палац Бахія",
+     "en": "Bahia Palace"
+    },
+    "detail": {
+     "uk": "Розписані стелі, внутрішні дворики, гарем.",
+     "en": "Painted ceilings, courtyards and the harem quarters."
+    },
+    "cost": {
+     "uk": "~70 MAD",
+     "en": "~70 MAD"
+    },
+    "poi": "mrk-bahia"
+   },
+   {
+    "t": "16:30",
+    "type": "rest",
+    "title": {
+     "uk": "Перепочинок у ріаді",
+     "en": "Break at the riad"
+    },
+    "detail": {
+     "uk": "Найспекотніші години позаду, але ноги після бруківки просять паузи.",
+     "en": "The hottest hours are over, but your feet will want a pause after the cobbles."
+    }
+   },
+   {
+    "t": "18:30",
+    "type": "sight",
+    "title": {
+     "uk": "Захід сонця на Джемаа",
+     "en": "Sunset on Jemaa"
+    },
+    "detail": {
+     "uk": "Займи місце на терасі за годину до заходу — площа оживає просто на очах.",
+     "en": "Take a terrace seat an hour before sunset — the square comes alive as you watch."
+    },
+    "poi": "mrk-jemaa"
+   },
+   {
+    "t": "20:00",
+    "type": "food",
+    "title": {
+     "uk": "Вечеря",
+     "en": "Dinner"
+    },
+    "detail": {
+     "uk": "Nomad або фуд-стенди на площі — залежить від настрою й бюджету.",
+     "en": "Nomad, or the food stalls on the square — depending on mood and budget."
+    },
+    "cost": {
+     "uk": "~150–250 MAD",
+     "en": "~150–250 MAD"
+    },
+    "poi": "mrk-nomad"
+   }
+  ]
+ },
+ {
+  "id": "d4",
+  "city": "marrakech",
+  "title": {
+   "uk": "День 4 — Сади, музеї, Геліз",
+   "en": "Day 4 — Gardens, museums, Guéliz"
+  },
+  "summary": {
+   "uk": "Прохолодніший день: сади Мажорель, музеї й шопінг там, де ціни фіксовані.",
+   "en": "A cooler day: the Majorelle gardens, museums and shopping where prices are fixed."
+  },
+  "stay": "Riad Dar Anika",
+  "blocks": [
+   {
+    "t": "08:00",
+    "type": "food",
+    "title": {
+     "uk": "Сніданок у ріаді",
+     "en": "Breakfast at the riad"
+    },
+    "cost": {
+     "uk": "включено",
+     "en": "included"
+    }
+   },
+   {
+    "t": "08:45",
+    "type": "sight",
+    "title": {
+     "uk": "Сади Мажорель",
+     "en": "Jardin Majorelle"
+    },
+    "detail": {
+     "uk": "Квитки ТІЛЬКИ онлайн заздалегідь — черги великі, особливо у вересні. Прийди до відкриття.",
+     "en": "Tickets ONLINE in advance only — the queues are long, especially in September. Arrive at opening."
+    },
+    "cost": {
+     "uk": "~70 MAD",
+     "en": "~70 MAD"
+    },
+    "poi": "mrk-majorelle"
+   },
+   {
+    "t": "10:30",
+    "type": "sight",
+    "title": {
+     "uk": "Музей ісламського мистецтва",
+     "en": "Museum of Islamic Art"
+    },
+    "detail": {
+     "uk": "Кераміка, рукописи, текстиль у синій віллі всередині садів.",
+     "en": "Ceramics, manuscripts and textiles in the blue villa inside the gardens."
+    },
+    "cost": {
+     "uk": "~60 MAD",
+     "en": "~60 MAD"
+    },
+    "poi": "mrk-islamicart"
+   },
+   {
+    "t": "11:30",
+    "type": "food",
+    "title": {
+     "uk": "Кава в Kaowa",
+     "en": "Coffee at Kaowa"
+    },
+    "detail": {
+     "uk": "Просто біля виходу з садів.",
+     "en": "Right by the garden exit."
+    },
+    "cost": {
+     "uk": "~60–120 MAD",
+     "en": "~60–120 MAD"
+    },
+    "poi": "mrk-kaowa"
+   },
+   {
+    "t": "12:30",
+    "type": "shop",
+    "title": {
+     "uk": "Геліз: бутики й каптани",
+     "en": "Guéliz: boutiques and kaftans"
+    },
+    "detail": {
+     "uk": "Ціни фіксовані, торгуватись не треба. Тут купують сучасний марокканський дизайн.",
+     "en": "Fixed prices, no haggling. This is where you buy modern Moroccan design."
+    },
+    "poi": "mrk-gueliz"
+   },
+   {
+    "t": "15:00",
+    "type": "move",
+    "title": {
+     "uk": "Повернення в медину",
+     "en": "Back to the medina"
+    },
+    "detail": {
+     "uk": "~2 км. Пішки можливо, але спекотно — petit taxi близько 30 MAD.",
+     "en": "~2 km. Walkable but hot — a petit taxi is about 30 MAD."
+    },
+    "cost": {
+     "uk": "~30 MAD",
+     "en": "~30 MAD"
+    }
+   },
+   {
+    "t": "16:00",
+    "type": "sight",
+    "title": {
+     "uk": "Палац Ель-Баді або Le Jardin Secret",
+     "en": "El Badi Palace or Le Jardin Secret"
+    },
+    "detail": {
+     "uk": "Руїни з лелеками й панорамою — або тихий сад-ріад, якщо хочеться спокою.",
+     "en": "Ruins with storks and a panorama — or the quiet riad garden if you want calm."
+    },
+    "cost": {
+     "uk": "~70–80 MAD",
+     "en": "~70–80 MAD"
+    },
+    "poi": "mrk-badi"
+   },
+   {
+    "t": "19:00",
+    "type": "food",
+    "title": {
+     "uk": "Вечеря в Гелізі",
+     "en": "Dinner in Guéliz"
+    },
+    "detail": {
+     "uk": "Le Foundouk або ресторани нового міста — суміш марокканської та європейської кухні.",
+     "en": "Le Foundouk or the new town's restaurants — a mix of Moroccan and European cooking."
+    },
+    "cost": {
+     "uk": "~200–250 MAD/особу",
+     "en": "~200–250 MAD per person"
+    },
+    "poi": "mrk-foundouk"
+   }
+  ]
+ },
+ {
+  "id": "d5",
+  "city": "marrakech",
+  "title": {
+   "uk": "День 5 — Атлаські гори",
+   "en": "Day 5 — The Atlas Mountains"
+  },
+  "summary": {
+   "uk": "Одноденна групова екскурсія: берберські села, водоспади, чай у місцевих. Бронюй за 2–3 дні.",
+   "en": "A group day trip: Berber villages, waterfalls and tea with locals. Book 2–3 days ahead."
+  },
+  "stay": "Riad Dar Anika",
+  "blocks": [
+   {
+    "t": "07:00",
+    "type": "food",
+    "title": {
+     "uk": "Ранній сніданок",
+     "en": "Early breakfast"
+    },
+    "cost": {
+     "uk": "включено",
+     "en": "included"
+    }
+   },
+   {
+    "t": "07:30",
+    "type": "move",
+    "title": {
+     "uk": "Виїзд у гори",
+     "en": "Departure for the mountains"
+    },
+    "detail": {
+     "uk": "~1,5 години дороги. Перевір прогноз напередодні: у вересні в горах бувають раптові зливи, які перекривають дороги.",
+     "en": "~1.5 hours' drive. Check the forecast the night before: September brings sudden mountain downpours that close roads."
+    },
+    "cost": {
+     "uk": "~300–400 MAD/особу",
+     "en": "~300–400 MAD per person"
+    }
+   },
+   {
+    "t": "09:00",
+    "type": "tour",
+    "title": {
+     "uk": "Долина Урика й берберські села",
+     "en": "The Ourika Valley and Berber villages"
+    },
+    "detail": {
+     "uk": "Треккінг, водоспади, чай у місцевих. Взуй кросівки, візьми воду й головний убір.",
+     "en": "Trekking, waterfalls and tea with locals. Wear trainers, bring water and a hat."
+    },
+    "cost": {
+     "uk": "вкл. у тур",
+     "en": "included in the tour"
+    },
+    "poi": "mrk-atlas"
+   },
+   {
+    "t": "13:00",
+    "type": "food",
+    "title": {
+     "uk": "Обід у горах",
+     "en": "Lunch in the mountains"
+    },
+    "detail": {
+     "uk": "Зазвичай включений у тур — тажин у місцевому закладі.",
+     "en": "Usually included in the tour — a tagine at a local place."
+    },
+    "cost": {
+     "uk": "вкл. у тур",
+     "en": "included"
+    }
+   },
+   {
+    "t": "15:00",
+    "type": "move",
+    "title": {
+     "uk": "Повернення в Марракеш",
+     "en": "Back to Marrakesh"
+    },
+    "detail": {
+     "uk": "Час залежить від дороги.",
+     "en": "Timing depends on traffic."
+    },
+    "cost": {
+     "uk": "вкл. у тур",
+     "en": "included"
+    }
+   },
+   {
+    "t": "17:00",
+    "type": "rest",
+    "title": {
+     "uk": "Душ і відпочинок",
+     "en": "Shower and rest"
+    },
+    "detail": {
+     "uk": "Після активного дня — пауза перед вечерею.",
+     "en": "A pause before dinner after an active day."
+    }
+   },
+   {
+    "t": "19:30",
+    "type": "food",
+    "title": {
+     "uk": "Вечеря",
+     "en": "Dinner"
+    },
+    "detail": {
+     "uk": "Спокійна вечеря — завтра збори.",
+     "en": "A quiet dinner — packing tomorrow."
+    },
+    "cost": {
+     "uk": "~150–250 MAD",
+     "en": "~150–250 MAD"
+    }
+   }
+  ]
+ },
+ {
+  "id": "d6",
+  "city": "marrakech",
+  "title": {
+   "uk": "День 6 — Шопінг і виліт",
+   "en": "Day 6 — Shopping and departure"
+  },
+  "summary": {
+   "uk": "Останні покупки, обмін залишку дирхамів і дорога в аеропорт.",
+   "en": "Last purchases, changing leftover dirhams and the run to the airport."
+  },
+  "blocks": [
+   {
+    "t": "08:00",
+    "type": "food",
+    "title": {
+     "uk": "Сніданок у ріаді",
+     "en": "Breakfast at the riad"
+    },
+    "cost": {
+     "uk": "включено",
+     "en": "included"
+    }
+   },
+   {
+    "t": "09:00",
+    "type": "shop",
+    "title": {
+     "uk": "Останні покупки",
+     "en": "Last purchases"
+    },
+    "detail": {
+     "uk": "Аргана — тільки темне скло, 150–250 MAD за 250 мл. Спеції, шафран, кераміка. Магазини Гелізу відкриваються о 10:00.",
+     "en": "Argan — dark glass only, 150–250 MAD per 250 ml. Spices, saffron, ceramics. Guéliz shops open at 10:00."
+    },
+    "poi": "mrk-gueliz"
+   },
+   {
+    "t": "11:00",
+    "type": "stay",
+    "title": {
+     "uk": "Збори й виїзд із ріаду",
+     "en": "Pack and check out"
+    },
+    "detail": {
+     "uk": "Валізи можна залишити на рецепції, якщо виліт пізніше.",
+     "en": "You can leave the bags at reception if your flight is later."
+    }
+   },
+   {
+    "t": "12:00",
+    "type": "food",
+    "title": {
+     "uk": "Фінальний обід",
+     "en": "Final lunch"
+    },
+    "detail": {
+     "uk": "Naranj або кафе Гелізу — зручно перед дорогою в аеропорт.",
+     "en": "Naranj or a Guéliz café — convenient before the airport run."
+    },
+    "cost": {
+     "uk": "~150–200 MAD/особу",
+     "en": "~150–200 MAD per person"
+    },
+    "poi": "mrk-naranj"
+   },
+   {
+    "t": "13:00",
+    "type": "shop",
+    "title": {
+     "uk": "Розміняти залишок дирхамів",
+     "en": "Change your leftover dirhams"
+    },
+    "detail": {
+     "uk": "ВАЖЛИВО: дирхам вивозити з Марокко не можна. Розміняй усе, що лишилось, до реєстрації.",
+     "en": "IMPORTANT: you may not take dirhams out of Morocco. Change whatever is left before check-in."
+    },
+    "poi": "mrk-exch-airport"
+   },
+   {
+    "t": "13:30",
+    "type": "move",
+    "title": {
+     "uk": "Трансфер в аеропорт",
+     "en": "Transfer to the airport"
+    },
+    "detail": {
+     "uk": "~20 км, приблизно 150 MAD. Замов таксі заздалегідь через ріад.",
+     "en": "~20 km, about 150 MAD. Order the taxi in advance through the riad."
+    },
+    "cost": {
+     "uk": "~150 MAD",
+     "en": "~150 MAD"
+    },
+    "poi": "mrk-airport"
+   },
+   {
+    "t": "14:30",
+    "type": "move",
+    "title": {
+     "uk": "Виліт",
+     "en": "Departure"
+    },
+    "detail": {
+     "uk": "Прибудь за 2 години до рейсу. Дорога назад — через пересадку.",
+     "en": "Arrive 2 hours before the flight. The way back goes via a connection."
+    },
+    "cost": {
+     "uk": "вкл. у квиток",
+     "en": "included"
+    }
+   }
+  ]
+ }
 ]

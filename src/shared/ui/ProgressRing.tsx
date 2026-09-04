@@ -1,13 +1,23 @@
-export function ProgressRing({value, size=48}:{value:number,size?:number}){
-  const r=18, c=2*Math.PI*r;
-  const off=c*(1-value);
+interface Props { value: number; size?: number; stroke?: number; label?: string; color?: string; }
+
+export function ProgressRing({ value, size = 56, stroke = 5, label, color = 'var(--gold)' }: Props) {
+  const r = (size - stroke) / 2;
+  const c = 2 * Math.PI * r;
+  const pct = Math.max(0, Math.min(1, value));
   return (
-    <svg width={size} height={size} viewBox="0 0 44 44">
-      <circle cx={22} cy={22} r={r} stroke="var(--line)" strokeWidth={4} fill="none"/>
-      <circle cx={22} cy={22} r={r} stroke="var(--gold)" strokeWidth={4} fill="none"
-        strokeDasharray={c} strokeDashoffset={off} strokeLinecap="round"
-        style={{transition:'stroke-dashoffset 600ms ease', transform:'rotate(-90deg)', transformOrigin:'50% 50%'}}/>
-      <text x="50%" y="50%" dominantBaseline="central" textAnchor="middle" fontSize={11} fontWeight={700} fill="var(--ink)">{Math.round(value*100)}%</text>
-    </svg>
+    <div style={{ position: 'relative', width: size, height: size, flex: `0 0 ${size}px` }}>
+      <svg width={size} height={size} style={{ transform: 'rotate(-90deg)' }} aria-hidden>
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--line)" strokeWidth={stroke} />
+        <circle
+          cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={stroke}
+          strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - pct)}
+          style={{ transition: 'stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)' }}
+        />
+      </svg>
+      <span style={{
+        position: 'absolute', inset: 0, display: 'grid', placeItems: 'center',
+        fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: size / 4.2,
+      }}>{label ?? `${Math.round(pct * 100)}%`}</span>
+    </div>
   );
 }

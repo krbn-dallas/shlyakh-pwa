@@ -1,14 +1,19 @@
-import type { CityId } from '../model/types';
-const BBOX: Record<CityId,[number,number,number,number]> = {
-  kyiv:[50.36,30.35,50.59,30.72],
-  chisinau:[46.92,28.78,47.10,28.97],
-  marrakech:[31.57,-8.08,31.70,-7.93]
+import type { City, CityId } from '@/shared/model/types';
+
+export const inBbox = (lat: number, lon: number, b: City['bbox']) =>
+  lat >= b[0] && lat <= b[2] && lon >= b[1] && lon <= b[3];
+
+/** Which known city contains this point? Prefers trip contexts over browse-only cities. */
+export const cityByCoord = (lat: number, lon: number, cities: City[]): CityId | null => {
+  const hits = cities.filter((c) => inBbox(lat, lon, c.bbox));
+  if (!hits.length) return null;
+  return (hits.find((c) => c.primary) ?? hits[0]).id;
 };
-export function cityByCoord(lat:number, lon:number): CityId|null{
-  for(const [id, bb] of Object.entries(BBOX)){
-    const [latS,lonW,latN,lonE]=bb as [number,number,number,number];
-    if(lat>=latS && lat<=latN && lon>=lonW && lon<=lonE) return id as CityId;
-  }
-  return null;
-}
-export function getBbox(id:CityId){ return BBOX[id]; }
+
+export const getPosition = (timeout = 8000) =>
+  new Promise<GeolocationPosition>((resolve, reject) => {
+    if (!('geolocation' in navigator)) return reject(new Error('no-geolocation'));
+    navigator.geolocation.getCurrentPosition(resolve, reject, {
+      timeout, maximumAge: 10 * 60 * 1000, enableHighAccuracy: false,
+    });
+  });
