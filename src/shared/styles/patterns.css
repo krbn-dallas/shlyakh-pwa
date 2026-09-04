@@ -1,16 +1,23 @@
 /* Zellige eight-pointed star — the house mark, at 5% as a card-header wash. */
 .zellige{
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23E3B341' stroke-width='1' opacity='0.11'><path d='M36 10l5.6 10.2 11.4-1.7-1.7 11.4L62 36l-10.2 5.6 1.7 11.4-11.4-1.7L36 62l-5.6-10.2-11.4 1.7 1.7-11.4L10 36l10.2-5.6L18.5 19l11.4 1.7z'/></g></svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23E3B341' stroke-width='1.1' opacity='0.22'><path d='M36 10l5.6 10.2 11.4-1.7-1.7 11.4L62 36l-10.2 5.6 1.7 11.4-11.4-1.7L36 62l-5.6-10.2-11.4 1.7 1.7-11.4L10 36l10.2-5.6L18.5 19l11.4 1.7z'/></g></svg>");
   background-size:72px 72px;
   background-position:center;
 }
-[data-theme="dark"] .zellige{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23E6B54C' stroke-width='1' opacity='0.16'><path d='M36 10l5.6 10.2 11.4-1.7-1.7 11.4L62 36l-10.2 5.6 1.7 11.4-11.4-1.7L36 62l-5.6-10.2-11.4 1.7 1.7-11.4L10 36l10.2-5.6L18.5 19l11.4 1.7z'/></g></svg>")}
+[data-theme="dark"] .zellige{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23E6B54C' stroke-width='1.1' opacity='0.20'><path d='M36 10l5.6 10.2 11.4-1.7-1.7 11.4L62 36l-10.2 5.6 1.7 11.4-11.4-1.7L36 62l-5.6-10.2-11.4 1.7 1.7-11.4L10 36l10.2-5.6L18.5 19l11.4 1.7z'/></g></svg>")}
 
 /* The "shlyakh" itself — gold dashes with red pins. Timeline, map, progress. */
 .dashed-gold{
-  border-left:2px dashed var(--gold);
+  position:relative;
   padding-left:var(--s4);
   margin-left:5px;
+  --draw:1;
+}
+.dashed-gold::before{
+  content:''; position:absolute; left:0; top:0; bottom:0; width:0;
+  border-left:2px dashed var(--gold);
+  transform:scaleY(var(--draw));
+  transform-origin:top center;
 }
 
 .timeline-pin{

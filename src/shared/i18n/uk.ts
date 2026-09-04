@@ -103,6 +103,8 @@ export const uk = {
     nearWarn: 'Поруч зона уваги', fixedPrice: 'Фіксовані ціни — не торгуються',
     copyAddress: 'Копіювати адресу', copyHint: 'Покажи або надішли таксисту',
     coordsApprox: 'Координати приблизні',
+    findNearby: 'Знайти поруч',
+    fromOsm: 'з OpenStreetMap',
     cats: {
       all: 'Усі', sight: 'Пам’ятки', food: 'Їжа', shop: 'Шопінг', market: 'Ринки',
       pharmacy: 'Аптеки', exchange: 'Обмін валют', transport: 'Транспорт', stay: 'Житло',
@@ -177,6 +179,7 @@ export const uk = {
     title: 'Налаштування', appearance: 'Вигляд', theme: 'Тема', lang: 'Мова',
     trip: 'Подорож', city: 'Місто', cityAuto: 'Визначати автоматично', cityManual: 'Обрано вручну',
     stays: 'Житло', party: 'Хто їде', ratesTitle: 'Курси валют',
+    ratesRefresh: 'Оновити курси онлайн', ratesUpdated: 'Курси оновлено',
     offline: 'Офлайн', data: 'Дані', resetCheck: 'Скинути чек-листи',
     resetAll: 'Скинути все', resetAllConfirm: 'Видалити всі налаштування й відмітки?',
     install: 'Встановлення', about: 'Про застосунок',

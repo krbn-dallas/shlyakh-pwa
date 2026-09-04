@@ -10,6 +10,7 @@ import { tr } from '@/shared/lib/l10n';
 import { token } from '@/shared/i18n/tokens';
 import { fmtDistance, haversine } from '@/shared/lib/haversine';
 import { getPosition } from '@/shared/lib/geo';
+import { findNearby } from '@/shared/lib/overpass';
 import type { POI, POICat } from '@/shared/model/types';
 
 const CAT_ICON: Record<POICat, IconName> = {
@@ -90,6 +91,24 @@ export default function PoiPage() {
   const [cat, setCat] = useState<POICat | 'all'>('all');
   const [allMorocco, setAllMorocco] = useState(false);
   const [here, setHere] = useState<{ lat: number; lon: number } | null>(null);
+  const [live, setLive] = useState<POI[]>([]);
+  const [liveBusy, setLiveBusy] = useState(false);
+
+  // Curated data is the offline backbone; Overpass fills the gaps when online.
+  const searchNearby = async () => {
+    // Prefer the device's own position; fall back to the city centre.
+    const centre = cities?.find((c) => c.id === city)?.center;
+    const lat = here?.lat ?? centre?.[0];
+    const lon = here?.lon ?? centre?.[1];
+    if (lat === undefined || lon === undefined) return;
+    setLiveBusy(true);
+    try {
+      const found = await findNearby(lat, lon, cat === 'all' ? 'food' : cat, city);
+      const known = new Set((poi ?? []).map((p) => p.id));
+      setLive(found.filter((f) => !known.has(f.id)));
+    } catch { setLive([]); }
+    setLiveBusy(false);
+  };
 
   useEffect(() => {
     let alive = true;
@@ -111,6 +130,7 @@ export default function PoiPage() {
   const list = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return (poi ?? [])
+      .concat(live)
       .filter((p) => (allMorocco && isMoroccoCity ? MOROCCO.has(p.city) : p.city === city))
       .filter((p) => cat === 'all' || p.cat === cat)
       .filter((p) => !needle
@@ -124,7 +144,7 @@ export default function PoiPage() {
         warn: zones.some((z) => haversine(z.lat!, z.lon!, p.lat, p.lon) < (z.radiusM ?? 0)),
       }))
       .sort((a, b) => (a.dist !== null && b.dist !== null ? a.dist - b.dist : 0));
-  }, [poi, city, cat, q, here, zones, lang, allMorocco, isMoroccoCity]);
+  }, [poi, live, city, cat, q, here, zones, lang, allMorocco, isMoroccoCity]);
 
   if (loading) return <Spinner label={t('common.loading')} />;
 
@@ -167,7 +187,13 @@ export default function PoiPage() {
         ))}
       </div>
 
-      <span className="tiny muted">{list.length} {t('places.title').toLowerCase()}</span>
+      <div className="row-between">
+        <span className="tiny muted">{list.length} {t('places.title').toLowerCase()}</span>
+        <button className="chip" onClick={() => void searchNearby()} disabled={liveBusy || !navigator.onLine}>
+          <Icon name={liveBusy ? 'spinner' : 'locate'} size={11} spin={liveBusy} />
+          {t('places.findNearby')}
+        </button>
+      </div>
 
       <div className="stack" data-stagger style={{ gap: 'var(--s3)' }}>
         {list.map(({ p, dist, warn }) => (

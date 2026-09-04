@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useStore, PRIMARY_CITIES, type Theme } from '@/app/store';
 import { useT } from '@/shared/i18n';
 import { Icon } from '@/shared/ui/Icon';
+import { BrokenHeart } from '@/shared/ui/Logo';
+import { fetchRates } from '@/shared/lib/rates';
 import { PageHeader } from '@/shared/ui/PageHeader';
 import { Section } from '@/shared/ui/Section';
 import { useData } from '@/shared/lib/data';
@@ -40,6 +42,21 @@ export default function SettingsPage() {
   const s = useStore();
   const { data: cities } = useData('cities');
   const [tiles, setTiles] = useState<{ pct: number; done: boolean } | null>(null);
+  const [ratesBusy, setRatesBusy] = useState(false);
+  const [ratesMsg, setRatesMsg] = useState<string | null>(null);
+
+  const refreshRates = async () => {
+    setRatesBusy(true); setRatesMsg(null);
+    try {
+      const live = await fetchRates();
+      s.setRates({ uah: live.uah, mdl: live.mdl, mad: live.mad });
+      setRatesMsg(t('settings.ratesUpdated'));
+    } catch {
+      setRatesMsg(t('common.error'));
+    }
+    setRatesBusy(false);
+    setTimeout(() => setRatesMsg(null), 3000);
+  };
 
   const primaries = (cities ?? []).filter((c) => PRIMARY_CITIES.includes(c.id));
   const cityData = (cities ?? []).find((c) => c.id === s.city);
@@ -162,6 +179,10 @@ export default function SettingsPage() {
 
       <Section icon="money" title={t('settings.ratesTitle')} note={t('home.ratesNote')}>
         <div className="card stack" style={{ gap: 'var(--s3)' }}>
+          <button className="btn btn-gold" onClick={() => void refreshRates()} disabled={ratesBusy}>
+            <Icon name={ratesBusy ? 'spinner' : 'rotate'} size={13} spin={ratesBusy} />
+            {ratesMsg ?? t('settings.ratesRefresh')}
+          </button>
           {([['uah', '🇺🇦 UAH'], ['mdl', '🇲🇩 MDL'], ['mad', '🇲🇦 MAD']] as const).map(([k, label]) => (
             <div key={k} className="row-between">
               <span className="small" style={{ fontWeight: 700 }}>{label}</span>
@@ -205,8 +226,12 @@ export default function SettingsPage() {
       </Section>
 
       <Section icon="info" title={t('settings.about')}>
-        <div className="card-flat stack" style={{ gap: 'var(--s2)' }}>
-          <span className="small">{t('settings.aboutText')}</span>
+        <div className="card-flat stack" style={{ gap: 'var(--s3)', alignItems: 'center', textAlign: 'center' }}>
+          <span className="small" style={{ fontWeight: 600 }}>
+            made with <BrokenHeart /> by <b>panfi<span style={{ color: 'var(--red)' }}>.</span>love</b>
+          </span>
+          <span className="small muted" style={{ fontStyle: 'italic' }}>don’t forget 2 breath</span>
+          <hr className="divider" style={{ width: '100%', margin: 0 }} />
           <span className="tiny faint">{t('settings.attribution')}</span>
         </div>
       </Section>

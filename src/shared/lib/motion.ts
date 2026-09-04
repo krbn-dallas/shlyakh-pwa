@@ -36,12 +36,14 @@ export function drawTimeline(root: HTMLElement): () => void {
   const ctx = gsap.context(() => {
     const line = root.querySelector<HTMLElement>('.dashed-gold');
     if (!line) return;
+    // Animates the --draw custom property, which only scales the ::before line.
+    // A clip-path on the container itself used to cut the cards in half mid-scroll.
     gsap.fromTo(line,
-      { clipPath: 'inset(0 0 100% 0)' },
+      { '--draw': 0 },
       {
-        clipPath: 'inset(0 0 0% 0)',
+        '--draw': 1,
         ease: 'none',
-        scrollTrigger: { trigger: line, start: 'top 85%', end: 'bottom 60%', scrub: 0.5 },
+        scrollTrigger: { trigger: line, start: 'top 85%', end: 'bottom 65%', scrub: 0.4 },
       });
   }, root);
   return () => ctx.revert();

@@ -21,6 +21,9 @@ const EN: Record<string, string> = {
   'дерево': 'woodwork', 'ремесла': 'crafts', 'парфуми': 'perfume', 'каптани': 'kaftans',
   'мода': 'fashion', 'дизайн': 'design', 'бренди': 'brands', 'шопінг': 'shopping',
   'ринок': 'market', 'кооператив': 'co-op', 'сертифікат': 'certified', 'автентично': 'authentic',
+  'Поділ': 'Podil', 'ТРЦ': 'mall', 'бронювання': 'book ahead', 'озеро': 'lake',
+  'подарунки': 'gifts', 'українське': 'Ukrainian-made', 'фудкорт': 'food hall',
+  'українська кухня': 'Ukrainian food', 'молдовська кухня': 'Moldovan food',
   // food
   'кава': 'coffee', 'кафе': 'café', 'тераса': 'terrace', 'сніданок': 'breakfast',
   'обід': 'lunch', 'вечеря': 'dinner', 'риба': 'seafood', 'вино': 'wine',

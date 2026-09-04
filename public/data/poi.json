@@ -2247,5 +2247,718 @@
    "посольство"
   ],
   "coordsApprox": true
+ },
+ {
+  "id": "kyi-sophia",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Софійський собор",
+   "en": "Saint Sophia Cathedral"
+  },
+  "lat": 50.4529,
+  "lon": 30.5145,
+  "desc": {
+   "uk": "Об'єкт ЮНЕСКО XI століття, мозаїки й фрески оригінальні. З дзвіниці — найкращий вид на центр.",
+   "en": "An 11th-century UNESCO site with original mosaics and frescoes. The bell tower has the best view of the centre."
+  },
+  "hours": "10:00–18:00",
+  "price": {
+   "uk": "~120 ₴",
+   "en": "~₴120"
+  },
+  "address": "вул. Володимирська 24, Київ",
+  "tags": [
+   "UNESCO",
+   "центр"
+  ]
+ },
+ {
+  "id": "kyi-lavra",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Києво-Печерська лавра",
+   "en": "Kyiv Pechersk Lavra"
+  },
+  "lat": 50.4348,
+  "lon": 30.5578,
+  "desc": {
+   "uk": "Печери, дзвіниця й музеї. Об'єкт ЮНЕСКО. Для входу в печери потрібен скромний одяг.",
+   "en": "Caves, a bell tower and museums. A UNESCO site. Modest dress is required to enter the caves."
+  },
+  "hours": "09:00–18:00",
+  "price": {
+   "uk": "~100 ₴",
+   "en": "~₴100"
+  },
+  "address": "вул. Лаврська 15, Київ",
+  "tags": [
+   "UNESCO"
+  ]
+ },
+ {
+  "id": "kyi-andriyivskyy",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Андріївський узвіз",
+   "en": "Andriyivskyy Descent"
+  },
+  "lat": 50.459,
+  "lon": 30.5163,
+  "desc": {
+   "uk": "Найколоритніша вулиця міста: сувеніри, художники, галереї. Андріївська церква вгорі.",
+   "en": "The city's most characterful street: souvenirs, artists and galleries, with St Andrew's Church at the top."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Андріївський узвіз, Київ",
+  "tags": [
+   "сувеніри",
+   "прогулянка"
+  ]
+ },
+ {
+  "id": "kyi-goldengate",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Золоті ворота",
+   "en": "Golden Gate"
+  },
+  "lat": 50.4487,
+  "lon": 30.5133,
+  "desc": {
+   "uk": "Реконструйована брама Києва XI століття й сквер навколо.",
+   "en": "The reconstructed 11th-century city gate and the square around it."
+  },
+  "hours": "10:00–18:00",
+  "price": {
+   "uk": "~60 ₴",
+   "en": "~₴60"
+  },
+  "address": "вул. Володимирська 40А, Київ",
+  "tags": [
+   "історія"
+  ]
+ },
+ {
+  "id": "kyi-maidan",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Майдан Незалежності",
+   "en": "Independence Square"
+  },
+  "lat": 50.4501,
+  "lon": 30.5241,
+  "desc": {
+   "uk": "Головна площа країни, серце Хрещатика.",
+   "en": "The country's main square, the heart of Khreshchatyk."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Майдан Незалежності, Київ",
+  "tags": [
+   "центр"
+  ]
+ },
+ {
+  "id": "kyi-volodymyrska-hirka",
+  "city": "kyiv",
+  "cat": "nature",
+  "name": {
+   "uk": "Володимирська гірка",
+   "en": "St Volodymyr's Hill"
+  },
+  "lat": 50.4574,
+  "lon": 30.5252,
+  "desc": {
+   "uk": "Парк над Дніпром зі скляним пішохідним мостом. Найкращі краєвиди міста на захід сонця.",
+   "en": "A park above the Dnipro with a glass footbridge. The city's best views at sunset."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Володимирський узвіз, Київ",
+  "tags": [
+   "панорама",
+   "захід сонця"
+  ]
+ },
+ {
+  "id": "kyi-motherland",
+  "city": "kyiv",
+  "cat": "sight",
+  "name": {
+   "uk": "Батьківщина-Мати й музей",
+   "en": "Motherland Monument and museum"
+  },
+  "lat": 50.4265,
+  "lon": 30.563,
+  "desc": {
+   "uk": "Монумент 102 м і Музей війни поруч. Оглядовий майданчик на щиті.",
+   "en": "A 102-metre monument with the war museum beside it, and a viewing platform on the shield."
+  },
+  "hours": "10:00–18:00",
+  "address": "вул. Лаврська 27, Київ",
+  "tags": [
+   "панорама"
+  ]
+ },
+ {
+  "id": "kyi-botanic",
+  "city": "kyiv",
+  "cat": "nature",
+  "name": {
+   "uk": "Ботанічний сад Гришка",
+   "en": "Hryshko Botanical Garden"
+  },
+  "lat": 50.4106,
+  "lon": 30.5628,
+  "desc": {
+   "uk": "Схили над Дніпром, бузковий сад, вид на Лавру. Найкраще навесні.",
+   "en": "Slopes above the Dnipro, a lilac garden and a view of the Lavra. Best in spring."
+  },
+  "hours": "09:00–20:00",
+  "price": {
+   "uk": "~80 ₴",
+   "en": "~₴80"
+  },
+  "address": "вул. Тимірязєвська 1, Київ",
+  "tags": [
+   "сад",
+   "панорама"
+  ]
+ },
+ {
+  "id": "kyi-trukhaniv",
+  "city": "kyiv",
+  "cat": "nature",
+  "name": {
+   "uk": "Труханів острів",
+   "en": "Trukhaniv Island"
+  },
+  "lat": 50.457,
+  "lon": 30.547,
+  "desc": {
+   "uk": "Пішохідний міст із Подолу, пляжі й велодоріжки просто в центрі міста.",
+   "en": "A footbridge from Podil leads to beaches and cycle paths right in the city centre."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Труханів острів, Київ",
+  "tags": [
+   "пляж",
+   "прогулянка"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-bessarabsky",
+  "city": "kyiv",
+  "cat": "market",
+  "name": {
+   "uk": "Бессарабський ринок",
+   "en": "Besarabsky Market"
+  },
+  "lat": 50.4425,
+  "lon": 30.522,
+  "desc": {
+   "uk": "Критий ринок 1912 року в кінці Хрещатика: мед, ікра, сало, спеції, фрукти. Дорого, але атмосферно.",
+   "en": "A covered 1912 market at the end of Khreshchatyk: honey, caviar, salo, spices, fruit. Pricey but atmospheric."
+  },
+  "hours": "08:00–20:00",
+  "address": "Бессарабська площа 2, Київ",
+  "tags": [
+   "ринок",
+   "центр"
+  ]
+ },
+ {
+  "id": "kyi-zhytniy",
+  "city": "kyiv",
+  "cat": "market",
+  "name": {
+   "uk": "Житній ринок",
+   "en": "Zhytniy Market"
+  },
+  "lat": 50.4653,
+  "lon": 30.514,
+  "desc": {
+   "uk": "Автентичний ринок на Подолі — дешевше й живіше за Бессарабський.",
+   "en": "An authentic Podil market — cheaper and livelier than Besarabsky."
+  },
+  "hours": "08:00–18:00",
+  "address": "вул. Верхній Вал 16, Київ",
+  "tags": [
+   "ринок",
+   "Поділ"
+  ]
+ },
+ {
+  "id": "kyi-volodymyrsky-rynok",
+  "city": "kyiv",
+  "cat": "market",
+  "name": {
+   "uk": "Володимирський ринок",
+   "en": "Volodymyrskyi Market"
+  },
+  "lat": 50.4437,
+  "lon": 30.5085,
+  "desc": {
+   "uk": "Продуктовий ринок біля центру: сир, зелень, домашні заготовки.",
+   "en": "A food market near the centre: cheese, greens, home preserves."
+  },
+  "hours": "08:00–19:00",
+  "address": "вул. Антоновича 11, Київ",
+  "tags": [
+   "ринок"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-puzata",
+  "city": "kyiv",
+  "cat": "food",
+  "name": {
+   "uk": "Пузата Хата",
+   "en": "Puzata Hata"
+  },
+  "lat": 50.447,
+  "lon": 30.522,
+  "desc": {
+   "uk": "Мережа українських їдалень самообслуговування. Найшвидший і найдешевший спосіб поїсти борщу перед дорогою.",
+   "en": "A chain of Ukrainian self-service canteens. The fastest, cheapest way to get borsch before you travel."
+  },
+  "hours": "08:00–22:00",
+  "price": {
+   "uk": "~150–250 ₴",
+   "en": "~₴150–250"
+  },
+  "address": "Хрещатик та по всьому місту",
+  "tags": [
+   "дешево",
+   "українська кухня"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-ostannya",
+  "city": "kyiv",
+  "cat": "food",
+  "name": {
+   "uk": "Остання Барикада",
+   "en": "Ostannya Barykada"
+  },
+  "lat": 50.4501,
+  "lon": 30.5241,
+  "desc": {
+   "uk": "Ресторан-музей під Майданом, сучасна українська кухня. Вхід за паролем — бронюй заздалегідь.",
+   "en": "A restaurant-museum beneath Maidan serving modern Ukrainian food. Entry by password — book ahead."
+  },
+  "hours": "12:00–23:00",
+  "price": {
+   "uk": "~600–900 ₴",
+   "en": "~₴600–900"
+  },
+  "address": "Майдан Незалежності, Київ",
+  "tags": [
+   "вечеря",
+   "бронювання"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-kanapa",
+  "city": "kyiv",
+  "cat": "food",
+  "name": {
+   "uk": "Канапа",
+   "en": "Kanapa"
+  },
+  "lat": 50.4592,
+  "lon": 30.517,
+  "desc": {
+   "uk": "Сучасна українська кухня на Андріївському узвозі. Одне з найкращих місць на вечерю в місті.",
+   "en": "Modern Ukrainian cooking on Andriyivskyy Descent. One of the best dinners in the city."
+  },
+  "hours": "12:00–23:00",
+  "price": {
+   "uk": "~700–1000 ₴",
+   "en": "~₴700–1000"
+  },
+  "address": "Андріївський узвіз 19, Київ",
+  "tags": [
+   "вечеря"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-musafir",
+  "city": "kyiv",
+  "cat": "food",
+  "name": {
+   "uk": "Мусафір",
+   "en": "Musafir"
+  },
+  "lat": 50.4498,
+  "lon": 30.5163,
+  "desc": {
+   "uk": "Кримськотатарська кухня: чебуреки, лагман, янтики. Смачно й недорого.",
+   "en": "Crimean Tatar food: chebureki, lagman, yantyk. Good and inexpensive."
+  },
+  "hours": "10:00–22:00",
+  "price": {
+   "uk": "~250–400 ₴",
+   "en": "~₴250–400"
+  },
+  "address": "вул. Сагайдачного 8, Київ",
+  "tags": [
+   "обід"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-foodmarket",
+  "city": "kyiv",
+  "cat": "food",
+  "name": {
+   "uk": "Kyiv Food Market",
+   "en": "Kyiv Food Market"
+  },
+  "lat": 50.439,
+  "lon": 30.546,
+  "desc": {
+   "uk": "Фудкорт у Мистецькому Арсеналі: десяток кухонь під одним дахом. Зручно, коли компанія хоче різного.",
+   "en": "A food hall at the Arsenal: a dozen kitchens under one roof. Handy when everyone wants something different."
+  },
+  "hours": "10:00–22:00",
+  "price": {
+   "uk": "~300–500 ₴",
+   "en": "~₴300–500"
+  },
+  "address": "вул. Лаврська 20А, Київ",
+  "tags": [
+   "фудкорт"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-coffee",
+  "city": "kyiv",
+  "cat": "food",
+  "name": {
+   "uk": "Кав'ярні на Рейтарській",
+   "en": "Cafés on Reitarska"
+  },
+  "lat": 50.452,
+  "lon": 30.5115,
+  "desc": {
+   "uk": "Вулиця київської кавової культури — кілька спешелті-кав'ярень поспіль.",
+   "en": "The street of Kyiv coffee culture — several speciality cafés in a row."
+  },
+  "hours": "08:00–20:00",
+  "price": {
+   "uk": "~80–150 ₴",
+   "en": "~₴80–150"
+  },
+  "address": "вул. Рейтарська, Київ",
+  "tags": [
+   "кава"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "kyi-khreshchatyk",
+  "city": "kyiv",
+  "cat": "shop",
+  "name": {
+   "uk": "Хрещатик",
+   "en": "Khreshchatyk"
+  },
+  "lat": 50.4479,
+  "lon": 30.5225,
+  "desc": {
+   "uk": "Головна вулиця: магазини, кав'ярні, ЦУМ. На вихідних пішохідна.",
+   "en": "The main street: shops, cafés and the TsUM department store. Pedestrianised at weekends."
+  },
+  "hours": "10:00–21:00",
+  "address": "вул. Хрещатик, Київ",
+  "tags": [
+   "центр",
+   "шопінг"
+  ]
+ },
+ {
+  "id": "kyi-tsum",
+  "city": "kyiv",
+  "cat": "shop",
+  "name": {
+   "uk": "ЦУМ",
+   "en": "TsUM"
+  },
+  "lat": 50.447,
+  "lon": 30.522,
+  "desc": {
+   "uk": "Центральний універмаг: бренди, косметика, останні покупки перед дорогою.",
+   "en": "The central department store: brands, cosmetics, last-minute pre-trip shopping."
+  },
+  "hours": "10:00–21:00",
+  "address": "вул. Хрещатик 38, Київ",
+  "tags": [
+   "бренди"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "kyi-gulliver",
+  "city": "kyiv",
+  "cat": "shop",
+  "name": {
+   "uk": "ТРЦ Гулівер",
+   "en": "Gulliver Mall"
+  },
+  "lat": 50.4397,
+  "lon": 30.5216,
+  "desc": {
+   "uk": "Торговий центр біля вокзалу метро Палац спорту — аптека, супермаркет, техніка в одному місці.",
+   "en": "A mall by Palats Sportu metro — pharmacy, supermarket and electronics in one place."
+  },
+  "hours": "10:00–22:00",
+  "address": "Спортивна площа 1А, Київ",
+  "tags": [
+   "ТРЦ"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "kyi-ocean",
+  "city": "kyiv",
+  "cat": "shop",
+  "name": {
+   "uk": "ТРЦ Ocean Plaza",
+   "en": "Ocean Plaza"
+  },
+  "lat": 50.4142,
+  "lon": 30.5219,
+  "desc": {
+   "uk": "Великий ТРЦ: одяг, валізи, дорожні аксесуари.",
+   "en": "A large mall: clothing, suitcases and travel accessories."
+  },
+  "hours": "10:00–22:00",
+  "address": "вул. Антоновича 176, Київ",
+  "tags": [
+   "ТРЦ"
+  ],
+  "fixedPrice": true
+ },
+ {
+  "id": "kyi-vsisvoi",
+  "city": "kyiv",
+  "cat": "shop",
+  "name": {
+   "uk": "Всі. Свої",
+   "en": "Vsi. Svoi"
+  },
+  "lat": 50.4487,
+  "lon": 30.5232,
+  "desc": {
+   "uk": "Магазин українських брендів — гарне місце по подарунок родичам у Марокко.",
+   "en": "A shop of Ukrainian brands — a good place for gifts to take to relatives in Morocco."
+  },
+  "hours": "10:00–21:00",
+  "address": "вул. Хрещатик 27, Київ",
+  "tags": [
+   "подарунки",
+   "українське"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "chi-laplacinte",
+  "city": "chisinau",
+  "cat": "food",
+  "name": {
+   "uk": "La Plăcinte",
+   "en": "La Plăcinte"
+  },
+  "lat": 47.0243,
+  "lon": 28.832,
+  "desc": {
+   "uk": "Мережа молдовської кухні: плацинди, зама, мамалига. Дешево й автентично.",
+   "en": "A Moldovan chain: plăcinte, zeamă, mămăligă. Cheap and authentic."
+  },
+  "hours": "09:00–23:00",
+  "price": {
+   "uk": "~120–200 MDL",
+   "en": "~120–200 MDL"
+  },
+  "address": "Bd. Ștefan cel Mare, Chișinău",
+  "tags": [
+   "молдовська кухня",
+   "дешево"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-vatra",
+  "city": "chisinau",
+  "cat": "food",
+  "name": {
+   "uk": "Vatra Neamului",
+   "en": "Vatra Neamului"
+  },
+  "lat": 47.025,
+  "lon": 28.829,
+  "desc": {
+   "uk": "Традиційна молдовська кухня у центрі, велика винна карта.",
+   "en": "Traditional Moldovan food in the centre with a long wine list."
+  },
+  "hours": "11:00–23:00",
+  "price": {
+   "uk": "~250–400 MDL",
+   "en": "~250–400 MDL"
+  },
+  "address": "str. București 26, Chișinău",
+  "tags": [
+   "вечеря",
+   "вино"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-propaganda",
+  "city": "chisinau",
+  "cat": "food",
+  "name": {
+   "uk": "Propaganda Cafe",
+   "en": "Propaganda Cafe"
+  },
+  "lat": 47.0248,
+  "lon": 28.8345,
+  "desc": {
+   "uk": "Популярне кафе в центрі: сніданки, кава, вечірня атмосфера.",
+   "en": "A popular central café: breakfasts, coffee and an evening buzz."
+  },
+  "hours": "08:00–24:00",
+  "price": {
+   "uk": "~150–300 MDL",
+   "en": "~150–300 MDL"
+  },
+  "address": "str. 31 August 1989, Chișinău",
+  "tags": [
+   "кава",
+   "сніданок"
+  ],
+  "coordsApprox": true
+ },
+ {
+  "id": "chi-malldova",
+  "city": "chisinau",
+  "cat": "shop",
+  "name": {
+   "uk": "Shopping MallDova",
+   "en": "Shopping MallDova"
+  },
+  "lat": 47.0064,
+  "lon": 28.863,
+  "desc": {
+   "uk": "Найбільший ТРЦ міста: одяг, техніка, супермаркет, фудкорт.",
+   "en": "The city's largest mall: clothing, electronics, a supermarket and a food court."
+  },
+  "hours": "10:00–22:00",
+  "address": "bd. Dacia 24, Chișinău",
+  "tags": [
+   "ТРЦ"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "chi-unic",
+  "city": "chisinau",
+  "cat": "shop",
+  "name": {
+   "uk": "Unic",
+   "en": "Unic"
+  },
+  "lat": 47.0237,
+  "lon": 28.833,
+  "desc": {
+   "uk": "Універмаг у центрі — сувеніри, вино, місцева косметика.",
+   "en": "A central department store — souvenirs, wine and local cosmetics."
+  },
+  "hours": "10:00–20:00",
+  "address": "bd. Ștefan cel Mare 8, Chișinău",
+  "tags": [
+   "сувеніри"
+  ],
+  "coordsApprox": true,
+  "fixedPrice": true
+ },
+ {
+  "id": "chi-valea",
+  "city": "chisinau",
+  "cat": "nature",
+  "name": {
+   "uk": "Парк Валя Морилор",
+   "en": "Valea Morilor Park"
+  },
+  "lat": 47.0206,
+  "lon": 28.8125,
+  "desc": {
+   "uk": "Великий парк з озером і сходами-каскадом. Найкраще місце на вечірню прогулянку.",
+   "en": "A large park with a lake and a cascade of steps. The best evening walk in town."
+  },
+  "hours": "цілодобово",
+  "price": {
+   "uk": "безкоштовно",
+   "en": "free"
+  },
+  "address": "Valea Morilor, Chișinău",
+  "tags": [
+   "прогулянка",
+   "озеро"
+  ]
+ },
+ {
+  "id": "chi-wine",
+  "city": "chisinau",
+  "cat": "shop",
+  "name": {
+   "uk": "Молдовське вино — де купити",
+   "en": "Moldovan wine — where to buy"
+  },
+  "lat": 47.024,
+  "lon": 28.831,
+  "desc": {
+   "uk": "Молдова — виноробна країна. Вино з Cricova чи Purcari коштує тут утричі дешевше, ніж деінде.",
+   "en": "Moldova is wine country. A bottle from Cricova or Purcari costs a third of what it does elsewhere."
+  },
+  "hours": "10:00–21:00",
+  "price": {
+   "uk": "100–400 MDL",
+   "en": "100–400 MDL"
+  },
+  "address": "центр, Chișinău",
+  "tags": [
+   "вино",
+   "подарунки"
+  ],
+  "coordsApprox": true
  }
 ]

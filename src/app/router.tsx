@@ -1,8 +1,10 @@
-import { lazy, Suspense, type ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import { AppLayout } from './layout';
 import { useStore } from './store';
 import { Spinner } from '@/shared/ui/Spinner';
+import { lazyWithReload } from './lazy';
+import { ErrorScreen } from './ErrorScreen';
 
 import HomePage from '@/features/home/page';
 import ItineraryPage from '@/features/itinerary/page';
@@ -13,12 +15,12 @@ import MorePage from '@/features/more/page';
 import OnboardingPage from '@/features/onboarding/page';
 
 // Split the heavy leaves out of the initial bundle.
-const MapPage = lazy(() => import('@/features/map/page'));
-const ServicesPage = lazy(() => import('@/features/services/page'));
-const SafetyPage = lazy(() => import('@/features/safety/page'));
-const PhrasesPage = lazy(() => import('@/features/phrases/page'));
-const GuidePage = lazy(() => import('@/features/guide/page'));
-const SettingsPage = lazy(() => import('@/features/settings/page'));
+const MapPage = lazyWithReload(() => import('@/features/map/page'));
+const ServicesPage = lazyWithReload(() => import('@/features/services/page'));
+const SafetyPage = lazyWithReload(() => import('@/features/safety/page'));
+const PhrasesPage = lazyWithReload(() => import('@/features/phrases/page'));
+const GuidePage = lazyWithReload(() => import('@/features/guide/page'));
+const SettingsPage = lazyWithReload(() => import('@/features/settings/page'));
 
 const L = (node: ReactNode) => <Suspense fallback={<Spinner />}>{node}</Suspense>;
 
@@ -30,10 +32,11 @@ const requireOnboarding = () => {
 };
 
 export const router = createBrowserRouter([
-  { path: '/onboarding', element: <OnboardingPage /> },
+  { path: '/onboarding', element: <OnboardingPage />, errorElement: <ErrorScreen /> },
   {
     path: '/',
     element: <AppLayout />,
+    errorElement: <ErrorScreen />,
     loader: requireOnboarding,
     children: [
       { index: true, element: <HomePage /> },

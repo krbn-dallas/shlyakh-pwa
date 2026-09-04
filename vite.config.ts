@@ -103,6 +103,26 @@ export default defineConfig({
             },
           },
           {
+            urlPattern: /^https:\/\/open\.er-api\.com\/.*/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'rates',
+              networkTimeoutSeconds: 5,
+              expiration: { maxEntries: 4, maxAgeSeconds: 24 * 60 * 60 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/overpass-api\.de\/.*/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'overpass',
+              networkTimeoutSeconds: 12,
+              expiration: { maxEntries: 40, maxAgeSeconds: 7 * 24 * 60 * 60 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
             urlPattern: /^https:\/\/api\.open-meteo\.com\/.*/i,
             handler: 'NetworkFirst',
             options: {

@@ -105,6 +105,8 @@ export const en: Dict = {
     nearWarn: 'Caution zone nearby', fixedPrice: 'Fixed prices — no haggling',
     copyAddress: 'Copy address', copyHint: 'Show or send it to the driver',
     coordsApprox: 'Approximate coordinates',
+    findNearby: 'Find nearby',
+    fromOsm: 'from OpenStreetMap',
     cats: {
       all: 'All', sight: 'Sights', food: 'Food', shop: 'Shopping', market: 'Markets',
       pharmacy: 'Pharmacies', exchange: 'Currency exchange', transport: 'Transport', stay: 'Stay',
@@ -179,6 +181,7 @@ export const en: Dict = {
     title: 'Settings', appearance: 'Appearance', theme: 'Theme', lang: 'Language',
     trip: 'Trip', city: 'City', cityAuto: 'Detect automatically', cityManual: 'Chosen manually',
     stays: 'Accommodation', party: 'Who is travelling', ratesTitle: 'Exchange rates',
+    ratesRefresh: 'Refresh rates online', ratesUpdated: 'Rates updated',
     offline: 'Offline', data: 'Data', resetCheck: 'Clear checklists',
     resetAll: 'Reset everything', resetAllConfirm: 'Delete all settings and ticks?',
     install: 'Installation', about: 'About',

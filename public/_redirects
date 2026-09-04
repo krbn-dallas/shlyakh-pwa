@@ -1,3 +1,8 @@
+# Hashed build assets must 404 when they are gone (after a redeploy) instead of
+# falling through to index.html — otherwise a dynamic import receives HTML and
+# dies with "text/html is not a valid JavaScript MIME type".
+/assets/*   /assets/:splat   404
+
 # SPA fallback. Lives in public/ so it ships inside dist/ — a direct (zip/CLI)
 # deploy never reads the repo-root netlify.toml, only what is in the publish dir.
 /*    /index.html   200

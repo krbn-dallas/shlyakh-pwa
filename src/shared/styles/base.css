@@ -78,10 +78,21 @@ h3{font-size:17px; line-height:1.25}
 .field{display:flex; flex-direction:column; gap:6px}
 .field > label{font-size:13px; font-weight:700; color:var(--muted)}
 .input{
-  width:100%; min-height:var(--tap); padding:10px var(--s3);
+  display:block; width:100%; max-width:100%; min-width:0;
+  min-height:var(--tap); padding:10px var(--s3);
   background:var(--surface); border:1px solid var(--line); border-radius:var(--r-ctl);
   color:var(--ink); font-size:16px; /* 16px stops iOS zoom-on-focus */
 }
+/* Safari on iOS gives date/time inputs an intrinsic width they refuse to shrink
+   below, which pushed them straight out of the card. */
+input[type="date"].input,
+input[type="time"].input,
+input[type="datetime-local"].input{
+  -webkit-appearance:none; appearance:none;
+  text-align:left;
+}
+input[type="date"]::-webkit-date-and-time-value{ text-align:left; margin:0 }
+input[type="date"]::-webkit-calendar-picker-indicator{ margin-inline-start:auto }
 .input:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px var(--gold-soft)}
 
 :focus-visible{outline:2px solid var(--gold); outline-offset:2px; border-radius:4px}

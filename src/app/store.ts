@@ -75,7 +75,7 @@ const DEFAULTS = {
   ret: null,
   party: { partner: false, kids: 0 } as Party,
   stays: {} as Partial<Record<CityId, Stay>>,
-  rates: { uah: 46, mdl: 19.5, mad: 10.8 } as Rates,
+  rates: { uah: 51.9, mdl: 20.1, mad: 10.9 } as Rates,  // refreshed live from open.er-api.com
   onboarded: false,
   geoAsked: false,
   installDismissed: false,
