@@ -1,0 +1,3 @@
+# SPA fallback. Lives in public/ so it ships inside dist/ — a direct (zip/CLI)
+# deploy never reads the repo-root netlify.toml, only what is in the publish dir.
+/*    /index.html   200
